@@ -1,27 +1,31 @@
-# WDSLab — current GitHub Pages site (cleaned)
+# WDSLab Static-First Rebuild
 
-This is a **structure-only cleanup** of the user-uploaded `wdslab.github.io-main.zip`.
-The published page HTML, working `assets/style.css`, `assets/site.js`, images, news and publication data were **not rewritten**.
+Deploy the CONTENTS of this folder to the root of the wdslab.github.io repository.
 
-## Deploy
-Upload the contents of this folder (not the outer folder) to the `wdslab.github.io` repository root.
-GitHub Pages: Settings → Pages → Deploy from branch → main / (root).
+- HTML includes all primary content; JS only adds search and mobile navigation.
+- All records are local and static.
+- `publications.json` includes verified original links for selected papers. Additional source links require checking.
+- 80 paper/conference records, 44 projects, 37 news, 12 people.
+- Original commercial HGGGOTHICSSI fonts are NOT included.
+- Hero image is illustrative, not a photo of an actual WDSLab factory.
+- Some titles, author lists, and publication statuses need final reconciliation with Google Sites.
+- Bilingual full-content translation is not yet implemented; this stable build prioritizes visible content.
 
-## Primary editable files
-- `index.html`: Home, highlights, selected papers, news
-- `research.html`: Research Areas
-- `publications.html`, `publications.json`: publications and links
-- `news.html`, `news_linked.json`, `news_full_original.json`: news
-- `people.html`, `members-detailed.json`: team
-- `pi.html`: principal investigator
-- `systems.html`: platforms
-- `assets/style.css`: **only active stylesheet**
-- `assets/site.js`: **only active JS file**
-- `assets/`: image assets and logo
+To test locally: `python -m http.server 8000` then open `http://localhost:8000`.
 
-## Maintenance archive
-`_maintenance/legacy` contains old unused alternate scripts/styles and content snapshots. It is retained for review, not loaded by the website.
-`_maintenance/history` preserves the original change logs.
 
-## Notes
-This cleanup does not verify the correctness of bibliographic metrics or external DOI/GitHub URLs, and does not redesign or rewrite site content.
+Enhanced archive: detailed member profiles in `members-detailed.json`; gallery metadata in `photos.json`. Original member photos and PHOTO images are NOT copied and must be supplied or exported. Existing news records remain; the News page links to Gallery.
+
+
+## Journal metrics / JCR
+- Original-site IF and Top-percentile annotations are preserved for selected *published* journals. They are not verified current-year JCR values.
+- JCR quartile fields are intentionally null until exact JCR year and subject category can be checked from an authorized source. Do not infer Q1 solely from an original-site Top% label.
+- To populate: set `jcr_quartile`, `jcr_year`, `jcr_category` for each record after verification and rebuild the static publication page.
+- Hero asset `assets/hero-industrial.png` is original generated art with **no embedded text**, representing humanoid dark factory, port logistics, Arctic routes and energy. All copy is HTML.
+
+
+## Research taxonomy update
+- Removed About page and navigation entry.
+- Replaced industry-led Research Areas with five paper-grounded methodological pillars.
+- Kept industry work in Projects and Systems.
+- Related-paper links point to Publications archive; existing DOI/code links on that archive remain intact.

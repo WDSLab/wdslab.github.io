@@ -175,7 +175,9 @@
     "venue": "Annals of Intensive Care",
     "status": "Published",
     "category": "International Journal",
-    "links": {},
+    "links": {
+      "doi": "https://doi.org/10.1016/j.aicoj.2026.100125"
+    },
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
@@ -362,7 +364,9 @@
     "venue": "Transportation Research Part D: Transport and Environment",
     "status": "Published",
     "category": "International Journal",
-    "links": {},
+    "links": {
+      "doi": "https://doi.org/10.1016/j.trd.2022.103431"
+    },
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,

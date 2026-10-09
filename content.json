@@ -1,0 +1,43 @@
+{
+  "systems": [
+    "LLM기반 해상교통안전 관리 서비스",
+    "국립 창원대학교 규정집 RAG 챗봇",
+    "삼성중공업 사외반출입 블록 관리 시스템",
+    "APA 기반 급식 업무 자동화 서비스",
+    "ARCTIC WATCHER: 북극항로 운항 의사결정지원시스템",
+    "LG Multi V AI Simulator"
+  ],
+  "people": [
+    "Sunghyun Sim — Principal Investigator",
+    "이재훈 — Ph.D.",
+    "주슬기 — Ph.D.",
+    "민근홍 — Ph.D.",
+    "김영휘 — Integrated MS/Ph.D.",
+    "이승우 — Integrated MS/Ph.D.",
+    "김두현 — M.S.",
+    "김남기 — M.S.",
+    "강준규 — M.S.",
+    "강다현 — M.S.",
+    "박민수 — M.S.",
+    "황조은 — Staff"
+  ],
+  "news": [
+    "2026.08.31 — 김영휘 학생 석사우수(이공계)장학생 선정",
+    "2026.07.14 — Annals of Intensive Care 논문 게재 승인",
+    "2026.07.06 — Journal of Forecasting 논문 게재 승인",
+    "2026.07.04 — Distributed Lag Transformer IEEE Access 게재 승인",
+    "2026.07.01 — 국가연구소 2.0 사업 선정",
+    "2026.05.29 — 북극항로 강화학습 연구 우수논문상"
+  ],
+  "publications": [
+    "Correlation Recurrent Units — IEEE TPAMI",
+    "Temporal multi-features representation learning-based clustering for time-series data — IEEE Access",
+    "Deep collaborative learning model for port-air pollutants prediction — Transportation Research Part D"
+  ],
+  "projects": [
+    "2026 — 국가연구소 2.0 (NRL2.0)",
+    "2025 — LG전자 AI 시뮬레이터 공동연구",
+    "2025 — 해운항만물류 전문인력 양성사업",
+    "2025 — BK21 인공지능 분야"
+  ]
+}
