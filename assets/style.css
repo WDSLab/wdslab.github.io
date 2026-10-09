@@ -247,3 +247,15 @@
 .publication-authors.author-unavailable{font-size:11px;color:#8899a7;font-style:italic}
 .selected-paper-card .compact-authors{margin:5px 0 12px;font-size:12px}
 @media(max-width:650px){.publication-authors{font-size:12px}.publication-authors .author-role{font-size:9px}}
+
+/* Compact, same-level publication metadata: journal, status, research, links */
+.record .publication-meta-row{display:flex;align-items:center;flex-wrap:wrap;gap:9px 12px;margin:12px 0 5px}
+.record .publication-meta-row .publication-journal{font-size:13px;font-weight:750;color:#253c50;margin:0;line-height:1.55}
+.record .publication-meta-row .tag{margin:0;white-space:nowrap}
+.record .publication-meta-row .metrics{margin:0;display:inline-flex;align-items:center;gap:7px}
+.record .publication-meta-row .research-topic{display:inline-flex;align-items:center;gap:6px;margin:0;padding:6px 10px;border-radius:7px;background:#eaf3f8;color:#27617f;font-size:11px}
+.record .publication-meta-row .links{display:inline-flex;flex-wrap:wrap;gap:7px;margin:0;align-items:center}
+.record .publication-meta-row .paper-action{min-height:32px;padding:7px 10px}
+.record .publication-authors{line-height:1.9}
+.record .publication-authors .author-role{background:#171c23;color:white;border-radius:4px;padding:3px 6px;margin-left:5px;font-size:10px;white-space:nowrap}
+@media(max-width:650px){.record .publication-meta-row{align-items:flex-start;gap:8px}.record .publication-meta-row .links{width:100%}}
