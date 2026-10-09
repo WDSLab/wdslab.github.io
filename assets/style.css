@@ -236,3 +236,14 @@
   .paper-action { transition: none !important; }
   .paper-action:hover { transform: none !important; }
 }
+
+/* Publication authorship and research-area mapping */
+.record .research-topic{display:inline-flex;align-items:center;gap:7px;margin:12px 0 9px;padding:6px 10px;border-radius:7px;background:#eaf3fa;color:#245c80;font-size:12px;font-weight:750;line-height:1.5}
+.research-topic-icon{font-size:16px;color:#2b8cb7}
+.publication-authors{font-size:13px;line-height:1.9;color:#566c7e;margin:8px 0 12px;overflow-wrap:anywhere}
+.publication-authors .lab-author{color:#172f40;font-weight:750}
+.publication-authors .author-role{display:inline-flex;vertical-align:baseline;margin-left:5px;padding:2px 7px;border-radius:4px;background:#171c23;color:#fff;font-size:10px;font-weight:750;line-height:1.5;white-space:nowrap}
+.publication-authors .author-separator{margin-right:5px;color:#8a9cab}
+.publication-authors.author-unavailable{font-size:11px;color:#8899a7;font-style:italic}
+.selected-paper-card .compact-authors{margin:5px 0 12px;font-size:12px}
+@media(max-width:650px){.publication-authors{font-size:12px}.publication-authors .author-role{font-size:9px}}
