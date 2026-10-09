@@ -17,7 +17,7 @@
         "name": "Dahyun Kang",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -30,14 +30,16 @@
       {
         "name": "Dohee Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       }
@@ -59,7 +61,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자",
+          "1저자",
           "교신저자"
         ],
         "corresponding_source": true
@@ -84,7 +86,7 @@
         "name": "Jungyu Kang",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -120,7 +122,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자",
+          "1저자",
           "교신저자"
         ],
         "corresponding_source": true
@@ -175,7 +177,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -220,7 +222,7 @@
         "name": "Jaehoon Lee",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -239,14 +241,16 @@
       {
         "name": "Dohee Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       }
@@ -271,7 +275,7 @@
         "name": "Jaehoon Lee",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -303,7 +307,7 @@
         "name": "Doohyun Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -335,7 +339,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -360,7 +364,9 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
     ]
@@ -383,7 +389,7 @@
         "name": "Doohyun Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -401,7 +407,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Oct"
   },
   {
     "year": 2026,
@@ -421,7 +428,7 @@
         "name": "Jaehoon Lee",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -445,7 +452,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Sep"
   },
   {
     "year": 2026,
@@ -464,7 +472,9 @@
       {
         "name": "Changwon Shin",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -611,7 +621,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "month": "Sep"
   },
   {
     "year": 2026,
@@ -634,7 +645,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -647,18 +658,21 @@
       {
         "name": "Dohee Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Sep"
   },
   {
     "year": 2026,
@@ -681,14 +695,16 @@
       {
         "name": "Min Ho Ju",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
         "name": "Seulgi Ju",
         "lab": true,
         "roles": [
-          "공동제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -726,17 +742,20 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       },
       {
         "name": "Hee Jung Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jul"
   },
   {
     "year": 2026,
@@ -759,7 +778,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -783,7 +802,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jul"
   },
   {
     "year": 2026,
@@ -804,7 +824,9 @@
       {
         "name": "Hanbyeol Park",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -834,10 +856,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jul"
   },
   {
     "year": 2026,
@@ -855,7 +880,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -873,7 +898,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "May"
   },
   {
     "year": 2025,
@@ -896,7 +922,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -909,18 +935,21 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Nov"
   },
   {
     "year": 2025,
@@ -942,7 +971,9 @@
       {
         "name": "Suhyun Jo",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -967,17 +998,20 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "공동교신저자"
+          "교신저자"
         ],
         "corresponding_source": true
       },
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Nov"
   },
   {
     "year": 2025,
@@ -996,7 +1030,9 @@
       {
         "name": "Hanbyeol Park",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1020,10 +1056,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Sep"
   },
   {
     "year": 2025,
@@ -1044,7 +1083,7 @@
         "name": "Younghwi Kim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1068,7 +1107,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jul"
   },
   {
     "year": 2024,
@@ -1088,7 +1128,7 @@
         "name": "Jaehoon Lee",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1106,7 +1146,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Aug"
   },
   {
     "year": 2024,
@@ -1128,7 +1169,7 @@
         "name": "Jaehoon Lee",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1146,7 +1187,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jun"
   },
   {
     "year": 2024,
@@ -1165,7 +1207,9 @@
       {
         "name": "Dohee Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1183,10 +1227,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Mar"
   },
   {
     "year": 2023,
@@ -1209,7 +1256,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1222,10 +1269,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Oct"
   },
   {
     "year": 2023,
@@ -1246,14 +1296,16 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
@@ -1262,7 +1314,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "month": "Jan"
   },
   {
     "year": 2022,
@@ -1284,7 +1337,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1297,10 +1350,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Oct"
   },
   {
     "year": 2022,
@@ -1320,7 +1376,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1345,10 +1401,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Feb"
   },
   {
     "year": 2021,
@@ -1367,7 +1426,9 @@
       {
         "name": "Ilseok Lee",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1379,10 +1440,13 @@
       {
         "name": "Sangeun Jin",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Jul"
   },
   {
     "year": 2021,
@@ -1399,7 +1463,9 @@
       {
         "name": "Kikun Park",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1411,10 +1477,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Feb"
   },
   {
     "year": 2020,
@@ -1431,13 +1500,17 @@
       {
         "name": "Imam Mustafa Kamal",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
@@ -1470,7 +1543,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "month": "May"
   },
   {
     "year": 2020,
@@ -1489,7 +1563,9 @@
       {
         "name": "Imam Mustafa Kamal",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1510,7 +1586,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "month": "Feb"
   },
   {
     "year": 2018,
@@ -1527,7 +1604,9 @@
       {
         "name": "Natanael Yabes Wirawan",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1581,10 +1660,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "May"
   },
   {
     "year": 2018,
@@ -1604,14 +1686,16 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       },
       {
@@ -1626,7 +1710,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "month": "Mar"
   },
   {
     "year": 2016,
@@ -1644,7 +1729,7 @@
         "name": "Sunghyun Sim",
         "lab": true,
         "roles": [
-          "제1저자"
+          "1저자"
         ],
         "corresponding_source": false
       },
@@ -1657,10 +1742,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Nov"
   },
   {
     "year": 2016,
@@ -1677,7 +1765,9 @@
       {
         "name": "Byeongjun Joo",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -1689,10 +1779,13 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "month": "Mar"
   },
   {
     "year": 2026,
