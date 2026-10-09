@@ -30,3 +30,31 @@ html body .news-links a.paper-action:hover, html body .record .links a.paper-act
 html body .selected-paper-card .paper-card-links a.paper-action:hover {filter:brightness(.94); transform:translateY(-1px)}
 html body .news-links a.paper-action:focus-visible, html body .record .links a.paper-action:focus-visible,
 html body .selected-paper-card .paper-card-links a.paper-action:focus-visible {outline:3px solid #68bdf0;outline-offset:2px}
+
+/* WDSLab color-coded action buttons (overrides preceding hotfix) */
+html body a.paper-action-paper {background:#e7f2ff!important;color:#1559a0!important;border-color:#9fc7f3!important}
+html body a.paper-action-details {background:#edf0ff!important;color:#4645a4!important;border-color:#b7b8f0!important}
+html body a.paper-action-github {background:#19364e!important;color:#fff!important;border-color:#19364e!important}
+html body a.paper-action-article {background:#fff1dd!important;color:#995714!important;border-color:#e8bd82!important}
+html body a.paper-action-arxiv {background:#f8eafa!important;color:#863e8c!important;border-color:#dfb3e5!important}
+html body a.paper-action-system {background:#e2f7ef!important;color:#146f52!important;border-color:#9ed7c2!important}
+html body a.paper-action:hover {filter:brightness(.94)!important;transform:translateY(-1px)}
+
+/* Soft GitHub code button: light mint-grey rather than solid navy */
+html body .news-featured-card .news-links a.paper-action-github,
+html body .news-original-item .news-links a.paper-action-github,
+html body .record .links a.paper-action-github,
+html body .selected-paper-card .paper-card-links a.paper-action-github,
+html body a.paper-action-github {
+  background:#e7f4f0!important;
+  color:#23685b!important;
+  border-color:#a9d4c8!important;
+  box-shadow:0 1px 3px rgba(25,90,75,.06)!important;
+}
+html body .news-links a.paper-action-github:hover,
+html body .record .links a.paper-action-github:hover,
+html body .selected-paper-card .paper-card-links a.paper-action-github:hover {
+  background:#d5ece5!important;
+  color:#175347!important;
+  border-color:#85c2b1!important;
+}
