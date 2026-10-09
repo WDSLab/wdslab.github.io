@@ -135,3 +135,104 @@
 #news .news-featured-card{min-height:205px}
 @media(max-width:1000px){#news .news-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){#news .news-featured-grid{grid-template-columns:1fr}.news-period-label{margin-left:0}}
+
+/* Selected Papers: consistent action labels and alignment */
+.selected-paper-card .paper-card-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:auto;padding-top:14px}
+.selected-paper-card .paper-action{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border:1px solid #c7deed;border-radius:6px;background:#eff7fc;color:#096fa6;font-size:11px;line-height:1.35;font-weight:800;letter-spacing:.015em;text-decoration:none;white-space:nowrap;transition:background .2s}
+.selected-paper-card .paper-action:hover{background:#d6effd;border-color:#80c6ec}
+.selected-paper-card .paper-action-github{background:#112f46;color:#fff;border-color:#112f46}
+.selected-paper-card .paper-action-github:hover{background:#1b5578}
+
+/* Shared link actions across homepage, news archive, and publications */
+.record .links,.news-links,.selected-paper-card .paper-card-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:12px}
+.record .links .paper-action,.news-links .paper-action,.selected-paper-card .paper-action{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border:1px solid #c7deed;border-radius:6px;background:#eff7fc;color:#096fa6;font-size:11px;line-height:1.35;font-weight:800;letter-spacing:.015em;text-decoration:none;white-space:normal;overflow-wrap:anywhere}
+.record .links .paper-action:hover,.news-links .paper-action:hover{background:#d6effd;border-color:#80c6ec}
+.record .links .paper-action-github,.news-links .paper-action-github{background:#112f46;color:white;border-color:#112f46}
+.record .links .paper-action-github:hover,.news-links .paper-action-github:hover{background:#1b5578}
+.news-links .paper-action-article{background:#fff6e8;color:#7a4b13;border-color:#f1dfc4}
+
+/* Unified refined link buttons — title case, subtle depth, clear interaction */
+.selected-paper-card .paper-card-links,
+.record .links,
+.news-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+}
+.selected-paper-card .paper-action,
+.record .links .paper-action,
+.news-links .paper-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 36px;
+  padding: 9px 13px;
+  border-radius: 8px;
+  border: 1px solid #cbdfe9;
+  background: #f3f8fc;
+  color: #195b82;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  text-transform: none !important;
+  text-decoration: none;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  box-shadow: 0 1px 2px rgba(15,43,65,.045);
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.selected-paper-card .paper-action:hover,
+.record .links .paper-action:hover,
+.news-links .paper-action:hover {
+  background: #e5f3fc;
+  border-color: #8ec8e9;
+  box-shadow: 0 4px 12px rgba(20,75,112,.10);
+  transform: translateY(-1px);
+}
+.selected-paper-card .paper-action:focus-visible,
+.record .links .paper-action:focus-visible,
+.news-links .paper-action:focus-visible {
+  outline: 3px solid #76c6f5;
+  outline-offset: 2px;
+}
+.selected-paper-card .paper-action-github,
+.record .links .paper-action-github,
+.news-links .paper-action-github {
+  background: #112f46;
+  color: #ffffff;
+  border-color: #112f46;
+}
+.selected-paper-card .paper-action-github:hover,
+.record .links .paper-action-github:hover,
+.news-links .paper-action-github:hover {
+  background: #1a4b6a;
+  color: #ffffff;
+  border-color: #1a4b6a;
+}
+.selected-paper-card .paper-action-article,
+.record .links .paper-action-article,
+.news-links .paper-action-article {
+  background: #fff7ed;
+  color: #87501c;
+  border-color: #ecd8bc;
+}
+.selected-paper-card .paper-action-article:hover,
+.record .links .paper-action-article:hover,
+.news-links .paper-action-article:hover {
+  background: #ffedd6;
+  border-color: #e5c295;
+}
+.paper-action .action-arrow {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1;
+  opacity: .8;
+  flex: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .paper-action { transition: none !important; }
+  .paper-action:hover { transform: none !important; }
+}
