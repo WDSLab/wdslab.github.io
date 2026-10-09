@@ -1,0 +1,74 @@
+[
+  {
+    "group": "PI",
+    "name_ko": "심성현",
+    "name_en": "Sunghyun Sim",
+    "area": "Industrial AI · Data Science · Efficient AI"
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "이재훈",
+    "name_en": "Jaehoon Lee",
+    "area": "Time-series Forecasting · Industrial Data Science"
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "주슬기",
+    "name_en": "Seulgi Ju",
+    "area": "Industrial Data Science"
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "민근홍",
+    "name_en": "Geunhong Min",
+    "area": "Industrial Data Science"
+  },
+  {
+    "group": "Integrated Ph.D.",
+    "name_ko": "김영휘",
+    "name_en": "Younghwi Kim",
+    "area": "XAI · Time-series · Spatiotemporal AI"
+  },
+  {
+    "group": "Integrated Ph.D.",
+    "name_ko": "이승우",
+    "name_en": "Seungwoo Lee",
+    "area": "LLM · Spatiotemporal AI"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "김두현",
+    "name_en": "Doohyun Kim",
+    "area": "Lightweight AI"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "김남기",
+    "name_en": "Namgi Kim",
+    "area": "Industrial AI"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "강준규",
+    "name_en": "Jungyu Kang",
+    "area": "Model Compression · Vision"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "강다현",
+    "name_en": "Dahyun Kang",
+    "area": "Industrial Data Science"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "박민수",
+    "name_en": "Minsoo Park",
+    "area": "Super-resolution · Anomaly Detection"
+  },
+  {
+    "group": "Staff",
+    "name_ko": "황조은",
+    "name_en": "Joeun Hwang",
+    "area": "Research Administration"
+  }
+]

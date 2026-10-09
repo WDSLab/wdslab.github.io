@@ -1,0 +1,1 @@
+Official logo supplied by WDSLab and integrated in the site header across all HTML pages. Original PNG preserved under assets/wdslab-official-logo.png. The dark original image is visually blended with the navy header using CSS mix-blend-mode:screen; source artwork is not redrawn. Other site content unchanged.

@@ -1,0 +1,974 @@
+[
+  {
+    "year": 2026,
+    "title": "Reducing Plate Waste and Carbon Emissions in School Meal Services through Tray-Image Intake Sensing and Menu Optimization",
+    "venue": "Journal of Cleaner Production",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/CA-Menu"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "From Targeting Firms to Matching Interventions: Configuration-Aware Design of AI Readiness Interventions in a Manufacturing Cluster",
+    "venue": "Technological Forecasting and Social Change",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Matching model capacity to format constraints: a frugal architecture for container code identification on edge-oriented in port automation",
+    "venue": "Engineering Applications of Artificial Intelligence",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/FruArIC"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Firm Size, Supply-chain Position and Readiness for Artificial Intelligence in Manufacturing Clusters",
+    "venue": "Journal of Manufacturing Technology Management",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Propagation-Aware Multi-Site PV Context Fusion with Imperfect Numerical Weather Prediction for Medium-Range PV Forecasting",
+    "venue": "Engineering Applications of Artificial Intelligence",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/kYounghwi/PACFormer_fusion"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "FEATHer: Fourier-Efficient Adaptive Temporal Hierarchy Forecaster for Time-Series Forecasting",
+    "venue": "Journal of Manufacturing Systems",
+    "status": "Submitted",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/FEATHer",
+      "arxiv": "https://arxiv.org/abs/2601.11350"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "CF-JEPA: Mask-free forward prediction with asymmetric encoder utilization for time-series representation learning",
+    "venue": "Knowledge-Based Systems",
+    "status": "In revision",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/CF-JEPA",
+      "arxiv": "https://arxiv.org/abs/2606.07031"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "QIRP: Frequency-Accumulated Structured Pruning for Stable Quantization-Aware Model Compression",
+    "venue": "IEEE Transactions on Industrial Informatics",
+    "status": "In revision",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Quantization-Iterative-Recoding-Pruning"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Artificial Intelligence-based Smart Port Logistics Metaverse for Enhancing Productivity, Environment, and Safety in Port Logistics: A Case Study of Busan Port",
+    "venue": "IEEE Access",
+    "status": "In revision",
+    "category": "International Journal",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/2409.10519"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Ensemble Index Recording-Based Pruning for Enhancing Robustness of Edge AI Models in Smart Port Environments",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.20.10.1129"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Bidirectional Causality between Arctic Sea Ice and Maritime Traffic: A Regional Analysis using ASTD Data",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.20.09.989"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Association of Cold Ischemic Time with Early and Long-Term Outcomes in a Nationwide Korean Heart Transplant Cohort",
+    "venue": "Korean Circulation Journal",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 3.4,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2026,
+    "title": "Legacy Learning Strategy Based on Few-Shot Font Generation Models for Automatic Text Design",
+    "venue": "Information Processing & Management",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Legacy-Learning",
+      "doi": "https://doi.org/10.1016/j.ipm.2026.104721"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 8.1,
+    "top_percentile_as_listed_on_original": "Top 5%"
+  },
+  {
+    "year": 2026,
+    "title": "Early red blood cell transfusion burden, hemoglobin at first transfusion, and in-hospital mortality in patients supported with veno-arterial ECMO: a multicenter cohort study",
+    "venue": "Annals of Intensive Care",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 6.9,
+    "top_percentile_as_listed_on_original": "Top 10%",
+    "doi": "https://doi.org/10.1016/j.aicoj.2026.100125",
+    "publisher_url": "https://www.sciencedirect.com/science/article/pii/S2110582026001603"
+  },
+  {
+    "year": 2026,
+    "title": "Distributed Lag Transformer based on Time-Variable-Aware Learning for Explainable Multivariate Time Series Forecasting",
+    "venue": "IEEE Access",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Distributed-Lag-Transformer",
+      "doi": "https://doi.org/10.1109/ACCESS.2026.3713022"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 4.2,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2026,
+    "title": "Hybrid Temporal Auto Encoder and Similarity Matching for Low Aggregation Level Long Time-Series Forecasting",
+    "venue": "Journal of Forecasting",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "doi": "https://doi.org/10.1002/for.70194"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 2.6,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2026,
+    "title": "ST-Correlation Transformer-Based Hybrid Network for Spatiotemporal Forecasting of Arctic Marine Emissions",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "How Will Arctic Shipping Emissions Evolve? A Spatiotemporal Topology-Aware Transformer Approach",
+    "venue": "Transportation Research Part D: Transport and Environment",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Spatiotemporal-Topology-aware-Transformer",
+      "doi": "https://doi.org/10.1016/j.trd.2025.105134"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 8.7,
+    "top_percentile_as_listed_on_original": "Top 7%"
+  },
+  {
+    "year": 2025,
+    "title": "Deep Learning Framework for Regional Maritime Collision Risk Assessment using CNN and Grad-CAM",
+    "venue": "Ocean Engineering",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/MCRA_GradCAM",
+      "doi": "https://doi.org/10.1016/j.oceaneng.2025.123452"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 6.3,
+    "top_percentile_as_listed_on_original": "Top 3%"
+  },
+  {
+    "year": 2025,
+    "title": "Trend-Fluctuation Correlated Attention Unit for Remaining Useful Life Prediction",
+    "venue": "IEEE Access",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 4.2,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2025,
+    "title": "Dual-dimensional Dependency Fusion Transformer for Long-Term Spatiotemporal Flow Prediction",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/DFusioner",
+      "doi": "https://doi.org/10.24507/icicel.19.07.795"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Temporal Feature Representation Learning for Time-Series Clustering with Variational Mode Decomposition",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.18.08.875"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Temporal Multi-features Representation Learning-Based Clustering for Time-Series Data",
+    "venue": "IEEE Access",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 4.2,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2024,
+    "title": "A robust eXplainable feature selection method based on Order Statistics",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.18.03.255"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Correlation Recurrent Units: A Novel Neural Architecture for Improving the Predictive Performance of Time Series Data",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Correlation-Recurrent-Units",
+      "paper": "https://ieeexplore.ieee.org/document/10264112"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 20.4,
+    "top_percentile_as_listed_on_original": "Top 1%"
+  },
+  {
+    "year": 2023,
+    "title": "Bagging Recurrent Event Imputation for Repair of Imperfect Event Log with Missing Categorical Events",
+    "venue": "IEEE Transactions on Services Computing",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/Bagging-Recurrent-Event-Imputation",
+      "paper": "https://ieeexplore.ieee.org/document/9566796"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2022,
+    "title": "Deep Collaborative Learning Model for Port-Air Pollutants Prediction using Automatic Identification System",
+    "venue": "Transportation Research Part D: Transport and Environment",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 8.7,
+    "top_percentile_as_listed_on_original": "Top 7%"
+  },
+  {
+    "year": 2022,
+    "title": "Automatic Conversion of Event Data to Event Logs Using a CNN and Event Density Embedding",
+    "venue": "IEEE Access",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 4.2,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2021,
+    "title": "Hamstring stretching significantly changes the sitting biomechanics",
+    "venue": "International Journal of Industrial Ergonomics",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 3.6,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2021,
+    "title": "Vessel estimated time of arrival prediction system based on a path-finding algorithm",
+    "venue": "Maritime Transport Research",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2020,
+    "title": "Forecasting High-dimensional Multivariate Regression of Baltic Dry Index (BDI) Using Deep Neural Networks",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2020,
+    "title": "DERN: Deep Ensemble Learning Model for Short- and Long-Term Prediction of Baltic Dry Index",
+    "venue": "Applied Sciences",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 2.9,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2018,
+    "title": "Petri Nets Simulation for Operational Analysis Based on Process Data: An Overview",
+    "venue": "ICIC Express Letters Part B",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2018,
+    "title": "Statistical Verification of Process Model Conformance to Execution Log Considering Model Abstraction",
+    "venue": "International Journal of Cooperative Information Systems",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "if_as_listed_on_original": 1.1,
+    "top_percentile_as_listed_on_original": null
+  },
+  {
+    "year": 2016,
+    "title": "Statistical verification of process model fitness in process mining",
+    "venue": "ICIC Express Letters Part B",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2016,
+    "title": "Utilization of sequential data for machine learning in process control",
+    "venue": "ICIC Express Letters",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "F4-SSM: Lightweight Multi-scale State Space Model for On-device Time Series Forecasting",
+    "venue": "ICECET2026 · Rome",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Physics Consistency-based Data Augmentation for Robust Data Driven HVAC System Prediction",
+    "venue": "ICECET2026 · Rome",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2026,
+    "title": "Vantage Vision for Identification of Container Codes in Port Environments",
+    "venue": "ICECET2026 · Rome",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "Bidirectional Causality between Arctic Sea Ice and Maritime Traffic: A Regional Analysis Using ASTD Data",
+    "venue": "ICICIC2025 · Kitakyushu",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.20.09.989"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "ST-Correlation Transformer-Based Hybrid Network for Spatiotemporal Forecasting of Arctic Marine Emissions",
+    "venue": "ICICIC2025 · Kitakyushu",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "Ensemble Index Recording-Based Pruning for Enhancing Robustness of Edge AI Models in Smart Port Environments",
+    "venue": "ICICIC2025 · Kitakyushu",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.20.10.1129"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "Multi-Dimensional Interdependency Network for Long-Term Forecasting of Pollutant Emissions from Arctic Ocean Ships",
+    "venue": "ICECET2025 · Paris",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "Spatio-Temporal Multimodal Large Language Model for Air Quality Index Prediction",
+    "venue": "ICECET2025 · Paris",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "Advancing Adolescent Nutrition: AI and XR Environment Solutions for School Meal Nutrition Management",
+    "venue": "Maastricht",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "A Study on AI-Based Data Processing Methods for Analyzing Age Voice Data Collected in the Metaverse Environment",
+    "venue": "Maastricht",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Neural Bezier Interpolation with Manifold Learning for Reliable Vessel Trajectory Prediction",
+    "venue": "CogMI2024 · Washington DC",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Dual-Dimensional Dependency Fusion Transformer for Long-Term Spatiotemporal Flow",
+    "venue": "ICICIC2024 · Qinhuangdao",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {
+      "github": "https://github.com/WDSLab/DFusioner",
+      "doi": "https://doi.org/10.24507/icicel.19.07.795"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Enhancing Predictive Power and Interpretability Power Model Based on Feature Engineering",
+    "venue": "ICICIC2024 · Qinhuangdao",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "A Semi-supervised Learning Imputation Model for Automatic Identification System Data",
+    "venue": "LOGMS2024 · Hamburg",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Spatial-Temporal Analysis of Ship Collision Risk",
+    "venue": "LOGMS2024 · Hamburg",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Legacy Learning Frameworks for Simultaneous Font Design and Application in a Metaverse Environment",
+    "venue": "Busan",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Real-time Predictive Maritime Logistics Metaverse Service for Addressing Environmental and Safety Issues in Maritime Logistics",
+    "venue": "Busan",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Improving time-series classification accuracy based on temporal feature representation learning using CRU-LSTM autoencoder",
+    "venue": "CogMI2023 · Atlanta",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Spatial-Temporal Analysis of The Relationship Between Ship Activities and Port Pollution Using Automatic Identification System and Explainable AI",
+    "venue": "LOGMS2023 · Busan",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Temporal Feature Representation Learning for Time-series Clustering with Variational Mode Decomposition",
+    "venue": "ICICIC2023 · Kumamoto",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.18.08.875"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "A Robust Explainable Feature Selection Method Based on Order Statistics",
+    "venue": "ICICIC2023 · Kumamoto",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {
+      "doi": "https://doi.org/10.24507/icicel.18.03.255"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Temporal Attention Gate Network with Temporal Decomposition for Improved Prediction Accuracy of Univariate Time-series Data",
+    "venue": "ICAIIC2023 · Bali",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2019,
+    "title": "Likelihood-based Multiple Imputation by Event Chain Methodology for Repair of Imperfect Event Logs with Missing Data",
+    "venue": "ICPM2019 · Aachen",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2018,
+    "title": "Forecasting High-dimensional Multivariate Regression of Baltic Dry Index (BDI) using Deep Neural Networks",
+    "venue": "ICICIC2018 · Lianyungang",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2016,
+    "title": "Statistical verification of process conformance based on log equality test",
+    "venue": "CIC2016 · Atlanta",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2016,
+    "title": "Statistical Verification of Process Model Fitness in Process Mining",
+    "venue": "ICICIC2016 · Harbin",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2015,
+    "title": "Utilization of Sequential Data for Machine Learning in Process Control",
+    "venue": "BFSA2015 · Kumamoto",
+    "status": "Presented",
+    "category": "International Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "북극항로 운영을 위한 Multimodal-LLM 기반 해빙 농도 예측",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "ASTD 데이터를 활용한 북극해 해빙과 선박 활동의 인과성 분석",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2025,
+    "title": "양자화 인식 훈련(QAT)와 반복적인 구조적 가지치기를 결합한 계층적 모델 경량화 기법",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "해상 물류의 환경 및 안전 문제를 해결하기 위한 AI 기반 실시간 해상 물류 메타버스",
+    "venue": "추계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "북극해 교통량 데이터와 이차원 종속 트랜스포머 기반의 북극해의 장기 오염 예측 연구",
+    "venue": "추계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "Grad-CAM을 활용한 선박 간 충돌위험에 대한 시공간적 분석 프레임워크",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2024,
+    "title": "AIS 데이터의 품질 향상을 위한 양방향 딥러닝 기반 보간 모델 개발",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "SentenceBERT 모델을 활용한 해양안전심판 재결서 분석 방법에 대한 연구",
+    "venue": "추계해양환경안전학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "Bi-LSTM 및 Quantization를 활용한 이벤트 데이터 압축 및 복원 방법론",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "독립변수들간의 상호관계 학습을 위한 CoRepNet",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2023,
+    "title": "시계열 군집을 위한 시계열 표현학습",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2022,
+    "title": "Auto PM: Automatic Process Model Discovery and Analysis",
+    "venue": "추계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2022,
+    "title": "Neural Temporal-Filter Network: 시계열 예측 정확도 향상을 위한 신경망 구조",
+    "venue": "하계한국자료분석학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2022,
+    "title": "시계열 데이터의 예측 정확도 향상을 위한 상관순환유닛",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2019,
+    "title": "월간 컨테이너 물동량 예측을 위한 TSG-Multi LSTM 방법론",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2018,
+    "title": "최적 LSTM 모델 결정을 위한 표본 추출 기반 하이퍼 파라미터 튜닝 방법",
+    "venue": "추계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  },
+  {
+    "year": 2018,
+    "title": "LSTM을 활용한 Bulk Dry Index 예측",
+    "venue": "춘계대한산업공학회",
+    "status": "Presented",
+    "category": "Domestic Conference",
+    "links": {},
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
+  }
+]

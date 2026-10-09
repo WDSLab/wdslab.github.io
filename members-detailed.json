@@ -1,0 +1,112 @@
+[
+  {
+    "group": "Professor",
+    "name_ko": "심성현",
+    "name_en": "Sunghyun Sim",
+    "email": "ssh@changwon.ac.kr",
+    "interests": "Industrial Engineering; Data Science; Industrial AI; Efficient AI",
+    "education": "B.S. Statistics, Pusan National University (2016); Ph.D. Industrial Engineering, Pusan National University (2021), dissertation: AutoPM: Automatic Process Discovery and Analysis",
+    "affiliation": "Assistant Professor, Changwon National University (2025–present); Assistant Professor, Dong-eui University (2022–2024); Postdoctoral Researcher, Pusan National University (2021–2022)",
+    "admission": ""
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "이재훈",
+    "name_en": "Jaehoon Lee",
+    "email": "dynamic97312@naver.com",
+    "interests": "Industrial Data Science; Time-series Forecasting",
+    "education": "B.S. Production and Information Technology Engineering, Dong-eui University; M.S. Mathematics and Information Statistics, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2025"
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "주슬기",
+    "name_en": "Seulgi Ju",
+    "email": "sleekai@nate.com",
+    "interests": "Industrial Data Science",
+    "education": "B.S. Shipbuilding and Ocean Engineering, Gyeongsang National University; M.S. Artificial Intelligence, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "September 2025"
+  },
+  {
+    "group": "Ph.D.",
+    "name_ko": "민근홍",
+    "name_en": "Geunhong Min",
+    "email": "casu106@naver.com",
+    "interests": "Industrial Data Science",
+    "education": "B.S. Production and Information Technology Engineering, Dong-eui University; M.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "June 2026"
+  },
+  {
+    "group": "Integrated M.S.–Ph.D.",
+    "name_ko": "김영휘",
+    "name_en": "Younghwi Kim",
+    "email": "dudgnl6032@naver.com",
+    "interests": "XAI; Time-series Forecasting; Spatiotemporal AI",
+    "education": "B.S. Applied Software Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2025"
+  },
+  {
+    "group": "Integrated M.S.–Ph.D.",
+    "name_ko": "이승우",
+    "name_en": "Seungwoo Lee",
+    "email": "younglks000@naver.com",
+    "interests": "Large Language Models; Spatiotemporal AI",
+    "education": "B.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2025"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "김두현",
+    "name_en": "Doohyun Kim",
+    "email": "kdh990815@naver.com",
+    "interests": "Industrial Data Science; Lightweight AI",
+    "education": "B.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2025"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "김남기",
+    "name_en": "Namgi Kim",
+    "email": "158plm@gmail.com",
+    "interests": "Industrial AI",
+    "education": "B.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "September 2025"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "강준규",
+    "name_en": "Jungyu Kang",
+    "email": "kangjgyu10@gmail.com",
+    "interests": "Model Lightweighting; Computer Vision",
+    "education": "B.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2026"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "강다현",
+    "name_en": "Dahyun Kang",
+    "email": "kangdahh0623@gmail.com",
+    "interests": "Industrial Data Science",
+    "education": "B.S. Industrial Management and Big Data Engineering, Dong-eui University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "March 2026"
+  },
+  {
+    "group": "M.S.",
+    "name_ko": "박민수",
+    "name_en": "Minsoo Park",
+    "email": "operioncwal@naver.com",
+    "interests": "Super-resolution; Anomaly Detection",
+    "education": "B.S. Mechanical Engineering (Robot Mobility), Kyungil University",
+    "affiliation": "Graduate School of AI Convergence Engineering, Changwon National University",
+    "admission": "August 2026"
+  }
+]

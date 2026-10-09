@@ -1,0 +1,310 @@
+[
+  {
+    "status": "ongoing",
+    "period": "2026.08–2026.12",
+    "title": "AI모델 학습을 위한 가상데이터 생성 및 데이터베이스 구축용역",
+    "funder": "중소조선연구원",
+    "role": "책임"
+  },
+  {
+    "status": "ongoing",
+    "period": "2026.08–2026.12",
+    "title": "산업단지 데모 다크팩토리 전략수립",
+    "funder": "한국산업단지공단",
+    "role": "책임"
+  },
+  {
+    "status": "ongoing",
+    "period": "2026.07–2027.06",
+    "title": "다품종 비연속공정 대응 i-Robot·h-Robot 통합 제어 플랫폼 및 AAS 표준 기반 AI 자율제조 솔루션 개발",
+    "funder": "한국산업기술기획평가원",
+    "role": "책임"
+  },
+  {
+    "status": "ongoing",
+    "period": "2026.06–2035.12",
+    "title": "SMR² 플랫폼 국가연구소",
+    "funder": "한국연구재단 NRL2.0",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2026.04–2028.12",
+    "title": "암모니아 연료 추진 선박 벙커링 안전성 확보를 위한 지능형 퍼징·스크러버 통합 예측 제어 시스템 개발",
+    "funder": "중소벤처기업부",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.12–2026.11",
+    "title": "프로세스 마이닝+인공지능 기반 고객 개인 맞춤형 스마트 운전 로직 개발",
+    "funder": "LG전자",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.10–2029.02",
+    "title": "시뮬레이션 데이터기반 멀티V AI시뮬레이터 개발",
+    "funder": "LG전자 / 국립창원대학교",
+    "role": "책임"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.09–2027.08",
+    "title": "DNA²+ 인공지능융합 교육연구단",
+    "funder": "교육부 BK21",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.06–2034.02",
+    "title": "DNA+ 연구소",
+    "funder": "한국연구재단 글로컬랩",
+    "role": "참여"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.02–2029.02",
+    "title": "제5차 해운항만물류 전문인력 양성사업",
+    "funder": "해양수산부",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.01–2029.02",
+    "title": "SW중심대학 사업",
+    "funder": "정보통신기획평가원",
+    "role": "참여"
+  },
+  {
+    "status": "ongoing",
+    "period": "2025.01–2026.12",
+    "title": "해상교통 환경 특화 대형행동모형 개발을 위한 에이전트 기술 개발",
+    "funder": "선박해양플랜트연구소",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2023.06–2030.02",
+    "title": "인간중심-탄소중립 글로벌 공급망 연구센터",
+    "funder": "한국연구재단",
+    "role": "공동"
+  },
+  {
+    "status": "ongoing",
+    "period": "2022.03–2027.12",
+    "title": "인공지능 Grand ICT연구센터",
+    "funder": "정보통신기획평가원",
+    "role": "세부책임"
+  },
+  {
+    "status": "completed",
+    "period": "2025.09–2026.08",
+    "title": "해운항만 물류 도메인 특화 엣지AI 적용을 위한 AI모형 경량화 방법론 개발",
+    "funder": "한국연구재단",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2025.04–2025.10",
+    "title": "학생배치 최적화를 위한 학생 유발률 산정 방식 타당성 검증 및 AI 기반 개선 연구",
+    "funder": "부산교육청",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2022.09–2025.02",
+    "title": "AI 기반 이벤트로그 라이프사이클 관리 방법론 연구",
+    "funder": "한국연구재단",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2022.04–2025.12",
+    "title": "해운-항만-운송기업 간 물류연계 최적화서비스 개발",
+    "funder": "해양수산부",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2024.03–2025.02",
+    "title": "스마트 에어솔루션 공감지능 기술개발",
+    "funder": "LG전자",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2024.10–2024.11",
+    "title": "공기압축기 데이터 분석 및 고장예측 연구",
+    "funder": "삼성중공업",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2022.03–2024.12",
+    "title": "디지털스마트아카데미 부산",
+    "funder": "정보통신기획평가원",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2021.01–2024.12",
+    "title": "해사안전의 정량적 평가를 위한 지표 개발",
+    "funder": "해양수산과학기술진흥원",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2024.04–2024.07",
+    "title": "강원특별자치도 미래형 교원 조직 체제 구상 연구",
+    "funder": "강원특별자치도교육청",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2024.10–2024.12",
+    "title": "학교급식 AI 식단분석을 통한 맞춤형 식생활 교육 방안",
+    "funder": "대구미래교육연구원",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2024.03–2024.12",
+    "title": "학생의 글로벌 경제금융역량 평가 및 학교교육의 영향 연구",
+    "funder": "대구미래교육연구원",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2023.07–2023.12",
+    "title": "수산물 수요 및 공급 예측 알고리즘 개발",
+    "funder": "LINC3.0",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2023.10–2024.07",
+    "title": "삼성중공업 거제조선소 블록 물류 최적화",
+    "funder": "삼성중공업",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2022.09–2022.12",
+    "title": "AI 기반 제조프로세스 모니터링 기술 개발",
+    "funder": "LINC3.0",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2022.04–2023.02",
+    "title": "대구광역시 학생 수 급감에 따른 학생 수용방안 연구",
+    "funder": "대구미래교육연구원",
+    "role": "공동"
+  },
+  {
+    "status": "completed",
+    "period": "2021.08–2022.01",
+    "title": "인공지능 기반 비정형 이벤트 데이터 처리 기술 개발",
+    "funder": "아이오코드",
+    "role": "책임"
+  },
+  {
+    "status": "completed",
+    "period": "2020.09–2021.02",
+    "title": "프로세스 자가 재설계 및 최적화를 위한 AI 기반 자동화 프로세스 마이닝 연구",
+    "funder": "한국연구재단",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2019.05–2021.02",
+    "title": "스마트 항만 IoT 인프라 구축기술 개발",
+    "funder": "해양수산부",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2020.09–2021.01",
+    "title": "해양수산 빅데이터 플랫폼 및 센터 구축 사업",
+    "funder": "한국지능정보사회진흥원",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2020.01–2020.12",
+    "title": "AI 기반 e-Navi 정보와 항만운영상황 실시간 인터페이스",
+    "funder": "해양수산과학기술진흥원",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2020.02–2020.11",
+    "title": "빅데이터 시범분석 및 플랫폼 연구 용역",
+    "funder": "한국예탁결제원",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2018.12–2020.11",
+    "title": "생산성 혁신을 위한 프로세스 기반 시뮬레이션 어낼리틱스",
+    "funder": "중소기업기술정보진흥원",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2019.07–2019.11",
+    "title": "인공지능 기반 지능형 항만 물류 데이터 처리 기술 연구",
+    "funder": "해양수산부",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2019.05–2019.10",
+    "title": "부산항 선박 ETA/RTA 데이터 분석 및 구축 용역",
+    "funder": "부산항만공사",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2017.11–2019.10",
+    "title": "빅데이터를 활용한 해운시장분석 연구",
+    "funder": "KMI",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2016.07–2018.10",
+    "title": "주문 맞춤형 유연생산 공정 최적설계 자동화 기술개발",
+    "funder": "스마트공장고도화",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2015.11–2018.10",
+    "title": "항만 간 코오피티션을 위한 프로세스 마이닝 기반 업무개선",
+    "funder": "한국연구재단",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2016.07–2017.06",
+    "title": "빅데이터 기반 물류 최적 수립 툴 개발",
+    "funder": "삼성중공업",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2015.07–2016.07",
+    "title": "차량부품제조업 생산성향상 및 품질 혁신을 위한 스마트 팩토리 서비스",
+    "funder": "부산테크노파크",
+    "role": "참여"
+  },
+  {
+    "status": "completed",
+    "period": "2015.07–2015.11",
+    "title": "부산 클라우드 컴퓨팅 도입 및 확산 전략 연구용역",
+    "funder": "부산정보산업진흥원",
+    "role": "참여"
+  }
+]
