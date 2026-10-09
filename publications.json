@@ -43,7 +43,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-001"
   },
   {
     "year": 2026,
@@ -66,7 +67,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-002"
   },
   {
     "year": 2026,
@@ -104,7 +106,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-003"
   },
   {
     "year": 2026,
@@ -157,7 +160,8 @@
         "roles": [],
         "corresponding_source": false
       }
-    ]
+    ],
+    "venue_id": "venue-004"
   },
   {
     "year": 2026,
@@ -201,7 +205,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-003"
   },
   {
     "year": 2026,
@@ -254,7 +259,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-005"
   },
   {
     "year": 2026,
@@ -287,7 +293,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-006"
   },
   {
     "year": 2026,
@@ -319,7 +326,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-007"
   },
   {
     "year": 2026,
@@ -369,7 +377,8 @@
         ],
         "corresponding_source": true
       }
-    ]
+    ],
+    "venue_id": "venue-008"
   },
   {
     "year": 2026,
@@ -408,7 +417,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Oct"
+    "month": "Oct",
+    "venue_id": "venue-009"
   },
   {
     "year": 2026,
@@ -453,7 +463,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Sep"
+    "month": "Sep",
+    "venue_id": "venue-009"
   },
   {
     "year": 2026,
@@ -622,7 +633,8 @@
         "corresponding_source": false
       }
     ],
-    "month": "Sep"
+    "month": "Sep",
+    "venue_id": "venue-010"
   },
   {
     "year": 2026,
@@ -672,7 +684,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Sep"
+    "month": "Sep",
+    "venue_id": "venue-011"
   },
   {
     "year": 2026,
@@ -755,7 +768,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jul"
+    "month": "Jul",
+    "venue_id": "venue-012"
   },
   {
     "year": 2026,
@@ -803,7 +817,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jul"
+    "month": "Jul",
+    "venue_id": "venue-008"
   },
   {
     "year": 2026,
@@ -862,7 +877,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jul"
+    "month": "Jul",
+    "venue_id": "venue-013"
   },
   {
     "year": 2026,
@@ -899,7 +915,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "May"
+    "month": "May",
+    "venue_id": "venue-009"
   },
   {
     "year": 2025,
@@ -949,7 +966,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Nov"
+    "month": "Nov",
+    "venue_id": "venue-014"
   },
   {
     "year": 2025,
@@ -1011,7 +1029,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Nov"
+    "month": "Nov",
+    "venue_id": "venue-015"
   },
   {
     "year": 2025,
@@ -1062,7 +1081,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Sep"
+    "month": "Sep",
+    "venue_id": "venue-008"
   },
   {
     "year": 2025,
@@ -1108,7 +1128,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jul"
+    "month": "Jul",
+    "venue_id": "venue-009"
   },
   {
     "year": 2024,
@@ -1147,7 +1168,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Aug"
+    "month": "Aug",
+    "venue_id": "venue-009"
   },
   {
     "year": 2024,
@@ -1188,7 +1210,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jun"
+    "month": "Jun",
+    "venue_id": "venue-008"
   },
   {
     "year": 2024,
@@ -1233,7 +1256,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Mar"
+    "month": "Mar",
+    "venue_id": "venue-009"
   },
   {
     "year": 2023,
@@ -1275,7 +1299,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Oct"
+    "month": "Oct",
+    "venue_id": "venue-016"
   },
   {
     "year": 2023,
@@ -1315,7 +1340,8 @@
         "corresponding_source": false
       }
     ],
-    "month": "Jan"
+    "month": "Jan",
+    "venue_id": "venue-017"
   },
   {
     "year": 2022,
@@ -1356,7 +1382,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Oct"
+    "month": "Oct",
+    "venue_id": "venue-014"
   },
   {
     "year": 2022,
@@ -1407,7 +1434,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Feb"
+    "month": "Feb",
+    "venue_id": "venue-008"
   },
   {
     "year": 2021,
@@ -1446,7 +1474,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Jul"
+    "month": "Jul",
+    "venue_id": "venue-018"
   },
   {
     "year": 2021,
@@ -1483,7 +1512,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Feb"
+    "month": "Feb",
+    "venue_id": "venue-019"
   },
   {
     "year": 2020,
@@ -1544,7 +1574,8 @@
         "corresponding_source": false
       }
     ],
-    "month": "May"
+    "month": "May",
+    "venue_id": "venue-009"
   },
   {
     "year": 2020,
@@ -1587,7 +1618,8 @@
         "corresponding_source": false
       }
     ],
-    "month": "Feb"
+    "month": "Feb",
+    "venue_id": "venue-020"
   },
   {
     "year": 2018,
@@ -1666,7 +1698,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "May"
+    "month": "May",
+    "venue_id": "venue-021"
   },
   {
     "year": 2018,
@@ -1711,7 +1744,8 @@
         "corresponding_source": false
       }
     ],
-    "month": "Mar"
+    "month": "Mar",
+    "venue_id": "venue-022"
   },
   {
     "year": 2016,
@@ -1748,7 +1782,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Nov"
+    "month": "Nov",
+    "venue_id": "venue-021"
   },
   {
     "year": 2016,
@@ -1785,7 +1820,8 @@
         "corresponding_source": true
       }
     ],
-    "month": "Mar"
+    "month": "Mar",
+    "venue_id": "venue-009"
   },
   {
     "year": 2026,
@@ -1798,7 +1834,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Efficient & Edge AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-023"
   },
   {
     "year": 2026,
@@ -1811,7 +1848,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-023"
   },
   {
     "year": 2026,
@@ -1824,7 +1862,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Efficient & Edge AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-023"
   },
   {
     "year": 2025,
@@ -1839,7 +1878,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-024"
   },
   {
     "year": 2025,
@@ -1852,7 +1892,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-024"
   },
   {
     "year": 2025,
@@ -1867,7 +1908,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Efficient & Edge AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-024"
   },
   {
     "year": 2025,
@@ -1880,7 +1922,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-025"
   },
   {
     "year": 2025,
@@ -1893,7 +1936,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Domain-Specific Foundation Models",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-025"
   },
   {
     "year": 2025,
@@ -1906,7 +1950,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-026"
   },
   {
     "year": 2025,
@@ -1919,7 +1964,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Domain-Specific Foundation Models",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-026"
   },
   {
     "year": 2024,
@@ -1932,7 +1978,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Representation & Self-Supervised Learning",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-027"
   },
   {
     "year": 2024,
@@ -1948,7 +1995,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-028"
   },
   {
     "year": 2024,
@@ -1961,7 +2009,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-028"
   },
   {
     "year": 2024,
@@ -1974,7 +2023,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Representation & Self-Supervised Learning",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-029"
   },
   {
     "year": 2024,
@@ -1987,7 +2037,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-029"
   },
   {
     "year": 2024,
@@ -2000,7 +2051,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Representation & Self-Supervised Learning",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-030"
   },
   {
     "year": 2024,
@@ -2013,7 +2065,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Domain-Specific Foundation Models",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-030"
   },
   {
     "year": 2023,
@@ -2026,7 +2079,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Representation & Self-Supervised Learning",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-031"
   },
   {
     "year": 2023,
@@ -2039,7 +2093,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-032"
   },
   {
     "year": 2023,
@@ -2054,7 +2109,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Representation & Self-Supervised Learning",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-033"
   },
   {
     "year": 2023,
@@ -2069,7 +2125,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-033"
   },
   {
     "year": 2023,
@@ -2082,7 +2139,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-034"
   },
   {
     "year": 2019,
@@ -2095,7 +2153,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-035"
   },
   {
     "year": 2018,
@@ -2108,7 +2167,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-036"
   },
   {
     "year": 2016,
@@ -2121,7 +2181,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-037"
   },
   {
     "year": 2016,
@@ -2134,7 +2195,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-038"
   },
   {
     "year": 2015,
@@ -2147,7 +2209,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-039"
   },
   {
     "year": 2025,
@@ -2160,7 +2223,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Domain-Specific Foundation Models",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2025,
@@ -2173,7 +2237,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2025,
@@ -2186,7 +2251,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2024,
@@ -2199,7 +2265,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-041"
   },
   {
     "year": 2024,
@@ -2212,7 +2279,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-041"
   },
   {
     "year": 2024,
@@ -2225,7 +2293,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2024,
@@ -2238,7 +2307,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2023,
@@ -2251,7 +2321,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-042"
   },
   {
     "year": 2023,
@@ -2264,7 +2335,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Efficient & Edge AI",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2023,
@@ -2277,7 +2349,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2023,
@@ -2290,7 +2363,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2022,
@@ -2303,7 +2377,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Explainable & Decision Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-041"
   },
   {
     "year": 2022,
@@ -2316,7 +2391,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-043"
   },
   {
     "year": 2022,
@@ -2329,7 +2405,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2019,
@@ -2342,7 +2419,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   },
   {
     "year": 2018,
@@ -2355,7 +2433,8 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-041"
   },
   {
     "year": 2018,
@@ -2368,6 +2447,7 @@
     "jcr_year": null,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
-    "authors": []
+    "authors": [],
+    "venue_id": "venue-040"
   }
 ]

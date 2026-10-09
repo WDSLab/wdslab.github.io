@@ -1,0 +1,273 @@
+{
+  "description": "Canonical publication venues, based on existing WDSLab publication records. Conference venues are retained but excluded from journal counts.",
+  "venues": [
+    {
+      "venue_id": "venue-001",
+      "canonical_name": "Journal of Cleaner Production",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-002",
+      "canonical_name": "Technological Forecasting and Social Change",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-003",
+      "canonical_name": "Engineering Applications of Artificial Intelligence",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-004",
+      "canonical_name": "Journal of Manufacturing Technology Management",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-005",
+      "canonical_name": "Journal of Manufacturing Systems",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-006",
+      "canonical_name": "Knowledge-Based Systems",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-007",
+      "canonical_name": "IEEE Transactions on Industrial Informatics",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-008",
+      "canonical_name": "IEEE Access",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-009",
+      "canonical_name": "ICIC Express Letters",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-010",
+      "canonical_name": "Korean Circulation Journal",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-011",
+      "canonical_name": "Information Processing & Management",
+      "type": "Journal",
+      "aliases": [
+        "IP&M"
+      ]
+    },
+    {
+      "venue_id": "venue-012",
+      "canonical_name": "Annals of Intensive Care",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-013",
+      "canonical_name": "Journal of Forecasting",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-014",
+      "canonical_name": "Transportation Research Part D: Transport and Environment",
+      "type": "Journal",
+      "aliases": [
+        "Transportation Research Part D",
+        "TR-D"
+      ]
+    },
+    {
+      "venue_id": "venue-015",
+      "canonical_name": "Ocean Engineering",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-016",
+      "canonical_name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+      "type": "Journal",
+      "aliases": [
+        "IEEE TPAMI",
+        "TPAMI"
+      ]
+    },
+    {
+      "venue_id": "venue-017",
+      "canonical_name": "IEEE Transactions on Services Computing",
+      "type": "Journal",
+      "aliases": [
+        "IEEE TSC"
+      ]
+    },
+    {
+      "venue_id": "venue-018",
+      "canonical_name": "International Journal of Industrial Ergonomics",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-019",
+      "canonical_name": "Maritime Transport Research",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-020",
+      "canonical_name": "Applied Sciences",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-021",
+      "canonical_name": "ICIC Express Letters Part B",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-022",
+      "canonical_name": "International Journal of Cooperative Information Systems",
+      "type": "Journal",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-023",
+      "canonical_name": "ICECET2026 · Rome",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-024",
+      "canonical_name": "ICICIC2025 · Kitakyushu",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-025",
+      "canonical_name": "ICECET2025 · Paris",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-026",
+      "canonical_name": "Maastricht",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-027",
+      "canonical_name": "CogMI2024 · Washington DC",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-028",
+      "canonical_name": "ICICIC2024 · Qinhuangdao",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-029",
+      "canonical_name": "LOGMS2024 · Hamburg",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-030",
+      "canonical_name": "Busan",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-031",
+      "canonical_name": "CogMI2023 · Atlanta",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-032",
+      "canonical_name": "LOGMS2023 · Busan",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-033",
+      "canonical_name": "ICICIC2023 · Kumamoto",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-034",
+      "canonical_name": "ICAIIC2023 · Bali",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-035",
+      "canonical_name": "ICPM2019 · Aachen",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-036",
+      "canonical_name": "ICICIC2018 · Lianyungang",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-037",
+      "canonical_name": "CIC2016 · Atlanta",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-038",
+      "canonical_name": "ICICIC2016 · Harbin",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-039",
+      "canonical_name": "BFSA2015 · Kumamoto",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-040",
+      "canonical_name": "춘계대한산업공학회",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-041",
+      "canonical_name": "추계대한산업공학회",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-042",
+      "canonical_name": "추계해양환경안전학회",
+      "type": "Conference",
+      "aliases": []
+    },
+    {
+      "venue_id": "venue-043",
+      "canonical_name": "하계한국자료분석학회",
+      "type": "Conference",
+      "aliases": []
+    }
+  ]
+}
