@@ -485,7 +485,7 @@
     "jcr_category": null,
     "if_as_listed_on_original": 3.4,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Clinical Data Science",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Changwon Shin",
@@ -720,7 +720,7 @@
     "top_percentile_as_listed_on_original": "Top 10%",
     "doi": "https://doi.org/10.1016/j.aicoj.2026.100125",
     "publisher_url": "https://www.sciencedirect.com/science/article/pii/S2110582026001603",
-    "research_area": "Clinical Data Science",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Min Ho Ju",
@@ -1065,7 +1065,9 @@
     "venue": "IEEE Access",
     "status": "Published",
     "category": "International Journal",
-    "links": {},
+    "links": {
+      "doi": "https://doi.org/10.1109/ACCESS.2025.3607444"
+    },
     "jcr_quartile": "Q2",
     "jcr_year": 2025,
     "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
@@ -1207,7 +1209,8 @@
     "status": "Published",
     "category": "International Journal",
     "links": {
-      "github": "https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering"
+      "github": "https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering",
+      "doi": "https://doi.org/10.1109/ACCESS.2024.3417348"
     },
     "jcr_quartile": "Q2",
     "jcr_year": 2025,

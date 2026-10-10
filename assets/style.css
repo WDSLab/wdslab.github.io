@@ -390,3 +390,6 @@
 .author-members-legend strong{color:#172f40;font-weight:800}
 
 @media(max-width:600px){.selected-papers-section .paper-card-ordered > .paper-card-top{flex-wrap:wrap}}
+
+/* Publication authorship details in news announcements */
+.news-authorship{margin:8px 0 0!important;color:#667b8d;font-size:12px;line-height:1.65!important}.news-authorship strong{color:#30495e}.news-authorship span{padding:0 4px}.news-member-note{margin:0 0 16px;color:#63798b;font-size:12px}.news-member-note strong{color:#30495e}
