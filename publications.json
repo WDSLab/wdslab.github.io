@@ -11,7 +11,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Dahyun Kang",
@@ -56,7 +56,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Industrial AI",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -120,7 +120,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Industrial AI",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -223,7 +223,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Jaehoon Lee",
@@ -485,7 +485,7 @@
     "jcr_category": null,
     "if_as_listed_on_original": 3.4,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Clinical Data Science",
     "authors": [
       {
         "name": "Changwon Shin",
@@ -720,7 +720,7 @@
     "top_percentile_as_listed_on_original": "Top 10%",
     "doi": "https://doi.org/10.1016/j.aicoj.2026.100125",
     "publisher_url": "https://www.sciencedirect.com/science/article/pii/S2110582026001603",
-    "research_area": "Industrial Intelligence",
+    "research_area": "Clinical Data Science",
     "authors": [
       {
         "name": "Min Ho Ju",
@@ -805,7 +805,7 @@
     "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Younghwi Kim",
@@ -855,7 +855,7 @@
     "jcr_category": null,
     "if_as_listed_on_original": 2.6,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Hanbyeol Park",
@@ -1009,7 +1009,7 @@
     "jcr_category": "ENGINEERING, MARINE",
     "if_as_listed_on_original": 6.3,
     "top_percentile_as_listed_on_original": "Top 3%",
-    "research_area": "Spatiotemporal & Multimodal AI",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Suhyun Jo",
@@ -1071,7 +1071,7 @@
     "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Hanbyeol Park",
@@ -1256,7 +1256,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Dohee Kim",
@@ -1306,7 +1306,7 @@
     "jcr_category": "ENGINEERING, ELECTRICAL & ELECTRONIC",
     "if_as_listed_on_original": 20.4,
     "top_percentile_as_listed_on_original": "Top 1%",
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -1349,7 +1349,7 @@
     "jcr_quartile": "Q1",
     "jcr_year": 2025,
     "jcr_category": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -1436,7 +1436,7 @@
     "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -1490,7 +1490,7 @@
     "jcr_category": "ERGONOMICS",
     "if_as_listed_on_original": 3.6,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Clinical Data Science",
     "authors": [
       {
         "name": "Ilseok Lee",
@@ -1530,7 +1530,7 @@
     "jcr_quartile": "Q1",
     "jcr_year": 2025,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Spatiotemporal & Multimodal AI",
     "authors": [
       {
         "name": "Kikun Park",
@@ -1570,7 +1570,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Imam Mustafa Kamal",
@@ -1634,7 +1634,7 @@
     "jcr_category": null,
     "if_as_listed_on_original": 2.9,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [
       {
         "name": "Imam Mustafa Kamal",
@@ -1678,7 +1678,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Natanael Yabes Wirawan",
@@ -1760,7 +1760,7 @@
     "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 1.1,
     "top_percentile_as_listed_on_original": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -1806,7 +1806,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [
       {
         "name": "Sunghyun Sim",
@@ -1844,7 +1844,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Industrial AI",
     "authors": [
       {
         "name": "Byeongjun Joo",
@@ -1896,7 +1896,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Industrial AI",
     "authors": [],
     "venue_id": "venue-023"
   },
@@ -1998,7 +1998,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-026"
   },
@@ -2057,7 +2057,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-028"
   },
@@ -2173,7 +2173,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-033"
   },
@@ -2187,7 +2187,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-034"
   },
@@ -2201,7 +2201,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-035"
   },
@@ -2215,7 +2215,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-036"
   },
@@ -2229,7 +2229,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-037"
   },
@@ -2243,7 +2243,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-038"
   },
@@ -2257,7 +2257,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Industrial AI",
     "authors": [],
     "venue_id": "venue-039"
   },
@@ -2285,7 +2285,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Spatiotemporal & Multimodal AI",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2299,7 +2299,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Efficient & Edge AI",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2313,7 +2313,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Domain-Specific Foundation Models",
     "authors": [],
     "venue_id": "venue-041"
   },
@@ -2327,7 +2327,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Spatiotemporal & Multimodal AI",
     "authors": [],
     "venue_id": "venue-041"
   },
@@ -2341,7 +2341,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2355,7 +2355,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Representation & Self-Supervised Learning",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2369,7 +2369,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Domain-Specific Foundation Models",
     "authors": [],
     "venue_id": "venue-042"
   },
@@ -2397,7 +2397,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2411,7 +2411,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Representation & Self-Supervised Learning",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2425,7 +2425,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
+    "research_area": "Explainable AI & Decision Support",
     "authors": [],
     "venue_id": "venue-041"
   },
@@ -2439,7 +2439,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-043"
   },
@@ -2453,7 +2453,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2467,7 +2467,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-040"
   },
@@ -2481,7 +2481,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-041"
   },
@@ -2495,7 +2495,7 @@
     "jcr_quartile": null,
     "jcr_year": null,
     "jcr_category": null,
-    "research_area": "Industrial Intelligence",
+    "research_area": "Time-Series Forecasting & Analytics",
     "authors": [],
     "venue_id": "venue-040"
   }
