@@ -354,13 +354,17 @@
       {
         "name": "Dohee Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "제1저자"
+        ],
         "corresponding_source": false
       },
       {
         "name": "Kikun Park",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "제1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -473,8 +477,8 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
     "jcr_category": null,
     "if_as_listed_on_original": 3.4,
     "top_percentile_as_listed_on_original": null,
@@ -491,7 +495,9 @@
       {
         "name": "Sunghyun Sim",
         "lab": true,
-        "roles": [],
+        "roles": [
+          "제1저자"
+        ],
         "corresponding_source": false
       },
       {
@@ -623,18 +629,24 @@
       {
         "name": "Kitae Kim",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": false
       },
       {
         "name": "Min Ho Ju",
         "lab": false,
-        "roles": [],
+        "roles": [
+          "교신저자"
+        ],
         "corresponding_source": false
       }
     ],
     "month": "Sep",
-    "venue_id": "venue-010"
+    "venue_id": "venue-010",
+    "jcr_best_top_percent": 30.43,
+    "jcr_jif": 3.1
   },
   {
     "year": 2026,
@@ -646,9 +658,9 @@
       "github": "https://github.com/WDSLab/Legacy-Learning",
       "doi": "https://doi.org/10.1016/j.ipm.2026.104721"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
     "if_as_listed_on_original": 8.1,
     "top_percentile_as_listed_on_original": "Top 5%",
     "research_area": "Representation & Self-Supervised Learning",
@@ -685,7 +697,9 @@
       }
     ],
     "month": "Sep",
-    "venue_id": "venue-011"
+    "venue_id": "venue-011",
+    "jcr_best_top_percent": 5.81,
+    "jcr_jif": 8.1
   },
   {
     "year": 2026,
@@ -696,8 +710,8 @@
     "links": {
       "doi": "https://doi.org/10.1016/j.aicoj.2026.100125"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
     "jcr_category": null,
     "if_as_listed_on_original": 6.9,
     "top_percentile_as_listed_on_original": "Top 10%",
@@ -769,7 +783,9 @@
       }
     ],
     "month": "Jul",
-    "venue_id": "venue-012"
+    "venue_id": "venue-012",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 6.9
   },
   {
     "year": 2026,
@@ -781,9 +797,9 @@
       "github": "https://github.com/WDSLab/Distributed-Lag-Transformer",
       "doi": "https://doi.org/10.1109/ACCESS.2026.3713022"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Industrial Intelligence",
@@ -818,7 +834,9 @@
       }
     ],
     "month": "Jul",
-    "venue_id": "venue-008"
+    "venue_id": "venue-008",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 4.2
   },
   {
     "year": 2026,
@@ -829,8 +847,8 @@
     "links": {
       "doi": "https://doi.org/10.1002/for.70194"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
     "jcr_category": null,
     "if_as_listed_on_original": 2.6,
     "top_percentile_as_listed_on_original": null,
@@ -878,7 +896,9 @@
       }
     ],
     "month": "Jul",
-    "venue_id": "venue-013"
+    "venue_id": "venue-013",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 2.6
   },
   {
     "year": 2026,
@@ -928,9 +948,9 @@
       "github": "https://github.com/WDSLab/Spatiotemporal-Topology-aware-Transformer",
       "doi": "https://doi.org/10.1016/j.trd.2025.105134"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "TRANSPORTATION",
     "if_as_listed_on_original": 8.7,
     "top_percentile_as_listed_on_original": "Top 7%",
     "research_area": "Spatiotemporal & Multimodal AI",
@@ -967,7 +987,9 @@
       }
     ],
     "month": "Nov",
-    "venue_id": "venue-014"
+    "venue_id": "venue-014",
+    "jcr_best_top_percent": 7.58,
+    "jcr_jif": 8.7
   },
   {
     "year": 2025,
@@ -979,9 +1001,9 @@
       "github": "https://github.com/WDSLab/MCRA_GradCAM",
       "doi": "https://doi.org/10.1016/j.oceaneng.2025.123452"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "ENGINEERING, MARINE",
     "if_as_listed_on_original": 6.3,
     "top_percentile_as_listed_on_original": "Top 3%",
     "research_area": "Spatiotemporal & Multimodal AI",
@@ -1030,7 +1052,9 @@
       }
     ],
     "month": "Nov",
-    "venue_id": "venue-015"
+    "venue_id": "venue-015",
+    "jcr_best_top_percent": 3.85,
+    "jcr_jif": 6.3
   },
   {
     "year": 2025,
@@ -1039,9 +1063,9 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Industrial Intelligence",
@@ -1082,7 +1106,9 @@
       }
     ],
     "month": "Sep",
-    "venue_id": "venue-008"
+    "venue_id": "venue-008",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 4.2
   },
   {
     "year": 2025,
@@ -1180,9 +1206,9 @@
     "links": {
       "github": "https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Representation & Self-Supervised Learning",
@@ -1211,7 +1237,9 @@
       }
     ],
     "month": "Jun",
-    "venue_id": "venue-008"
+    "venue_id": "venue-008",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 4.2
   },
   {
     "year": 2024,
@@ -1267,11 +1295,12 @@
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/Correlation-Recurrent-Units",
-      "paper": "https://ieeexplore.ieee.org/document/10264112"
+      "paper": "https://ieeexplore.ieee.org/document/10264112",
+      "doi": "https://doi.org/10.1109/TPAMI.2023.3319557"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "ENGINEERING, ELECTRICAL & ELECTRONIC",
     "if_as_listed_on_original": 20.4,
     "top_percentile_as_listed_on_original": "Top 1%",
     "research_area": "Industrial Intelligence",
@@ -1300,7 +1329,9 @@
       }
     ],
     "month": "Oct",
-    "venue_id": "venue-016"
+    "venue_id": "venue-016",
+    "jcr_best_top_percent": 1.08,
+    "jcr_jif": 20.4
   },
   {
     "year": 2023,
@@ -1312,9 +1343,9 @@
       "github": "https://github.com/WDSLab/Bagging-Recurrent-Event-Imputation",
       "paper": "https://ieeexplore.ieee.org/document/9566796"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
     "research_area": "Explainable & Decision Intelligence",
     "authors": [
       {
@@ -1341,7 +1372,10 @@
       }
     ],
     "month": "Jan",
-    "venue_id": "venue-017"
+    "venue_id": "venue-017",
+    "jcr_jif": 6.2,
+    "jcr_best_top_percent": 10.16,
+    "top_percentile_as_listed_on_original": "Top 10%"
   },
   {
     "year": 2022,
@@ -1352,9 +1386,9 @@
     "links": {
       "doi": "https://doi.org/10.1016/j.trd.2022.103431"
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "TRANSPORTATION",
     "if_as_listed_on_original": 8.7,
     "top_percentile_as_listed_on_original": "Top 7%",
     "research_area": "Spatiotemporal & Multimodal AI",
@@ -1383,7 +1417,9 @@
       }
     ],
     "month": "Oct",
-    "venue_id": "venue-014"
+    "venue_id": "venue-014",
+    "jcr_best_top_percent": 7.58,
+    "jcr_jif": 8.7
   },
   {
     "year": 2022,
@@ -1392,9 +1428,9 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 4.2,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Explainable & Decision Intelligence",
@@ -1435,7 +1471,9 @@
       }
     ],
     "month": "Feb",
-    "venue_id": "venue-008"
+    "venue_id": "venue-008",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 4.2
   },
   {
     "year": 2021,
@@ -1444,9 +1482,9 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
+    "jcr_category": "ERGONOMICS",
     "if_as_listed_on_original": 3.6,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Industrial Intelligence",
@@ -1475,7 +1513,9 @@
       }
     ],
     "month": "Jul",
-    "venue_id": "venue-018"
+    "venue_id": "venue-018",
+    "jcr_best_top_percent": 25.0,
+    "jcr_jif": 3.0
   },
   {
     "year": 2021,
@@ -1484,8 +1524,8 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": "Q1",
+    "jcr_year": 2025,
     "jcr_category": null,
     "research_area": "Industrial Intelligence",
     "authors": [
@@ -1513,7 +1553,9 @@
       }
     ],
     "month": "Feb",
-    "venue_id": "venue-019"
+    "venue_id": "venue-019",
+    "jcr_best_top_percent": 21.31,
+    "jcr_jif": 4.8
   },
   {
     "year": 2020,
@@ -1584,8 +1626,8 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": "Q2",
+    "jcr_year": 2025,
     "jcr_category": null,
     "if_as_listed_on_original": 2.9,
     "top_percentile_as_listed_on_original": null,
@@ -1619,7 +1661,9 @@
       }
     ],
     "month": "Feb",
-    "venue_id": "venue-020"
+    "venue_id": "venue-020",
+    "jcr_best_top_percent": null,
+    "jcr_jif": 2.9
   },
   {
     "year": 2018,
@@ -1708,9 +1752,9 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
+    "jcr_quartile": "Q4",
+    "jcr_year": 2025,
+    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
     "if_as_listed_on_original": 1.1,
     "top_percentile_as_listed_on_original": null,
     "research_area": "Explainable & Decision Intelligence",
@@ -1745,7 +1789,9 @@
       }
     ],
     "month": "Mar",
-    "venue_id": "venue-022"
+    "venue_id": "venue-022",
+    "jcr_best_top_percent": 82.33,
+    "jcr_jif": null
   },
   {
     "year": 2016,

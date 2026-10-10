@@ -5,61 +5,137 @@
       "venue_id": "venue-001",
       "canonical_name": "Journal of Cleaner Production",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-002",
       "canonical_name": "Technological Forecasting and Social Change",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-003",
       "canonical_name": "Engineering Applications of Artificial Intelligence",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-004",
       "canonical_name": "Journal of Manufacturing Technology Management",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-005",
       "canonical_name": "Journal of Manufacturing Systems",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-006",
       "canonical_name": "Knowledge-Based Systems",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-007",
       "canonical_name": "IEEE Transactions on Industrial Informatics",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-008",
       "canonical_name": "IEEE Access",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 4.2,
+        "best_quartile": "Q2",
+        "best_top_percent": null,
+        "top_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "category_rank": null,
+        "source_url": "https://www.peeref.com/journals/10017/ieee-access",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-009",
       "canonical_name": "ICIC Express Letters",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-010",
       "canonical_name": "Korean Circulation Journal",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 3.1,
+        "best_quartile": "Q2",
+        "best_top_percent": 30.43,
+        "top_category": null,
+        "category_rank": "70/230",
+        "source_url": "https://journalsimpactfactors.com/journal.php?id=4759",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-011",
@@ -67,19 +143,49 @@
       "type": "Journal",
       "aliases": [
         "IP&M"
-      ]
+      ],
+      "jcr_2025": {
+        "jif": 8.1,
+        "best_quartile": "Q1",
+        "best_top_percent": 5.81,
+        "top_category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+        "category_rank": "10/172",
+        "source_url": "https://scholar.pusan.ac.kr/journals/13888",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-012",
       "canonical_name": "Annals of Intensive Care",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 6.9,
+        "best_quartile": "Q1",
+        "best_top_percent": null,
+        "top_category": null,
+        "category_rank": null,
+        "source_url": "https://referencecitationanalysis.com/InCiteJournalInfo?id=2093",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-013",
       "canonical_name": "Journal of Forecasting",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 2.6,
+        "best_quartile": "Q2",
+        "best_top_percent": null,
+        "top_category": null,
+        "category_rank": null,
+        "source_url": "https://www.iit.comillas.edu/publicacion/info_revista/en/992/Journal_of_Forecasting",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-014",
@@ -88,13 +194,33 @@
       "aliases": [
         "Transportation Research Part D",
         "TR-D"
-      ]
+      ],
+      "jcr_2025": {
+        "jif": 8.7,
+        "best_quartile": "Q1",
+        "best_top_percent": 7.58,
+        "top_category": "TRANSPORTATION",
+        "category_rank": "5/66",
+        "source_url": "https://scholar.pusan.ac.kr/journals/17444/",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-015",
       "canonical_name": "Ocean Engineering",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 6.3,
+        "best_quartile": "Q1",
+        "best_top_percent": 3.85,
+        "top_category": "ENGINEERING, MARINE",
+        "category_rank": "1/26",
+        "source_url": "https://akaturk.com/journals/28339?lang=en",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-016",
@@ -103,7 +229,17 @@
       "aliases": [
         "IEEE TPAMI",
         "TPAMI"
-      ]
+      ],
+      "jcr_2025": {
+        "jif": 20.4,
+        "best_quartile": "Q1",
+        "best_top_percent": 1.08,
+        "top_category": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "category_rank": "4/369",
+        "source_url": "https://scholar.pusan.ac.kr/journals/10174/",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-017",
@@ -111,163 +247,367 @@
       "type": "Journal",
       "aliases": [
         "IEEE TSC"
-      ]
+      ],
+      "jcr_2025": {
+        "jif": 6.2,
+        "best_quartile": "Q1",
+        "best_top_percent": 10.16,
+        "source_url": "https://www.akaturk.com/journals/18300156728?lang=en",
+        "edition": 2026,
+        "top_category": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+        "category_rank": "13/128",
+        "source_type": "public secondary journal metrics"
+      }
     },
     {
       "venue_id": "venue-018",
       "canonical_name": "International Journal of Industrial Ergonomics",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 3.0,
+        "best_quartile": "Q1",
+        "best_top_percent": 25.0,
+        "top_category": "ERGONOMICS",
+        "category_rank": "6/24",
+        "source_url": "https://www.akaturk.com/journals/12385?lang=en",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-019",
       "canonical_name": "Maritime Transport Research",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 4.8,
+        "best_quartile": "Q1",
+        "best_top_percent": 21.31,
+        "top_category": null,
+        "category_rank": "13/61",
+        "source_url": "https://journalsimpactfactors.com/journal.php?id=2237",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-020",
       "canonical_name": "Applied Sciences",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": 2.9,
+        "best_quartile": "Q2",
+        "best_top_percent": null,
+        "top_category": null,
+        "category_rank": null,
+        "source_url": "https://www.iit.comillas.edu/publicacion/info_revista/en/468/Applied_Sciences",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-021",
       "canonical_name": "ICIC Express Letters Part B",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-022",
       "canonical_name": "International Journal of Cooperative Information Systems",
       "type": "Journal",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": "Q4",
+        "best_top_percent": 82.33,
+        "top_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "category_rank": "219/266",
+        "source_url": "https://www.ablesci.com/journal/detail?id=rA4gbD",
+        "source_type": "public secondary / university journal profile",
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-023",
       "canonical_name": "ICECET2026 · Rome",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-024",
       "canonical_name": "ICICIC2025 · Kitakyushu",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-025",
       "canonical_name": "ICECET2025 · Paris",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-026",
       "canonical_name": "Maastricht",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-027",
       "canonical_name": "CogMI2024 · Washington DC",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-028",
       "canonical_name": "ICICIC2024 · Qinhuangdao",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-029",
       "canonical_name": "LOGMS2024 · Hamburg",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-030",
       "canonical_name": "Busan",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-031",
       "canonical_name": "CogMI2023 · Atlanta",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-032",
       "canonical_name": "LOGMS2023 · Busan",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-033",
       "canonical_name": "ICICIC2023 · Kumamoto",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-034",
       "canonical_name": "ICAIIC2023 · Bali",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-035",
       "canonical_name": "ICPM2019 · Aachen",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-036",
       "canonical_name": "ICICIC2018 · Lianyungang",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-037",
       "canonical_name": "CIC2016 · Atlanta",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-038",
       "canonical_name": "ICICIC2016 · Harbin",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-039",
       "canonical_name": "BFSA2015 · Kumamoto",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-040",
       "canonical_name": "춘계대한산업공학회",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-041",
       "canonical_name": "추계대한산업공학회",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-042",
       "canonical_name": "추계해양환경안전학회",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     },
     {
       "venue_id": "venue-043",
       "canonical_name": "하계한국자료분석학회",
       "type": "Conference",
-      "aliases": []
+      "aliases": [],
+      "jcr_2025": {
+        "jif": null,
+        "best_quartile": null,
+        "best_top_percent": null,
+        "source_url": null,
+        "edition": 2026
+      }
     }
   ]
 }

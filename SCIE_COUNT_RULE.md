@@ -1,0 +1,1 @@
+SCIE count follows the laboratory-provided convention: published international journal papers with a recorded IF count as SCIE. Current dataset: 15 matching published papers. Submitted and In revision are excluded. Additional published papers without recorded IF are not assumed non-SCIE; they are simply not counted yet.

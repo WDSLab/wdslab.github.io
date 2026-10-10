@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Association of Cold Ischemic Time with Early and Long-Term Outcomes in a Nationwide Korean Heart Transplant Cohort",
+    "if": 3.4,
+    "top_percent": null
+  },
+  {
+    "title": "Legacy Learning Strategy Based on Few-Shot Font Generation Models for Automatic Text Design",
+    "if": 8.1,
+    "top_percent": 5.0
+  },
+  {
+    "title": "Early red blood cell transfusion burden, hemoglobin at first transfusion, and in-hospital mortality in patients supported with veno-arterial ECMO: a multicenter cohort study",
+    "if": 6.9,
+    "top_percent": 10.0
+  },
+  {
+    "title": "Distributed Lag Transformer based on Time-Variable-Aware Learning for Explainable Multivariate Time Series Forecasting",
+    "if": 4.2,
+    "top_percent": null
+  },
+  {
+    "title": "Hybrid Temporal Auto Encoder and Similarity Matching for Low Aggregation Level Long Time-Series Forecasting",
+    "if": 2.6,
+    "top_percent": null
+  },
+  {
+    "title": "How Will Arctic Shipping Emissions Evolve? A Spatiotemporal Topology-Aware Transformer Approach",
+    "if": 8.7,
+    "top_percent": 7.0
+  },
+  {
+    "title": "Deep Learning Framework for Regional Maritime Collision Risk Assessment using CNN and Grad-CAM",
+    "if": 6.3,
+    "top_percent": 3.0
+  },
+  {
+    "title": "Trend-Fluctuation Correlated Attention Unit for Remaining Useful Life Prediction",
+    "if": 4.2,
+    "top_percent": null
+  },
+  {
+    "title": "Temporal Multi-features Representation Learning-Based Clustering for Time-Series Data",
+    "if": 4.2,
+    "top_percent": null
+  },
+  {
+    "title": "Correlation Recurrent Units: A Novel Neural Architecture for Improving the Predictive Performance of Time Series Data",
+    "if": 20.4,
+    "top_percent": 1.0
+  },
+  {
+    "title": "Deep Collaborative Learning Model for Port-Air Pollutants Prediction using Automatic Identification System",
+    "if": 8.7,
+    "top_percent": 7.0
+  },
+  {
+    "title": "Automatic Conversion of Event Data to Event Logs Using a CNN and Event Density Embedding",
+    "if": 4.2,
+    "top_percent": null
+  },
+  {
+    "title": "Hamstring stretching significantly changes the sitting biomechanics",
+    "if": 3.6,
+    "top_percent": null
+  },
+  {
+    "title": "DERN: Deep Ensemble Learning Model for Short- and Long-Term Prediction of Baltic Dry Index",
+    "if": 2.9,
+    "top_percent": null
+  },
+  {
+    "title": "Statistical Verification of Process Model Conformance to Execution Log Considering Model Abstraction",
+    "if": 1.1,
+    "top_percent": null
+  }
+]
