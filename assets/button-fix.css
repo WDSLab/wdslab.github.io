@@ -77,3 +77,16 @@ html body .selected-paper-card .paper-card-links,
 html body .news-links, html body .record .links {gap:6px!important;}
 html body a.paper-action:hover {transform:translateY(-1px)!important;box-shadow:0 2px 7px rgba(20,60,80,.08)!important;}
 @media(max-width:500px){html body a.paper-action {white-space:normal!important;text-align:center!important;}}
+
+/* SSRN preprints: distinguish from publisher DOI and GitHub code */
+a.paper-action.paper-action-ssrn,
+.record a.paper-action.paper-action-ssrn,
+.publication-bottom-line a.paper-action.paper-action-ssrn {
+  display:inline-flex !important;align-items:center !important;gap:7px !important;
+  background:#F1EDFF !important;color:#6046A2 !important;
+  border:1px solid #CFC3F1 !important;border-radius:6px !important;
+  font-size:11px !important;font-weight:700 !important;
+  padding:6px 10px !important;text-transform:none !important;
+  text-decoration:none !important;
+}
+a.paper-action.paper-action-ssrn:hover{background:#E8DFFF !important;border-color:#AC96E4 !important}

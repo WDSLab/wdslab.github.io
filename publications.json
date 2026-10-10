@@ -77,7 +77,8 @@
     "status": "Submitted",
     "category": "International Journal",
     "links": {
-      "github": "https://github.com/WDSLab/FruArIC"
+      "github": "https://github.com/WDSLab/FruArIC",
+      "ssrn": "https://ssrn.com/abstract=7493405"
     },
     "jcr_quartile": null,
     "jcr_year": null,
@@ -167,10 +168,11 @@
     "year": 2026,
     "title": "Propagation-Aware Multi-Site PV Context Fusion with Imperfect Numerical Weather Prediction for Medium-Range PV Forecasting",
     "venue": "Engineering Applications of Artificial Intelligence",
-    "status": "Submitted",
+    "status": "In revision",
     "category": "International Journal",
     "links": {
-      "github": "https://github.com/kYounghwi/PACFormer_fusion"
+      "github": "https://github.com/kYounghwi/PACFormer_fusion",
+      "ssrn": "https://ssrn.com/abstract=7466130"
     },
     "jcr_quartile": null,
     "jcr_year": null,
@@ -270,7 +272,8 @@
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/CF-JEPA",
-      "arxiv": "https://arxiv.org/abs/2606.07031"
+      "arxiv": "https://arxiv.org/abs/2606.07031",
+      "ssrn": "https://ssrn.com/abstract=6913230"
     },
     "jcr_quartile": null,
     "jcr_year": null,
