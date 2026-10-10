@@ -10,41 +10,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Dahyun Kang",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-001"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -55,20 +21,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자",
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-002"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -77,38 +30,11 @@
     "status": "Submitted",
     "category": "International Journal",
     "links": {
-      "github": "https://github.com/WDSLab/FruArIC",
-      "ssrn": "https://ssrn.com/abstract=7493405"
+      "github": "https://github.com/WDSLab/FruArIC"
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [
-      {
-        "name": "Jungyu Kang",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-003"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -119,96 +45,20 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자",
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Minwon Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sangwoo Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yuna Jeong",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Euncheol Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaekyung Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      }
-    ],
-    "venue_id": "venue-004"
+    "jcr_category": null
   },
   {
     "year": 2026,
     "title": "Propagation-Aware Multi-Site PV Context Fusion with Imperfect Numerical Weather Prediction for Medium-Range PV Forecasting",
     "venue": "Engineering Applications of Artificial Intelligence",
-    "status": "In revision",
+    "status": "Submitted",
     "category": "International Journal",
     "links": {
-      "github": "https://github.com/kYounghwi/PACFormer_fusion",
-      "ssrn": "https://ssrn.com/abstract=7466130"
+      "github": "https://github.com/kYounghwi/PACFormer_fusion"
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seungwoo Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Reisenbauer Sarah",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-003"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -222,47 +72,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seungwoo Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-005"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -272,32 +82,11 @@
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/CF-JEPA",
-      "arxiv": "https://arxiv.org/abs/2606.07031",
-      "ssrn": "https://ssrn.com/abstract=6913230"
+      "arxiv": "https://arxiv.org/abs/2606.07031"
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-006"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -310,27 +99,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [
-      {
-        "name": "Doohyun Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-007"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -343,49 +112,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Domain-Specific Foundation Models",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Kikun Park",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sekil Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-008"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -398,34 +125,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [
-      {
-        "name": "Doohyun Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Joongrock Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Oct",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -438,40 +138,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seungwoo Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Sep",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -480,176 +147,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
+    "jcr_quartile": null,
+    "jcr_year": null,
     "jcr_category": null,
     "if_as_listed_on_original": 3.4,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Changwon Shin",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hae-Young Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Myoung Soo Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seok-Min Kang",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dong-Ju Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sang Eun Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jin-Oh Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyungseop Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Soo Yong Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yang Hyun Cho",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyun-Jai Cho",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaewon Oh",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jin Joo Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sung-Ho Jung",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "In-Cheol Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Woo Sung Jang",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jae-Joong Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Junho Hyun",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Darae Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jeehoon Kang",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Minjae Yoon",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Mi Hee Lim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Kitae Kim",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Min Ho Ju",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": false
-      }
-    ],
-    "month": "Sep",
-    "venue_id": "venue-010",
-    "jcr_best_top_percent": 30.43,
-    "jcr_jif": 3.1
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2026,
@@ -661,48 +163,11 @@
       "github": "https://github.com/WDSLab/Legacy-Learning",
       "doi": "https://doi.org/10.1016/j.ipm.2026.104721"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "INFORMATION SCIENCE & LIBRARY SCIENCE",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 8.1,
-    "top_percentile_as_listed_on_original": "Top 5%",
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seok Chan Jeong",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Sep",
-    "venue_id": "venue-011",
-    "jcr_best_top_percent": 5.81,
-    "jcr_jif": 8.1
+    "top_percentile_as_listed_on_original": "Top 5%"
   },
   {
     "year": 2026,
@@ -713,82 +178,13 @@
     "links": {
       "doi": "https://doi.org/10.1016/j.aicoj.2026.100125"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
+    "jcr_quartile": null,
+    "jcr_year": null,
     "jcr_category": null,
     "if_as_listed_on_original": 6.9,
     "top_percentile_as_listed_on_original": "Top 10%",
     "doi": "https://doi.org/10.1016/j.aicoj.2026.100125",
-    "publisher_url": "https://www.sciencedirect.com/science/article/pii/S2110582026001603",
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Min Ho Ju",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seulgi Ju",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "In Seok Jeong",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyoung Soo Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yang Hyun Cho",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jae-Seung Jung",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jung-Hoon Shin",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Hee Jung Kim",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jul",
-    "venue_id": "venue-012",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 6.9
+    "publisher_url": "https://www.sciencedirect.com/science/article/pii/S2110582026001603"
   },
   {
     "year": 2026,
@@ -800,46 +196,11 @@
       "github": "https://github.com/WDSLab/Distributed-Lag-Transformer",
       "doi": "https://doi.org/10.1109/ACCESS.2026.3713022"
     },
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 4.2,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Joongrock Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jul",
-    "venue_id": "venue-008",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 4.2
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2026,
@@ -850,58 +211,11 @@
     "links": {
       "doi": "https://doi.org/10.1002/for.70194"
     },
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
+    "jcr_quartile": null,
+    "jcr_year": null,
     "jcr_category": null,
     "if_as_listed_on_original": 2.6,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Hanbyeol Park",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Kikun Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yongjae Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Eunhee Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jul",
-    "venue_id": "venue-013",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 2.6
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2026,
@@ -912,34 +226,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "May",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -951,48 +238,11 @@
       "github": "https://github.com/WDSLab/Spatiotemporal-Topology-aware-Transformer",
       "doi": "https://doi.org/10.1016/j.trd.2025.105134"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "TRANSPORTATION",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 8.7,
-    "top_percentile_as_listed_on_original": "Top 7%",
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Nov",
-    "venue_id": "venue-014",
-    "jcr_best_top_percent": 7.58,
-    "jcr_jif": 8.7
+    "top_percentile_as_listed_on_original": "Top 7%"
   },
   {
     "year": 2025,
@@ -1004,60 +254,11 @@
       "github": "https://github.com/WDSLab/MCRA_GradCAM",
       "doi": "https://doi.org/10.1016/j.oceaneng.2025.123452"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "ENGINEERING, MARINE",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 6.3,
-    "top_percentile_as_listed_on_original": "Top 3%",
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Suhyun Jo",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Gawon Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaehyeon Heo",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Nov",
-    "venue_id": "venue-015",
-    "jcr_best_top_percent": 3.85,
-    "jcr_jif": 6.3
+    "top_percentile_as_listed_on_original": "Top 3%"
   },
   {
     "year": 2025,
@@ -1066,52 +267,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 4.2,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Hanbyeol Park",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Minseop Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yunkyung Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Sep",
-    "venue_id": "venue-008",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 4.2
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2025,
@@ -1125,40 +285,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Younghwi Kim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seungwoo Lee",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jul",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -1171,34 +298,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Eunhee Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Aug",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -1209,40 +309,11 @@
     "links": {
       "github": "https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering"
     },
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 4.2,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jun",
-    "venue_id": "venue-008",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 4.2
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2024,
@@ -1255,40 +326,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sangjae Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Mar",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -1298,43 +336,13 @@
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/Correlation-Recurrent-Units",
-      "paper": "https://ieeexplore.ieee.org/document/10264112",
-      "doi": "https://doi.org/10.1109/TPAMI.2023.3319557"
+      "paper": "https://ieeexplore.ieee.org/document/10264112"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 20.4,
-    "top_percentile_as_listed_on_original": "Top 1%",
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Oct",
-    "venue_id": "venue-016",
-    "jcr_best_top_percent": 1.08,
-    "jcr_jif": 20.4
+    "top_percentile_as_listed_on_original": "Top 1%"
   },
   {
     "year": 2023,
@@ -1346,39 +354,9 @@
       "github": "https://github.com/WDSLab/Bagging-Recurrent-Event-Imputation",
       "paper": "https://ieeexplore.ieee.org/document/9566796"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Ling Liu",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      }
-    ],
-    "month": "Jan",
-    "venue_id": "venue-017",
-    "jcr_jif": 6.2,
-    "jcr_best_top_percent": 10.16,
-    "top_percentile_as_listed_on_original": "Top 10%"
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
   },
   {
     "year": 2022,
@@ -1389,40 +367,11 @@
     "links": {
       "doi": "https://doi.org/10.1016/j.trd.2022.103431"
     },
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "TRANSPORTATION",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 8.7,
-    "top_percentile_as_listed_on_original": "Top 7%",
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Jin-Hyoung Park",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Oct",
-    "venue_id": "venue-014",
-    "jcr_best_top_percent": 7.58,
-    "jcr_jif": 8.7
+    "top_percentile_as_listed_on_original": "Top 7%"
   },
   {
     "year": 2022,
@@ -1431,52 +380,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 4.2,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Riska Asriana Sutrisnowati",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Seokare Won",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sanghwa Lee",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Feb",
-    "venue_id": "venue-008",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 4.2
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2021,
@@ -1485,40 +393,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": "ERGONOMICS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 3.6,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Ilseok Lee",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sangeun Jin",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Jul",
-    "venue_id": "venue-018",
-    "jcr_best_top_percent": 25.0,
-    "jcr_jif": 3.0
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2021,
@@ -1527,38 +406,9 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q1",
-    "jcr_year": 2025,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Kikun Park",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Feb",
-    "venue_id": "venue-019",
-    "jcr_best_top_percent": 21.31,
-    "jcr_jif": 4.8
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null
   },
   {
     "year": 2020,
@@ -1569,58 +419,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Imam Mustafa Kamal",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyemee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Dohee Kim",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yulim Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Heesung Yun",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      }
-    ],
-    "month": "May",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2020,
@@ -1629,44 +428,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q2",
-    "jcr_year": 2025,
+    "jcr_quartile": null,
+    "jcr_year": null,
     "jcr_category": null,
     "if_as_listed_on_original": 2.9,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [
-      {
-        "name": "Imam Mustafa Kamal",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Heesung Yun",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      }
-    ],
-    "month": "Feb",
-    "venue_id": "venue-020",
-    "jcr_best_top_percent": null,
-    "jcr_jif": 2.9
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2018,
@@ -1677,76 +443,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Natanael Yabes Wirawan",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Riska Asriana Sutrisnowati",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Nur Ichsan Utama",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Nur Ahmad Wahid",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Taufik Nur Adi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yulim Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Imam Mustafa Kamal",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Iq Reviessay Pulshashi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "May",
-    "venue_id": "venue-021"
+    "jcr_category": null
   },
   {
     "year": 2018,
@@ -1755,46 +452,11 @@
     "status": "Published",
     "category": "International Journal",
     "links": {},
-    "jcr_quartile": "Q4",
-    "jcr_year": 2025,
-    "jcr_category": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
     "if_as_listed_on_original": 1.1,
-    "top_percentile_as_listed_on_original": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      },
-      {
-        "name": "Yulim Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Ling Liu",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      }
-    ],
-    "month": "Mar",
-    "venue_id": "venue-022",
-    "jcr_best_top_percent": 82.33,
-    "jcr_jif": null
+    "top_percentile_as_listed_on_original": null
   },
   {
     "year": 2016,
@@ -1805,34 +467,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Yulim Choi",
-        "lab": false,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Nov",
-    "venue_id": "venue-021"
+    "jcr_category": null
   },
   {
     "year": 2016,
@@ -1843,34 +478,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [
-      {
-        "name": "Byeongjun Joo",
-        "lab": false,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [],
-        "corresponding_source": false
-      },
-      {
-        "name": "Hyerim Bae",
-        "lab": false,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "month": "Mar",
-    "venue_id": "venue-009"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -1881,10 +489,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [],
-    "venue_id": "venue-023"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -1895,10 +500,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-023"
+    "jcr_category": null
   },
   {
     "year": 2026,
@@ -1909,10 +511,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [],
-    "venue_id": "venue-023"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1925,10 +524,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-024"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1939,10 +535,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-024"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1955,10 +548,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [],
-    "venue_id": "venue-024"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1969,10 +559,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-025"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1983,10 +570,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Domain-Specific Foundation Models",
-    "authors": [],
-    "venue_id": "venue-025"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -1997,10 +581,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-026"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -2011,10 +592,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Domain-Specific Foundation Models",
-    "authors": [],
-    "venue_id": "venue-026"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2025,10 +603,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [],
-    "venue_id": "venue-027"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2042,10 +617,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-028"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2056,10 +628,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-028"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2070,10 +639,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [],
-    "venue_id": "venue-029"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2084,10 +650,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-029"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2098,10 +661,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [],
-    "venue_id": "venue-030"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2112,10 +672,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Domain-Specific Foundation Models",
-    "authors": [],
-    "venue_id": "venue-030"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2126,10 +683,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [],
-    "venue_id": "venue-031"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2140,10 +694,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Spatiotemporal & Multimodal AI",
-    "authors": [],
-    "venue_id": "venue-032"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2156,10 +707,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [],
-    "venue_id": "venue-033"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2172,10 +720,7 @@
     },
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-033"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2186,10 +731,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-034"
+    "jcr_category": null
   },
   {
     "year": 2019,
@@ -2200,10 +742,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-035"
+    "jcr_category": null
   },
   {
     "year": 2018,
@@ -2214,10 +753,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-036"
+    "jcr_category": null
   },
   {
     "year": 2016,
@@ -2228,10 +764,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-037"
+    "jcr_category": null
   },
   {
     "year": 2016,
@@ -2242,10 +775,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-038"
+    "jcr_category": null
   },
   {
     "year": 2015,
@@ -2256,10 +786,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-039"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -2270,10 +797,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Domain-Specific Foundation Models",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -2284,10 +808,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2025,
@@ -2298,10 +819,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2312,10 +830,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-041"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2326,10 +841,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-041"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2340,10 +852,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2024,
@@ -2354,10 +863,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2368,10 +874,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-042"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2382,10 +885,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Efficient & Edge AI",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2396,10 +896,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2023,
@@ -2410,10 +907,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2022,
@@ -2424,10 +918,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Explainable & Decision Intelligence",
-    "authors": [],
-    "venue_id": "venue-041"
+    "jcr_category": null
   },
   {
     "year": 2022,
@@ -2438,10 +929,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-043"
+    "jcr_category": null
   },
   {
     "year": 2022,
@@ -2452,10 +940,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2019,
@@ -2466,10 +951,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   },
   {
     "year": 2018,
@@ -2480,10 +962,7 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-041"
+    "jcr_category": null
   },
   {
     "year": 2018,
@@ -2494,9 +973,6 @@
     "links": {},
     "jcr_quartile": null,
     "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Industrial Intelligence",
-    "authors": [],
-    "venue_id": "venue-040"
+    "jcr_category": null
   }
 ]
