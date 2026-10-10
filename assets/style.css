@@ -275,10 +275,10 @@
   order:2;margin:0 0 12px;gap:7px;
 }
 .selected-papers-section .paper-card-ordered > .paper-venue{
-  order:3;margin:0 0 12px;font-size:13px;
+  order:4;margin:0 0 12px;font-size:13px;
 }
 .selected-papers-section .paper-card-ordered > .research-field-badge{
-  order:4;margin:0 0 15px;
+  order:3;margin:0 0 15px;
 }
 .selected-papers-section .paper-card-ordered > .paper-card-links{
   order:5;margin:0;padding:0;gap:7px;
@@ -389,5 +389,5 @@
 .selected-paper-card .paper-card-top > .paper-stat{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:32px}
 .selected-paper-card .paper-card-top > .research-field-badge{display:inline-flex;align-items:center;justify-content:center;gap:8px;flex:0 1 auto;min-height:32px;margin:0;padding:5px 10px;border-radius:6px;background:#eef5fa;color:#2c6b8d;text-align:center;font-size:11px;line-height:1.35}
 .selected-paper-card .paper-card-top > .research-field-badge .research-field-icon{display:grid;place-items:center;flex:0 0 24px;width:24px;height:24px}
-.author-members-legend{margin:16px 0 0;color:#667d8f;font-size:12px;line-height:1.6}
+.author-members-legend{margin:0 0 14px;color:#667d8f;font-size:12px;line-height:1.6}
 .author-members-legend strong{color:#172f40;font-weight:800}
