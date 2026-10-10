@@ -33,7 +33,7 @@ html body .selected-paper-card .paper-card-links a.paper-action:focus-visible {o
 
 /* WDSLab color-coded action buttons (overrides preceding hotfix) */
 html body a.paper-action-paper {background:#e7f2ff!important;color:#1559a0!important;border-color:#9fc7f3!important}
-html body a.paper-action-details {background:#edf0ff!important;color:#4645a4!important;border-color:#b7b8f0!important}
+html body a.paper-action-details {background:#e7f2ff!important;color:#1559a0!important;border-color:#9fc7f3!important}
 html body a.paper-action-github {background:#19364e!important;color:#fff!important;border-color:#19364e!important}
 html body a.paper-action-article {background:#fff1dd!important;color:#995714!important;border-color:#e8bd82!important}
 html body a.paper-action-arxiv {background:#f8eafa!important;color:#863e8c!important;border-color:#dfb3e5!important}
@@ -92,16 +92,16 @@ a.paper-action.paper-action-ssrn,
 a.paper-action.paper-action-ssrn:hover{background:#E8DFFF !important;border-color:#AC96E4 !important}
 
 /* Publication details: document icon, same compact button palette */
-html body a.paper-action-details{display:inline-flex!important;align-items:center!important;gap:7px!important;background:#edf0ff!important;color:#4645a4!important;border-color:#b7b8f0!important}
-html body a.paper-action-details .details-icon{font-size:14px!important;font-weight:700!important;line-height:1!important;color:#4645a4!important}
+html body a.paper-action-details{display:inline-flex!important;align-items:center!important;gap:7px!important;background:#e7f2ff!important;color:#1559a0!important;border-color:#9fc7f3!important}
+html body a.paper-action-details .details-icon{font-size:14px!important;font-weight:700!important;line-height:1!important;color:#1559a0!important}
 
 
 /* Selected Papers: preserve the established color for each action type */
 html body .selected-paper-card .publication-bottom-line a.paper-action{display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:6px!important;min-height:32px!important;padding:6px 10px!important;border-radius:6px!important;text-align:center!important;box-shadow:none!important}
 html body .selected-paper-card .publication-bottom-line a.paper-action-paper{background:#e7f2ff!important;color:#1559a0!important;border:1px solid #9fc7f3!important}
-html body .selected-paper-card .publication-bottom-line a.paper-action-details{background:#edf0ff!important;color:#4645a4!important;border:1px solid #b7b8f0!important}
-html body .selected-paper-card .publication-bottom-line a.paper-action-details .details-icon{color:inherit!important}
+html body .selected-paper-card .publication-bottom-line a.paper-action-details{background:#e7f2ff!important;color:#1559a0!important;border:1px solid #9fc7f3!important}
+html body .selected-paper-card .publication-bottom-line a.paper-action-details .details-icon{color:#1559a0!important}
 html body .selected-paper-card .publication-bottom-line a.paper-action-github{background:#e7f4f0!important;color:#23685b!important;border:1px solid #a9d4c8!important}
 html body .selected-paper-card .publication-bottom-line a.paper-action-paper:hover{background:#d7eaff!important;color:#1559a0!important;border-color:#82b8ea!important}
-html body .selected-paper-card .publication-bottom-line a.paper-action-details:hover{background:#e1e5ff!important;color:#4645a4!important;border-color:#a4a5e3!important}
+html body .selected-paper-card .publication-bottom-line a.paper-action-details:hover{background:#d7eaff!important;color:#1559a0!important;border-color:#82b8ea!important}
 html body .selected-paper-card .publication-bottom-line a.paper-action-github:hover{background:#d5ece5!important;color:#175347!important;border-color:#85c2b1!important}
