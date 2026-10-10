@@ -90,3 +90,7 @@ a.paper-action.paper-action-ssrn,
   text-decoration:none !important;
 }
 a.paper-action.paper-action-ssrn:hover{background:#E8DFFF !important;border-color:#AC96E4 !important}
+
+/* Publication details: document icon, same compact button palette */
+html body a.paper-action-details{display:inline-flex!important;align-items:center!important;gap:7px!important;background:#edf0ff!important;color:#4645a4!important;border-color:#b7b8f0!important}
+html body a.paper-action-details .details-icon{font-size:14px!important;font-weight:700!important;line-height:1!important;color:#4645a4!important}

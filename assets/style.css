@@ -376,3 +376,9 @@
 @media(max-width:470px){#publication-statistics .impact-kpis{gap:9px}#publication-statistics .impact-kpi{padding:16px;min-height:105px}}
 
 .paper-action-ssrn{background:#F1EDFF;color:#6046A2;border:1px solid #CFC3F1;border-radius:6px}
+
+/* 2x2 journal quartile dashboard + 2-column news cards */
+#impact-quartile-chart.impact-dist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#impact-quartile-chart .impact-quartile-card{min-height:135px;padding:22px 24px}
+#news .news-featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:680px){#impact-quartile-chart.impact-dist,#news .news-featured-grid{grid-template-columns:1fr}}
