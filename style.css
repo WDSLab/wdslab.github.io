@@ -81,3 +81,11 @@
 .selected-paper-member-note{margin:13px 0 0;text-align:right;color:#657f90;font-size:11px;line-height:1.5}
 .selected-paper-member-note strong{color:#17324d}
 @media(max-width:520px){.paper-card-top{gap:6px}.paper-card-top .research-field-badge{max-width:100%;white-space:normal}.paper-authors{font-size:11px}}
+/* Selected Papers: consistent centered metadata and action buttons */
+.selected-paper-card .paper-card-top{align-items:stretch}
+.selected-paper-card .paper-stat{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:38px}
+.selected-paper-card .paper-card-top .research-field-badge{justify-content:center;text-align:center}
+.selected-paper-card .paper-card-links .paper-action{flex:1 1 150px;justify-content:center;text-align:center;background:#f3f8fc;color:#195b82;border-color:#cbdfe9}
+.selected-paper-card .paper-card-links .paper-action:hover{background:#e7f2f9;border-color:#b8d5e5}
+.selected-paper-card .paper-card-links .paper-action-github{background:#f3f8fc;color:#195b82;border-color:#cbdfe9}
+.selected-paper-card .paper-card-links .paper-action-github:hover{background:#e7f2f9;color:#195b82;border-color:#b8d5e5}
