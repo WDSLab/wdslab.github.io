@@ -425,20 +425,20 @@
 
 /* Research philosophy and aligned selected-publication cards */
 .research-hero h1 em{font-style:normal;color:#7fd0ff}
-.research-philosophy h2{margin:0;color:#142c42;font-size:clamp(34px,4vw,48px);line-height:1.06;letter-spacing:-1.5px}
+.research-philosophy h2{margin:0;color:#142c42;font-size:clamp(32px,4vw,46px);line-height:1.12;letter-spacing:-1.3px;white-space:nowrap}
 .research-philosophy h2 em{font-style:italic}
-.research-philosophy p{margin:14px 0 0;color:#1688c7;font-size:clamp(17px,2vw,22px);font-weight:650;line-height:1.45;letter-spacing:-.2px}
+.research-philosophy p{margin:10px 0 0;color:#1688c7;font-size:clamp(16px,1.9vw,21px);font-weight:650;line-height:1.45;letter-spacing:-.2px;white-space:nowrap}
 .research-pillars{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:20px}
 .research-pillar{display:flex;flex-direction:column;min-width:0;padding:0;overflow:hidden}
 .research-pillar .research-image{height:165px}
 .research-pillar> :not(.research-image){margin-left:18px;margin-right:18px}
 .research-pillar .research-body{display:flex;flex:1;flex-direction:column}
-.research-index{align-items:flex-start;min-height:76px;margin-top:15px;gap:12px}
-.research-index .research-number{display:inline-flex;flex:0 0 30px;align-items:center;justify-content:center;min-height:27px;padding:0;border:1px solid #d7e8f2;border-radius:999px;background:#f2f8fc;color:#1688c7;font-size:11px;letter-spacing:.8px}
-.research-index h3{min-width:0;margin:2px 0 0;color:#142c42;font-size:19px;line-height:1.35;letter-spacing:-.35px}
-.research-body .research-summary{min-height:5.1em;font-size:14px;line-height:1.7;color:#435d72;margin:5px 0 17px}
+.research-index{align-items:flex-start;min-height:0;margin-top:15px;margin-bottom:14px;gap:10px}
+.research-index .research-number{display:inline-flex;flex:0 0 32px;align-items:center;justify-content:center;min-height:30px;padding:0;border:1px solid #cfe2ef;border-radius:999px;background:#f2f8fc;color:#1688c7;font-size:12px;letter-spacing:.5px}
+.research-index h3{display:inline-flex;align-items:center;min-width:0;max-width:100%;margin:0;padding:7px 12px;border:1px solid #d7e8f2;border-radius:10px;background:#f2f8fc;color:#31556c;font-size:15px;line-height:1.35;letter-spacing:-.15px}
+.research-body .research-summary{min-height:0;font-size:16px;line-height:1.7;color:#435d72;margin:0 0 18px}
 .research-papers{margin-top:auto;padding-top:13px}
-.research-papers strong{margin-bottom:8px}
-.research-papers a{display:-webkit-box;min-height:4.25em;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;margin:0;padding:6px 0;font-size:12px;line-height:1.5}
+.research-papers strong{margin-bottom:8px;font-size:13px}
+.research-papers a{display:-webkit-box;min-height:4.4em;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;margin:0;padding:6px 0;font-size:14px;line-height:1.5}
 @media(max-width:1000px){.research-pillars{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){.research-pillars{grid-template-columns:1fr}.research-pillar .research-image{height:190px}.research-pillar> :not(.research-image){margin-left:20px;margin-right:20px}.research-index{min-height:0}.research-index h3{font-size:21px}.research-body .research-summary{min-height:0}.research-papers a{min-height:0}}
+@media(max-width:650px){.research-pillars{grid-template-columns:1fr}.research-pillar .research-image{height:190px}.research-pillar> :not(.research-image){margin-left:20px;margin-right:20px}.research-philosophy h2,.research-philosophy p{white-space:normal}.research-philosophy h2{font-size:34px}.research-philosophy p{font-size:16px}.research-index h3{font-size:16px}.research-papers a{min-height:0}}
