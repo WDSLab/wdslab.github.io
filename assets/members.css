@@ -45,7 +45,7 @@
 .professor-member-grid .member-profile-links{grid-area:links;justify-self:start;min-width:0;width:fit-content;max-width:100%;box-sizing:border-box;flex-wrap:wrap;gap:8px;overflow:visible;margin-top:0;padding:0;border:0;border-radius:0;background:transparent}
 .professor-research-interests{font-size:12px!important;line-height:1.7!important}
 
-.professor-research-lines{display:inline;text-align:left;overflow-wrap:normal}
+.professor-research-lines{display:inline;text-align:left;overflow-wrap:normal}.professor-research-lines .interest-item{white-space:nowrap}
 
 @media(max-width:1100px){.member-profile-links{flex-wrap:wrap;overflow:visible}}
 
