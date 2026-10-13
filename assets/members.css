@@ -42,16 +42,17 @@
 .professor-member-grid .member-photo{grid-area:photo}
 .professor-member-grid .member-info{grid-area:content;display:flex;min-width:0;flex-direction:column;gap:5px}
 .professor-member-grid .member-info>small,.professor-member-grid .member-info>h3,.professor-member-grid .professor-research-interests{margin:0}
-.professor-member-grid .member-profile-links{grid-area:links;justify-self:start;min-width:0;width:fit-content;max-width:100%;box-sizing:border-box;flex-wrap:wrap;gap:8px;overflow:visible;margin-top:0;padding:0;border:0;border-radius:0;background:transparent}
+.professor-member-grid .member-profile-links{display:grid;grid-area:links;grid-template-columns:repeat(3,minmax(0,1fr));justify-self:stretch;min-width:0;width:100%;max-width:100%;box-sizing:border-box;gap:8px;overflow:visible;margin-top:0;padding:0;border:0;border-radius:0;background:transparent}
 .professor-research-interests{font-size:12px!important;line-height:1.7!important}
 
-.professor-research-lines{display:inline;text-align:left;overflow-wrap:normal}.professor-research-lines .interest-item{white-space:nowrap}
+.professor-research-lines{display:inline;text-align:left;white-space:normal;overflow-wrap:anywhere;word-break:normal}
 
 @media(max-width:1100px){.member-profile-links{flex-wrap:wrap;overflow:visible}}
 
 @media(max-width:580px){.professor-member-grid .member-photo{width:116px}}
 
-.professor-member-grid .member-profile-link{gap:6px;padding:8px 12px;border:1px solid #c4dbe9;border-radius:6px;background:#edf7fc;font-size:12px}
+.professor-member-grid .member-profile-link{width:100%;min-width:0;flex:initial;justify-content:center;gap:6px;padding:8px 6px;box-sizing:border-box;border:1px solid #c4dbe9;border-radius:6px;background:#edf7fc;font-size:12px;white-space:normal;overflow-wrap:anywhere;text-align:center}
 .professor-member-grid .member-profile-link:hover{background:#e2f1fa}
 .professor-profile-details{width:calc(50% - 9px);box-sizing:border-box}
 @media(max-width:900px){.professor-member-grid{grid-template-columns:minmax(0,1fr)}.professor-profile-details{width:100%}}
+@media(max-width:430px){.professor-member-grid .member-profile-link{gap:4px;padding:7px 3px;font-size:10px}.professor-member-grid .member-profile-link .member-profile-icon{width:13px;height:13px;flex-basis:13px}}
