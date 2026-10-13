@@ -38,7 +38,7 @@
 .member-github-icon{width:15px;height:15px;flex-basis:15px}
 
 .professor-member-grid{grid-template-columns:minmax(0,1fr)}
-.professor-member-grid .member-detail{padding:17px;align-content:start;align-items:start;grid-template-columns:116px minmax(0,1fr);grid-template-areas:"photo content" "links links";column-gap:18px;row-gap:8px}
+.professor-member-grid .member-detail{padding:17px;align-content:start;align-items:start;grid-template-columns:minmax(0,1fr);grid-template-areas:"photo" "content" "links";row-gap:10px}
 .professor-member-grid .member-photo{grid-area:photo}
 .professor-member-grid .member-info{grid-area:content;display:flex;min-width:0;flex-direction:column;gap:5px}
 .professor-member-grid .member-info>small,.professor-member-grid .member-info>h3,.professor-member-grid .professor-research-interests{margin:0}
@@ -49,7 +49,7 @@
 
 @media(max-width:1100px){.member-profile-links{flex-wrap:wrap;overflow:visible}}
 
-@media(max-width:580px){.professor-member-grid .member-detail{grid-template-columns:1fr;grid-template-areas:"photo" "content" "links"}.professor-member-grid .member-photo{width:116px}}
+@media(max-width:580px){.professor-member-grid .member-photo{width:116px}}
 
 .professor-member-grid .member-profile-link{gap:6px;padding:8px 12px;border:1px solid #c4dbe9;border-radius:6px;background:#edf7fc;font-size:12px}
 .professor-member-grid .member-profile-link:hover{background:#e2f1fa}
