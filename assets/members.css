@@ -42,16 +42,14 @@
 .professor-member-grid .member-photo{grid-area:photo}
 .professor-member-grid .member-info{grid-area:content;display:flex;min-width:0;flex-direction:column;gap:5px}
 .professor-member-grid .member-info>small,.professor-member-grid .member-info>h3,.professor-member-grid .professor-research-interests{margin:0}
-.professor-member-grid .member-profile-links{grid-area:links;min-width:0;width:100%;box-sizing:border-box;flex-wrap:nowrap;overflow-x:auto;margin-top:0}
+.professor-member-grid .member-profile-links{grid-area:links;justify-self:start;min-width:0;width:fit-content;max-width:100%;box-sizing:border-box;flex-wrap:wrap;gap:8px;overflow:visible;margin-top:0;padding:0;border:0;border-radius:0;background:transparent}
 .professor-research-interests{font-size:12px!important;line-height:1.7!important}
 
-.professor-research-lines{display:block;text-align:left;overflow-wrap:normal}
+.professor-research-lines{display:inline;text-align:left;overflow-wrap:normal}
 
 @media(max-width:1100px){.member-profile-links{flex-wrap:wrap;overflow:visible}}
-@media(max-width:1100px){.professor-member-grid .member-profile-links{flex-wrap:nowrap;overflow-x:auto}}
+
 @media(max-width:580px){.professor-member-grid .member-detail{grid-template-columns:1fr;grid-template-areas:"photo" "content" "links"}.professor-member-grid .member-photo{width:116px}}
 
-.professor-member-grid .member-profile-links{gap:0;padding:0;border:1px solid #c4dbe9;border-radius:6px;scrollbar-width:thin}
-.professor-member-grid .member-profile-link{gap:6px;padding:8px 12px;border:0;border-right:1px solid #c4dbe9;border-radius:0;background:transparent;font-size:12px}
-.professor-member-grid .member-profile-link:last-child{border-right:0}
+.professor-member-grid .member-profile-link{gap:6px;padding:8px 12px;border:1px solid #c4dbe9;border-radius:6px;background:#edf7fc;font-size:12px}
 .professor-member-grid .member-profile-link:hover{background:#e2f1fa}
