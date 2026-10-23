@@ -32,6 +32,9 @@
   .svc-track { padding: 0; margin-bottom: var(--svc-bottom); height: calc(var(--svc-stage) * (1 + 0.75 * var(--n))); }   /* 구간 길이: 한 장당 무대 높이의 3/4 × 장 수(마지막 장 다음에 첫 장이 한 번 더 — 순환). 아래 여백 = 고정 푸터 높이 (없으면 마지막 장이 끝까지 못 올라옴) */
   .svc-stage { position: sticky; top: var(--svc-top); height: var(--svc-stage); overflow: hidden; }   /* 무대: 제목 띠 바로 아래, 푸터 바로 위에 고정 */
   .svc-frame { width: min(100%, calc((var(--svc-stage) - 96px) * 1.6)); margin: 0 auto; }   /* 낮은 화면에선 캡처가 무대 안에 들어오게 줄임 (16:10) */
+  /* 페이지 스크롤바 숨김 — 화면이 다 고정이라 스크롤바가 움직이는 게 어색함 (사용자 요청). 스크롤 자체는 그대로 됨 */
+  html:has(body.page-services) { scrollbar-width: none; }
+  html:has(body.page-services)::-webkit-scrollbar { display: none; }
   /* 푸터: 화면 아래 고정 (납작한 모양은 site.css 공통) */
   .page-services .footer { position: fixed; left: 0; right: 0; bottom: 0; z-index: 2; }
   .svc-slides { position: absolute; inset: 0; margin: 0 auto; }
