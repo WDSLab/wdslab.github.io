@@ -22,7 +22,8 @@
 .project:last-child { border-bottom: 0; }
 
 /* 진행 중 과제 기간 표 (projects.js): 왼쪽 과제 이름, 오른쪽 같은 눈금의 막대. 진한 부분 = 지난 기간, 세로선 = 오늘. 줄을 낮게 해서 한눈에 */
-.timeline { position: relative; margin-bottom: 28px; padding: 14px 18px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
+.timeline { position: relative; margin-bottom: 28px; padding: 14px 18px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
+  min-height: calc(var(--tl-rows, 0) * 21px + 54px + 36px + 19px); }   /* 자리 미리 잡기 = 실제 높이: 줄 21px × 개수 + 위아래 여백·눈금(54) + 설명 줄(위 여백 36, 그 사이에 Today 글자 + 19) — .tl-note·.tl-today-layer 와 같이 바꿀 것 */
 .timeline .tl-axis, .timeline .tl-rows li, .timeline .tl-today-layer { display: grid; grid-template-columns: minmax(0, 260px) 1fr; gap: 14px; align-items: center; }
 .timeline .tl-track { position: relative; display: block; height: 100%; }
 .tl-axis { height: 18px; margin-bottom: 2px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -32,12 +33,16 @@
 .tl-name { overflow: hidden; font-size: 12px; color: var(--ink); white-space: nowrap; text-overflow: ellipsis; }
 .tl-bar { position: absolute; top: 50%; height: 6px; margin-top: -3px; overflow: hidden; border-radius: 3px; background: rgba(9,34,61,.2); }
 .tl-bar i { display: block; height: 100%; background: var(--navy); }
-.tl-today-layer { position: absolute; top: 34px; right: 18px; bottom: 16px; left: 18px; pointer-events: none; }
+.tl-bar.soon i { background: var(--accent); }   /* 6개월 안에 끝나는 과제 */
+.tl-more { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; font-size: 10.5px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }   /* 눈금 밖까지 이어지는 과제의 끝나는 해 */
+.tl-note { margin: 36px 0 0; font-size: 11.5px; line-height: 19px; color: var(--muted); }
+.tl-today-layer { position: absolute; top: 34px; right: 18px; bottom: 71px; left: 18px; pointer-events: none; }   /* bottom = 아래 여백 16 + 설명 줄(36 + 19) */
 .tl-today { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1.5px solid var(--accent); }
-.tl-today b { position: absolute; top: -18px; left: 0; transform: translateX(-50%); padding: 0 3px; background: var(--bg); font-size: 10.5px; font-weight: 600; color: var(--accent); }
+.tl-today b { position: absolute; bottom: -16px; left: 0; transform: translateX(-50%); padding: 0 3px; background: var(--bg); font-size: 10.5px; font-weight: 600; color: var(--accent); }   /* 선 아래에 (위에 두면 연도 눈금과 겹침) */
 @media (max-width: 640px) {
   .timeline { padding: 12px; }
   .timeline .tl-axis, .timeline .tl-rows li, .timeline .tl-today-layer { grid-template-columns: minmax(0, 110px) 1fr; gap: 8px; }
-  .tl-today-layer { top: 32px; right: 12px; bottom: 12px; left: 12px; }
+  .tl-today-layer { top: 32px; right: 12px; bottom: 86px; left: 12px; }   /* 12 + 36 + 38 */
+  .timeline { min-height: calc(var(--tl-rows, 0) * 21px + 46px + 36px + 38px); }   /* 휴대폰: 여백 12, 설명 줄 두 줄 */
   .tl-name { font-size: 11px; }
 }

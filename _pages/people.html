@@ -3,8 +3,8 @@ permalink: /people.html
 layout: default
 title: People
 nav: people
-styles: [/assets/members.css?v=20261023-metrics5]
-scripts: [/assets/members.js?v=20261023-metrics5]
+styles: [/assets/members.css?v=20261023-cv-css]
+scripts: [/assets/members.js?v=20261023-cv-css]
 ---
 {%- assign pi = site.data.people.professor -%}
 <section class="pagehero"><div class="shell"><h1>People</h1></div></section>
@@ -24,7 +24,7 @@ scripts: [/assets/members.js?v=20261023-metrics5]
   </div>
 </article>
 
-{%- comment -%} 이력 세 묶음: 넓은 화면은 늘 펼침, 좁은 화면(860px 이하)은 접어 두고 제목을 누르면 펼침 (members.js) {%- endcomment -%}
+{%- comment -%} 이력 세 묶음: 늘 open 으로 두고, 좁은 화면(860px 이하)은 CSS 가 내용을 숨김 · 제목을 누르면 펼침 (members.css · members.js) — open 을 스크립트로 바꾸면 열 때 화면이 밀림 {%- endcomment -%}
 <div class="pi-cv">
   <details class="pi-cv-part" open><summary><h3>Academic Appointments <span class="pi-cv-count">{{ pi.appointments.size }}</span></h3></summary><ul class="pi-timeline">
     {%- for a in pi.appointments %}<li><time>{{ a.period }}</time><div><strong>{{ a.title }}</strong><span>{{ a.place }}</span></div></li>{% endfor -%}

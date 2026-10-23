@@ -60,7 +60,7 @@ p { margin: 0; }
 .section-head p { color: var(--muted); margin-top: 6px; }
 
 /* 하위 페이지 머리 (People · Research · Publications · News · Join) */
-.pagehero { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+.pagehero { padding: 36px 0 28px; border-bottom: 1px solid var(--line); }   /* 제목 위 여백은 짧게 (사용자: 위가 너무 비어 보임) */
 .pagehero h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.035em; }
 .pagehero p { margin-top: 10px; font-size: 16px; color: var(--muted); }
 .more { font-size: 15px; white-space: nowrap; }
@@ -76,7 +76,7 @@ p { margin: 0; }
 .hero h1 { color: #fff; font-size: 80px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; }
 .hero .subtitle { margin-top: 18px; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; color: #fff; }
 .hero .actions { justify-content: center; }
-.hero-final { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #fff; opacity: 0; pointer-events: none; }
+.hero-final { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #fff; opacity: 0; pointer-events: none; padding: 0 24px; } /* 좌우 여백은 .shell 과 같게 — 처음 제목(?)과 끝 문장(!)이 휴대폰에서 같은 자리에서 줄이 바뀌도록 */
 .final-title { font-size: 80px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; } /* 처음 제목과 같은 크기·자리 */
 .final-mark { display: inline-block; margin-left: .06em; font-weight: 800; opacity: 0; } /* 큰 ! 가 날아와 이 자리에 앉는다 */
 .final-sub { margin-top: 18px; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; } /* 처음 부제와 같은 모양 */

@@ -121,4 +121,6 @@
 
 /* 연구 분야별 막대는 데이터를 받은 뒤 채워져서, 처음부터 그만큼 자리를 잡아 둠 (안 그러면 칸이 커지며 아래가 밀림) */
 .area-chart { min-height: 215px; }
-@media (max-width: 394px) { .area-chart { min-height: 237px; } }   /* 아주 좁은 화면: 분야 이름 하나가 두 줄로 접혀 그래프가 22px 커짐 — 그만큼 자리를 미리 잡음 */
+@media (max-width: 394px) { .area-chart { min-height: 237px; } }
+@media (max-width: 360px) { .year-chart { gap: 2px; } .impact-year-col b, .impact-year-col small { font-size: 9px; } }
+@media (max-width: 350px) { .area-chart { min-height: 260px; } }   /* 더 좁으면 분야 이름 둘이 두 줄로 */   /* 연도 9칸이 좁은 화면에서 옆으로 넘치지 않게 */   /* 아주 좁은 화면: 분야 이름 하나가 두 줄로 접혀 그래프가 22px 커짐 — 그만큼 자리를 미리 잡음 */

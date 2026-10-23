@@ -1,5 +1,5 @@
 /* Publications — 공동 연구 관계 그림.
-   저자 목록이 있는 논문만 쓴다. 점 = 사람(남색 = 연구실 구성원, 회색 = 외부 공동저자), 선 = 같이 쓴 논문 (굵을수록 많이).
+   연구실 구성원끼리만 그린다 (구성원 둘 이상이 함께 쓴 논문). 점 = 구성원, 선 = 같이 쓴 논문 (굵을수록 많이).
    자리는 처음에 한 번 계산한다. 움직임은 두 가지뿐이고 둘 다 끝나면 멈춘다 (계속 떠다니는 효과 없음):
      · 그림이 화면에 처음 들어올 때 흩어진 점들이 1.5초 동안 천천히 제자리로 모인다 (한 번만)
      · 마우스로 점을 끌면 연결된 점들이 고무줄처럼 따라오고, 놓으면 제자리로 돌아와 멈춘다 (마우스 있는 화면만)
@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   try {
     const response = await fetch('publications.json');
     if (!response.ok) throw new Error('publications');
-    papers = (await response.json()).filter((p) => (p.authors || []).length > 1);
+    // 연구실 구성원 둘 이상이 함께 쓴 논문만, 사람도 구성원만 (외부 공동저자까지 그리면 실타래처럼 보임 — 사용자 결정)
+    papers = (await response.json()).map((p) => ({ ...p, authors: (p.authors || []).filter((a) => a.lab) })).filter((p) => p.authors.length > 1);
   } catch (e) { box.textContent = '그림을 불러오지 못했습니다.'; return; }
 
   /* ---------- 사람과 연결 세기 ---------- */

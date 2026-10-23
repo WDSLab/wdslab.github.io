@@ -1,11 +1,10 @@
 (() => {
-  // 교수님 이력 세 묶음: 좁은 화면(860px 이하)에선 접어 두고, 넓은 화면에선 늘 펼침 (CSS 기준 폭과 같음)
-  const narrow = window.matchMedia('(max-width: 860px)');
-  const parts = [...document.querySelectorAll('.pi-cv-part')];
-  const fit = () => parts.forEach((part) => { part.open = !narrow.matches; });
-  fit();
-  narrow.addEventListener('change', fit);
-  parts.forEach((part) => part.addEventListener('toggle', () => { if (!narrow.matches && !part.open) part.open = true; }));
+  // 교수님 이력 세 묶음: HTML 은 늘 펼쳐 둔(open) 채로 두고, 좁은 화면(860px 이하)에서는 CSS 가 내용을 숨긴다 (members.css `.pi-cv-part:not([data-user-open])`).
+  // 스크립트가 open 을 바꾸지 않으니 열 때·새로 고침 때 화면이 밀리지 않는다. 제목을 누르면 data-user-open 만 켜고 끈다 (넓은 화면은 제목을 못 누름 — CSS pointer-events)
+  document.querySelectorAll('.pi-cv-part > summary').forEach((summary) => summary.addEventListener('click', (event) => {
+    event.preventDefault();
+    summary.parentElement.toggleAttribute('data-user-open');
+  }));
 })();
 
 (() => {

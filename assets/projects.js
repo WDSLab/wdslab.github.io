@@ -20,7 +20,7 @@
     const status = end <= thisMonth ? 'completed' : 'ongoing';
     row.dataset.category = status;
     counts[status] += 1;
-    if (status === 'ongoing') ongoing.push({ title: row.querySelector('h3')?.textContent.trim() || '', period, start, end });
+    if (status === 'ongoing') ongoing.push({ title: row.querySelector('h3')?.textContent.trim() || '', funder: (row.querySelector('p')?.textContent || '').split('·')[0].trim(), endYear: match[2].slice(0, 4), period, start, end });
   });
 
   // 탭 옆 숫자도 자동 분류 결과로
@@ -29,23 +29,27 @@
     if (n && counts[tab.dataset.filter] !== undefined) n.textContent = counts[tab.dataset.filter];
   });
 
-  // 기간 표
+  // 기간 표: 눈금은 "지금"을 중심으로 고정 (지난해 1월 ~ 3년 뒤 12월). 끝나는 순서로 줄 세움.
+  // 줄 이름은 기관(발주처), 과제 이름·기간은 마우스를 올리면. 6개월 안에 끝나는 과제는 강조색. 눈금을 넘는 과제는 막대를 자르고 오른쪽에 "→ 끝나는 해".
   const box = document.querySelector('#ongoing-timeline');
   if (!box) return;
   if (!ongoing.length) { box.hidden = true; return; }
-  ongoing.sort((a, b) => a.start - b.start || a.end - b.end);
-  const from = Math.floor(Math.min(...ongoing.map((i) => i.start)) / 12) * 12;   // 첫해 1월부터
-  const to = Math.ceil(Math.max(...ongoing.map((i) => i.end)) / 12) * 12;        // 끝해 12월까지
-  const pct = (m) => ((m - from) / (to - from)) * 100;
+  ongoing.sort((a, b) => a.end - b.end || a.start - b.start);
+  const from = (now.getFullYear() - 1) * 12, to = (now.getFullYear() + 4) * 12;
+  const pct = (m) => Math.min(100, Math.max(0, ((m - from) / (to - from)) * 100));
   const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const years = [];
-  const yearStep = Math.max(1, Math.ceil((to - from) / 12 / (window.innerWidth <= 640 ? 4 : 8)));   // 연도 글자가 겹치지 않게 (휴대폰은 4개 안팎, 넓은 화면은 8개 안팎)
-  for (let y = from / 12; y <= to / 12; y += yearStep) years.push(`<span style="left:${pct(y * 12)}%">${y}</span>`);
+  for (let y = from / 12; y < to / 12; y++) years.push(`<span style="left:${pct(y * 12)}%">${y}</span>`);
   const rows = ongoing.map((i) => {
-    const done = Math.min(1, Math.max(0, (today - i.start) / (i.end - i.start)));
-    return `<li title="${esc(i.title)} · ${esc(i.period)} · ${Math.round(done * 100)}% elapsed"><span class="tl-name">${esc(i.title)}</span><span class="tl-track"><span class="tl-bar" style="left:${pct(i.start)}%;width:${pct(i.end) - pct(i.start)}%"><i style="width:${done * 100}%"></i></span></span></li>`;
+    const over = i.end > to;
+    const visibleEnd = Math.min(i.end, to);
+    const done = Math.min(1, Math.max(0, (today - i.start) / (visibleEnd - i.start)));
+    const soon = i.end - thisMonth <= 6;
+    const size = over ? `left:${pct(i.start)}%;right:44px` : `left:${pct(i.start)}%;width:${pct(i.end) - pct(i.start)}%`;
+    return `<li title="${esc(i.title)} · ${esc(i.period)} · ${Math.round(((today - i.start) / (i.end - i.start)) * 100)}% elapsed"><span class="tl-name">${esc(i.funder || i.title)}</span><span class="tl-track"><span class="tl-bar${soon ? ' soon' : ''}" style="${size}"><i style="width:${done * 100}%"></i></span>${over ? `<b class="tl-more">→ ${esc(i.endYear)}</b>` : ''}</span></li>`;
   }).join('');
   box.innerHTML = `<div class="tl-axis"><span class="tl-name"></span><span class="tl-track">${years.join('')}</span></div>
     <ol class="tl-rows">${rows}</ol>
-    <div class="tl-today-layer" aria-hidden="true"><span class="tl-name"></span><span class="tl-track"><span class="tl-today" style="left:${pct(today)}%"><b>Today</b></span></span></div>`;
+    <div class="tl-today-layer" aria-hidden="true"><span class="tl-name"></span><span class="tl-track"><span class="tl-today" style="left:${pct(today)}%"><b>Today</b></span></span></div>
+    <p class="tl-note">진한 부분 = 지난 기간 · 하늘색 = 6개월 안에 끝남 · → = 눈금 밖까지 · 과제 이름은 마우스를 올리면</p>`;
 })();

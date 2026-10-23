@@ -71,7 +71,8 @@
   /* 좁은 화면: 세 묶음을 접어 두고 제목 줄을 누르면 펼침 */
   .pi-cv-part summary { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; border-top: 1px solid var(--line); cursor: pointer; pointer-events: auto; }
   .pi-cv-part summary::after { content: ""; width: 8px; height: 8px; margin-right: 4px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(45deg); transition: transform .2s ease; }
-  .pi-cv-part[open] summary::after { transform: rotate(-135deg); }
+  .pi-cv-part[data-user-open] summary::after { transform: rotate(-135deg); }
+  .pi-cv-part:not([data-user-open]) .pi-timeline { display: none; }   /* 좁은 화면은 접어 둠 — open 속성 대신 CSS 로 (members.js) */
   .pi-cv-part h3 { margin: 0; }
   .pi-cv-count { display: inline; }
   .pi-cv-part .pi-timeline { margin-bottom: 16px; }

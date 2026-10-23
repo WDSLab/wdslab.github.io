@@ -3,8 +3,8 @@ permalink: /publications.html
 layout: default
 title: Publications
 nav: publications
-styles: [/assets/publications.css?v=20261023-area394]
-scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.js?v=20261023-reload]
+styles: [/assets/publications.css?v=20261023-yr320b]
+scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.js?v=20261023-labonly]
 ---
 {%- assign pubs = site.data.publications -%}
 <section class="pagehero"><div class="shell"><h1>Publications</h1></div></section>
@@ -45,7 +45,7 @@ scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.j
   {%- if mean_frac < 10 -%}{%- assign mean_frac = mean_frac | prepend: "0" -%}{%- endif -%}
   {%- capture mean_if -%}{{ mean_whole }}.{{ mean_frac }}{%- endcapture -%}
 {%- else -%}{%- assign mean_if = "—" -%}{%- endif -%}
-{%- assign coauthored = 0 -%}{%- for p in pubs -%}{%- if p.authors.size > 1 -%}{%- assign coauthored = coauthored | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- assign coauthored = 0 -%}{%- for p in pubs -%}{%- assign lab_authors = p.authors | where: "lab", true -%}{%- if lab_authors.size > 1 -%}{%- assign coauthored = coauthored | plus: 1 -%}{%- endif -%}{%- endfor -%}
 {%- assign manuscripts = published.size | plus: revisions.size | plus: submitted.size -%}
 <h2>Research Output</h2>
 <div class="kpis">
@@ -66,7 +66,7 @@ scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.j
     <div class="pipeline-track" id="pipeline-track" aria-label="Manuscript status"></div>
   </div>
   <div class="chart-box chart-wide"><h3>Co-author network</h3>
-    <p class="co-legend"><span><i class="lab"></i>Lab members</span><span><i></i>External co-authors</span><span>선이 굵을수록 같이 쓴 논문이 많음 · 저자 목록이 있는 논문 <b id="coauthor-paper-count">{{ coauthored }}</b>편 기준 · 점에 마우스를 올리면 연결이 보이고, 끌어 볼 수 있음</span></p>
+    <p class="co-legend"><span><i class="lab"></i>Lab members</span><span>선이 굵을수록 같이 쓴 논문이 많음 · 구성원 둘 이상이 함께 쓴 논문 <b id="coauthor-paper-count">{{ coauthored }}</b>편 기준 · 점에 마우스를 올리면 연결이 보이고, 끌어 볼 수 있음</span></p>
     <div class="coauthor-graph" id="coauthor-graph"></div>
   </div>
 </div>
