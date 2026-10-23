@@ -1,0 +1,26 @@
+---
+permalink: /projects.html
+layout: default
+title: Projects
+nav: projects
+styles: [/assets/projects.css?v=20261023-compact]
+scripts: [/assets/projects.js?v=20261023-compact2]
+---
+<section class="pagehero"><div class="shell"><h1>Projects</h1></div></section>
+
+{%- comment -%} 연구 과제: 맨 위 진행 중 과제 기간 표 + 진행 중 · 완료 탭 (상태는 기간으로 자동 판단 — projects.js) (탭 고르기는 site.js), 페이지 나눔 없이 한 탭의 과제 전부를 정해진 높이의 상자 안에서 스크롤 {%- endcomment -%}
+<section class="section alt"><div class="shell">
+{%- comment -%} 진행 중 개수는 페이지를 만들 때도 기간으로 셈 (projects.js 와 같은 기준: 끝나는 달이 이번 달보다 앞이면 완료).
+기간 표 자리도 이 개수로 미리 잡아 둠 — 스크립트가 그리기 전에 비어 있으면 아래 목록이 그만큼 밀려 내려감 {%- endcomment -%}
+{%- assign now_ym = site.time | date: "%Y.%m" -%}
+{%- assign live = 0 -%}
+{%- for r in site.data.projects -%}{%- assign end_ym = r.period | split: "–" | last | strip -%}{%- if end_ym >= now_ym -%}{%- assign live = live | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- assign done = site.data.projects.size | minus: live -%}
+<div class="timeline" id="ongoing-timeline" aria-label="Ongoing projects timeline" style="min-height: {{ live | times: 21 | plus: 54 }}px"></div>
+<div class="tabs" role="tablist" aria-label="Project status"><button type="button" role="tab" data-filter="ongoing" aria-selected="true">Ongoing <span>{{ live }}</span></button><button type="button" role="tab" data-filter="completed" aria-selected="false">Completed <span>{{ done }}</span></button></div>
+<div class="project-list" id="records" data-scroll-chain>
+  {%- for r in site.data.projects -%}
+  <article class="project" data-category="{{ r.status }}"><time>{{ r.period }}</time><div><h3>{{ r.title | escape }}</h3><p>{{ r.funder | escape }} · {{ r.role }}</p></div></article>
+  {%- endfor -%}
+</div>
+</div></section>

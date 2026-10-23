@@ -1,0 +1,2 @@
+{%- comment -%} 논문 고유 주소. 옛 주소가 따로 있으면 anchor, 없으면 제목에서 만든다 (80자). {%- endcomment -%}
+paper-{% if include.paper.anchor %}{{ include.paper.anchor }}{% else %}{{ include.paper.title | slugify: "ascii" | slice: 0, 80 }}{% endif -%}

@@ -1,0 +1,41 @@
+# 연구 플랫폼 (홈 넘겨 보는 줄 · Services 카드). 화면 캡처는 assets/systems/<shot>.jpg (1200x750) — 연결은 _includes/system-card.html
+# description · partner · award 는 Services 카드에만 나옴, note 는 양쪽 (2026-10-23 각 사이트·README 확인 후 사용자 승인)
+- name: DARC
+  tagline: Industrial AI · Dark Factory
+  url: https://darc.wdslab.org
+  icon: "⚙"
+  shot: darc
+  description: A 3D digital-twin demo of a dark factory where robots and humanoids run a production line without human operators.
+- name: PortScope
+  tagline: Smart Port · Maritime Logistics
+  url: https://portscope.wdslab.org
+  icon: "⚓"
+  shot: portscope
+  description: An interactive 3D globe connecting major hub ports and the Arctic Ocean, with data on transshipment and shipping emissions.
+  partner: SCSC, Pusan National University
+- name: Arctic Watcher
+  tagline: Arctic Route Intelligence
+  url: https://arctic.wdslab.org
+  icon: "❄"
+  shot: arctic
+  description: A decision-support system for Arctic shipping routes using sea ice, weather and vessel data.
+  award: Excellence Award, K-Ocean AI Challenge Busan 2025
+- name: COMPASS
+  tagline: AI Student Support
+  url: https://compass.wdslab.org
+  icon: "◈"
+  shot: compass
+  description: An AI student success system that diagnoses core competencies and recommends courses and programs.
+  partner: Changwon National University
+- name: NEXUS
+  tagline: Smart Manufacturing
+  url: https://nexus.wdslab.org
+  icon: "⬡"
+  shot: nexus
+  description: A monitoring system for a seven-process machining line with a 3D digital twin and grinding-burn detection.
+- name: CoolSmooth Demo
+  tagline: Energy & HVAC AI
+  note: Login required
+  url: https://coolsmooth.wdslab.org
+  icon: "✦"
+  description: A demo that predicts indoor conditions and runs an energy-saving cycle for air conditioners.

@@ -1,4 +1,14 @@
 (() => {
+  // 교수님 이력 세 묶음: 좁은 화면(860px 이하)에선 접어 두고, 넓은 화면에선 늘 펼침 (CSS 기준 폭과 같음)
+  const narrow = window.matchMedia('(max-width: 860px)');
+  const parts = [...document.querySelectorAll('.pi-cv-part')];
+  const fit = () => parts.forEach((part) => { part.open = !narrow.matches; });
+  fit();
+  narrow.addEventListener('change', fit);
+  parts.forEach((part) => part.addEventListener('toggle', () => { if (!narrow.matches && !part.open) part.open = true; }));
+})();
+
+(() => {
   // Apply metrics and achievement details only to student member cards.
   const studentRoles = new Set(['Ph.D.', 'Integrated M.S.–Ph.D.', 'M.S.']);
   const cards = [...document.querySelectorAll('.member-detail')].filter((card) =>
@@ -42,10 +52,14 @@
     return heading ? [...heading.childNodes].filter((node) => node.nodeType === Node.TEXT_NODE).map((node) => node.textContent).join('').trim() : '';
   };
 
+  // 숫자 줄: 페이지에 미리 그려 둔 칸(people.html)이 있으면 숫자만 채움, 없으면 새로 만듦
   const addMetricCards = (info, values) => {
+    const cells = [['SCIE', values.scie], ['Scopus', values.scopus], ['KCI', values.kci], ['Conference', values.conference], ['Awards', values.awards]];
+    const ready = info.querySelector('.member-metrics');
+    if (ready) { ready.querySelectorAll('strong').forEach((strong, i) => { strong.textContent = String(cells[i]?.[1] ?? '—'); }); return; }
     const grid = el('div', 'member-metrics');
     grid.setAttribute('aria-label', 'Publication, conference, and award counts');
-    [['SCIE', values.scie], ['Scopus', values.scopus], ['KCI', values.kci], ['Conference', values.conference], ['Awards', values.awards]].forEach(([label, value]) => {
+    cells.forEach(([label, value]) => {
       const cell = el('div', 'member-metric');
       cell.append(el('span', '', label), el('strong', '', String(value)));
       grid.append(cell);
@@ -53,18 +67,49 @@
     info.append(grid);
   };
 
-  const addLink = (item, url, label) => {
-    if (!url) return;
-    const link = el('a', 'member-record-link', label);
-    link.href = url;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
-    item.append(link);
+  // 저자 역할은 데이터엔 한글로 두고 화면엔 영어로 (Publications 와 같은 이름)
+  const roleNames = { '제1저자': 'First author', '교신저자': 'Corresponding author' };
+
+  // 링크 한 줄: 사이트의 다른 곳(_includes/paper-links.html)과 같은 모양 · 같은 이름 · 같은 순서
+  const addLinks = (item, links) => {
+    const shown = links.filter(([url]) => url);
+    if (!shown.length) return;
+    const row = el('span', 'paper-links');
+    shown.forEach(([url, label, external = true]) => {
+      const link = el('a', '', label);
+      link.href = url;
+      if (external) { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+      row.append(link);
+    });
+    item.append(row);
+  };
+  // 논문 주소 고르는 순서도 Publications 와 같음: DOI → 논문 주소 → (옛 칸) doi → 출판사
+  const paperLinks = (paper) => {
+    const l = paper.links || {};
+    const doi = paper.doi ? (String(paper.doi).startsWith('http') ? paper.doi : `https://doi.org/${paper.doi}`) : '';
+    return [[l.doi || l.paper || doi || paper.publisher_url, 'Paper ↗'], [l.github, 'Code ↗'], [l.arxiv, 'arXiv ↗'], [l.ssrn, 'SSRN ↗']];
   };
 
+  // 실적 목록은 카드 안에서 펼치지 않고 화면 위 창으로 띄운다 (주변 카드가 밀리지 않게)
+  const dialog = el('dialog', 'member-dialog');
+  const dialogTitle = el('h3', 'member-dialog-title');
+  const closeButton = el('button', 'member-dialog-close', '×');
+  closeButton.type = 'button';
+  closeButton.setAttribute('aria-label', 'Close');
+  const dialogBody = el('div', 'member-dialog-body');
+  const dialogHead = el('div', 'member-dialog-head');
+  dialogHead.append(dialogTitle, closeButton);
+  dialog.append(dialogHead, dialogBody);
+  document.body.append(dialog);
+  closeButton.addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });   // 바깥 어두운 곳을 누르면 닫힘
+
   const addAchievementDetails = (info, papers, conferences, awards) => {
-    const details = el('details', 'member-achievements');
-    details.append(el('summary', '', `View achievements · ${papers.length + conferences.length + awards.length} records`));
+    const total = papers.length + conferences.length + awards.length;
+    const ready = info.querySelector('.member-achievements');   // 미리 그려 둔 버튼이 있으면 그걸 씀
+    const button = ready || el('button', 'member-achievements');
+    button.textContent = `View achievements · ${total} records`;
+    button.type = 'button';
     const panel = el('div', 'member-achievement-panel');
 
     if (papers.length) {
@@ -75,9 +120,8 @@
         item.append(el('strong', 'member-record-title', paper.title));
         item.append(el('p', 'member-record-meta', [paper.year, paper.venue, paper.status].filter(Boolean).join(' · ')));
         const member = paper.authors.find((author) => author.name === memberName(info.closest('.member-detail')));
-        if (member?.roles?.length) item.append(el('p', 'member-record-role', member.roles.join(' · ')));
-        const doi = paper.doi ? (String(paper.doi).startsWith('http') ? paper.doi : `https://doi.org/${paper.doi}`) : '';
-        addLink(item, paper.publisher_url || doi || paper.links?.paper, 'Paper / DOI ↗');
+        if (member?.roles?.length) item.append(el('p', 'member-record-role', member.roles.map((r) => roleNames[r] || r).join(' · ')));
+        addLinks(item, paperLinks(paper));
         list.append(item);
       });
       panel.append(list);
@@ -88,8 +132,9 @@
       const list = el('ul', 'member-achievement-list');
       conferences.forEach((entry) => {
         const item = el('li', 'member-achievement-item');
-        item.append(el('strong', 'member-record-title', entry.text));
-        addLink(item, 'news.html', 'News archive ↗');
+        item.append(el('strong', 'member-record-title', entry.body));
+        if (entry.date) item.append(el('p', 'member-record-meta', entry.date));
+        addLinks(item, [['news.html', 'News ↗', false]]);
         list.append(item);
       });
       panel.append(list);
@@ -100,15 +145,23 @@
       const list = el('ul', 'member-achievement-list');
       awards.forEach((entry) => {
         const item = el('li', 'member-achievement-item');
-        item.append(el('strong', 'member-record-title', entry.text));
-        addLink(item, 'news.html', 'News archive ↗');
+        item.append(el('strong', 'member-record-title', entry.body));
+        if (entry.date) item.append(el('p', 'member-record-meta', entry.date));
+        addLinks(item, [['news.html', 'News ↗', false]]);
         list.append(item);
       });
       panel.append(list);
     }
 
-    details.append(panel);
-    info.append(details);
+    if (!total) panel.append(el('p', 'member-no-records', 'No records yet.'));
+    const card = info.closest('.member-detail');
+    button.addEventListener('click', () => {
+      dialogTitle.textContent = `${koreanName(card)} ${memberName(card)}`;
+      dialogBody.replaceChildren(panel);
+      dialog.showModal();
+      dialogBody.scrollTop = 0;
+    });
+    if (!ready) info.append(button);
   };
 
   Promise.all([
@@ -117,7 +170,13 @@
   ]).then(([publications, newsHtml]) => {
     const newsDocument = new DOMParser().parseFromString(newsHtml, 'text/html');
     const newsItems = [...newsDocument.querySelectorAll('.news-original-item')].map((node) => ({
-      text: node.textContent.replace(/\s+/g, ' ').trim(),
+      text: node.textContent.replace(/\s+/g, ' ').trim(),   // 고르는 기준(학회·수상 찾기)은 그대로 전체 글자
+      body: (() => {   // 창에 보이는 글: 소식 본문만 (날짜·링크 글자가 붙지 않게, 줄바꿈은 띄어쓰기로)
+        const p = node.querySelector('.news-body p')?.cloneNode(true);
+        if (!p) return node.textContent.replace(/\s+/g, ' ').trim();
+        p.querySelectorAll('br').forEach((br) => br.replaceWith(' '));
+        return p.textContent.replace(/\s+/g, ' ').trim();
+      })(),
       date: node.querySelector('time')?.textContent.trim() || '',
       category: node.getAttribute('data-category') || ''
     }));
@@ -143,16 +202,14 @@
         return `${year}|${event}`;
       }));
 
-      const achievementLink = info.querySelector('.member-achievement-link');
-      achievementLink?.remove();
-      if (!info.querySelector('.member-metrics')) addMetricCards(info, { scie, scopus, kci, conference: conferenceEvents.size, awards: awards.length });
+      addMetricCards(info, { scie, scopus, kci, conference: conferenceEvents.size, awards: awards.length });
       addAchievementDetails(info, papers, conferences, awards);
     });
   }).catch(() => {
     cards.forEach((card) => {
       const info = card.querySelector('.member-info');
       if (!info) return;
-      if (!info.querySelector('.member-metrics')) addMetricCards(info, { scie: '—', scopus: '—', kci: '—', conference: '—', awards: '—' });
+      addMetricCards(info, { scie: '—', scopus: '—', kci: '—', conference: '—', awards: '—' });
     });
   });
 })();

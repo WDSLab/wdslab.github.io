@@ -1,0 +1,54 @@
+---
+permalink: /people.html
+layout: default
+title: People
+nav: people
+styles: [/assets/members.css?v=20261023-metrics5]
+scripts: [/assets/members.js?v=20261023-metrics5]
+---
+{%- assign pi = site.data.people.professor -%}
+<section class="pagehero"><div class="shell"><h1>People</h1></div></section>
+
+<section class="section alt"><div class="shell">
+<article class="pi" id="professor">
+  <img class="pi-photo" src="{{ pi.photo | relative_url }}" alt="{{ pi.name_en }}" loading="lazy">
+  <div class="pi-main">
+    <small>Professor</small>
+    <h2>{{ pi.name_ko }} <span>{{ pi.name_en }}</span></h2>
+    <p class="pi-interests">{{ pi.interests | replace: '; ', ' · ' | escape }}</p>
+    <div class="pi-links">
+      {%- for l in pi.links -%}
+      <a href="{{ l.url | escape }}" target="_blank" rel="noopener noreferrer">{% include profile-icon.html type=l.type %}{{ l.label }}</a>
+      {%- endfor -%}
+    </div>
+  </div>
+</article>
+
+{%- comment -%} 이력 세 묶음: 넓은 화면은 늘 펼침, 좁은 화면(860px 이하)은 접어 두고 제목을 누르면 펼침 (members.js) {%- endcomment -%}
+<div class="pi-cv">
+  <details class="pi-cv-part" open><summary><h3>Academic Appointments <span class="pi-cv-count">{{ pi.appointments.size }}</span></h3></summary><ul class="pi-timeline">
+    {%- for a in pi.appointments %}<li><time>{{ a.period }}</time><div><strong>{{ a.title }}</strong><span>{{ a.place }}</span></div></li>{% endfor -%}
+  </ul></details>
+  <details class="pi-cv-part" open><summary><h3>Education <span class="pi-cv-count">{{ pi.education.size }}</span></h3></summary><ul class="pi-timeline">
+    {%- for e in pi.education %}<li><time>{{ e.period }}</time><div><strong>{{ e.title }}</strong><span>{{ e.place }}{% if e.dissertation %} · Dissertation: <i>{{ e.dissertation }}</i>{% endif %}{% if e.advisor %} · Advisor: {{ e.advisor }}{% endif %}</span></div></li>{% endfor -%}
+  </ul></details>
+  <details class="pi-cv-part pi-cv-wide" open><summary><h3>External Appointments <span class="pi-cv-count">{{ pi.external.size }}</span></h3></summary><ul class="pi-timeline">
+    {%- for a in pi.external %}<li><time>{{ a.period }}</time><div><strong>{{ a.title }}</strong></div></li>{% endfor -%}
+  </ul></details>
+</div>
+</div></section>
+
+{%- for g in site.data.people.groups %}
+<section class="section{% cycle '', ' alt' %}"><div class="shell">
+<h2 class="group-title">{{ g.title }}</h2>
+<div class="member-grid">
+  {%- for m in g.members -%}
+  <article class="member-detail"><img class="member-photo" src="{{ m.photo | relative_url }}" alt="{{ m.name_en }}" loading="lazy"><div class="member-info"><small>{{ g.title }}</small><h3>{{ m.name_ko }} <span>{{ m.name_en }}</span></h3>
+    {%- if m.interests %}<p class="member-interests">{{ m.interests | replace: '; ', ' · ' | escape }}</p>{% endif -%}
+    {%- comment -%} 학생 카드: 숫자 줄과 실적 버튼 자리를 처음부터 그려 둠 — members.js 가 숫자만 채움 (나중에 끼워 넣으면 카드가 커지며 화면이 밀림) {%- endcomment -%}
+    {%- if g.title == "Ph.D." or g.title == "Integrated M.S.–Ph.D." or g.title == "M.S." %}{% assign metric_labels = "SCIE,Scopus,KCI,Conference,Awards" | split: "," %}<div class="member-metrics" aria-label="Publication, conference, and award counts">{% for l in metric_labels %}<div class="member-metric"><span>{{ l }}</span><strong>—</strong></div>{% endfor %}</div><button type="button" class="member-achievements">View achievements</button>{% endif -%}
+  </div></article>
+  {%- endfor -%}
+</div>
+</div></section>
+{%- endfor %}

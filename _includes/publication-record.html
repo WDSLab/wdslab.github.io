@@ -1,0 +1,21 @@
+{%- assign p = include.paper -%}
+{%- capture search -%}{{ p.title }} {{ p.venue }} {{ p.year }}{%- endcapture -%}
+<article class="pub"{% if include.hidden %} hidden{% endif %} data-category="{{ p.category }}" data-search="{{ search | downcase | escape }}" id="{% include publication-anchor.html paper=p %}">
+<time>{{ p.year }}{% if p.month %}<small>{{ p.month }}</small>{% endif %}</time>
+<div>
+<h3>{{ p.title | escape }}</h3>
+{%- if p.authors.size > 0 -%}
+<p class="pub-authors">
+  {%- for a in p.authors -%}
+    <span class="author-name{% if a.lab %} lab-author{% endif %}">{{ a.name }}</span>
+    {%- for r in a.roles %}<span class="author-role">{% case r %}{% when "제1저자" %}First author{% when "교신저자" %}Corresponding author{% else %}{{ r }}{% endcase %}</span>{% endfor -%}
+    {%- unless forloop.last %}<span class="author-separator">, </span>{% endunless -%}
+  {%- endfor -%}
+</p>
+{%- endif -%}
+<p class="pub-meta"><b>{{ p.venue | escape }}</b> · {{ p.category }} · {{ p.status }}
+  {%- if p.if_as_listed_on_original %} · IF {{ p.if_as_listed_on_original }}{% endif -%}
+  {%- if p.top_percentile_as_listed_on_original %} · {{ p.top_percentile_as_listed_on_original }}{% endif -%}
+</p>
+<p class="pub-links"><span class="pub-area">{{ p.research_area | escape }}</span>{% include paper-links.html paper=p %}</p>
+</div></article>

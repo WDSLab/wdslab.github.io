@@ -1,0 +1,5 @@
+---
+permalink: /assets/gallery.json
+layout: null
+---
+{{ site.data.gallery | jsonify }}

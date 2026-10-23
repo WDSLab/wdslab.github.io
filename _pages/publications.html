@@ -1,0 +1,94 @@
+---
+permalink: /publications.html
+layout: default
+title: Publications
+nav: publications
+styles: [/assets/publications.css?v=20261023-noshift]
+scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.js?v=20261023-reload]
+---
+{%- assign pubs = site.data.publications -%}
+<section class="pagehero"><div class="shell"><h1>Publications</h1></div></section>
+
+<section class="section alt" id="publication-statistics"><div class="shell">
+{%- comment -%} 윗줄 숫자·JCR 개수는 impact-dashboard.js 와 같은 기준으로 빌드 때 미리 계산해 둔다 (스크립트가 돌아도 글자가 안 바뀌어 화면이 안 움직임) {%- endcomment -%}
+{%- assign journals = pubs | where: "category", "International Journal" -%}
+{%- assign published = journals | where: "status", "Published" -%}
+{%- assign revisions = journals | where: "status", "In revision" -%}
+{%- assign submitted = journals | where: "status", "Submitted" -%}
+{%- assign scie = 0 -%}{%- assign jif_sum = 0.0 -%}{%- assign jif_n = 0 -%}{%- assign q1 = 0 -%}{%- assign q2 = 0 -%}{%- assign q3 = 0 -%}{%- assign q4 = 0 -%}{%- assign top10 = 0 -%}
+{%- for p in published -%}
+  {%- assign has_if = false -%}
+  {%- if p.jcr_jif -%}{%- assign has_if = true -%}{%- else -%}
+    {%- assign t = p.title | downcase -%}
+    {%- for m in site.data.publication_metrics -%}{%- if m["if"] -%}{%- assign mt = m.title | downcase -%}{%- if mt == t -%}{%- assign has_if = true -%}{%- break -%}{%- endif -%}{%- endif -%}{%- endfor -%}
+  {%- endif -%}
+  {%- if has_if -%}{%- assign scie = scie | plus: 1 -%}{%- endif -%}
+  {%- if p.jcr_year == 2025 -%}
+    {%- assign in_jcr = true -%}
+    {%- case p.jcr_quartile -%}
+      {%- when "Q1" -%}{%- assign q1 = q1 | plus: 1 -%}
+      {%- when "Q2" -%}{%- assign q2 = q2 | plus: 1 -%}
+      {%- when "Q3" -%}{%- assign q3 = q3 | plus: 1 -%}
+      {%- when "Q4" -%}{%- assign q4 = q4 | plus: 1 -%}
+      {%- else -%}{%- assign in_jcr = false -%}
+    {%- endcase -%}
+    {%- if in_jcr -%}
+      {%- if p.jcr_jif -%}{%- assign jif_sum = jif_sum | plus: p.jcr_jif -%}{%- assign jif_n = jif_n | plus: 1 -%}{%- endif -%}
+      {%- if p.top_percentile_as_listed_on_original == "Top 10%" -%}{%- assign top10 = top10 | plus: 1 -%}
+      {%- elsif p.jcr_best_top_percent -%}{%- if p.jcr_best_top_percent <= 10 -%}{%- assign top10 = top10 | plus: 1 -%}{%- endif -%}{%- endif -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if jif_n > 0 -%}
+  {%- assign mean100 = jif_sum | divided_by: jif_n | times: 100 | round -%}
+  {%- assign mean_whole = mean100 | divided_by: 100 -%}{%- assign mean_frac = mean100 | modulo: 100 -%}
+  {%- if mean_frac < 10 -%}{%- assign mean_frac = mean_frac | prepend: "0" -%}{%- endif -%}
+  {%- capture mean_if -%}{{ mean_whole }}.{{ mean_frac }}{%- endcapture -%}
+{%- else -%}{%- assign mean_if = "—" -%}{%- endif -%}
+{%- assign coauthored = 0 -%}{%- for p in pubs -%}{%- if p.authors.size > 1 -%}{%- assign coauthored = coauthored | plus: 1 -%}{%- endif -%}{%- endfor -%}
+{%- assign manuscripts = published.size | plus: revisions.size | plus: submitted.size -%}
+<h2>Research Output</h2>
+<div class="kpis">
+  <div><strong id="impact-total-records">{{ pubs.size }}</strong><span>Total records</span></div>
+  <div><strong id="impact-published">{{ published.size }}</strong><span>Journal papers</span></div>
+  <div><strong id="impact-scie">{{ scie }}</strong><span>SCIE</span></div>
+  <div><strong id="impact-mean">{{ mean_if }}</strong><span>Mean IF</span></div>
+  <div><strong id="impact-q1">{{ q1 }}</strong><span>JCR Q1</span></div>
+  <div><strong id="impact-top">{{ top10 }}</strong><span>JCR top 10%</span></div>
+</div>
+<p class="quartiles">JCR quartiles · Q1 <b id="impact-q1-count">{{ q1 }}</b> · Q2 <b id="impact-q2-count">{{ q2 }}</b> · Q3 <b id="impact-q3-count">{{ q3 }}</b> · Q4 <b id="impact-q4-count">{{ q4 }}</b></p>
+
+<div class="charts">
+  <div class="chart-box"><h3>Journal papers by year</h3><div class="year-chart" id="impact-year-chart"></div></div>
+  <div class="chart-box"><h3>Papers by research area</h3><div class="area-chart" id="impact-area-chart"></div></div>
+  <div class="chart-box chart-wide"><h3>Journal manuscripts</h3>
+    <p class="pipeline-legend"><span><i class="published"></i>Published <b id="pipeline-published">{{ published.size }}</b></span><span><i class="revision"></i>In revision <b id="pipeline-revision">{{ revisions.size }}</b></span><span><i class="submitted"></i>Submitted <b id="pipeline-submitted">{{ submitted.size }}</b></span><span>Total <b id="pipeline-total">{{ manuscripts }}</b></span></p>
+    <div class="pipeline-track" id="pipeline-track" aria-label="Manuscript status"></div>
+  </div>
+  <div class="chart-box chart-wide"><h3>Co-author network</h3>
+    <p class="co-legend"><span><i class="lab"></i>Lab members</span><span><i></i>External co-authors</span><span>선이 굵을수록 같이 쓴 논문이 많음 · 저자 목록이 있는 논문 <b id="coauthor-paper-count">{{ coauthored }}</b>편 기준 · 점에 마우스를 올리면 연결이 보이고, 끌어 볼 수 있음</span></p>
+    <div class="coauthor-graph" id="coauthor-graph"></div>
+  </div>
+</div>
+</div></section>
+
+<section class="section"><div class="shell">
+<h2>All Publications</h2>
+<div class="tools"><input id="search" type="search" placeholder="Search title, author, venue, year" aria-label="Search publications"><select id="filter" aria-label="Type"><option value="">All</option><option value="International Journal">International Journal</option><option value="International Conference">International Conference</option><option value="Domestic Conference">Domestic Conference</option></select><p class="count" id="count">{{ pubs.size }} / {{ pubs.size }}</p></div>
+<p class="legend">Bold names: lab members</p>
+{%- comment -%} 첫 페이지 밖 논문은 처음부터 hidden, 페이지 단추도 미리 그려 둔다 — site.js 는 같은 모양을 다시 그릴 뿐 (스크립트 전후 길이가 같아야 화면·스크롤바가 안 움직임) {%- endcomment -%}
+{%- assign page_size = 5 -%}
+{%- assign pages = pubs.size | plus: page_size | minus: 1 | divided_by: page_size -%}
+<div class="pub-list" id="records" data-page-size="{{ page_size }}">
+{%- for p in pubs %}{% if forloop.index > page_size %}{% assign rec_hidden = true %}{% else %}{% assign rec_hidden = false %}{% endif %}{% include publication-record.html paper=p hidden=rec_hidden %}{% endfor -%}
+</div>
+{%- if pages > 1 %}
+<nav class="pager" aria-label="Pages"><button type="button" data-page="0" disabled aria-label="Previous page">‹</button>
+  {%- assign gap = false -%}
+  {%- for n in (1..pages) -%}
+    {%- if pages <= 7 or n <= 2 or n == pages -%}<button type="button" data-page="{{ n }}"{% if n == 1 %} class="is-current" aria-current="page"{% endif %}>{{ n }}</button>{%- assign gap = false -%}
+    {%- elsif gap == false -%}<span class="pager-gap">…</span>{%- assign gap = true -%}{%- endif -%}
+  {%- endfor -%}
+<button type="button" data-page="2" aria-label="Next page">›</button></nav>
+{%- endif %}
+</div></section>

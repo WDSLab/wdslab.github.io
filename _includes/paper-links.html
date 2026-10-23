@@ -1,0 +1,12 @@
+{%- comment -%} 논문 링크 한 줄 (홈 주요 논문 · Research 연구 분야 · Publications 가 같이 씀; People 실적 창은 members.js 가 같은 규칙으로 만듦).
+  이름·순서 고정: Paper(DOI → 논문 주소 → 출판사 순으로 있는 것) · Code(공식 GitHub) · arXiv · SSRN. 없는 링크는 빼고, 지어내지 않음. {%- endcomment -%}
+{%- assign p = include.paper -%}
+{%- assign paper_url = p.links.doi | default: p.links.paper | default: p.doi | default: p.publisher_url -%}
+{%- if paper_url or p.links.github or p.links.arxiv or p.links.ssrn -%}
+<span class="paper-links">
+  {%- if paper_url %}<a href="{{ paper_url }}" rel="noopener noreferrer" target="_blank">Paper ↗</a>{% endif -%}
+  {%- if p.links.github %}<a href="{{ p.links.github }}" rel="noopener noreferrer" target="_blank">Code ↗</a>{% endif -%}
+  {%- if p.links.arxiv %}<a href="{{ p.links.arxiv }}" rel="noopener noreferrer" target="_blank">arXiv ↗</a>{% endif -%}
+  {%- if p.links.ssrn %}<a href="{{ p.links.ssrn }}" rel="noopener noreferrer" target="_blank">SSRN ↗</a>{% endif -%}
+</span>
+{%- endif -%}

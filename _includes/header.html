@@ -1,0 +1,10 @@
+<header class="header">
+  <div class="shell top">
+    <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/wdslab-logo-1x.png' | relative_url }}?v=2" srcset="{{ '/assets/wdslab-logo-2x.png' | relative_url }}?v=2 2x, {{ '/assets/wdslab-logo-3x.png' | relative_url }}?v=2 3x" alt="WDSLab · What is the Data Science Laboratory" width="169" height="48"/></a>
+    <button aria-label="Toggle navigation menu" aria-controls="site-navigation" aria-expanded="false" class="hamburger"><span aria-hidden="true">☰</span></button>
+    <nav class="nav" id="site-navigation">
+      {% for item in site.data.navigation %}<a{% if item.key == page.nav %} class="active" aria-current="page"{% endif %} href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endfor %}
+    </nav>
+  </div>
+  <div class="nav-backdrop" aria-hidden="true"></div>
+</header>

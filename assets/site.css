@@ -1,0 +1,274 @@
+/* WDSLab 공통 스타일. 색은 아래 7개만 쓴다. 페이지 전용은 members · research · publications · gallery .css */
+
+:root {
+  --navy: #09223D;      /* 주색: 머리띠, 제목, 버튼 */
+  --accent: #2F6FB5;    /* 강조 하나: 링크, 호버 */
+  --bg: #FFFFFF;
+  --bg2: #F4F6F9;       /* 번갈아 쓰는 연회색 구간 */
+  --ink: #1F2933;       /* 본문 글자 */
+  --muted: #6B7280;     /* 날짜·부제 */
+  --line: #E2E6EB;      /* 테두리·구분선 */
+  --shell: 1120px;
+  --radius: 14px;       /* 카드·사진·버튼 모서리 */
+}
+
+* { box-sizing: border-box; }
+html { scrollbar-gutter: stable; }   /* 부드러운 스크롤은 CSS 로 걸지 않음 — 걸면 새로 고침 때 이전 위치로 돌아가는 것까지 미끄러지듯 움직임 (같은 페이지 안 링크는 site.js 가 부드럽게). 스크롤바 자리를 늘 비워 둬서, 창이 열려 스크롤을 막아도 화면이 옆으로 밀리지 않음 */
+html:has(dialog[open]) { overflow: hidden; }           /* 창(실적 보기·사진 크게 보기)이 열린 동안 뒤 페이지는 스크롤 안 됨 */
+body {
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+h1, h2, h3 { margin: 0; line-height: 1.25; color: var(--navy); letter-spacing: -0.02em; }
+h2 { font-size: 28px; font-weight: 700; }
+h3 { font-size: 17px; font-weight: 700; }
+p { margin: 0; }
+.shell { max-width: var(--shell); margin: 0 auto; padding: 0 24px; }
+
+/* 머리글 */
+.header { background: var(--bg); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 10; }
+.header .top { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.brand { display: flex; align-items: center; }
+.brand:hover { text-decoration: none; }
+.brand img { width: auto; height: 48px; }   /* 연구실 공식 로고. 1x·2x·3x 그림 크기와 같게 */
+.nav { display: flex; gap: 28px; }
+.nav a { color: var(--ink); font-size: 15px; padding: 20px 0; border-bottom: 2px solid transparent; }
+.nav a:hover { color: var(--navy); text-decoration: none; }
+.nav a.active { color: var(--navy); font-weight: 700; border-bottom-color: var(--navy); }
+.hamburger { display: none; font: inherit; font-size: 22px; background: none; border: 0; color: var(--navy); cursor: pointer; }
+
+/* 버튼 */
+.btn { display: inline-block; padding: 11px 22px; border-radius: var(--radius); font-size: 15px; font-weight: 500; border: 1px solid var(--navy); background: var(--navy); color: #fff; }
+.btn:hover { background: var(--accent); border-color: var(--accent); text-decoration: none; }
+.btn.ghost { background: transparent; color: var(--navy); }
+.btn.ghost:hover { background: var(--bg2); color: var(--navy); border-color: var(--navy); }
+.hero .btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+.hero .btn.ghost:hover { background: rgba(255,255,255,.1); border-color: #fff; }
+
+/* 구간 공통 */
+.section { padding: 72px 0; }
+.section.alt { background: var(--bg2); }
+.section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+.section-head p { color: var(--muted); margin-top: 6px; }
+
+/* 하위 페이지 머리 (People · Research · Publications · News · Join) */
+.pagehero { padding: 64px 0 40px; border-bottom: 1px solid var(--line); }
+.pagehero h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.035em; }
+.pagehero p { margin-top: 10px; font-size: 16px; color: var(--muted); }
+.more { font-size: 15px; white-space: nowrap; }
+
+/* 첫 화면: 화면에 잠시 고정되고, 스크롤에 맞춰 점 ? 가 커지며 터졌다가 ! 로 모인다 (home.js) */
+.hero-pin { height: 300vh; }
+.hero { position: sticky; top: 64px; -webkit-user-select: none; user-select: none; height: calc(100vh - 64px); display: flex; align-items: center; color: #fff; overflow: hidden;
+  background: linear-gradient(180deg, var(--navy) 0%, #071A30 100%); }
+.hero-bg, .hero-dots { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.hero .shell { position: relative; z-index: 1; width: 100%; text-align: center; pointer-events: none; }
+.hero-copy { transform-origin: 50% 50%; pointer-events: auto; } /* will-change 를 두면 확대한 글자가 흐릿하게 남는다 */
+.hero-kicker { font-size: 16px; font-weight: 500; color: rgba(255,255,255,.7); margin-bottom: 20px; }
+.hero h1 { color: #fff; font-size: 80px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; }
+.hero .subtitle { margin-top: 18px; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; color: #fff; }
+.hero .actions { justify-content: center; }
+.hero-final { position: absolute; inset: 0; z-index: 1; display: flex; flex-direction: column; justify-content: center; text-align: center; color: #fff; opacity: 0; pointer-events: none; }
+.final-title { font-size: 80px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; white-space: nowrap; } /* 처음 제목과 같은 크기·자리 */
+.final-mark { display: inline-block; margin-left: .06em; font-weight: 800; opacity: 0; } /* 큰 ! 가 날아와 이 자리에 앉는다 */
+.final-sub { margin-top: 18px; font-size: 26px; font-weight: 600; letter-spacing: -0.02em; } /* 처음 부제와 같은 모양 */
+/* 질문(?) · 답(!) 구간 */
+.qa-row { display: block; }
+.qa { scroll-margin-top: 64px; } /* 머리글 높이만큼 띄워서 멈춤 */
+
+.qa h2, .home-head h2 { font-size: 32px; } /* 홈 구간 제목은 전부 32px */
+.qa h2 + .qa-list { margin-top: 28px; } /* 설명 줄 없이 제목 바로 아래 목록 */
+.qa-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.qa-list > li { border-bottom: 1px solid var(--line); }
+.qa-item { display: grid; grid-template-columns: 340px 1fr; gap: 24px; padding: 16px 0; color: inherit; transition: padding-left .2s ease; }
+.qa-item:hover { padding-left: 8px; }   /* 마우스를 올리면 줄이 살짝 밀림 */
+.qa-item > b { font-weight: 600; color: var(--navy); }
+.qa-item:hover > b { color: var(--accent); }
+.qa-item > span { color: var(--muted); font-size: 15px; }
+.qa-list.papers .qa-item { grid-template-columns: 1fr; gap: 4px; }
+.qa-list.papers .paper-links { margin-top: 2px; font-size: 13.5px; }
+@media (max-width: 860px) {
+  .qa-item { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav, .nav.open, .nav-backdrop, .menu-open .nav-backdrop { transition: none; } .hero-pin { height: auto; } .hero { position: relative; top: 0; height: auto; padding: 80px 0 72px; } .hero-final { display: none; } }
+
+/* 제목의 물음표: home.js 가 스크롤에 맞춰 별로 바꿔 그린다 */
+.mark { display: inline-block; margin-left: .04em; transition: opacity .2s linear; }
+/* 끝 장면의 글자 느낌표: 별이 다 모이면 이 글자로 바뀐다 (자리·크기는 home.js) */
+.hero-bang { position: absolute; z-index: 1; font-weight: 800; line-height: 1; color: #fff; opacity: 0; pointer-events: none; transform-origin: 0 0; }
+/* 첫 화면 맨 아래 신호: 글자 없이 반투명 동그라미(화면 폭에 맞춰 34~46px) 안의 꺾쇠 하나가 아래로 통통 튀듯 오르내림. 처음엔 장면 끝까지, 장면 끝에선 연구 분야로 (home.js) */
+.scroll-cue { --cue: clamp(34px, 3.1vw, 46px); position: absolute; left: 50%; bottom: calc(var(--cue) * .45); z-index: 1; display: flex; align-items: center; justify-content: center; width: var(--cue); height: var(--cue); border: 1px solid rgba(255,255,255,.35); border-radius: 50%; background: rgba(255,255,255,.14); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); transform: translateX(-50%); color: #fff; cursor: pointer; transition: opacity .4s ease, background .2s ease; animation: cue-bounce 1.8s ease-in-out infinite; }
+.scroll-cue:hover { background: rgba(255,255,255,.26); text-decoration: none; }
+.scroll-cue.is-hidden { opacity: 0; pointer-events: none; }
+.scroll-cue.cue-end { transition-duration: .8s, .2s; }   /* 사라질 땐 스르륵 */
+.scroll-cue i { width: calc(var(--cue) * .27); height: calc(var(--cue) * .27); margin-top: calc(var(--cue) * -.12); border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); }
+@keyframes cue-bounce { 0%, 100% { transform: translate(-50%, 0); } 45% { transform: translate(-50%, 8px); } 60% { transform: translate(-50%, 3px); } 75% { transform: translate(-50%, 6px); } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue { animation: none; } }
+.hero .actions { display: flex; gap: 12px; margin-top: 28px; }
+.hero .btn { background: #fff; color: var(--navy); border-color: #fff; }
+.hero .btn:hover { background: var(--bg2); }
+.hero.is-play { cursor: none; }
+
+/* 연구 분야 */
+/* 홈 연구 분야 줄 끝의 "View selected papers" 버튼 (누르면 주요 논문 창) */
+.qa-item.has-papers { grid-template-columns: 340px 1fr auto; align-items: baseline; }
+.area-papers-open { padding: 0; border: 0; background: none; font: inherit; font-size: 14px; white-space: nowrap; color: var(--accent); cursor: pointer; }
+.area-papers-open:hover { text-decoration: underline; }
+@media (max-width: 860px) { .qa-item.has-papers { grid-template-columns: 1fr; } .area-papers-open { justify-self: start; margin-top: 4px; } }
+
+/* 주요 논문 창: People 실적 창과 같은 모양 */
+.paper-dialog { width: min(640px, calc(100% - 32px)); max-height: min(80vh, 720px); padding: 0; border: 0; border-radius: var(--radius); color: var(--ink); box-shadow: 0 20px 60px rgba(9,34,61,.25); }
+.paper-dialog[open] { display: flex; flex-direction: column; }
+.paper-dialog::backdrop { background: rgba(9,34,61,.45); }
+.paper-dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+.paper-dialog-head h3 { font-size: 18px; }
+.paper-dialog-close { flex: none; width: 32px; height: 32px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); font: inherit; font-size: 20px; line-height: 1; color: var(--navy); cursor: pointer; }
+.paper-dialog-close:hover { border-color: var(--navy); }
+.paper-dialog-body { overflow-y: auto; overscroll-behavior: contain; padding: 16px 24px 20px; }
+.paper-dialog h4 { margin: 0; font-size: 13px; font-weight: 700; color: var(--muted); }
+.area-papers { list-style: none; margin: 8px 0 0; padding: 0; }
+.area-papers li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.area-papers > li > b { display: block; color: var(--navy); font-weight: 500; line-height: 1.45; }
+.area-papers > li > span:not(.paper-links) { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+.area-papers .paper-links { display: flex; margin-top: 4px; font-size: 13px; }
+
+
+.area { border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; background: var(--bg); color: inherit; display: block; transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+.area:hover { border-color: var(--navy); text-decoration: none; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(9,34,61,.08); }
+.area .num { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; transition: color .2s ease; }
+.area:hover .num { color: var(--accent); font-weight: 700; }
+.area h3 { margin-top: 10px; }
+.area p { margin-top: 10px; font-size: 14.5px; color: var(--ink); }
+
+/* 시스템: 멈춘 줄, 좌우 화살표로 넘김 (손가락으로 밀어도 됨) */
+/* 화살표: 줄 양옆 바깥 여백에 꺾쇠만 (동그라미 바탕 없음). 높이는 사진 가운데(--arrow-top). 여백이 없는 좁은 화면에선 줄 아래 오른쪽 */
+.rail-wrap { position: relative; --arrow-top: 88px; }
+.rail { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding: 4px; margin: -4px; }
+.rail::-webkit-scrollbar { display: none; }
+.rail-btn { position: absolute; top: var(--arrow-top); z-index: 1; width: 40px; height: 40px; padding: 0; border: 0; background: none; color: var(--navy); font-size: 0; cursor: pointer; opacity: .55; transition: opacity .2s ease; }
+.rail-btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 14px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; }
+.rail-btn.next::before { transform: translate(-70%, -50%) rotate(45deg); }
+.rail-btn.prev::before { transform: translate(-30%, -50%) rotate(-135deg); }
+.rail-btn:hover { opacity: 1; }
+.rail-btn.prev { left: -36px; } .rail-btn.next { right: -36px; }
+@media (max-width: 1220px) {
+  .rail-wrap { padding-bottom: 48px; }
+  .rail-btn { top: auto; bottom: 0; }
+  .rail-btn.prev { left: calc(50% - 44px); right: auto; } .rail-btn.next { left: calc(50% + 4px); right: auto; }   /* 줄 아래 가운데에 ‹ › 나란히 */
+}
+.system { display: block; color: inherit; width: 340px; flex: none; scroll-snap-align: start; }
+.system:hover { text-decoration: none; }
+.system .shot { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--navy); transition: border-color .2s ease; aspect-ratio: 16 / 10; }
+.system img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .4s ease; }
+.shot-text { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; color: #fff; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+.shot-text b { font-size: 34px; font-weight: 400; margin-bottom: 8px; opacity: .8; }
+.system:hover .shot { border-color: var(--navy); }
+.system:hover img { transform: scale(1.03); }
+.system h3 { margin-top: 14px; }
+.system h3 span { font-weight: 400; color: var(--muted); font-size: 14px; margin-left: 8px; display: inline-block; transition: transform .2s ease, color .2s ease; }
+.system:hover h3 span { color: var(--accent); transform: translate(2px, -2px); }
+.system p { font-size: 14.5px; color: var(--muted); margin-top: 2px; }
+
+/* 주요 논문 (목록) */
+.paper-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.paper-list li { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.paper-list .year { color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.paper-list h3 { font-size: 16.5px; font-weight: 600; }
+.paper-list h3 a { color: var(--navy); background-image: linear-gradient(var(--accent), var(--accent)); background-size: 0 1px; background-repeat: no-repeat; background-position: 0 100%; transition: background-size .25s ease, color .2s ease; }
+.paper-list h3 a:hover { color: var(--accent); text-decoration: none; background-size: 100% 1px; }
+.paper-list .meta { margin-top: 6px; font-size: 14.5px; color: var(--muted); }
+.paper-list .meta b { font-weight: 500; color: var(--ink); }
+.paper-list .links { margin-top: 8px; font-size: 13.5px; }
+.paper-list .links a { color: var(--muted); margin-right: 16px; padding-bottom: 1px; border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
+.paper-list .links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+/* 최근 소식 + 사진 */
+.news-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+.news-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.news-list li { display: grid; grid-template-columns: 92px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.news-list time { color: var(--muted); font-variant-numeric: tabular-nums; }
+/* 왼쪽 최근 소식 5건, 오른쪽은 사진 기록이 천천히 저절로 넘어가는 사진 칸 (home.js) — 목록 높이에 맞춤 */
+.news-grid { grid-template-columns: 1.15fr 1fr; align-items: stretch; }
+.news-photo { position: relative; min-height: 320px; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--navy); }
+.news-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .8s ease; }
+.news-photo img.is-hidden { opacity: 0; }
+.news-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 32px 16px 14px; font-size: 13.5px; color: #fff; background: linear-gradient(transparent, rgba(9,34,61,.85)); }
+/* 목록 페이지 넘기기 (site.js 가 만듦) */
+#records { scroll-margin-top: 88px; } /* 페이지를 넘기면 목록 맨 위로 — 머리글에 가리지 않게 */
+.pager { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 28px; }
+.pager button { min-width: 38px; height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font: inherit; font-size: 14px; color: var(--ink); cursor: pointer; font-variant-numeric: tabular-nums; transition: border-color .2s ease; }
+.pager button:hover:not(:disabled) { border-color: var(--navy); }
+.pager button.is-current { background: var(--navy); border-color: var(--navy); color: #fff; }
+.pager button:disabled { opacity: .35; cursor: default; }
+.pager-gap { align-self: center; padding: 0 2px; color: var(--muted); }
+
+/* Contact: 왼쪽 안내 문장 + 항목 3줄(이름표 | 내용), 오른쪽 지도 */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }
+.contact-lead { margin: 0 0 28px; font-size: 19px; line-height: 1.6; color: var(--navy); }
+.contact-list { margin: 0; border-top: 1px solid var(--line); }
+.contact-list > div { display: grid; grid-template-columns: 110px 1fr; gap: 16px; align-items: baseline; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.contact-list dt { font-size: 15px; font-weight: 600; color: var(--navy); }
+.contact-list dd { margin: 0; font-size: 16px; color: var(--ink); }
+.contact-list small { display: block; margin-top: 4px; font-size: 14px; line-height: 1.55; color: var(--muted); }
+.contact-mail { font-size: 20px; font-weight: 700; color: var(--navy); }
+.contact-copy { margin-left: 10px; padding: 3px 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font: inherit; font-size: 13px; color: var(--muted); cursor: pointer; vertical-align: 3px; transition: border-color .2s ease, color .2s ease; }
+.contact-copy:hover { border-color: var(--navy); color: var(--navy); }
+.contact-map { width: 100%; height: 100%; min-height: 380px; border: 0; border-radius: var(--radius); background: var(--line); }
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .contact-lead { font-size: 17px; }
+  .contact-list > div { grid-template-columns: 1fr; gap: 4px; padding: 16px 0; }
+  .contact-map { height: 300px; min-height: 0; }
+}
+
+/* 논문 링크 한 줄: Paper · Code · arXiv · SSRN (_includes/paper-links.html, members.js 가 같은 모양으로 씀) */
+.paper-links { display: inline-flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; }
+.paper-links a { color: var(--muted); border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
+.paper-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+
+/* 바닥글 */
+.footer { background: var(--navy); color: rgba(255,255,255,.7); font-size: 14px; }
+.footer a { color: rgba(255,255,255,.85); }
+.footer a:hover { color: #fff; text-decoration: none; }
+.footer b { display: block; margin-bottom: 12px; font-size: 13px; font-weight: 600; color: #fff; }
+.footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; padding-top: 56px; padding-bottom: 40px; }
+.footer-logo { display: inline-flex; }
+.footer-logo img { width: auto; height: 60px; }   /* 어두운 바탕용 흰 글자 로고 */
+.footer-slogan p, .footer-contact p { margin-top: 6px; }
+.footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding-top: 18px; padding-bottom: 22px; border-top: 1px solid rgba(255,255,255,.15); font-size: 12.5px; color: rgba(255,255,255,.5); }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track, .reel-track { animation: none; }
+  .marquee, .reel { -webkit-mask-image: none; mask-image: none; overflow-x: auto; }
+}
+
+@media (max-width: 860px) {
+  .news-grid { grid-template-columns: 1fr; }
+  .news-photo { min-height: 240px; order: -1; }
+  .hero h1 { font-size: 40px; white-space: normal; }
+  .final-title { font-size: 40px; white-space: normal; }
+  .footer-top { flex-direction: column; gap: 28px; }
+  .system { width: 260px; margin-right: 16px; }
+  .reel { height: 320px; }
+  /* 휴대폰 메뉴: ☰ 를 누르면 흰 메뉴가 위에서 부드럽게 내려오고, 나머지 화면은 어두워짐 (site.js) */
+  .nav { position: absolute; left: 0; right: 0; top: 64px; z-index: 1; flex-direction: column; gap: 0; padding: 8px 24px 16px; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(9,34,61,.12); clip-path: inset(0 0 100% 0); visibility: hidden; transition: clip-path .35s ease, visibility 0s linear .35s; }
+  .nav.open { clip-path: inset(0 0 -40px 0); visibility: visible; transition: clip-path .35s ease; }
+  .nav a { padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .nav a:last-child { border-bottom: 0; }
+  .nav a.active { border-bottom-color: var(--line); }
+  .nav-backdrop { position: fixed; inset: 64px 0 0; background: rgba(9,34,61,.4); opacity: 0; visibility: hidden; transition: opacity .35s ease, visibility 0s linear .35s; }
+  .menu-open .nav-backdrop { opacity: 1; visibility: visible; transition: opacity .35s ease; }
+  .menu-open { overflow: hidden; }   /* 메뉴가 열린 동안 뒤 페이지는 스크롤 안 됨 (body 까지 막으면 머리글 고정이 풀려 같이 밀려 올라감) */
+  .hamburger { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; transition: background .2s ease; }
+  .menu-open .hamburger { background: var(--bg2); }   /* 눌린 느낌 */
+  .section { padding: 48px 0; }
+}

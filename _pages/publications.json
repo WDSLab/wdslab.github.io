@@ -1,0 +1,5 @@
+---
+permalink: /publications.json
+layout: null
+---
+{{ site.data.publications | jsonify }}

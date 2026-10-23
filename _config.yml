@@ -1,0 +1,20 @@
+title: WDSLab
+description: What is Data Science Lab, Changwon National University — Data Science as a Service.
+lang: ko
+url: https://wdslab.github.io
+
+# 검색엔진용 sitemap.xml 과 robots.txt 를 자동으로 만듦 (GitHub Pages 지원 플러그인)
+plugins:
+  - jekyll-sitemap
+
+# 페이지 파일은 전부 _pages/ 에 둔다. 주소는 각 파일의 permalink 로 정한다.
+include:
+  - _pages
+
+# 공개하지 않을 파일 (Jekyll 은 .md 도 웹페이지로 만들어 버림)
+exclude:
+  - CLAUDE.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

@@ -1,0 +1,24 @@
+{%- assign n = include.item -%}
+{%- comment -%} archive=true: News 페이지 목록 모양. People 페이지(members.js)가 이 글자를 읽으므로 태그 사이에 공백을 넣지 않는다. {%- endcomment -%}
+{%- if include.archive -%}<article class="news-original-item" data-category="{{ n.category }}">
+{%- else -%}<article class="news-original-item news-featured-card" data-category="{{ n.category }}" data-reveal><span class="news-kind">{{ n.category }}</span>
+{%- endif -%}
+<time>{{ n.date }}</time><div class="news-body"><p>{{ n.text | escape | newline_to_br }}</p>
+{%- if n.links -%}<div class="news-links">
+  {%- for l in n.links -%}
+    {%- case l.type -%}
+      {%- when "paper" -%}{%- assign label = "Paper" -%}
+      {%- when "details" -%}{%- assign label = "Publication details" -%}
+      {%- when "github" -%}{%- assign label = "Code" -%}
+      {%- when "article" -%}{%- assign label = "News article" -%}
+      {%- when "system" -%}{%- assign label = "System" -%}
+      {%- else -%}{%- assign label = "Link" -%}
+    {%- endcase -%}
+    {%- if l.type == "details" -%}
+      <a class="paper-action paper-action-details" href="{{ l.url | relative_url }}">{{ label }}</a>
+    {%- else -%}
+      <a class="paper-action paper-action-{{ l.type }}" href="{{ l.url }}" rel="noopener noreferrer" target="_blank">{{ label }} <span aria-hidden="true" class="action-arrow">↗</span></a>
+    {%- endif -%}
+  {%- endfor -%}
+</div>{%- endif -%}
+</div></article>

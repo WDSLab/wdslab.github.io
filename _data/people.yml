@@ -1,0 +1,108 @@
+# People 페이지 내용. 논문 수("주요 실적 보기")는 publications.json 에서 자동으로 센다.
+# name_en 은 논문 데이터의 저자 이름과 똑같이 적어야 실적이 연결된다.
+
+professor:
+  name_ko: 심성현
+  name_en: Sunghyun Sim
+  photo: assets/members/sim-sunghyun.webp
+  interests: "Domain-Specific Foundation Models; Industrial Engineering; Industrial AI; Spatiotemporal & Multimodal AI; Explainable AI & Decision Support; Representation & Self-Supervised Learning"
+  links:
+    - type: scholar
+      label: Google Scholar
+      url: https://scholar.google.co.kr/citations?hl=ko&user=QzKSihEAAAAJ
+    - type: researchgate
+      label: ResearchGate
+      url: https://www.researchgate.net/profile/Sim-Sunghyun-2?ev=hdr_xprf
+    - type: github
+      label: WDSLab GitHub
+      url: https://github.com/WDSLab
+  appointments:
+    - period: 2025 – Present
+      title: Assistant Professor
+      place: Changwon National University · Department of Artificial Intelligence Engineering
+    - period: 2022 – 2024
+      title: Assistant Professor
+      place: Dong-eui University · Department of Industrial Management and Big Data Engineering
+    - period: 2022 – 2024
+      title: Assistant Professor
+      place: Dong-eui University · Graduate School of Artificial Intelligence
+    - period: 2021 – 2022
+      title: Postdoctoral Researcher
+      place: Pusan National University
+  external:
+    - period: 2026.04 – Present
+      title: 대통령직속 지방시대위원회 · 5극3특 초광역사업 총괄기획위원
+    - period: 2026.02 – Present
+      title: 대통령직속 국가인공지능전략위원회 · 지역자문단 영남권 리더
+    - period: 2026.02 – Present
+      title: 대통령 직속 국가인공지능전략위원회 · 지역특별위원회 위원
+    - period: 2026.02 – Present
+      title: 산업통상부 M.AX 얼라이언스 · 산업단지AX분과 분과위원
+    - period: 2026.02 – Present
+      title: 산업통상부 M.AX 얼라이언스 · 창원 MINI 얼라이언스 위원장
+    - period: 2025.09 – 2026.02
+      title: 대통령 직속 국가인공지능전략위원회 · 지역 TF 위원
+    - period: 2025.09 – Present
+      title: 대통령 직속 국가인공지능전략위원회 · 자문위원
+  education:
+    - period: Feb 2021
+      title: Ph.D. in Industrial Engineering
+      place: Pusan National University
+      dissertation: "AutoPM: Automatic Process Discovery and Analysis"
+      advisor: Prof. Hyerim Bae
+    - period: Feb 2016
+      title: B.S. in Statistics
+      place: Pusan National University
+
+groups:
+  - title: Ph.D.
+    members:
+      - name_ko: 이재훈
+        name_en: Jaehoon Lee
+        photo: assets/members/lee-jaehoon.webp
+        interests: Industrial Data Science; Time-series Forecasting
+      - name_ko: 주슬기
+        name_en: Seulgi Ju
+        photo: assets/members/ju-seulgi.webp
+        interests: Industrial Data Science
+      - name_ko: 민근홍
+        name_en: Geunhong Min
+        photo: assets/members/min-geunhong.webp
+        interests: Industrial Data Science
+  - title: Integrated M.S.–Ph.D.
+    members:
+      - name_ko: 김영휘
+        name_en: Younghwi Kim
+        photo: assets/members/kim-younghwi.webp
+        interests: XAI; Time-series Forecasting; Spatiotemporal AI
+      - name_ko: 이승우
+        name_en: Seungwoo Lee
+        photo: assets/members/lee-seungwoo.webp
+        interests: Large Language Models; Spatiotemporal AI
+  - title: M.S.
+    members:
+      - name_ko: 김두현
+        name_en: Doohyun Kim
+        photo: assets/members/kim-doohyun.webp
+        interests: Industrial Data Science; Lightweight AI
+      - name_ko: 김남기
+        name_en: Namgi Kim
+        photo: assets/members/kim-namgi.webp
+        interests: Industrial AI
+      - name_ko: 강준규
+        name_en: Jungyu Kang
+        photo: assets/members/kang-jungyu.webp
+        interests: Model Lightweighting; Computer Vision
+      - name_ko: 강다현
+        name_en: Dahyun Kang
+        photo: assets/members/kang-dahyun.webp
+        interests: Industrial Data Science
+      - name_ko: 박민수
+        name_en: Minsoo Park
+        photo: assets/members/park-minsoo.webp?v=20261013
+        interests: Super-resolution; Anomaly Detection
+  - title: Staff
+    members:
+      - name_ko: 황조은
+        name_en: Joeun Hwang
+        photo: assets/members/hwang-joeun.webp

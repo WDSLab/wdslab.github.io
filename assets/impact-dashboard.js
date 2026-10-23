@@ -60,9 +60,29 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const yearEntries=Object.entries(years).sort((a,b)=>Number(a[0])-Number(b[0]));
  const yearEl=document.getElementById('impact-year-chart');yearEl.replaceChildren();
  const maxYear=Math.max(1,...yearEntries.map(x=>x[1]));
- yearEntries.forEach(([year,n])=>{const col=document.createElement('div');col.className='impact-year-col';col.title=`${year}: ${n} articles`;const val=document.createElement('b');val.textContent=n;const track=document.createElement('div');track.className='impact-year-track';const bar=document.createElement('span');bar.className='impact-year-fill';bar.style.height=(100*n/maxYear)+'%';track.append(bar);const label=document.createElement('small');label.textContent=year;col.append(val,track,label);yearEl.append(col)});
+ yearEntries.forEach(([year,n])=>{const col=document.createElement('div');col.className='impact-year-col';col.title=`${year}: ${n} articles`;const val=document.createElement('b');val.textContent=n;const track=document.createElement('div');track.className='impact-year-track';const bar=document.createElement('span');bar.className='impact-year-fill';bar.style.height=(100*n/maxYear)+'%';track.append(val,bar);const label=document.createElement('small');label.textContent=year;col.append(track,label);yearEl.append(col)});
  const fields={};pubs.forEach(x=>{const k=x.research_area||'Unclassified';fields[k]=(fields[k]||0)+1});
  const area=document.getElementById('impact-area-chart');area.replaceChildren();const entries=Object.entries(fields).sort((a,b)=>b[1]-a[1]);const maxField=Math.max(1,...entries.map(x=>x[1]));
  entries.forEach(([label,n])=>{const row=document.createElement('div');row.className='impact-area-row';const header=document.createElement('div');const l=document.createElement('span');l.textContent=label;const v=document.createElement('b');v.textContent=n;header.append(l,v);const tr=document.createElement('div');tr.className='impact-area-track';const fill=document.createElement('span');fill.className='impact-area-fill';fill.style.width=(100*n/maxField)+'%';tr.append(fill);row.append(header,tr);area.append(row)});
+
+ // 그래프에 마우스를 올리면(휴대폰은 누르면) 그 칸에 들어간 논문 목록이 작은 상자로 뜸 — 연도별 · 연구 분야별 · 원고 현황
+ const tip=document.createElement('div');tip.className='chart-tip';tip.setAttribute('aria-hidden','true');document.body.append(tip);
+ const tips=new Map();
+ const describe=(el,head,list)=>{if(!el)return;tips.set(el,{head,list});el.removeAttribute('title');el.classList.add('has-tip');};
+ [...yearEl.children].forEach(col=>{const y=col.querySelector('small').textContent;const list=pubs.filter(x=>String(x.year)===y);describe(col,`${y} · ${list.length} journal papers`,list);});
+ [...area.children].forEach(row=>{const name=row.querySelector('span').textContent;const list=pubs.filter(x=>(x.research_area||'Unclassified')===name);describe(row,`${name} · ${list.length} papers`,list);});
+ if(track)[['published','Published',pubs],['revision','In revision',revisions],['submitted','Submitted',submitted]].forEach(([cls,name,list])=>describe(track.querySelector('.'+cls),`${name} · ${list.length}`,list));
+ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ let current=null;
+// 상자는 마우스를 바로 따라붙지 않고 미끄러지듯 따라감 (처음 나타날 땐 그 자리에서 바로)
+let posX=0,posY=0,goX=0,goY=0,glide=0;
+const step=()=>{posX+=(goX-posX)*0.2;posY+=(goY-posY)*0.2;tip.style.left=posX+'px';tip.style.top=posY+'px';glide=(Math.abs(goX-posX)>0.5||Math.abs(goY-posY)>0.5)?requestAnimationFrame(step):0;};
+const place=(x,y)=>{const w=tip.offsetWidth,h=tip.offsetHeight;let left=x+16,top=y+16;if(left+w>innerWidth-8)left=x-w-16;if(top+h>innerHeight-8)top=y-h-16;goX=Math.max(8,left);goY=Math.max(8,top);if(!tip.classList.contains('is-on')){posX=goX;posY=goY;tip.style.left=posX+'px';tip.style.top=posY+'px';}else if(!glide)glide=requestAnimationFrame(step);};
+ const show=(el,x,y)=>{if(el!==current){const d=tips.get(el);current=el;const shown=d.list.slice(0,6).map(p=>`<li>${esc(p.title)}<span>${esc(p.venue)}${p.year?' · '+esc(p.year):''}</span></li>`).join('');tip.innerHTML=`<b>${esc(d.head)}</b><ul>${shown}</ul>${d.list.length>6?`<p>+${d.list.length-6} more</p>`:''}`;}place(x,y);tip.classList.add('is-on');};
+ const hide=()=>{tip.classList.remove('is-on');current=null;};   // 사라질 땐 CSS 로 스르륵
+ root.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const el=e.target.closest('.has-tip');if(el&&tips.has(el))show(el,e.clientX,e.clientY);else hide();});
+ root.addEventListener('pointerleave',hide);
+ root.addEventListener('click',e=>{const el=e.target.closest('.has-tip');if(el&&tips.has(el)){current=null;show(el,e.clientX,e.clientY);}else hide();});
+ addEventListener('scroll',hide,{passive:true});
  }catch(e){console.error('Publication statistics could not load',e);}
 });

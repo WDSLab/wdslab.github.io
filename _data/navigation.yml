@@ -1,0 +1,22 @@
+# 위쪽 메뉴 7개 (key 는 각 페이지의 nav 값과 맞춤)
+- key: home
+  title: Home
+  url: /
+- key: people
+  title: People
+  url: /people.html
+- key: projects
+  title: Projects
+  url: /projects.html
+- key: publications
+  title: Publications
+  url: /publications.html
+- key: services
+  title: Services
+  url: /services.html
+- key: news
+  title: News
+  url: /news.html
+- key: contact
+  title: Contact
+  url: /contact.html

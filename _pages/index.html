@@ -1,0 +1,102 @@
+---
+permalink: /
+layout: default
+title: Home
+nav: home
+scripts: [/assets/home.js?v=20261023-cue-later]
+---
+{% assign pubs = site.data.publications %}
+<div class="hero-pin" id="hero-pin">
+<section class="hero" id="hero">
+  <canvas class="hero-bg" aria-hidden="true"></canvas>
+  <div class="shell">
+    <div class="hero-copy">
+      <p class="hero-kicker">데이터탐구연구실 · Changwon National University</p>
+      <h1><span class="words">What is Data Science</span><span class="mark">?</span></h1>
+      <p class="subtitle">Data Science as a Service.</p>
+      <div class="actions">
+        <a class="btn" href="#research" data-scroll>Research Areas</a>
+        <a class="btn ghost" href="#papers" data-scroll>Selected Papers</a>
+      </div>
+    </div>
+  </div>
+  <a class="scroll-cue" href="#research" data-scroll="scene" aria-label="Scroll down"><i></i></a>
+  <a class="scroll-cue cue-end is-hidden" href="#research" data-scroll aria-label="Go to Research Areas"><i></i></a>
+  <span class="hero-bang" aria-hidden="true">!</span>
+  <div class="hero-final" aria-hidden="true">
+    <p class="hero-kicker">데이터탐구연구실 · Changwon National University</p>
+    <p class="final-title">What is Data Science<span class="final-mark">!</span></p>
+    <p class="final-sub">Data Science as a Service.</p>
+  </div>
+</section>
+</div>
+
+<section class="section qa" id="research">
+  <div class="shell qa-row">
+    <div>
+      <h2>Research Areas</h2>
+      {%- comment -%} 연구 분야 줄: 이름 | 설명 | 주요 논문 버튼(누르면 창, site.js 의 data-dialog) {%- endcomment -%}
+      <ol class="qa-list">
+        {%- for a in site.data.research %}
+        <li><div class="qa-item has-papers"><b>{{ a.title }}</b><span>{{ a.summary }}</span><button type="button" class="area-papers-open" data-dialog="papers-{{ forloop.index }}">View selected papers · {{ a.papers.size }}</button>
+          <dialog class="paper-dialog" id="papers-{{ forloop.index }}" aria-labelledby="papers-{{ forloop.index }}-title">
+            <div class="paper-dialog-head"><h3 id="papers-{{ forloop.index }}-title">{{ a.title | escape }}</h3><button type="button" class="paper-dialog-close" data-close aria-label="Close">×</button></div>
+            <div class="paper-dialog-body"><h4>Selected Papers</h4>
+            <ul class="area-papers">
+              {%- for t in a.papers -%}{%- assign p = site.data.publications | where: "title", t | first -%}
+              <li><b>{{ p.title | escape }}</b><span>{{ p.venue }} · {{ p.year }}</span>{% include paper-links.html paper=p %}</li>
+              {%- endfor -%}
+            </ul></div>
+          </dialog></div></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section qa alt" id="papers">
+  <div class="shell qa-row">
+    <div>
+      <div class="section-head"><h2>Selected Papers</h2><a class="more" href="{{ '/publications.html' | relative_url }}">View all →</a></div>
+      <ol class="qa-list papers">
+        {% assign selected = pubs | where: "selected", true %}
+        {% for p in selected limit: 4 %}
+        <li><div class="qa-item"><b>{{ p.title }}</b><span>{{ p.venue }} · {{ p.year }}</span>{% include paper-links.html paper=p %}</div></li>
+        {% endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="shell">
+    <div class="section-head home-head"><div><h2>Services</h2></div><a class="more" href="{{ '/services.html' | relative_url }}">View all →</a></div>
+  </div>
+<div class="shell rail-wrap">
+  <button type="button" class="rail-btn prev" aria-label="Previous service">‹</button>
+  <div class="rail" id="platform-rail" data-auto="6000">
+    {% for s in site.data.systems %}{% include system-card.html system=s %}{% endfor %}
+  </div>
+  <button type="button" class="rail-btn next" aria-label="Next service">›</button>
+</div>
+</section>
+
+<section class="section alt">
+  <div class="shell">
+    <div class="section-head home-head"><div><h2>News</h2></div><a class="more" href="{{ '/news.html' | relative_url }}">View all →</a></div>
+    <div class="news-grid">
+{%- comment -%} 왼쪽: 최근 소식 5건 (나머지는 "전체 →"). 오른쪽: 사진 기록의 행사별 대표 사진이 천천히 저절로 넘어감 (home.js) {%- endcomment -%}
+<ul class="news-list">
+  {% for n in site.data.news limit: 5 %}
+  <li><time>{{ n.date }}</time><span>{{ n.text | escape }}</span></li>
+  {% endfor %}
+</ul>
+{% assign shown = site.data.gallery | where_exp: "g", "g.photos.size > 0" %}{% assign first = shown | first %}
+<figure class="news-photo">
+  <img src="{{ first.photos[0] | relative_url }}" alt="{{ first.title }}"/>
+  <figcaption>{{ first.date }} · {{ first.title }}</figcaption>
+  <script type="application/json" id="news-photos">[{% for g in shown %}{"src":{{ g.photos[0] | relative_url | jsonify }},"caption":{{ g.date | append: " · " | append: g.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
+</figure>
+    </div>
+  </div>
+</section>
