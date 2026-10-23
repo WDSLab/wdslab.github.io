@@ -236,6 +236,14 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .news-photo { position: relative; min-height: 320px; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--navy); }
 .news-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .8s ease; }
 .news-photo img.is-hidden { opacity: 0; }
+/* 둥근 꺾쇠 단추 공통 (Projects 달력·Services·News 사진): 30px, 테두리 + 꺾쇠 */
+.nav-btn { width: 30px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: var(--navy); cursor: pointer; position: relative; transition: border-color .2s ease, background .2s ease; }
+.nav-btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+.nav-btn.prev::before { transform: translate(-25%, -50%) rotate(-135deg); }   /* ‹ */
+.nav-btn.next::before { transform: translate(-75%, -50%) rotate(45deg); }     /* › */
+.nav-btn:hover { border-color: var(--navy); background: var(--bg2); }
+.news-nav { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; gap: 6px; }   /* 사진 오른쪽 위 */
+.news-nav .nav-btn { background: rgba(255,255,255,.92); border-color: transparent; }
 .news-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 32px 16px 14px; font-size: 13.5px; color: #fff; background: linear-gradient(transparent, rgba(9,34,61,.85)); }
 /* 목록 페이지 넘기기 (site.js 가 만듦) */
 #records { scroll-margin-top: 88px; } /* 페이지를 넘기면 목록 맨 위로 — 머리글에 가리지 않게 */
@@ -284,6 +292,7 @@ html.js.reveal-init main .section > .shell { transition: none; }
 
 /* 협력 기관 로고 띠(홈 맨 아래): 두 줄을 이어 붙인 트랙이 왼쪽으로 절반(한 줄 길이)만큼 40초에 걸쳐 움직여 끊김 없이 돈다. 양 끝은 흐리게. 마우스를 올려도 계속 간다(사용자 결정). 제목 없이 News 아래(맨 끝) */
 .coop-section { padding: 48px 0 56px; }   /* 회색 News 구간 다음 흰 띠 */
+html.js main .coop-section > .shell { opacity: 1; transform: none; transition: none; }   /* 로고 띠는 스크롤 등장 효과 없음 — 이미 움직이는 띠가 또 올라오면 이질감 (사용자 지적) */
 .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee-track { display: flex; width: max-content; animation: coop-move 40s linear infinite; }
 @keyframes coop-move { from { transform: translateX(0); } to { transform: translateX(-50%); } }

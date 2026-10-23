@@ -3,8 +3,8 @@ permalink: /services/
 layout: default
 title: Services
 nav: services
-styles: [/assets/services.css?v=20261023-nosb]
-scripts: [/assets/services.js?v=20261023-nosb]
+styles: [/assets/services.css?v=20261023-steps]
+scripts: [/assets/services.js?v=20261023-steps]
 ---
 {%- comment -%} 제목 띠는 화면 위에 붙어 있음(sticky) — 스크롤해도 "Services" 가 따라 내려가지 않음 (사용자 요청) {%- endcomment -%}
 <section class="pagehero svc-hero"><div class="shell"><h1>Services</h1></div></section>
@@ -12,7 +12,7 @@ scripts: [/assets/services.js?v=20261023-nosb]
 {%- comment -%} 연구실이 만들어 공개한 서비스 전부 (_data/systems.yml 순서).
    PC: 제목 띠 아래 무대(.svc-stage)가 고정되고, 서비스마다 "캡처(왼쪽) + 설명(오른쪽)" 한 장(.svc-slide)이 겹쳐 있다.
        스크롤을 내리면 지금 장이 위로 밀려 나가고 다음 장이 아래에서 올라온다(장 간격은 무대의 70% — 위·아래 장이 연하게 살짝 보임) — 세로 회전문을 스크롤로 돌리는 느낌 (services.js 가 스크롤 위치로 자리를 바로 정함, 전환 효과 없음). ▲▼ 단추와 4초 자동 넘김은 다음 장 위치로 부드럽게 스크롤하는 것 (사용자가 스크롤·터치하면 6초 쉼).
-       구간(.svc-track) 높이 = 무대 높이 × (1 + 0.75 × 장 수) — 한 장 넘기는 데 무대 높이의 3/4 만큼 스크롤. 마지막 장 다음에 첫 장이 이어 올라오고(순환), 다 올라오면 스크롤을 처음으로 되돌린다.
+       구간(.svc-track) 높이 = 무대 높이 × (1 + 0.75 × (장 수 + 1)) — 한 장 넘기는 데 무대 높이의 3/4 만큼 스크롤. 앞뒤로 한 칸씩 더 있어 첫 장 위로 마지막 장, 마지막 장 아래로 첫 장이 이어지고(순환), 끝에 닿으면 같은 그림인 반대쪽 자리로 스크롤을 옮긴다.
    PC 에선 하단 바(푸터)도 처음부터 화면 아래에 고정(한 줄로 납작하게) — 머리글·제목 띠·무대·푸터가 다 고정이고 장만 움직인다.
    휴대폰(860px 이하): 고정 없이 서비스마다 캡처 + 설명을 세로로 쌓는다.
    첫 상태(첫 장만 보임)는 CSS 로 미리 그려 열 때 밀림 없음 {%- endcomment -%}

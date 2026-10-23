@@ -3,7 +3,7 @@ permalink: /
 layout: default
 title: Home
 nav: home
-scripts: [/assets/home.js?v=20261023-coop]
+scripts: [/assets/home.js?v=20261023-newsnav]
 ---
 {% assign pubs = site.data.publications %}
 <div class="hero-pin" id="hero-pin">
@@ -84,7 +84,7 @@ scripts: [/assets/home.js?v=20261023-coop]
   <div class="shell">
     <div class="section-head home-head"><div><h2>News</h2></div><a class="more" href="{{ '/news/' | relative_url }}">View all →</a></div>
     <div class="news-grid">
-{%- comment -%} 왼쪽: 최근 소식 5건 (나머지는 "전체 →"). 오른쪽: 사진 기록의 행사별 대표 사진이 천천히 저절로 넘어감 (home.js) {%- endcomment -%}
+{%- comment -%} 왼쪽: 최근 소식 5건 (나머지는 "전체 →"). 오른쪽: 사진 기록의 행사별 대표 사진이 천천히 저절로 넘어감, ‹ › 단추로 직접 넘길 수도 (home.js) {%- endcomment -%}
 <ul class="news-list">
   {% for n in site.data.news limit: 5 %}
   <li><time>{{ n.date }}</time><span>{{ n.text | escape }}</span></li>
@@ -94,6 +94,7 @@ scripts: [/assets/home.js?v=20261023-coop]
 <figure class="news-photo">
   <img src="{{ first.photos[0] | relative_url }}" alt="{{ first.title }}"/>
   <figcaption>{{ first.date }} · {{ first.title }}</figcaption>
+  <div class="news-nav"><button type="button" class="nav-btn prev" aria-label="Previous photo"></button><button type="button" class="nav-btn next" aria-label="Next photo"></button></div>
   <script type="application/json" id="news-photos">[{% for g in shown %}{"src":{{ g.photos[0] | relative_url | jsonify }},"caption":{{ g.date | append: " · " | append: g.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
 </figure>
     </div>

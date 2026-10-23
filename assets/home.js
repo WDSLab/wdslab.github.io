@@ -301,26 +301,25 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/* 최근 소식 사진 칸: 사진 기록의 행사별 대표 사진을 5초마다 하나씩, 겹쳐 흐려지며(0.8초) 넘긴다. 끝나면 처음부터.
-   마우스를 올리면 멈추고, 화면 밖이거나 탭이 숨겨졌을 때도 멈춘다. 움직임 줄이기 설정이면 첫 사진에 머문다. */
+/* 최근 소식 사진 칸: 사진 기록의 행사별 대표 사진을 5초마다 하나씩, 겹쳐 흐려지며(0.8초) 넘긴다. 끝나면 처음부터. ‹ › 단추로 직접 넘길 수도 있다(누르면 6초간 자동은 쉼).
+   마우스를 올리면 멈추고, 화면 밖이거나 탭이 숨겨졌을 때도 멈춘다. 움직임 줄이기 설정이면 저절로는 안 넘기고 단추만 된다. */
 document.addEventListener('DOMContentLoaded', () => {
   const figure = document.querySelector('.news-photo');
   const data = document.getElementById('news-photos');
   if (!figure || !data) return;
   const photos = JSON.parse(data.textContent);
-  if (photos.length < 2 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (photos.length < 2) { figure.querySelector('.news-nav')?.remove(); return; }
   const caption = figure.querySelector('figcaption');
   const front = figure.querySelector('img');
   const back = front.cloneNode();           // 다음 사진을 뒤에 미리 깔아 두고, 앞 사진을 흐리게 해서 넘김
   back.classList.add('is-hidden');
   figure.insertBefore(back, front);
-  let index = 0, shown = front, hidden = back, hovered = false, visible = false;
+  let index = 0, shown = front, hidden = back, hovered = false, visible = false, lastUser = 0;
   figure.addEventListener('mouseenter', () => { hovered = true; });
   figure.addEventListener('mouseleave', () => { hovered = false; });
   new IntersectionObserver((e) => { visible = e[0].isIntersecting; }, { threshold: 0.3 }).observe(figure);
-  setInterval(() => {
-    if (hovered || !visible || document.hidden) return;
-    index = (index + 1) % photos.length;
+  const go = (dir) => {
+    index = (index + dir + photos.length) % photos.length;
     const p = photos[index];
     const next = new Image();
     next.onload = () => {
@@ -330,5 +329,14 @@ document.addEventListener('DOMContentLoaded', () => {
       caption.textContent = p.caption;
     };
     next.src = p.src;
+  };
+  figure.querySelector('.news-nav')?.addEventListener('click', (e) => {
+    const b = e.target.closest('.nav-btn'); if (!b) return;
+    lastUser = performance.now(); go(b.classList.contains('next') ? 1 : -1);
+  });
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setInterval(() => {
+    if (hovered || !visible || document.hidden || performance.now() - lastUser < 6000) return;
+    go(1);
   }, 5000);
 });
