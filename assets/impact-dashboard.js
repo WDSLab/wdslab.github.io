@@ -78,8 +78,10 @@ document.addEventListener('DOMContentLoaded',async()=>{
 let posX=0,posY=0,goX=0,goY=0,glide=0;
 const step=()=>{posX+=(goX-posX)*0.2;posY+=(goY-posY)*0.2;tip.style.left=posX+'px';tip.style.top=posY+'px';glide=(Math.abs(goX-posX)>0.5||Math.abs(goY-posY)>0.5)?requestAnimationFrame(step):0;};
 const place=(x,y)=>{const w=tip.offsetWidth,h=tip.offsetHeight;let left=x+16,top=y+16;if(left+w>innerWidth-8)left=x-w-16;if(top+h>innerHeight-8)top=y-h-16;goX=Math.max(8,left);goY=Math.max(8,top);if(!tip.classList.contains('is-on')){posX=goX;posY=goY;tip.style.left=posX+'px';tip.style.top=posY+'px';}else if(!glide)glide=requestAnimationFrame(step);};
- const show=(el,x,y)=>{if(el!==current){const d=tips.get(el);current=el;const shown=d.list.slice(0,6).map(p=>`<li>${esc(p.title)}<span>${esc(p.venue)}${p.year?' · '+esc(p.year):''}</span></li>`).join('');tip.innerHTML=`<b>${esc(d.head)}</b><ul>${shown}</ul>${d.list.length>6?`<p>+${d.list.length-6} more</p>`:''}`;}place(x,y);tip.classList.add('is-on');};
+ const show=(el,x,y)=>{if(el!==current){const d=tips.get(el);current=el;const shown=d.list.map(p=>`<li>${esc(p.title)}<span>${esc(p.venue)}${p.year?' · '+esc(p.year):''}</span></li>`).join('');tip.innerHTML=`<b>${esc(d.head)}</b><ul>${shown}</ul>`;}/* 전부 넣고(상자 크기는 CSS 로 고정) 넘치면 목록 안에서 스크롤 — 머리글에 이미 편수가 있어 "+n more" 는 뺌 */place(x,y);tip.classList.add('is-on');};
  const hide=()=>{tip.classList.remove('is-on');current=null;};   // 사라질 땐 CSS 로 스르륵
+ // 상자는 마우스를 따라다녀 직접 긁을 수 없으니, 상자가 떠 있는 동안 휠은 상자 안 목록을 굴린다(목록이 끝나면 아무것도 안 함 — 페이지는 안 움직임)
+ root.addEventListener('wheel',e=>{if(!tip.classList.contains('is-on'))return;const ul=tip.querySelector('ul');if(!ul)return;e.preventDefault();ul.scrollTop+=e.deltaY;},{passive:false});
  root.addEventListener('pointermove',e=>{if(e.pointerType==='touch')return;const el=e.target.closest('.has-tip');if(el&&tips.has(el))show(el,e.clientX,e.clientY);else hide();});
  root.addEventListener('pointerleave',hide);
  root.addEventListener('click',e=>{const el=e.target.closest('.has-tip');if(el&&tips.has(el)){current=null;show(el,e.clientX,e.clientY);}else hide();});

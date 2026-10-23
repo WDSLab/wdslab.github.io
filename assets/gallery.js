@@ -14,6 +14,10 @@
   const PAGE = 9;
   let page = 1;
   const pager = grid.nextElementSibling?.classList.contains('pager') ? grid.nextElementSibling : (() => { const nav = document.createElement('nav'); nav.className = 'pager'; nav.setAttribute('aria-label', 'Pages'); grid.after(nav); return nav; })();
+  // 격자 높이는 첫 쪽(가장 긴 쪽) 높이로 고정 — 짧은 마지막 쪽에서도 문서가 줄지 않아 제목까지 늘 위로 굴러감 (site.js 목록과 같은 이유)
+  const holdHeight = () => { if (page === 1 && grid.children.length) { grid.style.minHeight = ''; grid.style.minHeight = `${grid.offsetHeight}px`; } };
+  holdHeight();
+  window.addEventListener('resize', holdHeight);
   pager.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-page]');
     if (!button || button.disabled) return;
@@ -36,10 +40,14 @@
       pager.append(button);
     };
     add('‹', page - 1, { disabled: page === 1, label: 'Previous page' });
-    let gap = false;
-    for (let n = 1; n <= pages; n++) {
-      if (pages <= 7 || n === 1 || n === pages || Math.abs(n - page) <= 1) { add(String(n), n, { current: n === page }); gap = false; }
-      else if (!gap) { const dots = document.createElement('span'); dots.className = 'pager-gap'; dots.textContent = '…'; pager.append(dots); gap = true; }
+    // 늘 7칸 (site.js renderPager 와 같은 규칙 — 칸 수가 안 바뀌게)
+    const slots = pages <= 7 ? Array.from({ length: pages }, (_, i) => i + 1)
+      : page <= 4 ? [1, 2, 3, 4, 5, 0, pages]
+      : page >= pages - 3 ? [1, 0, pages - 4, pages - 3, pages - 2, pages - 1, pages]
+      : [1, 0, page - 1, page, page + 1, 0, pages];
+    for (const n of slots) {
+      if (n) { add(String(n), n, { current: n === page }); continue; }
+      const dots = document.createElement('span'); dots.className = 'pager-gap'; dots.textContent = '…'; pager.append(dots);
     }
     add('›', page + 1, { disabled: page === pages, label: 'Next page' });
   };

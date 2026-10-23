@@ -252,7 +252,7 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .pager button:hover:not(:disabled) { border-color: var(--navy); }
 .pager button.is-current { background: var(--navy); border-color: var(--navy); color: #fff; }
 .pager button:disabled { opacity: .35; cursor: default; }
-.pager-gap { align-self: center; padding: 0 2px; color: var(--muted); }
+.pager-gap { align-self: center; width: 38px; text-align: center; color: var(--muted); }   /* 단추와 같은 폭 — 줄 길이가 쪽마다 안 변함 */
 
 /* Contact: 왼쪽 안내 문장 + 항목 3줄(이름표 | 내용), 오른쪽 지도 */
 .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: stretch; }

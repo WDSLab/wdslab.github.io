@@ -101,6 +101,11 @@ document.addEventListener('DOMContentLoaded', () => {
     pager.className = 'pager';
     pager.setAttribute('aria-label', 'Pages');
     if (!ready) list.after(pager);
+    // 목록 높이는 첫 쪽(가장 긴 쪽) 높이로 고정 — 마지막 쪽처럼 짧은 쪽으로 가도 문서가 줄지 않아 제목까지 늘 같은 방향(위로)으로 굴러감
+    // (줄어들면 스크롤이 먼저 튀고 반대로 굴러 어쩔 땐 위에서·어쩔 땐 아래서 오는 것처럼 보였음 — 사용자 지적). 폭이 바뀌면 첫 쪽에서만 다시 잼
+    const holdHeight = () => { if (page === 1) { list.style.minHeight = ''; list.style.minHeight = `${list.offsetHeight}px`; } };
+    holdHeight();
+    window.addEventListener('resize', holdHeight);
     pager.addEventListener('click', (event) => {
       const button = event.target.closest('button[data-page]');
       if (!button || button.disabled) return;
@@ -128,18 +133,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     add('‹', page - 1, { disabled: page === 1, label: 'Previous page' });
     // 페이지가 많으면 처음 · 끝 · 지금 앞뒤만 보이고 나머지는 … 로 줄임
-    let gap = false;
-    for (let n = 1; n <= pages; n++) {
-      if (pages <= 7 || n === 1 || n === pages || Math.abs(n - page) <= 1) {
-        add(String(n), n, { current: n === page });
-        gap = false;
-      } else if (!gap) {
-        const dots = document.createElement('span');
-        dots.className = 'pager-gap';
-        dots.textContent = '…';
-        pager.append(dots);
-        gap = true;
-      }
+    // 늘 7칸 — 앞쪽(1~4쪽) 1 2 3 4 5 … N, 가운데 1 … p−1 p p+1 … N, 끝쪽 1 … N−4 … N. 칸 수가 안 바뀌어 쪽을 눌러도 줄 모양이 "뚝" 바뀌지 않음 (_includes/pager.html 과 같은 규칙)
+    const slots = pages <= 7 ? Array.from({ length: pages }, (_, i) => i + 1)
+      : page <= 4 ? [1, 2, 3, 4, 5, 0, pages]
+      : page >= pages - 3 ? [1, 0, pages - 4, pages - 3, pages - 2, pages - 1, pages]
+      : [1, 0, page - 1, page, page + 1, 0, pages];
+    for (const n of slots) {
+      if (n) { add(String(n), n, { current: n === page }); continue; }
+      const dots = document.createElement('span');
+      dots.className = 'pager-gap';
+      dots.textContent = '…';
+      pager.append(dots);
     }
     add('›', page + 1, { disabled: page === pages, label: 'Next page' });
   }

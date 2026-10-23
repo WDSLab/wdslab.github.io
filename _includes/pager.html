@@ -1,11 +1,11 @@
-{%- comment -%} 페이지 단추 줄 (1쪽 상태) — site.js renderPager 와 같은 모양·순서. include pager.html pages=N
+{%- comment -%} 페이지 단추 줄 (1쪽 상태) — site.js renderPager 와 같은 모양·순서(쪽이 8 이상이면 늘 7칸: 1 2 3 4 5 … N). include pager.html pages=N
 페이지가 하나면 단추 없이 빈 <nav> 만 둔다: site.js 가 미리 그려 둔 이 줄을 그대로 쓰므로 스크립트 전후 높이가 같다 {%- endcomment -%}
 {%- assign pages = include.pages -%}
 <nav class="pager" aria-label="Pages">
 {%- if pages > 1 -%}<button type="button" data-page="0" disabled aria-label="Previous page">‹</button>
   {%- assign gap = false -%}
   {%- for n in (1..pages) -%}
-    {%- if pages <= 7 or n <= 2 or n == pages -%}<button type="button" data-page="{{ n }}"{% if n == 1 %} class="is-current" aria-current="page"{% endif %}>{{ n }}</button>{%- assign gap = false -%}
+    {%- if pages <= 7 or n <= 5 or n == pages -%}<button type="button" data-page="{{ n }}"{% if n == 1 %} class="is-current" aria-current="page"{% endif %}>{{ n }}</button>{%- assign gap = false -%}
     {%- elsif gap == false -%}<span class="pager-gap">…</span>{%- assign gap = true -%}{%- endif -%}
   {%- endfor -%}
 <button type="button" data-page="2" aria-label="Next page">›</button>{%- endif -%}
