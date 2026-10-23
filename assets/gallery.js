@@ -14,17 +14,28 @@
   const PAGE = 9;
   let page = 1;
   const pager = grid.nextElementSibling?.classList.contains('pager') ? grid.nextElementSibling : (() => { const nav = document.createElement('nav'); nav.className = 'pager'; nav.setAttribute('aria-label', 'Pages'); grid.after(nav); return nav; })();
-  // 격자 높이는 첫 쪽(가장 긴 쪽) 높이로 고정 — 짧은 마지막 쪽에서도 문서가 줄지 않아 제목까지 늘 위로 굴러감 (site.js 목록과 같은 이유)
-  const holdHeight = () => { if (page === 1 && grid.children.length) { grid.style.minHeight = ''; grid.style.minHeight = `${grid.offsetHeight}px`; } };
-  holdHeight();
-  window.addEventListener('resize', holdHeight);
+  // 짧은 마지막 쪽에서도 "Photo Archive" 제목이 화면 위까지 올라올 수 있게, 모자라는 만큼만 격자 아래에 자리를 둔다 (site.js 목록과 같은 방식 — 첫 쪽 높이로 통째로 고정하면 빈칸이 많아 보기 싫음)
+  const reserve = () => {
+    const y = window.scrollY;   // 받침을 잠깐 빼고 재는 동안 스크롤이 잘릴 수 있으니 재고 나서 되돌림
+    grid.style.minHeight = '';
+    const anchor = grid.closest('section')?.querySelector('h2') || grid;
+    const need = (anchor.getBoundingClientRect().top + window.scrollY - 88 + window.innerHeight) - document.documentElement.scrollHeight;
+    if (need > 0) grid.style.minHeight = `${grid.offsetHeight + need}px`;
+    if (window.scrollY !== y) window.scrollTo(0, y);
+  };
+  window.addEventListener('resize', reserve);
   pager.addEventListener('click', (event) => {
     const button = event.target.closest('button[data-page]');
     if (!button || button.disabled) return;
     page = Number(button.dataset.page);
+    const y0 = window.scrollY;   // 바뀐 순간 스크롤이 끝에 걸려 튀지 않게: 바꾸기 전 위치까지 잠시 받치고 되돌린 뒤 굴러감 (site.js 와 같음)
     render();
+    const extra = y0 + window.innerHeight - document.documentElement.scrollHeight;
+    if (extra > 0) grid.style.minHeight = `${grid.offsetHeight + extra}px`;
+    window.scrollTo(0, y0);
     const anchor = grid.closest('section')?.querySelector('h2') || grid;   // 쪽을 넘기면 "Photo Archive" 제목이 보이는 자리까지 천천히 (site.js 의 wdsScrollTo)
     window.wdsScrollTo(anchor.getBoundingClientRect().top + window.scrollY - 88);
+    setTimeout(reserve, 1500);
   });
   const renderPager = (pages) => {
     pager.replaceChildren();
@@ -75,6 +86,7 @@
     page = Math.min(Math.max(1, page), pages);
     grid.innerHTML = visible.slice((page - 1) * PAGE, page * PAGE).map(({ item, index }) => cardMarkup(item, index)).join('');
     renderPager(pages);
+    reserve();
   };
 
   const updateLightbox = () => {

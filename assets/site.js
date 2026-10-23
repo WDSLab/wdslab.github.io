@@ -94,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageSize = Number(list?.dataset.pageSize) || 0;
   let page = 1;
   let pager = null;
+  let reserve = () => {};   // 쪽 나누기가 있을 때만 아래에서 채워짐 (updateNews 가 바깥 함수라 여기 둠)
   if (pageSize && list) {
     // 페이지가 미리 그려 둔 단추 줄(Publications)이 있으면 그걸 쓰고, 없으면 만든다
     const ready = list.nextElementSibling?.classList.contains('pager') ? list.nextElementSibling : null;
@@ -101,19 +102,31 @@ document.addEventListener('DOMContentLoaded', () => {
     pager.className = 'pager';
     pager.setAttribute('aria-label', 'Pages');
     if (!ready) list.after(pager);
-    // 목록 높이는 첫 쪽(가장 긴 쪽) 높이로 고정 — 마지막 쪽처럼 짧은 쪽으로 가도 문서가 줄지 않아 제목까지 늘 같은 방향(위로)으로 굴러감
-    // (줄어들면 스크롤이 먼저 튀고 반대로 굴러 어쩔 땐 위에서·어쩔 땐 아래서 오는 것처럼 보였음 — 사용자 지적). 폭이 바뀌면 첫 쪽에서만 다시 잼
-    const holdHeight = () => { if (page === 1) { list.style.minHeight = ''; list.style.minHeight = `${list.offsetHeight}px`; } };
-    holdHeight();
-    window.addEventListener('resize', holdHeight);
+    // 짧은 쪽(마지막 쪽)에서도 제목이 화면 위(머리글 아래 88px)까지 올라올 수 있게, 모자라는 만큼만 목록 아래에 자리를 둔다
+    // (문서가 짧으면 스크롤이 끝에 걸려 제목까지 못 가고 튀어 보임). 첫 쪽 높이로 통째로 고정하면 짧은 쪽에 빈칸이 많아 보기 싫음(사용자 지적) → 꼭 필요한 만큼만
+    reserve = () => {
+      const y = window.scrollY;   // 받침을 잠깐 빼고 재는 동안 문서가 짧아져 스크롤이 잘릴 수 있으니, 재고 나서 원래 자리로 되돌린다
+      list.style.minHeight = '';
+      const anchor = list.closest('section')?.querySelector('.tabs, h2') || list;
+      const need = (anchor.getBoundingClientRect().top + window.scrollY - 88 + window.innerHeight) - document.documentElement.scrollHeight;
+      if (need > 0) list.style.minHeight = `${list.offsetHeight + need}px`;
+      if (window.scrollY !== y) window.scrollTo(0, y);
+    };
+    window.addEventListener('resize', reserve);
     pager.addEventListener('click', (event) => {
       const button = event.target.closest('button[data-page]');
       if (!button || button.disabled) return;
       page = Number(button.dataset.page);
+      // 바뀐 순간 문서가 짧아지면 브라우저가 스크롤을 끝으로 잘라 '뚝' 튄다 → 바꾸기 전 위치(y0)를 기억해, 그 위치까지 목록 아래를 잠시 받치고 y0 로 되돌린 뒤 굴러간다(끝나면 풀어 꼭 필요한 만큼만 남김)
+      const y0 = window.scrollY;
       updateNews();
+      const extra = y0 + window.innerHeight - document.documentElement.scrollHeight;
+      if (extra > 0) list.style.minHeight = `${list.offsetHeight + extra}px`;
+      window.scrollTo(0, y0);
       // 쪽을 넘기면 그 구간의 제목(탭 줄 · h2)이 머리글 아래 보이는 자리까지 천천히 올라감 (wdsScrollTo — 위쪽)
       const anchor = list.closest('section')?.querySelector('.tabs, h2') || list;
       window.wdsScrollTo(anchor.getBoundingClientRect().top + window.scrollY - 88);
+      setTimeout(reserve, 1500);
     });
   }
 
@@ -175,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const shown = new Set(pageSize ? visible.slice((page - 1) * pageSize, page * pageSize) : visible);
     records.forEach((record) => { record.hidden = !shown.has(record); });
     renderPager(pages);
+    if (pageSize && list) reserve();   // 쪽이 바뀐 뒤 필요한 만큼만 자리 확보
     // 연도 묶음: 남은 소식이 없으면 그 연도 제목도 숨김
     list?.querySelectorAll(':scope > section').forEach((group) => {
       group.hidden = !group.querySelector('article:not([hidden])');

@@ -84,11 +84,11 @@
 .has-tip { cursor: default; }
 .impact-year-col.has-tip:hover .impact-year-fill, .impact-area-row.has-tip:hover .impact-area-fill { background: var(--accent); }
 .pipeline-segment.has-tip:hover { filter: brightness(1.25); }
-.chart-tip { position: fixed; z-index: 20; width: 340px; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font-size: 12.5px; line-height: 1.4; box-shadow: 0 10px 28px rgba(9,34,61,.12); pointer-events: none; opacity: 0; transform: translateY(6px) scale(.98); transform-origin: top left; transition: opacity .3s ease, transform .3s ease; }
-.chart-tip.is-on { opacity: 1; transform: none; }   /* 나타날 때·사라질 때 0.3초에 걸쳐 */
+.chart-tip { position: fixed; z-index: 20; width: 340px; box-sizing: border-box; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); font-size: 12.5px; line-height: 1.4; box-shadow: 0 10px 28px rgba(9,34,61,.12); pointer-events: none; opacity: 0;   /* 떠 있는 동안(.is-on)은 마우스를 받음 — 상자 위에서 스크롤 */ transform: translateY(6px) scale(.98); transform-origin: top left; transition: opacity .1s ease, transform .1s ease; }   /* 사라질 땐 0.1초 — 마우스가 벗어나면 바로 (사용자 요청) */
+.chart-tip.is-on { opacity: 1; transform: none; pointer-events: auto; transition: opacity .3s ease, transform .3s ease, left .25s ease, top .25s ease; }   /* 나타날 땐 0.3초. 떠 있는 채로 옆 칸에 올리면 자리가 0.25초에 걸쳐 미끄러져 옮겨감(뚝 안 튀게) */
 .chart-tip b { display: block; margin-bottom: 6px; font-size: 13px; font-weight: 700; color: var(--navy); }
-/* 목록 칸은 늘 같은 높이(190px) — 논문이 많아져도 상자 크기가 변하지 않고, 넘치면 안에서 스크롤(마우스 휠을 impact-dashboard.js 가 넘겨 줌). 좁은 화면은 아래 미디어 쿼리 */
-.chart-tip ul { margin: 0; padding: 0 6px 0 0; list-style: none; height: 190px; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+/* 목록 칸은 늘 같은 높이(190px) — 논문이 많아져도 상자 크기가 변하지 않고, 넘치면 안에서 스크롤(마우스를 상자 위에 올리고 휠). 끝에 닿아도 페이지로 안 번짐. 좁은 화면은 아래 미디어 쿼리 */
+.chart-tip ul { margin: 0; padding: 0 6px 0 0; list-style: none; height: 190px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .chart-tip ul::-webkit-scrollbar { width: 6px; }
 .chart-tip ul::-webkit-scrollbar-thumb { border-radius: 3px; background: var(--line); }
 .chart-tip li { padding: 5px 0; border-top: 1px solid var(--line); }
