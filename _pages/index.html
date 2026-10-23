@@ -80,23 +80,6 @@ scripts: [/assets/home.js?v=20261023-coop]
 </div>
 </section>
 
-{%- comment -%} 협력 기관(_data/cooperations.yml): 로고가 왼쪽으로 천천히 한 바퀴씩 흘러간다(CSS 애니메이션, 40초에 한 바퀴, 마우스를 올려도 계속 감). 같은 줄을 두 번 이어 붙여 끊김 없이 돈다. 움직임 줄이기 설정이면 멈추고 옆으로 넘겨 봄 {%- endcomment -%}
-<section class="section coop-section" id="cooperations" aria-label="Cooperations">
-  <div class="shell">
-    <div class="marquee coop">
-      <div class="marquee-track">
-        {%- for pass in (1..2) %}
-        <ul class="coop-row"{% if pass == 2 %} aria-hidden="true"{% endif %}>
-          {%- for c in site.data.cooperations %}
-          <li class="coop-item">{% if c.logo %}<img src="{{ '/assets/partners/' | append: c.logo | relative_url }}" alt="{{ c.name }}" height="36" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}</li>
-          {%- endfor %}
-        </ul>
-        {%- endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="section alt" id="news">
   <div class="shell">
     <div class="section-head home-head"><div><h2>News</h2></div><a class="more" href="{{ '/news/' | relative_url }}">View all →</a></div>
@@ -113,6 +96,23 @@ scripts: [/assets/home.js?v=20261023-coop]
   <figcaption>{{ first.date }} · {{ first.title }}</figcaption>
   <script type="application/json" id="news-photos">[{% for g in shown %}{"src":{{ g.photos[0] | relative_url | jsonify }},"caption":{{ g.date | append: " · " | append: g.title | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]</script>
 </figure>
+    </div>
+  </div>
+</section>
+
+{%- comment -%} 협력 기관(_data/cooperations.yml): 로고가 왼쪽으로 천천히 한 바퀴씩 흘러간다(CSS 애니메이션, 40초에 한 바퀴, 마우스를 올려도 계속 감). 같은 줄을 두 번 이어 붙여 끊김 없이 돈다. 움직임 줄이기 설정이면 멈추고 옆으로 넘겨 봄 {%- endcomment -%}
+<section class="section coop-section" id="cooperations" aria-label="Cooperations">
+  <div class="shell">
+    <div class="marquee coop">
+      <div class="marquee-track">
+        {%- for pass in (1..2) %}
+        <ul class="coop-row"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+          {%- for c in site.data.cooperations %}
+          <li class="coop-item">{% if c.logo %}<img src="{{ '/assets/partners/' | append: c.logo | relative_url }}" alt="{{ c.name }}" height="36" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}</li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+      </div>
     </div>
   </div>
 </section>

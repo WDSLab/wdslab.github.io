@@ -282,8 +282,8 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .footer-slogan p, .footer-contact p { display: inline; margin: 0; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding-top: 9px; padding-bottom: 11px; border-top: 1px solid rgba(255,255,255,.15); font-size: 12.5px; color: rgba(255,255,255,.5); }
 
-/* 협력 기관 로고 띠(홈 맨 아래): 두 줄을 이어 붙인 트랙이 왼쪽으로 절반(한 줄 길이)만큼 40초에 걸쳐 움직여 끊김 없이 돈다. 양 끝은 흐리게. 마우스를 올려도 계속 간다(사용자 결정). 제목 없이 Services 바로 아래 */
-.coop-section { padding: 0 0 56px; }   /* Services(흰 바탕) 바로 아래 이어지는 띠 — 위 여백 없음 */
+/* 협력 기관 로고 띠(홈 맨 아래): 두 줄을 이어 붙인 트랙이 왼쪽으로 절반(한 줄 길이)만큼 40초에 걸쳐 움직여 끊김 없이 돈다. 양 끝은 흐리게. 마우스를 올려도 계속 간다(사용자 결정). 제목 없이 News 아래(맨 끝) */
+.coop-section { padding: 48px 0 56px; }   /* 회색 News 구간 다음 흰 띠 */
 .marquee { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee-track { display: flex; width: max-content; animation: coop-move 40s linear infinite; }
 @keyframes coop-move { from { transform: translateX(0); } to { transform: translateX(-50%); } }
