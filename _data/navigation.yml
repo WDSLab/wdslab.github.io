@@ -4,19 +4,19 @@
   url: /
 - key: people
   title: People
-  url: /people.html
+  url: /people/
 - key: projects
   title: Projects
-  url: /projects.html
+  url: /projects/
 - key: publications
   title: Publications
-  url: /publications.html
+  url: /publications/
 - key: services
   title: Services
-  url: /services.html
+  url: /services/
 - key: news
   title: News
-  url: /news.html
+  url: /news/
 - key: contact
   title: Contact
-  url: /contact.html
+  url: /contact/

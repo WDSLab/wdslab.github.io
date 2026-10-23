@@ -3,20 +3,26 @@ permalink: /
 layout: default
 title: Home
 nav: home
-scripts: [/assets/home.js?v=20261023-cue-later]
+scripts: [/assets/home.js?v=20261023-coop]
 ---
 {% assign pubs = site.data.publications %}
 <div class="hero-pin" id="hero-pin">
 <section class="hero" id="hero">
+  {%- comment -%} 배경 사진(지구 지평선과 은하수 — 사용자 제작 2026-10-23 18:18, 1086×1448, 지평선은 그림의 67%, 60% 위치. 사용자 결정으로 이 사진으로 확정): 별 캔버스 아래. 스크롤로 장면이 시작되면 home.js 가 서서히 지운다 {%- endcomment -%}
+  <img class="hero-photo" data-horizon="0.67" src="{{ '/assets/hero-earth.webp' | relative_url }}?v=7" srcset="{{ '/assets/hero-earth-small.webp' | relative_url }}?v=7 720w, {{ '/assets/hero-earth.webp' | relative_url }}?v=7 1086w" sizes="100vw" alt="" aria-hidden="true" decoding="async" fetchpriority="high">
   <canvas class="hero-bg" aria-hidden="true"></canvas>
+  {%- comment -%} 학교 사진: 장면 끝(! 가 내려앉을 때)에 별 위로 서서히 나타나며 살짝 커진다(화면을 채운 채) — 우주에서 학교로 내려오는 느낌 (home.js). 글이 읽히게 CSS 로 어둡게 {%- endcomment -%}
+  <img class="hero-campus" src="{{ '/assets/hero-campus.webp' | relative_url }}" srcset="{{ '/assets/hero-campus-small.webp' | relative_url }} 720w, {{ '/assets/hero-campus.webp' | relative_url }} 1000w" sizes="100vw" alt="" aria-hidden="true" decoding="async" loading="lazy">
   <div class="shell">
     <div class="hero-copy">
       <p class="hero-kicker">데이터탐구연구실 · Changwon National University</p>
       <h1><span class="words">What is Data Science</span><span class="mark">?</span></h1>
       <p class="subtitle">Data Science as a Service.</p>
       <div class="actions">
-        <a class="btn" href="#research" data-scroll>Research Areas</a>
+        <a class="btn ghost" href="#research" data-scroll>Research Areas</a>
         <a class="btn ghost" href="#papers" data-scroll>Selected Papers</a>
+        <a class="btn ghost" href="#services" data-scroll>Services</a>
+        <a class="btn ghost" href="#news" data-scroll>News</a>
       </div>
     </div>
   </div>
@@ -32,32 +38,24 @@ scripts: [/assets/home.js?v=20261023-cue-later]
 </div>
 
 <section class="section qa" id="research">
-  <div class="shell qa-row">
-    <div>
-      <h2>Research Areas</h2>
-      {%- comment -%} 연구 분야 줄: 이름 | 설명 | 주요 논문 버튼(누르면 창, site.js 의 data-dialog) {%- endcomment -%}
-      <ol class="qa-list">
-        {%- for a in site.data.research %}
-        <li><div class="qa-item has-papers"><b>{{ a.title }}</b><span>{{ a.summary }}</span><button type="button" class="area-papers-open" data-dialog="papers-{{ forloop.index }}">View selected papers · {{ a.papers.size }}</button>
-          <dialog class="paper-dialog" id="papers-{{ forloop.index }}" aria-labelledby="papers-{{ forloop.index }}-title">
-            <div class="paper-dialog-head"><h3 id="papers-{{ forloop.index }}-title">{{ a.title | escape }}</h3><button type="button" class="paper-dialog-close" data-close aria-label="Close">×</button></div>
-            <div class="paper-dialog-body"><h4>Selected Papers</h4>
-            <ul class="area-papers">
-              {%- for t in a.papers -%}{%- assign p = site.data.publications | where: "title", t | first -%}
-              <li><b>{{ p.title | escape }}</b><span>{{ p.venue }} · {{ p.year }}</span>{% include paper-links.html paper=p %}</li>
-              {%- endfor -%}
-            </ul></div>
-          </dialog></div></li>
-        {%- endfor %}
-      </ol>
+  <div class="shell"><h2>Research Areas</h2></div>
+  {%- comment -%} 연구 분야 카드 넘겨 보기: 한 번에 3장(휴대폰 1장), 가운데 장만 선명·크게, 양옆은 연하고 작게 겹치듯(site.js data-focus-center), ‹ › 로 한 장씩. 4초마다 저절로 넘어감(사용자 요청, Services 와 같은 빠르기).
+      카드 배경은 research.yml 의 image. (주요 논문 단추·창은 2026-10-23 사용자 요청으로 뺌 — 분야별 논문은 research.yml 의 papers 에 그대로 있음) {%- endcomment -%}
+  <div class="shell rail-wrap areas-wrap">
+    <button type="button" class="rail-btn prev" aria-label="Previous research area">‹</button>
+    <div class="rail areas-rail" data-focus-center data-auto="4000" aria-label="Research areas">
+      {%- for a in site.data.research %}
+      <article class="area-card{% if forloop.index == 2 %} is-center{% endif %}"><div class="area-inner" style="background-image: url('{{ a.image | relative_url }}?v=3')"><div class="qa-item"><b>{{ a.title }}</b><span>{{ a.summary }}</span></div></div></article>
+      {%- endfor %}
     </div>
+    <button type="button" class="rail-btn next" aria-label="Next research area">›</button>
   </div>
 </section>
 
 <section class="section qa alt" id="papers">
   <div class="shell qa-row">
     <div>
-      <div class="section-head"><h2>Selected Papers</h2><a class="more" href="{{ '/publications.html' | relative_url }}">View all →</a></div>
+      <div class="section-head"><h2>Selected Papers</h2><a class="more" href="{{ '/publications/' | relative_url }}">View all →</a></div>
       <ol class="qa-list papers">
         {% assign selected = pubs | where: "selected", true %}
         {% for p in selected limit: 4 %}
@@ -68,22 +66,40 @@ scripts: [/assets/home.js?v=20261023-cue-later]
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="services">
   <div class="shell">
-    <div class="section-head home-head"><div><h2>Services</h2></div><a class="more" href="{{ '/services.html' | relative_url }}">View all →</a></div>
+    <div class="section-head home-head"><div><h2>Services</h2></div><a class="more" href="{{ '/services/' | relative_url }}">View all →</a></div>
   </div>
 <div class="shell rail-wrap">
   <button type="button" class="rail-btn prev" aria-label="Previous service">‹</button>
-  <div class="rail" id="platform-rail" data-auto="6000">
-    {% for s in site.data.systems %}{% include system-card.html system=s %}{% endfor %}
+  {%- comment -%} Research Areas 와 같은 모양: 3장 보임, 가운데만 선명·크게(data-focus-center), 4초마다 넘어감 {%- endcomment -%}
+  <div class="rail services-rail" id="platform-rail" data-auto="4000" data-focus-center>
+    {% for s in site.data.systems %}{% assign is_c = false %}{% if forloop.index == 2 %}{% assign is_c = true %}{% endif %}{% include system-card.html system=s center=is_c %}{% endfor %}
   </div>
   <button type="button" class="rail-btn next" aria-label="Next service">›</button>
 </div>
 </section>
 
-<section class="section alt">
+{%- comment -%} 협력 기관(_data/cooperations.yml): 로고가 왼쪽으로 천천히 한 바퀴씩 흘러간다(CSS 애니메이션, 40초에 한 바퀴, 마우스를 올려도 계속 감). 같은 줄을 두 번 이어 붙여 끊김 없이 돈다. 움직임 줄이기 설정이면 멈추고 옆으로 넘겨 봄 {%- endcomment -%}
+<section class="section coop-section" id="cooperations" aria-label="Cooperations">
   <div class="shell">
-    <div class="section-head home-head"><div><h2>News</h2></div><a class="more" href="{{ '/news.html' | relative_url }}">View all →</a></div>
+    <div class="marquee coop">
+      <div class="marquee-track">
+        {%- for pass in (1..2) %}
+        <ul class="coop-row"{% if pass == 2 %} aria-hidden="true"{% endif %}>
+          {%- for c in site.data.cooperations %}
+          <li class="coop-item">{% if c.logo %}<img src="{{ '/assets/partners/' | append: c.logo | relative_url }}" alt="{{ c.name }}" height="36" loading="lazy">{% else %}<span>{{ c.name }}</span>{% endif %}</li>
+          {%- endfor %}
+        </ul>
+        {%- endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="news">
+  <div class="shell">
+    <div class="section-head home-head"><div><h2>News</h2></div><a class="more" href="{{ '/news/' | relative_url }}">View all →</a></div>
     <div class="news-grid">
 {%- comment -%} 왼쪽: 최근 소식 5건 (나머지는 "전체 →"). 오른쪽: 사진 기록의 행사별 대표 사진이 천천히 저절로 넘어감 (home.js) {%- endcomment -%}
 <ul class="news-list">

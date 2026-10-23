@@ -1,35 +1,36 @@
 # 연구 분야 (순서대로 01, 02 …). papers 는 publications.json 의 제목과 똑같이 적는다.
+# image: 홈 Research Areas 줄의 배경 그림 (assets/research/area-N.webp, 1200px 가로 — 사용자가 준 그림 6장, 2026-10-23)
 - title: Industrial AI
   summary: 현장 데이터 기반 설비 이상·생산 변화 조기 감지, 운영 의사결정 지원
-  image: assets/research-1.webp
+  image: assets/research/area-1.webp
   image_alt: Industrial AI for factory operations and time-series analysis
   papers:
   - Utilization of Sequential Data for Machine Learning in Process Control
   - Trend-Fluctuation Correlated Attention Unit for Remaining Useful Life Prediction
 - title: Representation & Self-Supervised Learning
-  summary: 정답(레이블)이 적은 데이터에서 반복 구조 스스로 학습, 새로운 상황에도 강한 AI
-  image: assets/research-2.webp
+  summary: 레이블 없는 데이터의 표현 학습, 적은 데이터로도 일반화되는 모델 개발
+  image: assets/research/area-2.webp
   image_alt: Representation and self-supervised learning research illustration
   papers:
   - 'CF-JEPA: Mask-free forward prediction with asymmetric encoder utilization for time-series representation learning'
   - Temporal Multi-features Representation Learning-Based Clustering for Time-Series Data
 - title: Explainable AI & Decision Support
   summary: AI 판단 근거를 사람이 이해할 수 있게 설명, 믿을 수 있는 의사결정으로 연결
-  image: assets/research-3.webp
+  image: assets/research/area-3.webp
   image_alt: Explainable AI and decision support research illustration
   papers:
   - A robust eXplainable feature selection method based on Order Statistics
   - Statistical Verification of Process Model Conformance to Execution Log Considering Model Abstraction
 - title: Efficient & Edge AI
-  summary: AI 모델 경량화·고속화, 고성능 서버 없이 현장 장비에서 바로 작동
-  image: assets/research-4.webp
+  summary: 모델 경량화·압축, 현장 장비(엣지)에서의 실시간 추론
+  image: assets/research/area-4.webp
   image_alt: Efficient and edge AI research illustration
   papers:
   - 'QIRP: Frequency-Accumulated Structured Pruning for Stable Quantization-Aware Model Compression'
   - Ensemble Index Recording-Based Pruning for Enhancing Robustness of Edge AI Models in Smart Port Environments
 - title: Spatiotemporal & Multimodal AI
   summary: 시간·장소별로 달라지는 신호 통합 분석, 해운·기후·에너지 변화 예측
-  image: assets/research-5.webp
+  image: assets/research/area-5.webp
   image_alt: Spatiotemporal and multimodal AI research illustration
   class: research-spatiotemporal
   papers:
@@ -37,7 +38,7 @@
   - Propagation-Aware Multi-Site PV Context Fusion with Imperfect Numerical Weather Prediction for Medium-Range PV Forecasting
 - title: Domain-Specific Foundation Models
   summary: 제조·해양 등 분야별 데이터·업무 지식 학습, 현장에 맞는 전문 AI 기반 모델 개발
-  image: assets/research-foundation-models.webp
+  image: assets/research/area-6.webp
   image_alt: Domain-specific foundation models connecting manufacturing, maritime logistics and energy
   class: research-foundation
   papers:

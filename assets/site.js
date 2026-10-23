@@ -1,3 +1,26 @@
+// 부드럽게 굴러가기 (쪽 넘기기 등에서 씀): 브라우저 기본 smooth 는 빠르기를 정할 수 없어 직접 굴린다.
+// 거리에 따라 0.8~1.3초, 처음과 끝은 느리게. 굴러가는 동안 휠·터치·키·마우스를 쓰면 바로 멈추고 사용자에게 양보. 움직임 줄이기 설정이면 바로 이동
+window.wdsScrollTo = (top) => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const to = Math.min(max, Math.max(0, top));
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) { window.scrollTo(0, to); return; }
+  const from = window.scrollY, dist = to - from;
+  if (Math.abs(dist) < 1) return;
+  const D = Math.min(1300, 800 + Math.abs(dist) * 0.2);
+  const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const start = performance.now();
+  const types = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+  let frame = 0;
+  const stop = () => { cancelAnimationFrame(frame); frame = 0; types.forEach((type) => window.removeEventListener(type, stop, true)); };
+  types.forEach((type) => window.addEventListener(type, stop, { passive: true, capture: true }));
+  const step = (now) => {
+    const t = Math.min(1, (now - start) / D);
+    window.scrollTo(0, from + dist * ease(t));
+    if (t < 1) frame = requestAnimationFrame(step); else stop();
+  };
+  frame = requestAnimationFrame(step);
+};
+
 // 새로 고침 때 보던 자리로 돌아가기: 브라우저에 맡기면 내용(사진·숫자 칸·그래프)이 채워지는 동안 여러 번 맞추느라 화면이 움직여 보임
 // → 직접 저장했다가, 열리자마자 한 번 바로 옮기고, 다 불러온 뒤 어긋났으면 한 번 더 (그 사이 사용자가 스크롤하면 손대지 않음)
 (() => {
@@ -83,7 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!button || button.disabled) return;
       page = Number(button.dataset.page);
       updateNews();
-      list.scrollIntoView({ block: 'start', behavior: 'instant' });
+      // 쪽을 넘기면 그 구간의 제목(탭 줄 · h2)이 머리글 아래 보이는 자리까지 천천히 올라감 (wdsScrollTo — 위쪽)
+      const anchor = list.closest('section')?.querySelector('.tabs, h2') || list;
+      window.wdsScrollTo(anchor.getBoundingClientRect().top + window.scrollY - 88);
     });
   }
 
@@ -154,13 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (count) count.textContent = `${visible.length} / ${records.length}`;
   }
 
-  const restart = () => { page = 1; updateNews(); if (list) list.scrollTop = 0; };   // 검색어·종류·연도를 바꾸면 첫 페이지부터, 스크롤 상자(News)도 맨 위로
+  const restart = () => { page = 1; updateNews(); };   // 검색어·종류·연도를 바꾸면 첫 페이지부터
   search?.addEventListener('input', restart);
   filter?.addEventListener('change', restart);
   tabs.forEach((tab) => tab.addEventListener('click', () => {
     tabs.forEach((other) => other.setAttribute('aria-selected', String(other === tab)));
     restart();
-    if (list) { list.scrollTop = 0; list.dispatchEvent(new Event('scroll-reset')); }   // 목록 상자 안 스크롤도 처음으로 (Projects), 움직이던 것도 멈춤
   }));
   years.forEach((button) => button.addEventListener('click', () => {
     years.forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
@@ -218,13 +242,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // 복사본 구간에 들어가 있으면 진짜 구간의 같은 자리로 옮긴다 (보이는 모양은 같아서 티가 안 남)
     const wrapAround = () => {
       const w = setWidth();
-      if (rail.scrollLeft < w - 2) rail.scrollLeft += w;
-      else if (rail.scrollLeft >= 2 * w - 2) rail.scrollLeft -= w;
+      let jumped = false;
+      if (rail.scrollLeft < w - 2) { rail.scrollLeft += w; jumped = true; }
+      else if (rail.scrollLeft >= 2 * w - 2) { rail.scrollLeft -= w; jumped = true; }
+      // 순간 이동 뒤에는 가운데 강조도 전환 없이 바로 옮긴다 — 안 그러면 같은 모양의 카드가 다시 밝아지며 "뚝" 끊겨 보임
+      if (jumped && focusCenter) { rail.classList.add('no-transition'); focusCenter(); void rail.offsetWidth; rail.classList.remove('no-transition'); }
     };
+    // data-focus-center: 보이는 카드 가운데 것만 선명(.is-center), 나머지는 CSS 가 연하게 (Research Areas)
+    // 판정은 넘기기 시작할 때(목표 자리 기준) 한 번, 손으로 밀어 멈춘 뒤 한 번만 — 스크롤 중에 매번 하면 전환이 겹쳐 버벅인다
+    const focusCenter = rail.hasAttribute('data-focus-center') ? (at = rail.scrollLeft) => {
+      const s = step(); if (!s) return;
+      const left = Math.round(at / s), visible = Math.max(1, Math.round(rail.clientWidth / s));
+      const center = left + Math.floor(visible / 2);
+      items.forEach((it, i) => it.classList.toggle('is-center', i === center));
+    } : null;
     let settle = 0;
-    rail.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(wrapAround, 140); }, { passive: true });
-    window.addEventListener('resize', home);
-    home();
+    rail.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(() => { wrapAround(); focusCenter?.(); }, 140); }, { passive: true });
+    window.addEventListener('resize', () => { home(); focusCenter?.(); });
+    home(); focusCenter?.();
     let lastTouch = 0;   // 사람이 넘긴 직후엔 잠시 쉰다
     // 넘길 때는 브라우저 기본 스크롤 대신 직접 움직인다: 1.4초 동안 천천히 출발해 천천히 멈춤
     let anim = 0, target = null;
@@ -235,9 +270,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const from = rail.scrollLeft;
       const k = Math.round(((target ?? from) - base) / s) + dir;      // 연달아 누르면 이어서 한 칸 더
       target = base + k * s;
+      focusCenter?.(target);                                           // 가운데 강조는 목표 자리 기준으로 지금 바로 (움직임과 함께 한 번만)
       if (reduceMotion) { rail.scrollLeft = target; wrapAround(); target = null; return; }
       rail.style.scrollSnapType = 'none';                              // 움직이는 동안은 칸 맞춤을 잠시 끔
-      const start = performance.now(), D = 1400;
+      const start = performance.now(), D = 1000;   // 한 장 넘어가는 시간 (6초·1.4초는 느리다는 지적 → 4초·1초)
       const tick = (now) => {
         const t = Math.min(1, (now - start) / D);
         rail.scrollLeft = from + (target - from) * ease(t);
@@ -248,6 +284,18 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     prev?.addEventListener('click', () => { lastTouch = Date.now(); go(-1); });
     next?.addEventListener('click', () => { lastTouch = Date.now(); go(1); });
+    // 가운데 강조 줄(data-focus-center): 양옆의 연한 카드를 누르면 그 카드가 가운데로 오도록 넘어간다 (사용자 요청)
+    if (focusCenter) rail.addEventListener('click', (event) => {
+      const card = event.target.closest('.rail > *');
+      if (!card || card.classList.contains('is-center')) return;
+      const s = step(); if (!s) return;
+      const center = Math.round(rail.scrollLeft / s) + Math.floor(Math.max(1, Math.round(rail.clientWidth / s)) / 2);
+      const i = items.indexOf(card);
+      if (i < 0 || i === center) return;
+      event.preventDefault();
+      lastTouch = Date.now();
+      go(i - center);
+    });
 
     const delay = Number(rail.dataset.auto) || 0;
     if (!delay || reduceMotion) return;
@@ -264,76 +312,49 @@ document.addEventListener('DOMContentLoaded', () => {
     }, delay);
   });
 
-  // 같은 페이지 안 링크(#…)는 부드럽게 이동 (홈 첫 화면 버튼처럼 data-scroll 이 있는 건 home.js 가 따로 처리)
-  const smooth = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+// 스크롤 떠오름 (site.css): 구간 내용이 화면 아래쪽 12% 선을 넘어오면 .is-in — 한 번만. 열 때 이미 보이는 것은 전환 없이 바로(reveal-init).
+// 한 구간에 묶음이 둘이면(제목 + 넘김 줄) 두 번째는 0.12초 뒤에. 판정은 스크롤·크기 바뀜 때 직접 잰다 (IntersectionObserver 만 믿으면 그리기가 멈춘 탭에서 영영 안 보일 수 있음)
+(() => {
+  const root = document.documentElement;
+  let pending = [...document.querySelectorAll('main .section > .shell')];
+  if (!pending.length) return;
+  pending.forEach((el) => { const i = [...el.parentElement.children].filter((c) => c.classList.contains('shell')).indexOf(el); if (i > 0) el.style.transitionDelay = `${i * 0.12}s`; });
+  const check = () => {
+    const line = window.innerHeight * 0.88;
+    pending = pending.filter((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top < line && r.bottom > 0 || r.top < 0) { el.classList.add('is-in'); return false; }   // 화면에 들어왔거나 이미 지나간 것
+      return true;
+    });
+    if (!pending.length) { window.removeEventListener('scroll', onScroll); window.removeEventListener('resize', onScroll); }
+  };
+  let frame = 0;
+  const onScroll = () => { if (!frame) frame = requestAnimationFrame(() => { frame = 0; check(); }); };
+  root.classList.add('reveal-init');
+  check();                                                            // 열 때 보이는 것은 바로
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove('reveal-init')));
+  setTimeout(() => root.classList.remove('reveal-init'), 400);         // 안전장치: 그리기가 멈춰 있어도 전환 끄기는 풀린다
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+})();
+
+  // 홈: 첫 화면 위에서는 머리글이 남색 바·흰 글자, 첫 화면이 머리글 밑으로 지나가면 흰 바·남색 글자 (site.css .home:not(.hero-passed))
+  const homeHero = document.body.classList.contains('home') ? document.querySelector('#hero') : null;
+  if (homeHero) {
+    const mark = () => document.body.classList.toggle('hero-passed', homeHero.getBoundingClientRect().bottom <= 64);
+    mark();
+    window.addEventListener('scroll', mark, { passive: true });
+    window.addEventListener('resize', mark);
+  }
+
+  // 같은 페이지 안 링크(#…)는 쪽 넘김과 같은 느린 스크롤(wdsScrollTo)로 — 목표는 머리글 아래 88px (홈 첫 화면 버튼처럼 data-scroll 이 있는 건 home.js 가 따로 처리)
   document.addEventListener('click', (event) => {
     const link = event.target.closest('a[href^="#"]:not([data-scroll])');
     const target = link && link.hash.length > 1 && document.getElementById(decodeURIComponent(link.hash.slice(1)));
     if (!target) return;
     event.preventDefault();
-    target.scrollIntoView({ behavior: smooth });
+    window.wdsScrollTo(target.getBoundingClientRect().top + window.scrollY - 88);
     history.pushState(null, '', link.hash);
-  });
-
-  // 상자 안 스크롤(data-scroll-chain)이 끝에 닿으면, 같은 휠 동작 그대로 페이지가 이어서 내려감 (Projects 목록)
-  // 브라우저는 한 번 굴리는 동안 계속 상자만 붙잡아서, 끝에서 잠깐 멈췄다 내려가는 느낌이 났음
-  // → 휠은 직접 받아서: 상자가 화면에 다 들어올 때까지는 페이지, 그다음 상자, 상자 끝을 넘는 만큼은 다시 페이지 (모두 부드럽게) (터치·스크롤 막대는 브라우저 그대로)
-  document.querySelectorAll('[data-scroll-chain]').forEach((box) => {
-    let boxTo = null, pageTo = null, frame = 0;
-    const step = () => {
-      let moving = false;
-      if (boxTo !== null) {
-        const d = boxTo - box.scrollTop;
-        const before = box.scrollTop;
-        if (Math.abs(d) < 1) { box.scrollTop = boxTo; boxTo = null; } else { box.scrollTop += Math.sign(d) * Math.max(1, Math.abs(d) * 0.25); moving = true; }
-        if (moving && box.scrollTop === before) { boxTo = null; moving = false; }   // 더 못 가면(끝·목록이 바뀜) 목표를 버림
-      }
-      if (pageTo !== null) {
-        const d = pageTo - window.scrollY;
-        const before = window.scrollY;
-        if (Math.abs(d) < 1) { window.scrollTo({ top: pageTo, behavior: 'instant' }); pageTo = null; } else { window.scrollTo({ top: window.scrollY + Math.sign(d) * Math.max(1, Math.abs(d) * 0.25), behavior: 'instant' }); moving = true; }
-        if (pageTo !== null && window.scrollY === before) pageTo = null;   // 페이지 끝 등으로 더 못 가면 목표를 버림
-      }
-      frame = moving ? requestAnimationFrame(step) : 0;
-    };
-    box.addEventListener('scroll-reset', () => { boxTo = null; pageTo = null; });
-    // 상자 밖에서 스크롤하면(휠·터치·키보드·스크롤 막대) 상자 쪽 움직임은 그 자리에서 멈추고 사용자 스크롤에 양보 — 둘이 서로 끌어당기지 않게
-    const yield_ = (event) => { if (frame && !box.contains(event.target)) { cancelAnimationFrame(frame); frame = 0; boxTo = null; pageTo = null; } };
-    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach((type) => window.addEventListener(type, yield_, { passive: true, capture: true }));
-    box.addEventListener('wheel', (event) => {
-      if (event.ctrlKey || event.deltaY === 0) return;
-      if (box.scrollHeight - box.clientHeight < 1) return;
-      event.preventDefault();
-      if (!frame) { boxTo = null; pageTo = null; }   // 움직이는 중이 아니면 지난 목표는 버리고 지금 위치에서 시작
-      let dy = event.deltaMode === 1 ? event.deltaY * 16 : event.deltaMode === 2 ? event.deltaY * window.innerHeight : event.deltaY;
-      const movePage = (by) => {
-        const pageMax = document.documentElement.scrollHeight - window.innerHeight;
-        pageTo = Math.min(pageMax, Math.max(0, (pageTo ?? window.scrollY) + by));
-      };
-      // 1) 상자가 화면에 다 들어오기 전에는 페이지부터 (내릴 땐 상자 아래 끝, 올릴 땐 머리글 밑 상자 위 끝이 보일 때까지)
-      const pending = (pageTo ?? window.scrollY) - window.scrollY;   // 아직 남은 페이지 이동
-      const rect = box.getBoundingClientRect();
-      const top = rect.top - pending, bottom = rect.bottom - pending;
-      const take = dy > 0 ? Math.min(dy, Math.max(0, bottom - window.innerHeight)) : Math.max(dy, Math.min(0, top - 64));
-      if (take) { movePage(take); dy -= take; }
-      // 2) 남은 만큼 상자, 3) 상자 끝을 넘친 만큼 다시 페이지
-      const boxMax = box.scrollHeight - box.clientHeight;
-      const from = boxTo ?? box.scrollTop;
-      const next = Math.min(boxMax, Math.max(0, from + dy));
-      boxTo = next;
-      const rest = dy - (next - from);
-      if (rest) movePage(rest);
-      if (!frame) frame = requestAnimationFrame(step);
-    }, { passive: false });
-  });
-
-  // 버튼(data-dialog="창 id")으로 창 열기, × 나 바깥 어두운 곳을 누르면 닫힘 (Research 주요 논문)
-  document.querySelectorAll('[data-dialog]').forEach((button) => {
-    const dialog = document.getElementById(button.dataset.dialog);
-    if (!dialog) return;
-    button.addEventListener('click', () => dialog.showModal());
-    dialog.querySelector('[data-close]')?.addEventListener('click', () => dialog.close());
-    dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
   });
 
   const professorProfile = document.querySelector('#professor-profile');

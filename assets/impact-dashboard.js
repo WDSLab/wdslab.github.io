@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded',async()=>{
  const root=document.getElementById('publication-statistics');if(!root)return;
  const load=async(url)=>{const r=await fetch(url,{cache:'no-cache'});if(!r.ok)throw Error(url);return r.json()};
  try{
- const [all,metricRows]=await Promise.all([load('publications.json'),load('publication_metrics.json')]);
+ const [all,metricRows]=await Promise.all([load('/publications.json'),load('/publication_metrics.json')]);
  const journals=all.filter(x=>x.category==='International Journal');
  const pubs=journals.filter(x=>x.status==='Published');
  const revisions=journals.filter(x=>x.status==='In revision');

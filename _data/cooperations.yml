@@ -1,0 +1,18 @@
+# 협력 기관 (홈 맨 아래 "Cooperations" 로고 띠 — 원래 Google Sites 의 COOPERATIONS 그림과 같은 14곳, 같은 순서).
+# logo 는 assets/partners/ 파일. 아직 로고 파일이 없는 곳은 이름 글자로 보임 (파일을 받으면 logo 만 채우면 됨)
+- name: 삼성중공업
+- name: LG전자
+  logo: lg.svg
+- name: 부산항만공사
+- name: SCSC 선도연구센터
+- name: KRISO
+  logo: kriso.png
+- name: 그랜드 ICT연구센터
+- name: ST-이노베이션
+- name: 부산테크노파크
+- name: 크로노그래프
+- name: XAI 에듀랩스
+- name: 수엔터프라이즈
+- name: 대구광역시교육청
+- name: 강원특별자치도교육청
+- name: 부산광역시교육청

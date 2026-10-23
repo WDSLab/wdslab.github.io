@@ -20,7 +20,7 @@
   - type: paper
     url: https://doi.org/10.1016/j.aicoj.2026.100125
   - type: details
-    url: publications.html#paper-hemoglobin-threshold-at-first-red-blood-cell-transfusion-and-mortality-in-periph
+    url: publications/#paper-hemoglobin-threshold-at-first-red-blood-cell-transfusion-and-mortality-in-periph
   - type: article
     url: https://v.daum.net/v/20260817140824304
 - date: 2026.07.06
@@ -33,7 +33,7 @@
   - type: paper
     url: https://doi.org/10.1002/for.70194
   - type: details
-    url: publications.html#paper-hybrid-temporal-auto-encoder-and-similarity-matching-for-low-aggregation-level-l
+    url: publications/#paper-hybrid-temporal-auto-encoder-and-similarity-matching-for-low-aggregation-level-l
 - date: 2026.07.04
   category: PUBLICATIONS
   text: 김영휘 학생이 제1저자로 참여한 “Distributed Lag Transformer based on Time-Variable-Aware Learning for Explainable Multivariate Time Series Forecasting” 논문이 IEEE Access에 게재되었습니다. 축하합니다!
@@ -41,7 +41,7 @@
   - type: paper
     url: https://doi.org/10.1109/ACCESS.2026.3713022
   - type: details
-    url: publications.html#paper-distributed-lag-transformer-based-on-time-variable-aware-learning-for-explainabl
+    url: publications/#paper-distributed-lag-transformer-based-on-time-variable-aware-learning-for-explainabl
   - type: github
     url: https://github.com/WDSLab/Distributed-Lag-Transformer
 - date: 2026.07.01
@@ -66,7 +66,7 @@
   - type: paper
     url: https://doi.org/10.1016/j.ipm.2026.104721
   - type: details
-    url: publications.html#paper-legacy-learning-strategy-based-on-few-shot-font-generation-models-for-automatic-
+    url: publications/#paper-legacy-learning-strategy-based-on-few-shot-font-generation-models-for-automatic-
   - type: github
     url: https://github.com/WDSLab/Legacy-Learning
   - type: article
@@ -96,7 +96,7 @@
   - type: paper
     url: https://doi.org/10.1016/j.trd.2025.105134
   - type: details
-    url: publications.html#paper-how-will-arctic-shipping-emissions-evolve-a-spatiotemporal-topology-aware-transf
+    url: publications/#paper-how-will-arctic-shipping-emissions-evolve-a-spatiotemporal-topology-aware-transf
   - type: github
     url: https://github.com/WDSLab/Spatiotemporal-Topology-aware-Transformer
   - type: article
@@ -122,7 +122,7 @@
   - type: paper
     url: https://doi.org/10.1016/j.oceaneng.2025.123452
   - type: details
-    url: publications.html#paper-deep-learning-framework-for-regional-maritime-collision-risk-assessment-using-cn
+    url: publications/#paper-deep-learning-framework-for-regional-maritime-collision-risk-assessment-using-cn
   - type: github
     url: https://github.com/WDSLab/MCRA_GradCAM
   - type: article
@@ -167,7 +167,7 @@
   - type: paper
     url: https://doi.org/10.24507/icicel.20.09.989
   - type: details
-    url: publications.html#paper-bidirectional-causality-between-arctic-sea-ice-and-maritime-traffic-a-regional-a-2025
+    url: publications/#paper-bidirectional-causality-between-arctic-sea-ice-and-maritime-traffic-a-regional-a-2025
   - type: article
     url: https://www.newsis.com/view/NISX20250903_0003314917
 - date: 2025.08.27
@@ -177,7 +177,7 @@
   - type: paper
     url: https://doi.org/10.1109/ACCESS.2025.3607444
   - type: details
-    url: publications.html#paper-trend-fluctuation-correlated-attention-unit-for-remaining-useful-life-prediction
+    url: publications/#paper-trend-fluctuation-correlated-attention-unit-for-remaining-useful-life-prediction
 - date: 2025.07.14
   category: LAB NEWS
   text: 김영휘, 이승우 학생이 Austrian Institute of Technology (AIT)와 "신재생에너지의 생산량 예측"이라는 주제로 국제공동연구를 시작하였습니다.
@@ -230,7 +230,7 @@
   - type: paper
     url: https://doi.org/10.24507/icicel.19.07.795
   - type: details
-    url: publications.html#paper-dual-dimensional-dependency-fusion-transformer-for-long-term-spatiotemporal-flow-2024
+    url: publications/#paper-dual-dimensional-dependency-fusion-transformer-for-long-term-spatiotemporal-flow-2024
   - type: github
     url: https://github.com/WDSLab/DFusioner
 - date: 2024.08.26
@@ -244,7 +244,7 @@
   text: 김영휘 학생이 독일 함부르크에서 개최된 LOGMS2024에서 1건의 Oral Presentation을 진행했습니다.
   links:
   - type: details
-    url: publications.html#paper-a-semi-supervised-learning-imputation-model-for-automatic-identification-system-
+    url: publications/#paper-a-semi-supervised-learning-imputation-model-for-automatic-identification-system-
 - date: 2024.06.25
   category: LAB NEWS
   text: 우리 연구실에서 개발한 "인공지능 기반 수산물 품질 예측 및 가격 예측 알고리즘" 기술을 수랩(주)에 기술이전 계약을 체결했습니다.
@@ -255,7 +255,7 @@
   - type: paper
     url: https://doi.org/10.1109/ACCESS.2024.3417348
   - type: details
-    url: publications.html#paper-temporal-multi-features-representation-learning-based-clustering-for-time-series
+    url: publications/#paper-temporal-multi-features-representation-learning-based-clustering-for-time-series
   - type: github
     url: https://github.com/WDSLab/Temporal-Multi-features-Representation-Learning-Based-Clustering
 - date: 2024.06.01
@@ -281,7 +281,7 @@
   text: 심성현 교수가 미국 애틀란타에서 개최된 CogMI2023에서 1건의 Oral Presentation을 진행했습니다.
   links:
   - type: details
-    url: publications.html#paper-improving-time-series-classification-accuracy-based-on-temporal-feature-represen
+    url: publications/#paper-improving-time-series-classification-accuracy-based-on-temporal-feature-represen
 - date: 2023.10.25
   category: LAB NEWS
   text: 우리 연구실에서 개발한 "딥러닝을 기초로 하는 영유아 교육 플랫폼 서비스 및 시스템" 기술을 "XAI에듀랩스(주)"에 기술이전 계약을 체결했습니다.
@@ -292,7 +292,7 @@
   - type: paper
     url: https://ieeexplore.ieee.org/document/10264112
   - type: details
-    url: publications.html#paper-correlation-recurrent-units-a-novel-neural-architecture-for-improving-the-predic
+    url: publications/#paper-correlation-recurrent-units-a-novel-neural-architecture-for-improving-the-predic
   - type: github
     url: https://github.com/WDSLab/Correlation-Recurrent-Units
   - type: article
@@ -302,7 +302,7 @@
   text: 심성현 교수가 대한민국 부산에서 개최된 LOGMS2023에서 1건의 Oral Presentation을 진행했습니다.
   links:
   - type: details
-    url: publications.html#paper-spatial-temporal-analysis-of-the-relationship-between-ship-activities-and-port-p
+    url: publications/#paper-spatial-temporal-analysis-of-the-relationship-between-ship-activities-and-port-p
 - date: 2023.09.01
   category: NEW MEMBERS
   text: 김영휘, 이승우 학생이 연구실에 합류하였습니다.
@@ -316,7 +316,7 @@
   - type: paper
     url: https://doi.org/10.24507/icicel.18.08.875
   - type: details
-    url: publications.html#paper-temporal-feature-representation-learning-for-time-series-clustering-with-variati-2023
+    url: publications/#paper-temporal-feature-representation-learning-for-time-series-clustering-with-variati-2023
 - date: 2023.06.01
   category: LAB NEWS
   text: 우리 연구실이 한국연구재단 집단연구과제 "선도연구센터"에 지원하여 최종 선정되어 7년간 156억 원을 지원받게 되었습니다.
@@ -328,7 +328,7 @@
   text: 심성현 교수가 인도네시아 발리에서 개최된 ICAIIC2023에서 1건의 Oral Presentation을 진행했습니다.
   links:
   - type: details
-    url: publications.html#paper-temporal-attention-gate-network-with-temporal-decomposition-for-improved-predict
+    url: publications/#paper-temporal-attention-gate-network-with-temporal-decomposition-for-improved-predict
 - date: 2022.11.04
   category: CONFERENCE
   text: 심성현 교수가 2022년 추계 대한산업공학회에서 1건의 Oral Presentation을 진행했습니다.
@@ -342,7 +342,7 @@
   - type: paper
     url: https://doi.org/10.1016/j.trd.2022.103431
   - type: details
-    url: publications.html#paper-deep-collaborative-learning-model-for-port-air-pollutants-prediction-using-autom
+    url: publications/#paper-deep-collaborative-learning-model-for-port-air-pollutants-prediction-using-autom
 - date: 2022.09.01
   category: LAB NEWS
   text: 우리 연구실이 한국연구재단에서 지원하는 "2022년 개인기초연구"에 최종 선정되어 2.5년간 7,500만 원을 지원받게 되었습니다.

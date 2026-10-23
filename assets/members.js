@@ -133,7 +133,7 @@
         const item = el('li', 'member-achievement-item');
         item.append(el('strong', 'member-record-title', entry.body));
         if (entry.date) item.append(el('p', 'member-record-meta', entry.date));
-        addLinks(item, [['news.html', 'News ↗', false]]);
+        addLinks(item, [['/news/', 'News ↗', false]]);
         list.append(item);
       });
       panel.append(list);
@@ -146,7 +146,7 @@
         const item = el('li', 'member-achievement-item');
         item.append(el('strong', 'member-record-title', entry.body));
         if (entry.date) item.append(el('p', 'member-record-meta', entry.date));
-        addLinks(item, [['news.html', 'News ↗', false]]);
+        addLinks(item, [['/news/', 'News ↗', false]]);
         list.append(item);
       });
       panel.append(list);
@@ -164,8 +164,8 @@
   };
 
   Promise.all([
-    fetch('publications.json').then((response) => { if (!response.ok) throw new Error('publications'); return response.json(); }),
-    fetch('news.html').then((response) => { if (!response.ok) throw new Error('news'); return response.text(); })
+    fetch('/publications.json').then((response) => { if (!response.ok) throw new Error('publications'); return response.json(); }),
+    fetch('/news/').then((response) => { if (!response.ok) throw new Error('news'); return response.text(); })
   ]).then(([publications, newsHtml]) => {
     const newsDocument = new DOMParser().parseFromString(newsHtml, 'text/html');
     const newsItems = [...newsDocument.querySelectorAll('.news-original-item')].map((node) => ({

@@ -1,10 +1,10 @@
 ---
-permalink: /publications.html
+permalink: /publications/
 layout: default
 title: Publications
 nav: publications
-styles: [/assets/publications.css?v=20261023-yr320b]
-scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.js?v=20261023-labonly]
+styles: [/assets/publications.css?v=20261023-tabs]
+scripts: [/assets/impact-dashboard.js?v=20261023-urls]
 ---
 {%- assign pubs = site.data.publications -%}
 <section class="pagehero"><div class="shell"><h1>Publications</h1></div></section>
@@ -45,9 +45,8 @@ scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.j
   {%- if mean_frac < 10 -%}{%- assign mean_frac = mean_frac | prepend: "0" -%}{%- endif -%}
   {%- capture mean_if -%}{{ mean_whole }}.{{ mean_frac }}{%- endcapture -%}
 {%- else -%}{%- assign mean_if = "—" -%}{%- endif -%}
-{%- assign coauthored = 0 -%}{%- for p in pubs -%}{%- assign lab_authors = p.authors | where: "lab", true -%}{%- if lab_authors.size > 1 -%}{%- assign coauthored = coauthored | plus: 1 -%}{%- endif -%}{%- endfor -%}
 {%- assign manuscripts = published.size | plus: revisions.size | plus: submitted.size -%}
-<h2>Research Output</h2>
+<div class="section-head"><h2>Research Output</h2><a class="more" href="#all-publications">All Publications ↓</a></div>
 <div class="kpis">
   <div><strong id="impact-total-records">{{ pubs.size }}</strong><span>Total records</span></div>
   <div><strong id="impact-published">{{ published.size }}</strong><span>Journal papers</span></div>
@@ -65,30 +64,27 @@ scripts: [/assets/impact-dashboard.js?v=20261023-glide, /assets/coauthor-graph.j
     <p class="pipeline-legend"><span><i class="published"></i>Published <b id="pipeline-published">{{ published.size }}</b></span><span><i class="revision"></i>In revision <b id="pipeline-revision">{{ revisions.size }}</b></span><span><i class="submitted"></i>Submitted <b id="pipeline-submitted">{{ submitted.size }}</b></span><span>Total <b id="pipeline-total">{{ manuscripts }}</b></span></p>
     <div class="pipeline-track" id="pipeline-track" aria-label="Manuscript status"></div>
   </div>
-  <div class="chart-box chart-wide"><h3>Co-author network</h3>
-    <p class="co-legend"><span><i class="lab"></i>Lab members</span><span>선이 굵을수록 같이 쓴 논문이 많음 · 구성원 둘 이상이 함께 쓴 논문 <b id="coauthor-paper-count">{{ coauthored }}</b>편 기준 · 점에 마우스를 올리면 연결이 보이고, 끌어 볼 수 있음</span></p>
-    <div class="coauthor-graph" id="coauthor-graph"></div>
-  </div>
 </div>
 </div></section>
 
-<section class="section"><div class="shell">
+<section class="section" id="all-publications"><div class="shell">
 <h2>All Publications</h2>
-<div class="tools"><input id="search" type="search" placeholder="Search title, author, venue, year" aria-label="Search publications"><select id="filter" aria-label="Type"><option value="">All</option><option value="International Journal">International Journal</option><option value="International Conference">International Conference</option><option value="Domestic Conference">Domestic Conference</option></select><p class="count" id="count">{{ pubs.size }} / {{ pubs.size }}</p></div>
+{%- comment -%} 종류 탭 (Projects 의 Ongoing/Completed 와 같은 모양, site.js 의 role="tab" 처리). 검색 칸은 뺌 (2026-10-23 사용자 결정) {%- endcomment -%}
+{%- assign n_ij = pubs | where: "category", "International Journal" | size -%}
+{%- assign n_ic = pubs | where: "category", "International Conference" | size -%}
+{%- assign n_dc = pubs | where: "category", "Domestic Conference" | size -%}
+<div class="tabs" role="tablist" aria-label="Publication type">
+  <button type="button" role="tab" data-filter="" aria-selected="true">All <span>{{ pubs.size }}</span></button>
+  <button type="button" role="tab" data-filter="International Journal" aria-selected="false">International Journal <span>{{ n_ij }}</span></button>
+  <button type="button" role="tab" data-filter="International Conference" aria-selected="false">International Conference <span>{{ n_ic }}</span></button>
+  <button type="button" role="tab" data-filter="Domestic Conference" aria-selected="false">Domestic Conference <span>{{ n_dc }}</span></button>
+</div>
 <p class="legend">Bold names: lab members</p>
 {%- comment -%} 첫 페이지 밖 논문은 처음부터 hidden, 페이지 단추도 미리 그려 둔다 — site.js 는 같은 모양을 다시 그릴 뿐 (스크립트 전후 길이가 같아야 화면·스크롤바가 안 움직임) {%- endcomment -%}
-{%- assign page_size = 5 -%}
+{%- assign page_size = 10 -%}
 {%- assign pages = pubs.size | plus: page_size | minus: 1 | divided_by: page_size -%}
 <div class="pub-list" id="records" data-page-size="{{ page_size }}">
 {%- for p in pubs %}{% if forloop.index > page_size %}{% assign rec_hidden = true %}{% else %}{% assign rec_hidden = false %}{% endif %}{% include publication-record.html paper=p hidden=rec_hidden %}{% endfor -%}
 </div>
-{%- if pages > 1 %}
-<nav class="pager" aria-label="Pages"><button type="button" data-page="0" disabled aria-label="Previous page">‹</button>
-  {%- assign gap = false -%}
-  {%- for n in (1..pages) -%}
-    {%- if pages <= 7 or n <= 2 or n == pages -%}<button type="button" data-page="{{ n }}"{% if n == 1 %} class="is-current" aria-current="page"{% endif %}>{{ n }}</button>{%- assign gap = false -%}
-    {%- elsif gap == false -%}<span class="pager-gap">…</span>{%- assign gap = true -%}{%- endif -%}
-  {%- endfor -%}
-<button type="button" data-page="2" aria-label="Next page">›</button></nav>
-{%- endif %}
+{% include pager.html pages=pages %}
 </div></section>

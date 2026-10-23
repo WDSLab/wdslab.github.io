@@ -1,35 +1,47 @@
 ---
-permalink: /services.html
+permalink: /services/
 layout: default
 title: Services
 nav: services
-styles: [/assets/services.css?v=20261023-cards-align]
+styles: [/assets/services.css?v=20261023-foot2]
+scripts: [/assets/services.js?v=20261023-foot2]
 ---
-<section class="pagehero"><div class="shell"><h1>Services</h1></div></section>
+{%- comment -%} 제목 띠는 화면 위에 붙어 있음(sticky) — 스크롤해도 "Services" 가 따라 내려가지 않음 (사용자 요청) {%- endcomment -%}
+<section class="pagehero svc-hero"><div class="shell"><h1>Services</h1></div></section>
 
-{%- comment -%} 연구실이 만들어 공개한 서비스 전부를 테두리 카드 격자로 (PC 3열 · 태블릿 2열 · 휴대폰 1열, 모든 카드 같은 높이).
-   새 서비스는 _data/systems.yml 에 추가하면 아래로 계속 이어짐 (사용자 결정). 홈은 넘겨 보는 카드 줄(_includes/system-card.html) {%- endcomment -%}
-<section class="section alt"><div class="shell">
-<div class="service-grid">
-  {%- for s in site.data.systems %}
-  <article class="service">
-    <a class="service-shot" href="{{ s.url }}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
-      {%- if s.shot %}<img src="{{ '/assets/systems/' | append: s.shot | append: '.jpg' | relative_url }}" alt="" loading="lazy"/>{% else %}<span class="shot-text"><b>{{ s.icon }}</b>{{ s.name }}</span>{% endif -%}
-    </a>
-    <div class="service-body">
-      <h2>{{ s.name }}</h2>
-      <p class="service-field">{{ s.tagline }}</p>
-      <p class="service-desc">{{ s.description }}</p>
-      {%- if s.partner or s.award or s.note %}
-      <dl class="service-info">
-        {%- if s.partner %}<dt>Partner</dt><dd>{{ s.partner }}</dd>{% endif -%}
-        {%- if s.award %}<dt>Award</dt><dd>{{ s.award }}</dd>{% endif -%}
-        {%- if s.note %}<dt>Access</dt><dd>{{ s.note }}</dd>{% endif -%}
-      </dl>
-      {%- endif %}
-      <a class="btn ghost service-btn" href="{{ s.url }}" target="_blank" rel="noopener noreferrer">Visit site <span aria-hidden="true">↗</span></a>
-    </div>
-  </article>
-  {%- endfor %}
-</div>
-</div></section>
+{%- comment -%} 연구실이 만들어 공개한 서비스 전부 (_data/systems.yml 순서).
+   PC: 제목 띠 아래 무대(.svc-stage)가 고정되고, 서비스마다 "캡처(왼쪽) + 설명(오른쪽)" 한 장(.svc-slide)이 겹쳐 있다.
+       스크롤을 내리면 지금 장이 위로 밀려 나가고 다음 장이 아래에서 올라온다(장 간격은 무대의 70% — 위·아래 장이 연하게 살짝 보임) — 세로 회전문을 스크롤로 돌리는 느낌 (services.js 가 스크롤 위치로 자리를 바로 정함, 전환 효과 없음). ▲▼ 단추와 4초 자동 넘김은 다음 장 위치로 부드럽게 스크롤하는 것 (사용자가 스크롤·터치하면 6초 쉼).
+       구간(.svc-track) 높이 = 무대 높이 × (1 + 0.75 × 장 수) — 한 장 넘기는 데 무대 높이의 3/4 만큼 스크롤. 마지막 장 다음에 첫 장이 이어 올라오고(순환), 다 올라오면 스크롤을 처음으로 되돌린다.
+   PC 에선 하단 바(푸터)도 처음부터 화면 아래에 고정(한 줄로 납작하게) — 머리글·제목 띠·무대·푸터가 다 고정이고 장만 움직인다.
+   휴대폰(860px 이하): 고정 없이 서비스마다 캡처 + 설명을 세로로 쌓는다.
+   첫 상태(첫 장만 보임)는 CSS 로 미리 그려 열 때 밀림 없음 {%- endcomment -%}
+<section class="section alt svc-track" id="svc-track" style="--n: {{ site.data.systems.size }}">
+  <div class="svc-stage" id="svc-stage">
+    <ol class="shell svc-slides">
+      {%- for s in site.data.systems %}
+      <li class="svc-slide" data-url="{{ s.url }}">
+        <a class="svc-frame" href="{{ s.url }}" target="_blank" rel="noopener noreferrer" aria-label="Open {{ s.name }}">
+          {%- if s.shot %}<img class="svc-shot" src="{{ '/assets/systems/' | append: s.shot | append: '.jpg' | relative_url }}" alt="{{ s.name }} screenshot" width="1200" height="750"{% unless forloop.first %} loading="lazy"{% endunless %}>
+          {%- else %}<span class="svc-shot svc-shot-text"><b>{{ s.icon }}</b>{{ s.name }}</span>{% endif %}
+        </a>
+        <div class="svc-text">
+          <h2>{{ s.name }}</h2>
+          <p class="service-field">{{ s.tagline }}</p>
+          <p class="service-desc">{{ s.description }}</p>
+          {%- if s.partner or s.award or s.note %}
+          <dl class="service-info">
+            {%- if s.partner %}<dt>Partner</dt><dd>{{ s.partner }}</dd>{% endif -%}
+            {%- if s.award %}<dt>Award</dt><dd>{{ s.award }}</dd>{% endif -%}
+            {%- if s.note %}<dt>Access</dt><dd>{{ s.note }}</dd>{% endif -%}
+          </dl>
+          {%- endif %}
+          <a class="btn ghost service-btn" href="{{ s.url }}" target="_blank" rel="noopener noreferrer">Visit site <span aria-hidden="true">↗</span></a>
+        </div>
+      </li>
+      {%- endfor %}
+    </ol>
+    {%- comment -%} 오른쪽 위: 몇 번째인지 + 위·아래 둥근 단추 (Projects 달력 카드와 같은 모양). 누르면 그 장 위치로 부드럽게 스크롤 (services.js) {%- endcomment -%}
+    <div class="svc-nav shell"><p class="svc-caption"><b id="svc-index">1</b> / {{ site.data.systems.size }}</p><button type="button" class="svc-btn prev" aria-label="Previous service"></button><button type="button" class="svc-btn next" aria-label="Next service"></button></div>
+  </div>
+</section>

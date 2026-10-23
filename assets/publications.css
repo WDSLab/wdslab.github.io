@@ -40,11 +40,12 @@
 .submitted { background: var(--muted); }
 
 /* 전체 목록 */
-.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 20px 0 8px; }
-.tools input, .tools select { font: inherit; font-size: 15px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); }
-.tools input { flex: 1; min-width: 220px; max-width: 420px; }
-.tools input:focus, .tools select:focus { outline: none; border-color: var(--navy); }
-.count { margin-left: auto; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+/* 종류 탭: 모양은 projects.css 의 .tabs 와 같게 (Publications 전용 사본) */
+.tabs { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 20px 0 8px; }
+.tabs button { padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: 16px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.tabs button span { margin-left: 4px; font-weight: 400; }
+.tabs button:hover { color: var(--navy); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--navy); color: var(--navy); }
 .legend { margin-bottom: 16px; font-size: 13px; color: var(--muted); }
 .pub-list { border-top: 1px solid var(--line); }
 .pub { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
@@ -66,7 +67,7 @@
   .kpis { grid-template-columns: repeat(3, 1fr); }
   .kpis strong { font-size: 28px; }
   .charts { grid-template-columns: 1fr; }
-  .count { margin-left: 0; width: 100%; }
+  .tabs { gap: 0 18px; } .tabs button { font-size: 15px; }
   .pub { grid-template-columns: 1fr; gap: 4px; }
   .pub time small { display: inline; margin-left: 6px; }
 }
@@ -77,33 +78,6 @@
   .impact-year-col small, .impact-year-col b { font-size: 10.5px; }
 }
 
-/* 공동 연구 관계 (coauthor-graph.js 가 그림) */
-.co-legend { display: flex; flex-wrap: wrap; gap: 6px 20px; font-size: 13.5px; color: var(--muted); }
-.co-legend b { color: var(--ink); font-weight: 600; }
-.co-legend i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--muted); opacity: .45; vertical-align: -1px; }
-.co-legend i.lab { background: var(--navy); opacity: 1; }
-.coauthor-graph { margin-top: 12px; aspect-ratio: 1000 / 620; } /* 그림이 늦게 들어와도 아래 목록이 밀리지 않게 자리를 미리 잡음 */
-.coauthor-svg { display: block; width: 100%; height: auto; }
-.co-edge { stroke: var(--line); stroke-linecap: round; transition: opacity .2s ease, stroke .2s ease; }
-.co-edge.lab { stroke: var(--navy); stroke-opacity: .3; }
-.co-node circle { fill: var(--muted); fill-opacity: .45; transition: opacity .2s ease; cursor: pointer; }
-.co-node.lab circle { fill: var(--navy); fill-opacity: 1; }
-.co-node:focus { outline: none; }
-.co-label { font-size: 13px; fill: var(--muted); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
-.co-label.lab { font-size: 14px; font-weight: 600; fill: var(--navy); opacity: 1; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
-.is-focus .co-edge, .is-focus .co-node circle { opacity: .15; }
-.is-focus .co-label.lab { opacity: .25; }
-.is-focus .co-edge.on { opacity: 1; stroke: var(--accent); stroke-opacity: 1; }
-.is-focus .co-node.on circle { opacity: 1; fill-opacity: 1; }
-.is-focus .co-label.on { opacity: 1; paint-order: stroke; stroke: #fff; stroke-width: 4px; }
-@media (max-width: 600px) {
-  /* 그림이 작게 줄어드니 이름 글자는 크게 */
-  .co-label { font-size: 26px; }
-  .co-label.lab { font-size: 28px; stroke-width: 6px; }
-}
-.can-drag .co-node circle { cursor: grab; }
-.is-dragging, .is-dragging .co-node circle { cursor: grabbing; }
-.coauthor-svg { user-select: none; }
 
 
 /* 그래프 위 마우스 상자 (impact-dashboard.js): 그 칸에 들어간 논문 목록 */

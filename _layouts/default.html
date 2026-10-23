@@ -7,21 +7,22 @@
   <meta name="description" content="{{ page.description | default: site.description }}"/>
   <script>document.documentElement.classList.add('js')</script>
   {%- comment -%} 새로 고침이면 본문을 잠깐 숨겼다가, 보던 자리로 옮기고 다 그려진 뒤 보여 줌 (안 그러면 연타할 때 맨 위가 잠깐 비침). 1.2초 안전장치 {%- endcomment %}
+  <script>document.documentElement.classList.add('js');</script>
   <style>.restoring main, .restoring .footer { visibility: hidden; }</style>
   <script>(function(){try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='reload'&&!location.hash&&Number(sessionStorage.getItem('scroll:'+location.pathname+location.search))>0){var h=document.documentElement;h.classList.add('restoring');setTimeout(function(){h.classList.remove("restoring")},1200);}}catch(e){}})()</script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"/>
-  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v=20261023-hero-pad"/>
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}?v=20261023-coop2"/>
   {% for css in page.styles %}<link rel="stylesheet" href="{{ css | relative_url }}"/>
   {% endfor %}
 </head>
-<body>
+<body class="page-{{ page.nav }}{% if page.nav == 'home' %} home{% endif %}">
   {% include header.html %}
   <main>{{ content }}</main>
   {% include footer.html %}
   {%- comment -%} 보여 주는 건 페이지를 그리는 스크립트(Projects 기간 표, 목록 나누기 등)가 다 끝난 뒤 — 그 전에 보여 주면 빈 자리가 잠깐 비쳤다가 밀림.
   나중에 받아 오는 내용(News 사진 기록 등) 아래에 있던 자리면, 페이지가 그만큼 길어질 때까지 조금 더 기다림 (최대 0.9초) {%- endcomment %}
   <script>(function(){var h=document.documentElement;if(!h.classList.contains('restoring'))return;var y=0;try{history.scrollRestoration='manual';y=Number(sessionStorage.getItem('scroll:'+location.pathname+location.search))||0;}catch(e){}window.scrollTo(0,y);var t0=Date.now();function show(){if(document.documentElement.scrollHeight-window.innerHeight<y-2&&Date.now()-t0<900){setTimeout(show,50);return;}window.scrollTo(0,y);h.classList.remove('restoring');}document.addEventListener('DOMContentLoaded',function(){setTimeout(show,0);});})()</script>
-  <script defer src="{{ '/assets/site.js' | relative_url }}?v=20261023-prerender"></script>
+  <script defer src="{{ '/assets/site.js' | relative_url }}?v=20261023-anchors"></script>
   {% for js in page.scripts %}<script defer src="{{ js | relative_url }}"></script>
   {% endfor %}
 </body>

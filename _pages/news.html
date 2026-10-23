@@ -1,10 +1,10 @@
 ---
-permalink: /news.html
+permalink: /news/
 layout: default
 title: News
 nav: news
-styles: [/assets/gallery.css?v=20261023-photo-box]
-scripts: [/assets/gallery.js?v=20261023-prerender]
+styles: [/assets/gallery.css?v=20261023-dots]
+scripts: [/assets/gallery.js?v=20261023-dots]
 ---
 <section class="pagehero"><div class="shell"><h1>News</h1></div></section>
 
@@ -12,45 +12,29 @@ scripts: [/assets/gallery.js?v=20261023-prerender]
 <div class="section-head"><h2>News</h2><a class="more" href="#gallery">Photo Archive ↓</a></div>
 {%- assign news = site.data.news -%}
 {%- assign years = news | group_by_exp: "n", "n.date | slice: 0, 4" -%}
-<div class="tools">
-  <input id="search" type="search" placeholder="Search news" aria-label="Search news"/>
-  <p class="count" id="count" aria-live="polite">{{ years.first.items.size }} / {{ news.size }}</p>
-</div>
-{%- comment -%} 종류 고르기: 누르면 그 종류만 남음 (site.js 의 role="tab" 처리) {%- endcomment -%}
-<div class="news-filters" role="tablist" aria-label="News type">
-  <button type="button" role="tab" data-filter="" aria-selected="true">All</button>
-  {%- assign kinds = "PUBLICATIONS:Papers,CONFERENCE:Presentations,AWARDS:Awards,NEW MEMBERS:New members,LAB NEWS:Lab news" | split: "," -%}
-  {%- for k in kinds -%}{%- assign kv = k | split: ":" %}
-  <button type="button" role="tab" data-filter="{{ kv[0] }}" aria-selected="false">{{ kv[1] }}</button>
-  {%- endfor %}
-</div>
-{%- comment -%} 연도는 한 해씩 골라 봄 (검색할 때만 전체). 처음엔 가장 최근 해 {%- endcomment -%}
-<div class="news-years" role="group" aria-label="Year">{% for y in years %}<button type="button" data-year="{{ y.name }}" aria-pressed="{% if forloop.first %}true{% else %}false{% endif %}">{{ y.name }}</button>{% endfor %}</div>
-<div class="news-archive" id="records">
-  {% for y in years %}<section class="news-year" data-year="{{ y.name }}"{% unless forloop.first %} hidden{% endunless %}><h3>{{ y.name }}</h3>
-  {% for n in y.items %}{% include news-item.html item=n archive=true %}{% endfor %}
+{%- comment -%} 검색·종류 고르기 없이 소식 전체를 10개씩 (2026-10-23 사용자 결정: 단순하게) {%- endcomment -%}
+{%- comment -%} 전체 소식을 10개씩 페이지로 (site.js). 연도 묶음 제목(2026·2025…)은 쪽 안에서 구분선 노릇. 첫 상태(첫 10개 + 페이지 단추)는 빌드 때 미리 그림 — 쪽에 소식이 없는 연도 묶음은 통째로 hidden (site.js 와 같은 기준) {%- endcomment -%}
+{%- assign page_size = 10 -%}
+{%- assign pages = news.size | plus: page_size | minus: 1 | divided_by: page_size -%}
+<div class="news-archive" id="records" data-page-size="{{ page_size }}">
+  {%- assign seen = 0 -%}
+  {% for y in years %}<section class="news-year" data-year="{{ y.name }}"{% if seen >= page_size %} hidden{% endif %}><h3>{{ y.name }}</h3>
+  {% for n in y.items %}{% assign seen = seen | plus: 1 %}{% if seen > page_size %}{% assign item_hidden = true %}{% else %}{% assign item_hidden = false %}{% endif %}{% include news-item.html item=n archive=true hidden=item_hidden %}{% endfor %}
   </section>{% endfor %}
 </div>
+{% include pager.html pages=pages %}
 </div></section>
 
 <section class="section" id="gallery"><div class="shell">
 <h2>Photo Archive</h2>
-<div class="tools gallery-toolbar">
-  <input id="gallery-search" type="search" placeholder="Search events or names" aria-label="Search photo archive">
-  {%- comment -%} 종류 단추·개수·카드는 gallery.js 의 cardMarkup 과 같은 모양으로 빌드 때 미리 그려 둔다 (스크립트는 고를 때만 다시 그림) {%- endcomment -%}
-  {%- assign gallery = site.data.gallery -%}
-  <div class="gallery-filters" id="gallery-filters" aria-label="Photo type">
-    {%- assign gallery_kinds = "All,Conferences,Awards,Lab life" | split: "," -%}
-    {%- for k in gallery_kinds %}<button type="button" class="gallery-filter{% if forloop.first %} is-active{% endif %}" aria-pressed="{{ forloop.first }}">{{ k }}</button>{% endfor -%}
-  </div>
-  <p class="count" id="gallery-count" aria-live="polite">{{ gallery.size }} / {{ gallery.size }}</p>
-</div>
+{%- comment -%} 사진 기록도 검색·종류 단추 없이 9장씩 쪽으로만 (사용자 결정). 카드(첫 9장)·페이지 단추는 gallery.js 와 같은 모양으로 빌드 때 미리 그림 {%- endcomment -%}
+{%- assign gallery = site.data.gallery -%}
 <div class="gallery-grid" id="gallery-grid" aria-live="polite">
-{%- for item in gallery -%}
+{%- for item in gallery limit: 9 -%}
   {%- assign photos = item.photos -%}
   <article class="gallery-card" data-category="{{ item.category | escape }}">
     {% if photos.size > 0 %}<button class="gallery-cover" type="button" data-record="{{ forloop.index0 }}" data-photo="0" aria-label="View photos: {{ item.title | escape }}">
-      <img src="{{ photos[0] | escape }}" alt="{{ item.title | escape }}" loading="lazy">
+      <img src="{{ photos[0] | prepend: '/' | relative_url }}" alt="{{ item.title | escape }}" loading="lazy">
       {% if photos.size > 1 %}<span class="gallery-cover-count">{{ photos.size }} photos</span>{% endif %}
     </button>{% else %}<div class="gallery-cover gallery-cover-empty"><span>No photos yet</span></div>{% endif %}
     <div class="gallery-card-body">
@@ -61,5 +45,7 @@ scripts: [/assets/gallery.js?v=20261023-prerender]
   </article>
 {%- endfor -%}
 </div>
+{%- assign gallery_pages = gallery.size | plus: 8 | divided_by: 9 -%}
+{% include pager.html pages=gallery_pages %}
 </div></section>
-<dialog class="gallery-lightbox" id="gallery-lightbox" aria-label="Photo viewer"><div class="gallery-lightbox-frame"><button class="gallery-lightbox-close" type="button" data-close aria-label="Close">×</button><button class="gallery-lightbox-step prev" type="button" data-step="prev" aria-label="Previous photo">‹</button><img class="gallery-lightbox-image" alt=""><button class="gallery-lightbox-step next" type="button" data-step="next" aria-label="Next photo">›</button><div class="gallery-lightbox-caption"></div></div></dialog>
+<dialog class="gallery-lightbox" id="gallery-lightbox" aria-labelledby="gallery-lightbox-title"><div class="gallery-lightbox-head"><h3 class="gallery-lightbox-caption" id="gallery-lightbox-title"></h3><button class="gallery-lightbox-close" type="button" data-close aria-label="Close">×</button></div><div class="gallery-lightbox-frame"><button class="gallery-lightbox-step prev" type="button" data-step="prev" aria-label="Previous photo">‹</button><img class="gallery-lightbox-image" alt=""><button class="gallery-lightbox-step next" type="button" data-step="next" aria-label="Next photo">›</button></div><div class="gallery-lightbox-foot" id="gallery-lightbox-dots" aria-label="Photos"></div></dialog>

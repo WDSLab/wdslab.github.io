@@ -1,11 +1,12 @@
 {%- assign n = include.item -%}
 {%- comment -%} archive=true: News 페이지 목록 모양. People 페이지(members.js)가 이 글자를 읽으므로 태그 사이에 공백을 넣지 않는다. {%- endcomment -%}
-{%- if include.archive -%}<article class="news-original-item" data-category="{{ n.category }}">
+{%- if include.archive -%}<article class="news-original-item" data-category="{{ n.category }}"{% if include.hidden %} hidden{% endif %}>
 {%- else -%}<article class="news-original-item news-featured-card" data-category="{{ n.category }}" data-reveal><span class="news-kind">{{ n.category }}</span>
 {%- endif -%}
 <time>{{ n.date }}</time><div class="news-body"><p>{{ n.text | escape | newline_to_br }}</p>
-{%- if n.links -%}<div class="news-links">
-  {%- for l in n.links -%}
+{%- assign shown_links = n.links | where_exp: "l", "l.type != 'details'" -%}{%- comment -%} Publication details 링크는 안 보임 (2026-10-23 사용자 요청) {%- endcomment -%}
+{%- if shown_links.size > 0 -%}<div class="news-links">
+  {%- for l in shown_links -%}
     {%- case l.type -%}
       {%- when "paper" -%}{%- assign label = "Paper" -%}
       {%- when "details" -%}{%- assign label = "Publication details" -%}

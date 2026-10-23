@@ -1,6 +1,6 @@
 /* Projects
    1) 진행 중 · 완료를 기간으로 자동 판단: 끝나는 달이 지나면 Completed (보는 날 기준, 데이터의 status 는 쓰지 않음)
-   2) 목록 위 진행 중 과제 기간 표(간트 차트): 줄마다 과제 하나, 같은 연도 눈금, 진한 부분 = 지난 기간, 세로선 = 오늘
+   2) 목록 위 진행 중 과제 달력 카드(projects.html(/projects/) 이 빌드 때 미리 그림): 진행 막대와 남은 달 수를 보는 날 기준으로 다시 맞추고, 4초마다 저절로 다음 장으로 넘긴다
    site.js 의 탭 고르기보다 먼저 분류해야 해서 DOMContentLoaded 를 기다리지 않고 바로 실행 (defer 라 목록은 이미 읽혀 있음) */
 (() => {
   const list = document.querySelector('#records');
@@ -29,27 +29,52 @@
     if (n && counts[tab.dataset.filter] !== undefined) n.textContent = counts[tab.dataset.filter];
   });
 
-  // 기간 표: 눈금은 "지금"을 중심으로 고정 (지난해 1월 ~ 3년 뒤 12월). 끝나는 순서로 줄 세움.
-  // 줄 이름은 기관(발주처), 과제 이름·기간은 마우스를 올리면. 6개월 안에 끝나는 과제는 강조색. 눈금을 넘는 과제는 막대를 자르고 오른쪽에 "→ 끝나는 해".
-  const box = document.querySelector('#ongoing-timeline');
-  if (!box) return;
-  if (!ongoing.length) { box.hidden = true; return; }
-  ongoing.sort((a, b) => a.end - b.end || a.start - b.start);
-  const from = (now.getFullYear() - 1) * 12, to = (now.getFullYear() + 4) * 12;
-  const pct = (m) => Math.min(100, Math.max(0, ((m - from) / (to - from)) * 100));
-  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-  const years = [];
-  for (let y = from / 12; y < to / 12; y++) years.push(`<span style="left:${pct(y * 12)}%">${y}</span>`);
-  const rows = ongoing.map((i) => {
-    const over = i.end > to;
-    const visibleEnd = Math.min(i.end, to);
-    const done = Math.min(1, Math.max(0, (today - i.start) / (visibleEnd - i.start)));
-    const soon = i.end - thisMonth <= 6;
-    const size = over ? `left:${pct(i.start)}%;right:44px` : `left:${pct(i.start)}%;width:${pct(i.end) - pct(i.start)}%`;
-    return `<li title="${esc(i.title)} · ${esc(i.period)} · ${Math.round(((today - i.start) / (i.end - i.start)) * 100)}% elapsed"><span class="tl-name">${esc(i.funder || i.title)}</span><span class="tl-track"><span class="tl-bar${soon ? ' soon' : ''}" style="${size}"><i style="width:${done * 100}%"></i></span>${over ? `<b class="tl-more">→ ${esc(i.endYear)}</b>` : ''}</span></li>`;
-  }).join('');
-  box.innerHTML = `<div class="tl-axis"><span class="tl-name"></span><span class="tl-track">${years.join('')}</span></div>
-    <ol class="tl-rows">${rows}</ol>
-    <div class="tl-today-layer" aria-hidden="true"><span class="tl-name"></span><span class="tl-track"><span class="tl-today" style="left:${pct(today)}%"><b>Today</b></span></span></div>
-    <p class="tl-note">진한 부분 = 지난 기간 · 하늘색 = 6개월 안에 끝남 · → = 눈금 밖까지 · 과제 이름은 마우스를 올리면</p>`;
+  // 달력 카드 넘기기: ▼ 다음 장이 위에서 내려오며 나타나고 지금 장은 아래로 사라짐 (▲ 는 반대). 한 번에 하나만 움직임, 0.5초
+  const stack = document.querySelector('.tl-stack');
+  if (stack) {
+    const cards = [...stack.querySelectorAll('.tl-card')];
+    const countEl = document.querySelector('.tl-count b');
+    let cur = Math.max(0, cards.findIndex((c) => c.classList.contains('is-active')));
+    let timer = 0;
+    const show = (k, rev) => {
+      const next = (k + cards.length) % cards.length;
+      if (!cards.length || next === cur) return;
+      stack.classList.toggle('rev', rev);
+      const old = cards[cur];
+      cards.forEach((c) => c.classList.remove('is-leaving'));
+      old.classList.remove('is-active'); old.classList.add('is-leaving');
+      clearTimeout(timer); timer = setTimeout(() => old.classList.remove('is-leaving'), 520);
+      cards[next].classList.add('is-active');
+      cur = next;
+      if (countEl) countEl.textContent = String(cur + 1);
+    };
+    let lastTouch = 0;   // 직접 넘긴 직후엔 잠시 쉰다
+    document.querySelector('.tl-btn.prev')?.addEventListener('click', () => { lastTouch = Date.now(); show(cur - 1, true); });
+    document.querySelector('.tl-btn.next')?.addEventListener('click', () => { lastTouch = Date.now(); show(cur + 1, false); });
+    // 4초마다 저절로 다음 장 (사용자 요청). 마우스를 올리거나 누르는 동안, 화면 밖이거나 탭이 숨겨졌을 때, 움직임 줄이기 설정이면 멈춤 — 홈 넘김 줄과 같은 규칙
+    const wrap = stack.closest('.tl-wrap') || stack;
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      let hovered = false, visible = false;
+      wrap.addEventListener('pointerenter', () => { hovered = true; });
+      wrap.addEventListener('pointerleave', () => { hovered = false; });
+      wrap.addEventListener('focusin', () => { hovered = true; });
+      wrap.addEventListener('focusout', () => { hovered = false; });
+      new IntersectionObserver((entries) => { visible = entries[0].isIntersecting; }, { threshold: 0.5 }).observe(wrap);
+      setInterval(() => {
+        if (hovered || !visible || document.hidden || Date.now() - lastTouch < 6000) return;
+        show(cur + 1, false);
+      }, 4000);
+    }
+  }
+
+// 달력 카드: 빌드 날과 보는 날이 다르면 막대·남은 달이 어긋나므로 같은 기준으로 다시 맞춘다 (대개 같아서 아무것도 안 바뀜)
+document.querySelectorAll('.tl-card').forEach((card) => {
+  const start = Number(card.dataset.start), end = Number(card.dataset.end), cur = thisMonth + 1;   // 데이터의 달 번호는 year*12+month(1~12)
+  const pct = Math.min(100, Math.max(0, ((cur - start) / (end - start + 1)) * 100));
+  const bar = card.querySelector('.tl-bar i');
+  if (bar) bar.style.width = `${pct.toFixed(1)}%`;
+  const left = end - cur;
+  const el = card.querySelector('.tl-left');
+  if (el) el.textContent = left <= 0 ? '이번 달 종료' : `${left}개월 남음`;
+});
 })();

@@ -36,12 +36,12 @@ All page files are in `_pages/`. Each file's `permalink` sets its address; the b
 | Page | File | Address |
 |---|---|---|
 | Home | `_pages/index.html` | `/` |
-| People | `_pages/people.html` | `/people.html` |
-| Services | `_pages/services.html` | `/services.html` |
-| Projects (ongoing / completed) | `_pages/projects.html` | `/projects.html` |
-| Publications | `_pages/publications.html` | `/publications.html` |
-| News and photo gallery | `_pages/news.html` | `/news.html` |
-| Contact | `_pages/contact.html` | `/contact.html` |
+| People | `_pages/people.html` | `/people/` |
+| Services | `_pages/services.html` | `/services/` |
+| Projects (ongoing / completed) | `_pages/projects.html` | `/projects/` |
+| Publications | `_pages/publications.html` | `/publications/` |
+| News and photo gallery | `_pages/news.html` | `/news/` |
+| Contact | `_pages/contact.html` | `/contact/` |
 | Not found | `_pages/404.html` | — |
 
 Shared parts:
@@ -50,7 +50,7 @@ Shared parts:
 - `_includes/` — repeated pieces such as publication records, news items, platform cards and the Research tabs
 - `assets/site.css` — site styles (colors, fonts, header, footer); `members.css`, `projects.css`, `services.css`, `publications.css`, `gallery.css` — page styles
 - `assets/site.js` — mobile menu, list search/filter/pages, sliding rows; `assets/home.js` — homepage opening scene
-- `assets/impact-dashboard.js`, `assets/coauthor-graph.js`, `assets/members.js`, `assets/gallery.js` — publication dashboard, co-author graph, member records, photo gallery
+- `assets/impact-dashboard.js`, `assets/members.js`, `assets/gallery.js` — publication dashboard, member records, photo gallery
 - `_pages/publications.json`, `_pages/publication_metrics.json`, `_pages/gallery.json` — publish `_data/` as `/publications.json`, `/publication_metrics.json` and `/assets/gallery.json` for the scripts above; do not edit them
 
 ## Current records

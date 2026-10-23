@@ -17,32 +17,46 @@
   .project { grid-template-columns: 1fr; gap: 2px; }
 }
 
-/* 목록은 정해진 높이 안에서만 스크롤 (사용자 요청). 끝까지 내리면 페이지가 이어서 내려감 */
-.project-list { max-height: min(640px, 70vh); overflow-y: auto; padding-right: 8px; border-bottom: 1px solid var(--line); scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
-.project:last-child { border-bottom: 0; }
 
 /* 진행 중 과제 기간 표 (projects.js): 왼쪽 과제 이름, 오른쪽 같은 눈금의 막대. 진한 부분 = 지난 기간, 세로선 = 오늘. 줄을 낮게 해서 한눈에 */
-.timeline { position: relative; margin-bottom: 28px; padding: 14px 18px 16px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg);
-  min-height: calc(var(--tl-rows, 0) * 21px + 54px + 36px + 19px); }   /* 자리 미리 잡기 = 실제 높이: 줄 21px × 개수 + 위아래 여백·눈금(54) + 설명 줄(위 여백 36, 그 사이에 Today 글자 + 19) — .tl-note·.tl-today-layer 와 같이 바꿀 것 */
-.timeline .tl-axis, .timeline .tl-rows li, .timeline .tl-today-layer { display: grid; grid-template-columns: minmax(0, 260px) 1fr; gap: 14px; align-items: center; }
-.timeline .tl-track { position: relative; display: block; height: 100%; }
-.tl-axis { height: 18px; margin-bottom: 2px; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
-.tl-axis .tl-track span { position: absolute; top: 0; transform: translateX(-50%); }
-.tl-rows { margin: 0; padding: 0; list-style: none; }
-.tl-rows li { height: 21px; }
-.tl-name { overflow: hidden; font-size: 12px; color: var(--ink); white-space: nowrap; text-overflow: ellipsis; }
-.tl-bar { position: absolute; top: 50%; height: 6px; margin-top: -3px; overflow: hidden; border-radius: 3px; background: rgba(9,34,61,.2); }
-.tl-bar i { display: block; height: 100%; background: var(--navy); }
-.tl-bar.soon i { background: var(--accent); }   /* 6개월 안에 끝나는 과제 */
-.tl-more { position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 40px; font-size: 10.5px; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }   /* 눈금 밖까지 이어지는 과제의 끝나는 해 */
-.tl-note { margin: 36px 0 0; font-size: 11.5px; line-height: 19px; color: var(--muted); }
-.tl-today-layer { position: absolute; top: 34px; right: 18px; bottom: 71px; left: 18px; pointer-events: none; }   /* bottom = 아래 여백 16 + 설명 줄(36 + 19) */
-.tl-today { position: absolute; top: 0; bottom: 0; width: 0; border-left: 1.5px solid var(--accent); }
-.tl-today b { position: absolute; bottom: -16px; left: 0; transform: translateX(-50%); padding: 0 3px; background: var(--bg); font-size: 10.5px; font-weight: 600; color: var(--accent); }   /* 선 아래에 (위에 두면 연도 눈금과 겹침) */
+/* 진행 중 과제 달력 카드: 한 장씩, 달력 넘기듯 세로로 넘긴다(projects.js). 카드는 한 격자 칸에 겹쳐 두고(.tl-stack) 보이는 건 .is-active 하나 — 높이는 가장 긴 카드에 맞춰 자동이라 넘겨도 아래 목록이 안 밀림.
+   위 = 기간, 가운데 = 진행 막대(지난 기간만큼 남색), 아래 = 과제명·기관·남은 달 */
+.tl-wrap { position: relative; }   /* 달력 카드는 회색 구간, 목록은 아래 흰 구간 (구간 여백이 간격 노릇) */
+.tl-stack { display: grid; align-items: start; }   /* 카드마다 제 높이로 (겹친 카드 중 긴 것에 맞춰 늘어나면 로고 칸이 내용보다 길어짐) */
+.tl-card { grid-area: 1 / 1; padding: 0; display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; align-items: stretch; opacity: 0;   /* 상자 없이 회색 구간 위에 바로 (구간이 곧 틀) */ visibility: hidden; transform: translateY(-28px); transition: opacity .5s ease, transform .5s ease, visibility 0s linear .5s; }
+.tl-card.is-active { opacity: 1; visibility: visible; transform: none; transition: opacity .5s ease, transform .5s ease; }
+.tl-card.is-leaving { transform: translateY(28px); }   /* 지금 장은 아래로 내려가며 사라짐, 다음 장은 위에서 내려옴 */
+.tl-stack.rev .tl-card { transform: translateY(28px); }   /* 이전 장으로 갈 땐 반대 방향 */
+.tl-stack.rev .tl-card.is-active { transform: none; }
+.tl-stack.rev .tl-card.is-leaving { transform: translateY(-28px); }
+/* 넘김 묶음: 카드 안 오른쪽 위에 "n / 전체" 와 둥근 단추 두 개(위·아래 꺾쇠). 눌린 느낌은 테두리·바탕만 살짝 */
+.tl-nav { position: absolute; top: 0; right: 0; z-index: 1; display: flex; align-items: center; gap: 6px; }
+.tl-btn { width: 30px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: var(--navy); cursor: pointer; position: relative; transition: border-color .2s ease, background .2s ease; }
+.tl-btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+.tl-btn.prev::before { transform: translate(-50%, -25%) rotate(-45deg); }   /* 위 꺾쇠 */
+.tl-btn.next::before { transform: translate(-50%, -75%) rotate(135deg); }   /* 아래 꺾쇠 */
+.tl-btn:hover { border-color: var(--navy); background: var(--bg2); }
+@media (prefers-reduced-motion: reduce) { .tl-card, .tl-card.is-active { transition: none; } }
+/* 왼쪽 로고 칸: 흰 상자 안에 기관 로고, 없으면 약자 글자. 높이는 옆 달력 내용(기간~남은 달)과 같게 늘어남(stretch) — 위·아래 줄이 맞음 */
+.tl-logo { box-sizing: border-box; width: 180px; display: flex; align-items: center; justify-content: center; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.tl-logo img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.tl-logo span { font-size: 18px; font-weight: 700; letter-spacing: .04em; color: var(--navy); }
+.tl-body { min-width: 0; }
+.tl-range { font-size: 22px; font-weight: 700; color: var(--navy); letter-spacing: -0.01em; font-variant-numeric: tabular-nums; }
+.tl-range i { margin: 0 10px; font-style: normal; font-weight: 400; color: var(--muted); }
+.tl-count { margin: 0 6px 0 0; font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.tl-count b { color: var(--ink); font-weight: 600; }
+.tl-bar { height: 10px; margin-top: 20px; border-radius: 5px; background: #fff; border: 1px solid var(--line); overflow: hidden; }   /* 회색 구간 위라 남은 부분은 흰색 */   /* 진행 막대: 카드마다 같은 길이, 지난 기간만큼 채움 */
+.tl-bar i { display: block; height: 100%; border-radius: 5px; background: var(--navy); transition: width .6s ease; }
+.tl-card h3 { margin-top: 18px; font-size: 17px; font-weight: 600; line-height: 1.4; color: var(--ink); }
+.tl-meta { margin-top: 6px; font-size: 14px; color: var(--muted); }
+.tl-left { font-weight: 600; color: var(--accent); }
 @media (max-width: 640px) {
-  .timeline { padding: 12px; }
-  .timeline .tl-axis, .timeline .tl-rows li, .timeline .tl-today-layer { grid-template-columns: minmax(0, 110px) 1fr; gap: 8px; }
-  .tl-today-layer { top: 32px; right: 12px; bottom: 86px; left: 12px; }   /* 12 + 36 + 38 */
-  .timeline { min-height: calc(var(--tl-rows, 0) * 21px + 46px + 36px + 38px); }   /* 휴대폰: 여백 12, 설명 줄 두 줄 */
-  .tl-name { font-size: 11px; }
+  .tl-card { grid-template-columns: 112px minmax(0, 1fr); gap: 16px; }
+  .tl-logo { width: 112px; padding: 12px; }
+  .tl-logo span { font-size: 14px; }
+  .tl-range { font-size: 18px; }
+  .tl-wrap { padding-bottom: 46px; }
+  .tl-nav { top: auto; bottom: 0; right: auto; left: 50%; transform: translateX(-50%); }   /* 휴대폰: 카드 아래 가운데 (카드 위쪽은 기간 글자와 자리가 겹침) */
+  .tl-card h3 { font-size: 16px; }
 }

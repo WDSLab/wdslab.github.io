@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const cueEnd = hero?.querySelector('.cue-end');
   let bangDX = 0, bangDY = 0, bangScale = 1;   // 큰 ! 가 문장 끝 자리로 가는 길
   const bg = hero?.querySelector('.hero-bg');
+  const photo = hero?.querySelector('.hero-photo');   // 배경 지구 사진 (스크롤하면 사라짐)
+  const campus = hero?.querySelector('.hero-campus'); // 학교 사진 (장면 끝에 작게 나타나 커진다)
   if (!hero || !mark || !copy || !bg) return;
   const words = hero.querySelector('.words');
   const copyRest = [...copy.children].filter((el) => el.tagName !== 'H1');
@@ -30,8 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!pin) { progress = 0; beyond = 0; return; }
     const r = pin.getBoundingClientRect();
     const total = pin.offsetHeight - hero.offsetHeight;
-    progress = total > 0 ? Math.min(1, Math.max(0, (64 - r.top) / total)) : 0;
-    beyond = total > 0 ? Math.max(0, 64 - r.top - total) : 0;
+    // 홈은 머리글이 첫 화면 위에 떠 있어(site.css .home .header) 첫 화면이 화면 맨 위(0)부터 시작한다
+    progress = total > 0 ? Math.min(1, Math.max(0, -r.top / total)) : 0;
+    beyond = total > 0 ? Math.max(0, -r.top - total) : 0;
   }
   const easeInOut = (t) => t < .5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
   const easeOut = (t) => 1 - Math.pow(1 - t, 3);
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ctx = bg.getContext('2d');
   const dpr = Math.min(window.devicePixelRatio || 1, 2);
   let W = 0, H = 0, markX = 0, markY = 0, originX = 0, originY = 0, markSize = 0, bigSize = 0;
+  let poleX = 0, poleY = 0, R = 0;   // 하늘이 도는 축(북극성 자리)과 하늘 반지름 — 축은 사진의 지평선 높이에 둔다 (별 궤적 사진처럼, 사용자 요청)
   let stars = [], unitQ = [], unitE = [];
   const par = { x: 0, y: 0, tx: 0, ty: 0 };
 
@@ -107,27 +111,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
+    // 회전 축: 가로 가운데, 세로는 사진의 지평선(없거나 아직 안 읽혔으면 화면 72%). 반지름은 축에서 가장 먼 모서리까지
+    poleX = W / 2; poleY = H * 0.72;
+    if (photo && photo.naturalWidth) { const sc = Math.max(W / photo.naturalWidth, H / photo.naturalHeight), shown = photo.naturalHeight * sc; poleY = (H - shown) * 0.6 + Number(photo.dataset.horizon || 0.68) * shown; }
+    R = Math.hypot(W / 2, Math.max(poleY, H - poleY));
     unitQ = sample('?'); unitE = sample('!');
     const n = Math.max(unitQ.length, unitE.length);
     const pad = (arr) => { const out = arr.slice(); while (out.length < n) out.push(arr[Math.floor(Math.random() * arr.length)]); return out; };
     unitQ = pad(unitQ); unitE = pad(unitE);
 
-    // 하늘의 별 + 물음표가 될 별(처음엔 안 보임)
-    const count = Math.round(W * H / 700);
-    stars = [];
-    for (let i = 0; i < count + n; i++) {
-      const mine = i >= count;
-      const layer = mine ? Math.random() : Math.pow(Math.random(), 2.2);   // 대부분 멀고 흐리게, 몇 개만 가깝고 밝게
-      stars.push({
-        x: Math.random() * W, y: Math.random() * H, layer, r: 0.4 + layer * 1.3, a: 0.18 + layer * 0.7,
-        twinkle: !mine && Math.random() < 0.12, ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.5,
-        q: mine ? unitQ[i - count] : null, e: mine ? unitE[i - count] : unitE[i % n],   // 끝엔 하늘의 별 전부가 ! 자리로 모인다
-        jx: (Math.random() - .5) * 3, jy: (Math.random() - .5) * 3,
-      });
-    }
+  // 하늘의 별 + 물음표가 될 별(처음엔 안 보임)
+  // 네모 화면에 고르게 뿌리지 않고, 화면 가운데를 천정으로 한 둥근 하늘(타원) 안에 뿌린다 — 땅에서 올려다본 밤하늘처럼 (사용자 요청)
+  // 자리는 각도·반지름으로 두고(frame 에서 x·y 로), 하늘 전체가 가운데를 축으로 아주 천천히 돈다. 가장자리로 갈수록 조금 흐리다
+  const count = Math.round(W * H / 700);
+  stars = [];
+  for (let i = 0; i < count + n; i++) {
+    const mine = i >= count;
+    const layer = mine ? Math.random() : Math.pow(Math.random(), 2.2);   // 대부분 멀고 흐리게, 몇 개만 가깝고 밝게
+    const rad = Math.sqrt(Math.random());                                   // 원 안에 고르게 (반지름 1 = 화면 모서리까지 — 하늘은 정원)
+    stars.push({
+      ang: Math.random() * Math.PI * 2, rad, layer, r: 0.35 + Math.pow(layer, 1.6) * 1.9,   // 대부분 아주 작고 몇 개만 큼
+      tint: Math.random() < 0.72 ? '255,255,255' : (Math.random() < 0.55 ? '255,240,214' : '206,222,255'),   // 색 온도: 흰 · 노르스름 · 푸르스름
+      a: (0.18 + layer * 0.7) * (1 - 0.45 * Math.pow(rad, 4)),             // 가장자리로 갈수록 조금 흐리게
+      twinkle: !mine && Math.random() < 0.12, ph: Math.random() * Math.PI * 2, sp: 0.4 + Math.random() * 0.5,
+      q: mine ? unitQ[i - count] : null, e: mine ? unitE[i - count] : unitE[i % n],   // 끝엔 하늘의 별 전부가 ! 자리로 모인다
+      jx: (Math.random() - .5) * 3, jy: (Math.random() - .5) * 3,
+    });
   }
+}
 
-  /* ---------- 매 프레임 ---------- */
+/* ---------- 매 프레임 ---------- */
   function frame() {
     const p = progress;
     // 고정 구간(300vh)을 장면별로 나눈다. 숫자는 진행률 0~1
@@ -154,9 +167,26 @@ document.addEventListener('DOMContentLoaded', () => {
     if (words) words.style.opacity = 1 - seg(t1, 0.3, 0.85); // "What is Data Science" 는 커지면서 사라진다
     mark.style.opacity = 1 - appear;                        // 글자 ? 는 별 ? 가 나타나면 사라진다
     copy.style.pointerEvents = t1 > 0.2 ? 'none' : '';
+    // 배경 사진은 장면이 시작되면 서서히 사라져 별만 남는다. 사진이 보이는 동안 별은 지평선 위에만 (지구 위엔 안 그림 — 사용자 요청)
+    const photoA = photo ? 1 - seg(p, 0, 0.22) : 0;
+    let horizonY = Infinity;
+    if (photo) {
+      photo.style.opacity = photoA;
+      if (photoA > 0 && photo.naturalWidth) {   // object-fit: cover · object-position: center 60% 와 같은 계산 (site.css .hero-photo)
+        const scale = Math.max(W / photo.naturalWidth, H / photo.naturalHeight), shown = photo.naturalHeight * scale;
+        horizonY = (H - shown) * 0.6 + Number(photo.dataset.horizon || 0.68) * shown;
+      }
+    }
     cue?.classList.toggle('is-hidden', p > 0.01);           // 스크롤을 시작하면 "스크롤" 신호는 사라짐
     cueEnd?.classList.toggle('is-hidden', p < 0.97 || beyond > innerHeight * 0.45);   // "What is Data Science!" 가 다 나오면 같은 자리에 "연구 분야" 신호, 화면 절반 가까이 더 내려가면 사라짐
     if (finalText) finalText.style.opacity = easeOut(seg(p, 0.9, 1));    // ! 가 먼저 앉고, 그 앞에 큰 문장이 제자리에서 나타난다
+    // 학교 사진: ! 가 내려앉는 동안(0.8~1) 별 위로 서서히 나타나며, 화면을 꽉 채운 채 1.0→1.08 로 천천히 커진다 — 우주에서 학교로 다가오는 느낌.
+    // 작은 네모가 커지는 식은 테두리가 보여 인위적이라 뺌 (사용자 지적). 다 나타난 뒤엔 1.08 그대로
+    if (campus) {
+      const land2 = easeOut(seg(p, 0.8, 1));
+      campus.style.opacity = land2;
+      campus.style.transform = land2 > 0 ? `scale(${(1 + 0.08 * land2).toFixed(4)})` : '';
+    }
 
     // 별
     const t = performance.now() / 1000;
@@ -165,9 +195,10 @@ document.addEventListener('DOMContentLoaded', () => {
     ctx.clearRect(0, 0, W, H);
     for (const st of stars) {
       const depth = 0.3 + st.layer;
-      // 하늘이 아주 천천히 흐른다 (가까운 별이 조금 더 빨리), 화면 끝에서 반대편으로 이어진다
-      let x = (st.x + t * 4 * depth + par.x * depth * 6 + W) % W;
-      let y = (st.y + t * 1.2 * depth + par.y * depth * 6 + H) % H;
+      // 둥근 하늘(정원)이 가운데(천정)를 축으로 천천히 돈다. 마우스를 따라 겹마다 조금씩 어긋나 깊이감
+      const ang = st.ang + t * 0.012;   // 한 바퀴 약 9분 (느리지만 보면 도는 게 느껴지는 정도 — 사용자 요청으로 더 돌게)
+      let x = poleX + Math.cos(ang) * st.rad * R + par.x * depth * 6;
+      let y = poleY + Math.sin(ang) * st.rad * R + par.y * depth * 6;
       if (fly > 0) { x = W / 2 + (x - W / 2) * (1 + fly * depth * 0.6); y = H / 2 + (y - H / 2) * (1 + fly * depth * 0.6); }
       let rad = st.r, a = st.a;
       if (st.twinkle) a *= 0.55 + 0.45 * Math.sin(t * st.sp + st.ph);
@@ -186,7 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
         rad += (1.9 - rad) * gather; a = (a + (0.95 - a) * gather) * (1 - solid);
       }
       if (x < -2 || x > W + 2 || y < -2 || y > H + 2) continue;
-      ctx.fillStyle = `rgba(255,255,255,${a})`;
+      if (!st.q && photoA > 0 && y > horizonY - 30) {   // 지평선 아래는 사진이 보이는 만큼 가림 (60px 띠로 부드럽게)
+        a *= 1 - photoA * Math.min(1, (y - horizonY + 30) / 60);
+        if (a < 0.01) continue;
+      }
+      // 별 궤적: 땅에서 오래 찍은 밤하늘 사진처럼 별마다 가운데(천정)를 도는 짧은 호를 꼬리로 단다 — 바깥 별일수록 길게 (사용자 요청)
+      // 장면이 시작되면(t1) 꼬리는 사라지고 점만 남아 ?·! 장면은 그대로. 물음표가 될 별(q)은 꼬리 없음
+      if (!st.q && t1 < 1 && st.rad > 0.06) {
+        const L = (0.06 + st.layer * 0.07) * (1 - t1);
+        ctx.strokeStyle = `rgba(${st.tint},${a * 0.5})`; ctx.lineWidth = Math.max(0.6, rad * 0.9);
+        ctx.beginPath(); ctx.arc(poleX + par.x * depth * 6, poleY + par.y * depth * 6, st.rad * R, ang - L, ang); ctx.stroke();
+      }
+      if (rad > 1.3 && !st.q) { ctx.fillStyle = `rgba(${st.tint},${a * 0.16})`; ctx.beginPath(); ctx.arc(x, y, rad * 3, 0, Math.PI * 2); ctx.fill(); }   // 밝은 별은 은은하게 번짐
+      ctx.fillStyle = `rgba(${st.tint},${a})`;
       ctx.beginPath(); ctx.arc(x, y, rad, 0, Math.PI * 2); ctx.fill();
     }
   }
@@ -209,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const root = document.documentElement, savedBehavior = root.style.scrollBehavior;
       root.style.scrollBehavior = 'auto';            // CSS 의 부드러운 스크롤과 겹치면 서로 상쇄되므로 잠시 끈다
       const total = pin.offsetHeight - hero.offsetHeight;
-      const start = pin.getBoundingClientRect().top + window.scrollY - 64;   // 진행률 0 인 스크롤 위치
+      const start = pin.getBoundingClientRect().top + window.scrollY;   // 진행률 0 인 스크롤 위치 (첫 화면은 맨 위 0 부터)
       const at = (p) => start + p * total;
       const yA = at(0.29), yB = at(0.78), yC = at(1);
       // 맨 아래 "스크롤" 신호(data-scroll="scene")는 "What is Data Science!" 가 다 나온 자리에서 멈춘다
@@ -249,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const ready = document.fonts?.ready || Promise.resolve();
+  if (photo && !photo.complete) photo.addEventListener('load', () => { layout(); readProgress(); }, { once: true });   // 사진 크기를 알아야 지평선(회전 축)을 맞출 수 있다
   ready.then(() => {
     layout(); readProgress();
     window.addEventListener('resize', () => { layout(); readProgress(); });

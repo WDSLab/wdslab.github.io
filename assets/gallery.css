@@ -1,28 +1,13 @@
 /* News 페이지 (소식 목록 + 사진 기록). 색·모서리는 site.css 변수만 쓴다. 사진 카드는 gallery.js 가 만든다. */
 
 /* 검색 줄 (Projects · Publications 와 같은 모양) */
-.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 20px 0 16px; }
-.tools input { font: inherit; font-size: 15px; padding: 10px 14px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); color: var(--ink); }
-.tools input { flex: 1; min-width: 220px; max-width: 420px; }
-.tools input:focus { outline: none; border-color: var(--navy); }
-.count { margin-left: auto; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
 /* 소식 종류 · 연도 고르기: 글자만, 고른 것은 남색 밑줄 (Projects 탭과 같은 모양) */
-.news-filters, .news-years { display: flex; flex-wrap: wrap; gap: 0 22px; }
-.news-filters button, .news-years button { padding: 6px 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: 15px; font-weight: 600; color: var(--muted); cursor: pointer; }
-.news-years { margin: 6px 0 8px; }
-.news-years button { font-size: 14.5px; font-weight: 500; font-variant-numeric: tabular-nums; }
-.news-filters button:hover, .news-years button:hover:not(:disabled) { color: var(--navy); }
-.news-filters button[aria-selected="true"], .news-years button[aria-pressed="true"] { border-bottom-color: var(--navy); color: var(--navy); }
-.news-years button:disabled { opacity: .35; cursor: default; }
-.news-years[hidden] { display: none; }
 
-/* 소식 목록: 날짜 | 내용. 검색할 때만 연도 제목이 보임 */
-/* 목록은 높이를 고정한 상자 안에서 스크롤 (Projects 목록과 같은 방식) — 소식이 늘어도 페이지 길이는 그대로 */
-.news-archive { max-height: min(640px, 70vh); overflow-y: auto; padding-right: 8px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
+/* 소식 목록: 날짜 | 내용. 10개씩 페이지 나누기(site.js), 연도 제목은 쪽 안의 구분선 */
+.news-archive { margin-top: 20px; border-top: 1px solid var(--line); }
 .news-year[hidden] { display: none; }
 .news-year h3 { padding: 28px 0 10px; border-bottom: 1px solid var(--navy); font-size: 20px; font-variant-numeric: tabular-nums; }
-.news-archive:not(.is-search) .news-year h3 { display: none; }
 .news-original-item { display: grid; grid-template-columns: 120px 1fr; gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; }
 .news-original-item[hidden] { display: none; }
 .news-original-item time { color: var(--muted); font-variant-numeric: tabular-nums; }
@@ -38,13 +23,8 @@
 .news-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 
 /* 사진 기록 */
-.gallery-filters { display: flex; flex-wrap: wrap; gap: 6px; }
-.gallery-filter { font: inherit; font-size: 14px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); color: var(--ink); cursor: pointer; transition: border-color .2s ease; }
-.gallery-filter:hover { border-color: var(--navy); }
-.gallery-filter.is-active { background: var(--navy); border-color: var(--navy); color: #fff; }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; margin-top: 20px; scroll-margin-top: 88px; }   /* 쪽을 넘기면 격자 맨 위로 — 머리글에 가리지 않게 */
 /* 사진 기록도 소식 목록처럼 높이를 고정한 상자 안에서 스크롤 — 행사가 늘어도 페이지 길이는 그대로 */
-.gallery-grid { max-height: min(640px, 70vh); overflow-y: auto; padding: 16px 8px 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); scrollbar-width: thin; scrollbar-color: var(--line) transparent; }
 .gallery-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); }
 .gallery-cover { position: relative; display: block; width: 100%; aspect-ratio: 3 / 2; padding: 0; border: 0; background: var(--bg2); overflow: hidden; cursor: zoom-in; }
 .gallery-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
@@ -57,27 +37,30 @@
 .gallery-description { margin-top: 6px; font-size: 14px; color: var(--ink); }
 
 /* 사진 크게 보기 */
-.gallery-lightbox { width: min(1040px, calc(100% - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 0; border-radius: var(--radius); background: var(--navy); color: #fff; }
-.gallery-lightbox::backdrop { background: rgba(9,34,61,.8); }
-.gallery-lightbox-frame { position: relative; }
-.gallery-lightbox-image { width: 100%; max-height: calc(100vh - 100px); object-fit: contain; background: var(--navy); }
-.gallery-lightbox-caption { padding: 12px 20px 16px; font-size: 14px; color: rgba(255,255,255,.85); }
-.gallery-lightbox-close, .gallery-lightbox-step { position: absolute; z-index: 1; width: 40px; height: 40px; padding: 0; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; background: rgba(9,34,61,.6); color: #fff; font: inherit; font-size: 22px; line-height: 1; cursor: pointer; transition: background .2s ease; }
-.gallery-lightbox-close:hover, .gallery-lightbox-step:hover { background: var(--navy); }
-.gallery-lightbox-close { top: 12px; right: 12px; }
-.gallery-lightbox-step { top: 50%; transform: translateY(-50%); }
+/* 사진 창: People 실적 창(members.css .member-dialog)과 같은 모양 — 흰 상자, 제목 줄 + 둥근 ×, 같은 그림자·어두운 바탕. 열림 효과는 site.css 의 dialog 공통 */
+.gallery-lightbox { width: min(960px, calc(100% - 32px)); max-height: calc(100vh - 32px); padding: 0; border: 0; border-radius: var(--radius); background: var(--bg); color: var(--ink); box-shadow: 0 20px 60px rgba(9,34,61,.25); }
+.gallery-lightbox[open] { display: flex; flex-direction: column; }
+.gallery-lightbox::backdrop { background: rgba(9,34,61,.45); }
+.gallery-lightbox-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); }
+.gallery-lightbox-caption { margin: 0; font-size: 18px; font-weight: 600; color: var(--ink); }
+.gallery-lightbox-close { flex: none; width: 32px; height: 32px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); font: inherit; font-size: 20px; line-height: 1; color: var(--navy); cursor: pointer; }
+.gallery-lightbox-close:hover { border-color: var(--navy); }
+.gallery-lightbox-frame { position: relative; background: var(--bg2); }
+.gallery-lightbox-image { display: block; width: 100%; max-height: calc(100vh - 140px); object-fit: contain; }
+.gallery-lightbox-step { position: absolute; top: 50%; z-index: 1; width: 36px; height: 36px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: var(--navy); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; transform: translateY(-50%); transition: border-color .2s ease; }
+.gallery-lightbox-step:hover { border-color: var(--navy); }
 .gallery-lightbox-step.prev { left: 12px; }
 .gallery-lightbox-step.next { right: 12px; }
 .gallery-lightbox-step[hidden] { display: none; }
+/* 사진 아래 여백 + 점(사진 수만큼): 누르면 그 사진으로 */
+.gallery-lightbox-foot { display: flex; justify-content: center; gap: 10px; min-height: 10px; padding: 16px 24px 20px; }
+.gallery-lightbox-foot button { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: var(--line); cursor: pointer; transition: background .2s ease; }
+.gallery-lightbox-foot button:hover { background: var(--muted); }
+.gallery-lightbox-foot button.is-on { background: var(--navy); }
 
 @media (max-width: 860px) {
   .news-original-item { grid-template-columns: 1fr; gap: 4px; }
   .news-original-item time::after { display: inline; margin-left: 8px; }
-  .count { margin-left: 0; width: 100%; }
-  .tools input { min-width: 0; max-width: none; }
-  .news-filters, .news-years { gap: 0 16px; }
-  .news-filters button { font-size: 14.5px; }
-  .news-archive, .gallery-grid { max-height: 60vh; }   /* 휴대폰: 상자 위아래로 페이지를 밀 자리를 남김 */
   .gallery-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 560px) {
