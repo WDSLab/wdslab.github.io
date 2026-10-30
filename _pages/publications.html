@@ -3,7 +3,7 @@ permalink: /publications/
 layout: default
 title: Publications
 nav: publications
-styles: [/assets/publications.css?v=20261023-tip5]
+styles: [/assets/publications.css?v=20261030-jcrd]
 scripts: [/assets/impact-dashboard.js?v=20261023-tip5]
 ---
 {%- assign pubs = site.data.publications -%}
@@ -71,11 +71,13 @@ scripts: [/assets/impact-dashboard.js?v=20261023-tip5]
 <h2>All Publications</h2>
 {%- comment -%} 종류 탭 (Projects 의 Ongoing/Completed 와 같은 모양, site.js 의 role="tab" 처리). 검색 칸은 뺌 (2026-10-23 사용자 결정) {%- endcomment -%}
 {%- assign n_ij = pubs | where: "category", "International Journal" | size -%}
+{%- assign n_dj = pubs | where: "category", "Domestic Journal" | size -%}
 {%- assign n_ic = pubs | where: "category", "International Conference" | size -%}
 {%- assign n_dc = pubs | where: "category", "Domestic Conference" | size -%}
 <div class="tabs" role="tablist" aria-label="Publication type">
   <button type="button" role="tab" data-filter="" aria-selected="true">All <span>{{ pubs.size }}</span></button>
   <button type="button" role="tab" data-filter="International Journal" aria-selected="false">International Journal <span>{{ n_ij }}</span></button>
+  <button type="button" role="tab" data-filter="Domestic Journal" aria-selected="false">Domestic Journal <span>{{ n_dj }}</span></button>
   <button type="button" role="tab" data-filter="International Conference" aria-selected="false">International Conference <span>{{ n_ic }}</span></button>
   <button type="button" role="tab" data-filter="Domestic Conference" aria-selected="false">Domestic Conference <span>{{ n_dc }}</span></button>
 </div>

@@ -13,9 +13,8 @@
   {%- endfor -%}
 </p>
 {%- endif -%}
-<p class="pub-meta"><b>{{ p.venue | escape }}</b> · {{ p.category }} · {{ p.status }}
+<p class="pub-meta">{% include jcr-badge.html paper=p %}<b>{{ p.venue | escape }}</b> · {{ p.category }} · {{ p.status }}
   {%- if p.if_as_listed_on_original %} · IF {{ p.if_as_listed_on_original }}{% endif -%}
-  {%- if p.top_percentile_as_listed_on_original %} · {{ p.top_percentile_as_listed_on_original }}{% endif -%}
 </p>
-<p class="pub-links"><span class="pub-area">{{ p.research_area | escape }}</span>{% include paper-links.html paper=p %}</p>
+<p class="pub-links">{% if p.research_area %}<span class="pub-area">{{ p.research_area | escape }}</span>{% endif %}{% include paper-links.html paper=p %}</p>
 </div></article>

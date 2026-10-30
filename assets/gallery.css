@@ -47,10 +47,13 @@
 .gallery-lightbox-close:hover { border-color: var(--navy); }
 .gallery-lightbox-frame { position: relative; background: var(--bg2); }
 .gallery-lightbox-image { display: block; width: 100%; max-height: calc(100vh - 140px); object-fit: contain; }
-.gallery-lightbox-step { position: absolute; top: 50%; z-index: 1; width: 36px; height: 36px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: var(--navy); font: inherit; font-size: 22px; line-height: 1; cursor: pointer; transform: translateY(-50%); transition: border-color .2s ease; }
-.gallery-lightbox-step:hover { border-color: var(--navy); }
-.gallery-lightbox-step.prev { left: 12px; }
-.gallery-lightbox-step.next { right: 12px; }
+.gallery-lightbox-step { position: absolute; top: calc(50% - 20px); z-index: 1; width: 40px; height: 40px; padding: 0; border: 0; background: none; color: var(--navy); font-size: 0; cursor: pointer; opacity: .85; filter: drop-shadow(0 0 2px #fff) drop-shadow(0 0 3px #fff); transition: opacity .2s ease; }   /* 꺾쇠만 (.rail-btn 과 같은 모양). 세로 사진은 양옆이 밝은 바탕이라 남색 + 흰 테 — 어두운 사진 위에서도 보임 */
+.gallery-lightbox-step::before { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 14px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; }
+.gallery-lightbox-step.prev::before { transform: translate(-30%, -50%) rotate(-135deg); }
+.gallery-lightbox-step.next::before { transform: translate(-70%, -50%) rotate(45deg); }
+.gallery-lightbox-step:hover { opacity: 1; }
+.gallery-lightbox-step.prev { left: 4px; }
+.gallery-lightbox-step.next { right: 4px; }
 .gallery-lightbox-step[hidden] { display: none; }
 /* 사진 아래 여백 + 점(사진 수만큼): 누르면 그 사진으로 */
 .gallery-lightbox-foot { display: flex; justify-content: center; gap: 10px; min-height: 10px; padding: 16px 24px 20px; }

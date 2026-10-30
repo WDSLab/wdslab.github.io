@@ -657,6 +657,7 @@
     "year": 2026,
     "title": "Legacy Learning Strategy Based on Few-Shot Font Generation Models for Automatic Text Design",
     "selected": true,
+    "selected_order": 3,
     "venue": "Information Processing & Management",
     "status": "Published",
     "category": "International Journal",
@@ -712,6 +713,7 @@
     "title": "Early red blood cell transfusion burden, hemoglobin at first transfusion, and in-hospital mortality in patients supported with veno-arterial ECMO: a multicenter cohort study",
     "anchor": "hemoglobin-threshold-at-first-red-blood-cell-transfusion-and-mortality-in-periph",
     "selected": true,
+    "selected_order": 6,
     "venue": "Annals of Intensive Care",
     "status": "Published",
     "category": "International Journal",
@@ -950,6 +952,7 @@
     "year": 2025,
     "title": "How Will Arctic Shipping Emissions Evolve? A Spatiotemporal Topology-Aware Transformer Approach",
     "selected": true,
+    "selected_order": 4,
     "venue": "Transportation Research Part D: Transport and Environment",
     "status": "Published",
     "category": "International Journal",
@@ -1004,6 +1007,7 @@
     "year": 2025,
     "title": "Deep Learning Framework for Regional Maritime Collision Risk Assessment using CNN and Grad-CAM",
     "selected": true,
+    "selected_order": 2,
     "venue": "Ocean Engineering",
     "status": "Published",
     "category": "International Journal",
@@ -1304,6 +1308,7 @@
     "year": 2023,
     "title": "Correlation Recurrent Units: A Novel Neural Architecture for Improving the Predictive Performance of Time Series Data",
     "selected": true,
+    "selected_order": 1,
     "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
     "status": "Published",
     "category": "International Journal",
@@ -1351,6 +1356,7 @@
     "year": 2023,
     "title": "Bagging Recurrent Event Imputation for Repair of Imperfect Event Log with Missing Categorical Events",
     "selected": true,
+    "selected_order": 7,
     "venue": "IEEE Transactions on Services Computing",
     "status": "Published",
     "category": "International Journal",
@@ -1397,6 +1403,7 @@
     "year": 2022,
     "title": "Deep Collaborative Learning Model for Port-Air Pollutants Prediction using Automatic Identification System",
     "selected": true,
+    "selected_order": 5,
     "venue": "Transportation Research Part D: Transport and Environment",
     "status": "Published",
     "category": "International Journal",
@@ -1895,6 +1902,43 @@
     ],
     "month": "Mar",
     "venue_id": "venue-009"
+  },
+  {
+    "year": 2026,
+    "title": "Reinforcement Learning-Based Multi-Objective Arctic Route Optimization Considering Sea Ice Risk, Time, and Cost",
+    "venue": "Journal of Korean Society of Industrial and Systems Engineering",
+    "status": "Published",
+    "category": "Domestic Journal",
+    "links": {
+      "paper": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003348736"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "authors": [
+      {
+        "name": "Seungwoo Lee",
+        "lab": true,
+        "roles": [
+          "제1저자"
+        ],
+        "corresponding_source": false
+      },
+      {
+        "name": "이병헌",
+        "lab": false,
+        "roles": [],
+        "corresponding_source": false
+      },
+      {
+        "name": "Sunghyun Sim",
+        "lab": true,
+        "roles": [
+          "교신저자"
+        ],
+        "corresponding_source": true
+      }
+    ]
   },
   {
     "year": 2026,

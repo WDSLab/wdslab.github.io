@@ -57,9 +57,9 @@ scripts: [/assets/home.js?v=20261023-newsnav]
     <div>
       <div class="section-head"><h2>Selected Papers</h2><a class="more" href="{{ '/publications/' | relative_url }}">View all →</a></div>
       <ol class="qa-list papers">
-        {% assign selected = pubs | where: "selected", true %}
-        {% for p in selected limit: 4 %}
-        <li><div class="qa-item"><b>{{ p.title }}</b><span>{{ p.venue }} · {{ p.year }}</span>{% include paper-links.html paper=p %}</div></li>
+        {% assign selected = pubs | where: "selected", true | sort: "selected_order" %}
+        {% for p in selected %}
+        <li><div class="qa-item"><b>{{ p.title }}</b><span>{% include jcr-badge.html paper=p %}{{ p.venue }} · {{ p.year }}</span>{% include paper-links.html paper=p %}</div></li>
         {% endfor %}
       </ol>
     </div>

@@ -32,7 +32,7 @@
     'Ocean Engineering',
     'Transportation Research Part D: Transport and Environment'
   ]);
-  const kciVenues = new Set(['Korean Circulation Journal']);
+  const kciVenues = new Set(['Korean Circulation Journal', 'Journal of Korean Society of Industrial and Systems Engineering']);
   const conferencePattern = /학회|학술대회|conference|assembly|oral presentation|대학생경진대회/i;
   const presentationPattern = /발표|oral presentation|발표상|우수논문|수상|best paper/i;
   const awardPattern = /수상|award|prize|best paper|excellence award|우수상|우수논문상|우수발표상|대상|최우수|장관상|시장상|회장상|금상|은상|동상|포스터상/i;
@@ -55,7 +55,7 @@
   const addMetricCards = (info, values) => {
     const cells = [['SCIE', values.scie], ['Scopus', values.scopus], ['KCI', values.kci], ['Conference', values.conference], ['Awards', values.awards]];
     const ready = info.querySelector('.member-metrics');
-    if (ready) { ready.querySelectorAll('strong').forEach((strong, i) => { strong.textContent = String(cells[i]?.[1] ?? '—'); }); return; }
+    if (ready) { ready.querySelectorAll('strong').forEach((strong, i) => { const value = cells[i]?.[1]; strong.textContent = value === 0 ? '–' : String(value ?? '—'); strong.classList.toggle('is-zero', value === 0); }); return; }   // 0 은 흐린 – 로
     const grid = el('div', 'member-metrics');
     grid.setAttribute('aria-label', 'Publication, conference, and award counts');
     cells.forEach(([label, value]) => {
@@ -109,6 +109,7 @@
     const button = ready || el('button', 'member-achievements');
     button.textContent = `View achievements · ${total} records`;
     button.type = 'button';
+    if (!total) button.style.visibility = 'hidden';   // 실적이 없으면 숨기되 자리는 둠 (옆 카드와 높이가 같게)
     const panel = el('div', 'member-achievement-panel');
 
     if (papers.length) {
@@ -186,9 +187,9 @@
       const info = card.querySelector('.member-info');
       if (!name || !info) return;
 
-      const papers = publications.filter((paper) => paper.category === 'International Journal' && (paper.authors || []).some((author) => author.name === name))
+      const papers = publications.filter((paper) => (paper.category === 'International Journal' || paper.category === 'Domestic Journal') && (paper.authors || []).some((author) => author.name === name))
         .sort((a, b) => Number(b.year || 0) - Number(a.year || 0));
-      const publishedJournals = papers.filter((paper) => paper.status === 'Published' && paper.category === 'International Journal');
+      const publishedJournals = papers.filter((paper) => paper.status === 'Published');
       const hasImpactFactor = (paper) => paper.if_as_listed_on_original !== null && paper.if_as_listed_on_original !== undefined && paper.if_as_listed_on_original !== '';
       const scie = publishedJournals.filter(hasImpactFactor).length;
       const scopus = publishedJournals.filter((paper) => !hasImpactFactor(paper) && scopusVenues.has(paper.venue)).length;

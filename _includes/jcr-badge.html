@@ -1,0 +1,4 @@
+{%- comment -%} 논문의 JCR 상위 % 표시 (홈 Selected Papers · Publications 가 같이 씀). 값이 없는 논문은 아무것도 안 나옴. {%- endcomment -%}
+{%- if include.paper.top_percentile_as_listed_on_original -%}
+<span class="jcr-badge">JCR {{ include.paper.top_percentile_as_listed_on_original }}</span>
+{%- endif -%}

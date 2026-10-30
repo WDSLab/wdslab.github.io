@@ -22,7 +22,7 @@ Most updates only touch one file in `_data/`. The homepage and other pages read 
 Rules:
 
 - Each News item has at most one `News article` link. Selected Papers do not use News article buttons.
-- Selected Papers on Home are the publications marked `"selected": true`.
+- Selected Papers on Home are the publications marked `"selected": true`, shown by `selected_order` (highest JCR rank first).
 - A member's `name_en` in `people.yml` must match the author name in `publications.json`; the paper count on People is counted from it.
 - Paper titles in `research.yml` must match `publications.json` exactly (two papers differ only in letter case).
 - `anchor` in `publications.json` keeps an older link address for a paper; do not change it, because News and other pages link to it.
@@ -57,7 +57,7 @@ Shared parts:
 
 - Homepage News: latest 5 of 79 (the rest on the News page)
 - News archive: 79
-- Publications: 80
+- Publications: 81
 - Projects: 44
 - People: 12
 

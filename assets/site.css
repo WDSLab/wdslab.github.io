@@ -22,8 +22,12 @@ body {
   line-height: 1.65;
   color: var(--ink);
   background: var(--bg);
+  display: flex; flex-direction: column; min-height: 100vh;   /* 내용이 짧은 페이지(Contact·404)도 푸터가 화면 맨 아래에 붙게 */
   -webkit-font-smoothing: antialiased;
 }
+main { flex: 1 0 auto; min-width: 0; }
+.page-contact main { display: flex; flex-direction: column; }
+.page-contact main > .section { flex: 1; }   /* 늘어난 자리도 회색 구간으로 채움 (제목 띠만 흰색) */
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 img { max-width: 100%; display: block; }
@@ -88,7 +92,7 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .section-head p { color: var(--muted); margin-top: 6px; }
 
 /* 하위 페이지 머리 (People · Research · Publications · News · Join) */
-.pagehero { padding: 36px 0 28px; border-bottom: 1px solid var(--line); }   /* 제목 위 여백은 짧게 (사용자: 위가 너무 비어 보임) */
+.pagehero { padding: 32px 0; border-bottom: 1px solid var(--line); }   /* 글자 위·아래 눈에 보이는 여백이 같게(45px). 띠 높이 125px 는 Services --svc-top 과 맞물림 */
 .pagehero h1 { font-size: 48px; font-weight: 800; letter-spacing: -0.035em; }
 .pagehero p { margin-top: 10px; font-size: 16px; color: var(--muted); }
 .more { font-size: 15px; white-space: nowrap; }
@@ -150,13 +154,13 @@ html.js.reveal-init main .section > .shell { transition: none; }
 
 /* 연구 분야 */
 /* 홈 Research Areas: 카드 넘겨 보기 (.rail 재사용). 한 번에 3장, 가운데 장만 선명(.is-center, site.js) 양옆은 연하게. 카드 배경 그림 + 검은색 반투명 한 겹 + 흰 글자 */
-.areas-wrap { margin-top: 28px; --arrow-top: calc(50% - 20px); }
-.areas-rail { padding: 24px 4px; margin: -24px -4px; gap: 8px; }   /* 가운데 카드가 커져도 잘리지 않게 위아래 여유 */
+.areas-wrap { margin-top: 28px; }
+.rail.areas-rail { padding: 24px 4px; margin: -24px -4px; gap: 8px; }   /* 가운데 카드가 커져도 잘리지 않게 위아래 여유. .rail 이 뒤에 있어 덮어쓰지 못하게 .rail 을 붙임 (덮이면 간격 24px → 오른쪽 카드 잘림) */
 /* 카드 자체(.area-card)는 칸 맞춤 기준 상자라 크기를 바꾸지 않고, 안쪽 상자(.area-inner)만 키우고 줄인다 — 카드를 직접 줄이면 넘김이 멈춘 뒤 브라우저가 줄어든 상자 기준으로 칸을 다시 맞춰 "뚝" 더 끌려감 */
 .area-card { flex: none; width: calc((100% - 16px) / 3); scroll-snap-align: start; position: relative; }
 .area-card.is-center { z-index: 1; }
 .areas-rail .area-card:not(.is-center), .services-rail .system:not(.is-center) { cursor: pointer; }   /* 양옆 카드는 누르면 넘어감 */
-.area-inner { border-radius: var(--radius); overflow: hidden; background: var(--navy) center / cover no-repeat; opacity: .45; transform: scale(.88); transition: opacity .6s ease, transform .6s ease; will-change: transform, opacity; backface-visibility: hidden; }   /* 그래픽 층으로 올려 넘길 때 다시 그리지 않게 */
+.area-inner { border-radius: var(--radius); overflow: hidden; background: var(--navy) center / cover no-repeat; opacity: .45; transform: scale(.88); transition: opacity 1s cubic-bezier(.65,0,.35,1), transform 1s cubic-bezier(.65,0,.35,1); will-change: transform, opacity; backface-visibility: hidden; }   /* 그래픽 층으로 올려 넘길 때 다시 그리지 않게. 전환은 site.js 넘김(1초, 같은 곡선)과 맞춤 — 다르면 카드가 움직이기 전에 밝기부터 바뀜 */
 .area-card.is-center .area-inner { opacity: 1; transform: scale(1.04); }   /* 가운데는 크게, 양옆은 작고 연하게 — 살짝 겹쳐 보임 */
 .rail.no-transition .area-inner { transition: none; }   /* 복사본 구간 → 진짜 구간 순간 이동 때 (site.js wrapAround) */
 .area-card .qa-item { display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 6px; height: 300px; padding: 20px 22px 22px; color: #fff; background: rgba(0,0,0,.52); transition: background .4s ease; }
@@ -177,8 +181,8 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .area p { margin-top: 10px; font-size: 14.5px; color: var(--ink); }
 
 /* 시스템: 멈춘 줄, 좌우 화살표로 넘김 (손가락으로 밀어도 됨) */
-/* 화살표: 줄 양옆 바깥 여백에 꺾쇠만 (동그라미 바탕 없음). 높이는 사진 가운데(--arrow-top). 여백이 없는 좁은 화면에선 줄 아래 오른쪽 */
-.rail-wrap { position: relative; --arrow-top: 88px; }
+/* 화살표: 줄 양옆 바깥 여백에 꺾쇠만 (동그라미 바탕 없음). 높이는 카드 가운데(--arrow-top). 여백이 없는 좁은 화면에선 줄 좌우를 띄워 그 자리에 둠 */
+.rail-wrap { position: relative; --arrow-top: calc(50% - 20px); }
 .rail { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 4px; scrollbar-width: none; padding: 4px; margin: -4px; }   /* scroll-padding = 안쪽 여백: 칸 맞춤 자리와 스크립트가 멈추는 자리(offsetLeft 기준)를 같게 — 다르면 멈춘 뒤 4px "툭" 당겨짐 */
 .rail::-webkit-scrollbar { display: none; }
 .rail-btn { position: absolute; top: var(--arrow-top); z-index: 1; width: 40px; height: 40px; padding: 0; border: 0; background: none; color: var(--navy); font-size: 0; cursor: pointer; opacity: .55; transition: opacity .2s ease; }
@@ -188,16 +192,20 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .rail-btn:hover { opacity: 1; }
 .rail-btn.prev { left: -36px; } .rail-btn.next { right: -36px; }
 @media (max-width: 1220px) {
-  .rail-wrap { padding-bottom: 48px; }
-  .rail-btn { top: auto; bottom: 0; }
-  .rail-btn.prev { left: calc(50% - 44px); right: auto; } .rail-btn.next { left: calc(50% + 4px); right: auto; }   /* 줄 아래 가운데에 ‹ › 나란히 */
+  .rail-wrap { padding-inline: 44px; }
+  .rail-btn.prev { left: 2px; } .rail-btn.next { right: 2px; }
+}
+@media (max-width: 860px) {
+  .rail-wrap { padding-inline: 32px; }
+  .rail-btn { width: 32px; }
+  .rail-btn.prev { left: 0; } .rail-btn.next { right: 0; }
 }
 .system { display: block; color: inherit; width: 340px; flex: none; scroll-snap-align: start; position: relative; }
 /* 홈 Services 줄: Research Areas 와 같은 모양 — 3장, 가운데만 선명·크게, 양옆 작고 연하게. 크기는 안쪽 상자(.system-inner)만 바꾼다 (카드 자체를 줄이면 칸 맞춤이 어긋나 "뚝" 끌려감) */
 .services-rail { padding: 24px 4px; margin: -24px -4px; gap: 8px; }
 .services-rail .system { width: calc((100% - 16px) / 3); }
 .system.is-center { z-index: 1; }
-.system-inner { display: block; position: relative; border-radius: var(--radius); overflow: hidden; background: var(--navy); opacity: .45; transform: scale(.88); transition: opacity .6s ease, transform .6s ease; will-change: transform, opacity; backface-visibility: hidden; }
+.system-inner { display: block; position: relative; border-radius: var(--radius); overflow: hidden; background: var(--navy); opacity: .45; transform: scale(.88); transition: opacity 1s cubic-bezier(.65,0,.35,1), transform 1s cubic-bezier(.65,0,.35,1); will-change: transform, opacity; backface-visibility: hidden; }
 /* 이름·설명은 캡처 화면 위에 (검은 반투명 덮개 + 흰 글자 — Research Areas 카드와 같은 식, 사용자 요청) */
 .system-inner::after { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,.42); transition: background .4s ease; }
 .system:hover .system-inner::after { background: rgba(0,0,0,.3); }
@@ -237,14 +245,13 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .news-photo { position: relative; min-height: 320px; margin: 0; overflow: hidden; border-radius: var(--radius); background: var(--navy); }
 .news-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .8s ease; }
 .news-photo img.is-hidden { opacity: 0; }
-/* 둥근 꺾쇠 단추 공통 (Projects 달력·Services·News 사진): 30px, 테두리 + 꺾쇠 */
-.nav-btn { width: 30px; height: 30px; padding: 0; border: 1px solid var(--line); border-radius: 50%; background: var(--bg); color: var(--navy); cursor: pointer; position: relative; transition: border-color .2s ease, background .2s ease; }
-.nav-btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 7px; height: 7px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
-.nav-btn.prev::before { transform: translate(-25%, -50%) rotate(-135deg); }   /* ‹ */
-.nav-btn.next::before { transform: translate(-75%, -50%) rotate(45deg); }     /* › */
-.nav-btn:hover { border-color: var(--navy); background: var(--bg2); }
-.news-nav { position: absolute; top: 12px; right: 12px; z-index: 2; display: flex; gap: 6px; }   /* 사진 오른쪽 위 */
-.news-nav .nav-btn { background: rgba(255,255,255,.92); border-color: transparent; }
+/* News 사진 넘김 단추: 사진 왼쪽·오른쪽 가운데에 꺾쇠만 (.rail-btn 과 같은 모양). 밝은 사진에서도 보이게 그림자 */
+.nav-btn { position: absolute; top: calc(50% - 20px); z-index: 2; width: 40px; height: 40px; padding: 0; border: 0; background: none; color: #fff; cursor: pointer; opacity: .85; filter: drop-shadow(0 1px 3px rgba(0,0,0,.6)); transition: opacity .2s ease; }
+.nav-btn::before { content: ''; position: absolute; top: 50%; left: 50%; width: 14px; height: 14px; border-top: 2px solid currentColor; border-right: 2px solid currentColor; }
+.nav-btn.prev::before { transform: translate(-30%, -50%) rotate(-135deg); }   /* ‹ */
+.nav-btn.next::before { transform: translate(-70%, -50%) rotate(45deg); }     /* › */
+.nav-btn:hover { opacity: 1; }
+.nav-btn.prev { left: 4px; } .nav-btn.next { right: 4px; }
 .news-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 32px 16px 14px; font-size: 13.5px; color: #fff; background: linear-gradient(transparent, rgba(9,34,61,.85)); }
 /* 목록 페이지 넘기기 (site.js 가 만듦) */
 #records { scroll-margin-top: 88px; } /* 페이지를 넘기면 목록 맨 위로 — 머리글에 가리지 않게 */
@@ -278,6 +285,8 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .paper-links { display: inline-flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; }
 .paper-links a { color: var(--muted); border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
 .paper-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
+/* 논문의 JCR 상위 %: 상자 없이 파란 글자 (_includes/jcr-badge.html) */
+.jcr-badge { margin-right: 8px; color: var(--accent); font-weight: 600; white-space: nowrap; }
 
 /* 바닥글 */
 .footer { background: var(--navy); color: rgba(255,255,255,.7); font-size: 14px; }
@@ -285,10 +294,15 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .footer a:hover { color: #fff; text-decoration: none; }
 /* 푸터는 모든 페이지에서 한 줄로 납작하게 (PC 약 108px) — Services 의 고정 푸터와 같은 크기로 통일 (사용자 결정 2026-10-23) */
 .footer b { display: inline; margin: 0 8px 0 0; font-size: 13px; font-weight: 600; color: #fff; }
-.footer-top { display: flex; justify-content: space-between; align-items: center; gap: 40px; padding-top: 14px; padding-bottom: 12px; }
+.footer-top { display: flex; align-items: center; gap: 24px; padding-top: 14px; padding-bottom: 12px; }
 .footer-logo { display: inline-flex; }
 .footer-logo img { width: auto; height: 40px; }   /* 어두운 바탕용 흰 글자 로고 */
-.footer-slogan p, .footer-contact p { display: inline; margin: 0; }
+.footer-contact { margin-left: auto; }
+.footer-contact p { display: inline; margin: 0; }
+/* 슬로건: 로고 옆에 세로 선을 두고 두 줄로 (큰 줄 + 흐린 줄). 로고 높이 안에 들어가 푸터 높이는 그대로 */
+.footer-slogan { padding-left: 24px; border-left: 1px solid rgba(255,255,255,.2); line-height: 1.35; }
+.footer-slogan b { display: block; margin: 0; font-size: 15px; letter-spacing: -0.01em; }
+.footer-slogan p { margin: 1px 0 0; font-size: 12.5px; color: rgba(255,255,255,.6); }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 24px; padding-top: 9px; padding-bottom: 11px; border-top: 1px solid rgba(255,255,255,.15); font-size: 12.5px; color: rgba(255,255,255,.5); }
 
 /* 협력 기관 로고 띠(홈 맨 아래): 두 줄을 이어 붙인 트랙이 왼쪽으로 절반(한 줄 길이)만큼 40초에 걸쳐 움직여 끊김 없이 돈다. 양 끝은 흐리게. 마우스를 올려도 계속 간다(사용자 결정). 제목 없이 News 아래(맨 끝) */
@@ -313,6 +327,8 @@ html.js main .coop-section > .shell { opacity: 1; transform: none; transition: n
   .hero h1 { font-size: 40px; white-space: normal; }
   .final-title { font-size: 40px; white-space: normal; }
   .footer-top { flex-direction: column; align-items: flex-start; gap: 10px; padding-top: 18px; padding-bottom: 14px; }   /* 휴대폰: 세로로, 간격은 좁게 */
+  .footer-slogan { padding-left: 0; border-left: 0; }
+  .footer-contact { margin-left: 0; }
   .system { width: 260px; margin-right: 16px; }
   .services-rail .system { width: 100%; margin-right: 0; }
   .system .shot { height: 240px; }

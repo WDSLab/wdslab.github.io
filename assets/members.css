@@ -41,6 +41,7 @@
 .member-metrics { display: grid; grid-template-columns: repeat(5, 1fr); column-gap: 8px; margin-top: 14px; border-top: 1px solid var(--line); }
 .member-metric { display: flex; flex-direction: column-reverse; align-items: center; padding-top: 10px; text-align: center; }   /* 숫자와 이름을 칸 가운데에 */
 .member-metric strong { font-size: 18px; font-weight: 700; color: var(--navy); line-height: 1.2; font-variant-numeric: tabular-nums; }
+.member-metric strong.is-zero { font-weight: 400; color: var(--muted); opacity: .6; }
 .member-metric span { font-size: 12px; color: var(--muted); }
 
 /* members.js 가 붙이는 실적 보기 버튼 + 화면 위 창 (카드가 늘어나지 않음) */

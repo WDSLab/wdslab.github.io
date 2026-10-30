@@ -275,26 +275,37 @@ document.addEventListener('DOMContentLoaded', () => {
       items.forEach((it, i) => it.classList.toggle('is-center', i === center));
     } : null;
     let settle = 0;
-    rail.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(() => { wrapAround(); focusCenter?.(); }, 140); }, { passive: true });
+    rail.addEventListener('scroll', () => { clearTimeout(settle); settle = setTimeout(() => { if (anim) return; wrapAround(); focusCenter?.(); }, 140); }, { passive: true });   // 넘기는 중엔 건드리지 않음 — 끝나자마자 또 누르면 강조가 이전 카드로 되돌아감
     window.addEventListener('resize', () => { home(); focusCenter?.(); });
     home(); focusCenter?.();
     let lastTouch = 0;   // 사람이 넘긴 직후엔 잠시 쉰다
     // 넘길 때는 브라우저 기본 스크롤 대신 직접 움직인다: 1.4초 동안 천천히 출발해 천천히 멈춤
     let anim = 0, target = null;
     const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+    const easeOut = (t) => 1 - Math.pow(1 - t, 3);
     const go = (dir) => {
+      if (anim && Math.abs(target + dir * step() - rail.scrollLeft) > 3 * step()) return;   // 아주 빠르게 눌러도 세 칸 넘게 앞서가지 않음
+      const moving = !!anim;
       if (anim) { cancelAnimationFrame(anim); anim = 0; } else { wrapAround(); target = null; }
-      const s = step(), base = items[count].offsetLeft - items[0].offsetLeft;
-      const from = rail.scrollLeft;
+      const s = step(), base = setWidth();
+      let from = rail.scrollLeft;
       const k = Math.round(((target ?? from) - base) / s) + dir;      // 연달아 누르면 이어서 한 칸 더
-      target = base + k * s;
+      let goal = base + k * s;
+      if (goal < base || goal >= 2 * base) {                           // 줄 끝에 닿기 전에 같은 모양의 진짜 구간으로 옮긴다 (끝에 닿으면 멈추고 강조가 사라짐)
+        const shift = goal < base ? base : -base;
+        rail.classList.add('no-transition');
+        focusCenter?.((target ?? from) + shift);
+        rail.scrollLeft = from += shift; goal += shift;
+        void rail.offsetWidth; rail.classList.remove('no-transition');
+      }
+      target = goal;
       focusCenter?.(target);                                           // 가운데 강조는 목표 자리 기준으로 지금 바로 (움직임과 함께 한 번만)
       if (reduceMotion) { rail.scrollLeft = target; wrapAround(); target = null; return; }
       rail.style.scrollSnapType = 'none';                              // 움직이는 동안은 칸 맞춤을 잠시 끔
       const start = performance.now(), D = 1000;   // 한 장 넘어가는 시간 (6초·1.4초는 느리다는 지적 → 4초·1초)
       const tick = (now) => {
         const t = Math.min(1, (now - start) / D);
-        rail.scrollLeft = from + (target - from) * ease(t);
+        rail.scrollLeft = from + (target - from) * (moving ? easeOut(t) : ease(t));   // 움직이는 중에 또 누르면 멈칫하지 않게 바로 이어서
         if (t < 1) { anim = requestAnimationFrame(tick); return; }
         anim = 0; target = null; rail.style.scrollSnapType = ''; wrapAround();
       };
@@ -307,7 +318,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = event.target.closest('.rail > *');
       if (!card || card.classList.contains('is-center')) return;
       const s = step(); if (!s) return;
-      const center = Math.round(rail.scrollLeft / s) + Math.floor(Math.max(1, Math.round(rail.clientWidth / s)) / 2);
+      const center = Math.round((target ?? rail.scrollLeft) / s) + Math.floor(Math.max(1, Math.round(rail.clientWidth / s)) / 2);
       const i = items.indexOf(card);
       if (i < 0 || i === center) return;
       event.preventDefault();
