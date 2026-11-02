@@ -57,7 +57,7 @@ Shared parts:
 
 - Homepage News: latest 5 of 79 (the rest on the News page)
 - News archive: 79
-- Publications: 81
+- Publications: 82
 - Projects: 44
 - People: 12
 

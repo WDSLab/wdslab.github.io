@@ -1941,6 +1941,37 @@
     ]
   },
   {
+    "year": 2025,
+    "title": "Design of a Multimodal Embedding Fusion-Based Model for Long-Term Sea Ice Concentration Forecasting",
+    "venue": "The journal of Bigdata",
+    "status": "Published",
+    "category": "Domestic Journal",
+    "links": {
+      "doi": "https://doi.org/10.36498/kbigdt.2025.10.2.241"
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "authors": [
+      {
+        "name": "Seungwoo Lee",
+        "lab": true,
+        "roles": [
+          "제1저자"
+        ],
+        "corresponding_source": false
+      },
+      {
+        "name": "Sunghyun Sim",
+        "lab": true,
+        "roles": [
+          "교신저자"
+        ],
+        "corresponding_source": true
+      }
+    ]
+  },
+  {
     "year": 2026,
     "title": "F4-SSM: Lightweight Multi-scale State Space Model for On-device Time Series Forecasting",
     "venue": "ICECET2026 · Rome",

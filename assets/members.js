@@ -32,7 +32,7 @@
     'Ocean Engineering',
     'Transportation Research Part D: Transport and Environment'
   ]);
-  const kciVenues = new Set(['Korean Circulation Journal', 'Journal of Korean Society of Industrial and Systems Engineering']);
+  const kciVenues = new Set(['Korean Circulation Journal', 'Journal of Korean Society of Industrial and Systems Engineering', 'The journal of Bigdata']);
   const conferencePattern = /학회|학술대회|conference|assembly|oral presentation|대학생경진대회/i;
   const presentationPattern = /발표|oral presentation|발표상|우수논문|수상|best paper/i;
   const awardPattern = /수상|award|prize|best paper|excellence award|우수상|우수논문상|우수발표상|대상|최우수|장관상|시장상|회장상|금상|은상|동상|포스터상/i;
