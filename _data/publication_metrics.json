@@ -1,4 +1,9 @@
 [
+    {
+    "title": "CF-JEPA: Mask-free Forward Prediction with Asymmetric Encoder Utilization for Time-series Representation Learning",
+    "if": 8.0,
+    "top_percent": 12.5
+  },
   {
     "title": "Association of Cold Ischemic Time with Early and Long-Term Outcomes in a Nationwide Korean Heart Transplant Cohort",
     "if": 3.4,
