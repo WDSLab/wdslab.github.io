@@ -2,7 +2,7 @@
   {
     "year": 2026,
     "title": "Reducing Plate Waste and Carbon Emissions in School Meal Services through Tray-Image Intake Sensing and Menu Optimization",
-    "venue": "Journal of Cleaner Production",
+    "venue": "Waste Management",
     "status": "Submitted",
     "category": "International Journal",
     "links": {
@@ -74,7 +74,7 @@
     "year": 2026,
     "title": "Matching model capacity to format constraints: a frugal architecture for container code identification on edge-oriented in port automation",
     "venue": "Engineering Applications of Artificial Intelligence",
-    "status": "Submitted",
+    "status": "In revision",
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/FruArIC",
@@ -266,41 +266,6 @@
   },
   {
     "year": 2026,
-    "title": "CF-JEPA: Mask-free forward prediction with asymmetric encoder utilization for time-series representation learning",
-    "venue": "Knowledge-Based Systems",
-    "status": "In revision",
-    "category": "International Journal",
-    "links": {
-      "github": "https://github.com/WDSLab/CF-JEPA",
-      "arxiv": "https://arxiv.org/abs/2606.07031",
-      "ssrn": "https://ssrn.com/abstract=6913230"
-    },
-    "jcr_quartile": null,
-    "jcr_year": null,
-    "jcr_category": null,
-    "research_area": "Representation & Self-Supervised Learning",
-    "authors": [
-      {
-        "name": "Jaehoon Lee",
-        "lab": true,
-        "roles": [
-          "제1저자"
-        ],
-        "corresponding_source": false
-      },
-      {
-        "name": "Sunghyun Sim",
-        "lab": true,
-        "roles": [
-          "교신저자"
-        ],
-        "corresponding_source": true
-      }
-    ],
-    "venue_id": "venue-006"
-  },
-  {
-    "year": 2026,
     "title": "QIRP: Frequency-Accumulated Structured Pruning for Stable Quantization-Aware Model Compression",
     "venue": "IEEE Transactions on Industrial Informatics",
     "status": "In revision",
@@ -330,7 +295,7 @@
         "corresponding_source": true
       }
     ],
-    "venue_id": "venue-007"
+    "venue_id": "venue-006"
   },
   {
     "year": 2026,
@@ -379,6 +344,40 @@
       {
         "name": "Hyerim Bae",
         "lab": false,
+        "roles": [
+          "교신저자"
+        ],
+        "corresponding_source": true
+      }
+    ],
+    "venue_id": "venue-007"
+  },
+  {
+    "year": 2026,
+    "title": "CF-JEPA: Mask-free forward prediction with asymmetric encoder utilization for time-series representation learning",
+    "venue": "Knowledge-Based Systems",
+    "status": "Published",
+    "category": "International Journal",
+    "links": {
+      "github": "https://github.com/WDSLab/CF-JEPA",
+      "doi": "https://doi.org/10.1016/j.knosys.2026.117305"  
+    },
+    "jcr_quartile": null,
+    "jcr_year": null,
+    "jcr_category": null,
+    "research_area": "Representation & Self-Supervised Learning",
+    "authors": [
+      {
+        "name": "Jaehoon Lee",
+        "lab": true,
+        "roles": [
+          "제1저자"
+        ],
+        "corresponding_source": false
+      },
+      {
+        "name": "Sunghyun Sim",
+        "lab": true,
         "roles": [
           "교신저자"
         ],
