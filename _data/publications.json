@@ -362,9 +362,11 @@
       "github": "https://github.com/WDSLab/CF-JEPA",
       "doi": "https://doi.org/10.1016/j.knosys.2026.117305"  
     },
-    "jcr_quartile": null,
-    "jcr_year": null,
+    "jcr_quartile": Q1,
+    "jcr_year": 2025,
     "jcr_category": null,
+    "if_as_listed_on_original": 8.0,
+    "top_percentile_as_listed_on_original": 12.5%,
     "research_area": "Representation & Self-Supervised Learning",
     "authors": [
       {
