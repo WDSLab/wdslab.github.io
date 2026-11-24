@@ -1,6 +1,6 @@
 {%- assign p = include.paper -%}
 {%- capture search -%}{{ p.title }} {{ p.venue }} {{ p.year }}{%- endcapture -%}
-<article class="pub"{% if include.hidden %} hidden{% endif %} data-category="{{ p.category }}" data-search="{{ search | downcase | escape }}" id="{% include publication-anchor.html paper=p %}">
+<article class="pub"{% if include.hidden %} hidden{% endif %} data-category="{{ p.category }}" data-area="{{ p.research_area | escape }}" data-search="{{ search | downcase | escape }}" id="{% include publication-anchor.html paper=p %}">
 <time>{{ p.year }}{% if p.month %}<small>{{ p.month }}</small>{% endif %}</time>
 <div>
 <h3>{{ p.title | escape }}</h3>

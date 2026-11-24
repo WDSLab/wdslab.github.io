@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const search = document.querySelector('#search');
   const filter = document.querySelector('#filter');
+  const area = document.querySelector('#area');   // 분야 고르기 (Publications) — 종류 탭과 함께 걸림
   const list = document.querySelector('#records');
   const records = [...document.querySelectorAll('#records > article, #records > section > article')];   // News 는 연도 묶음(section) 안에 있음
   const count = document.querySelector('#count');
@@ -166,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const category = filter?.value || tabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.filter || '';
     const matched = records.filter((record) => {
       const text = `${record.dataset.search || ''} ${record.textContent || ''}`.toLocaleLowerCase();
-      return (!query || text.includes(query)) && (!category || record.dataset.category === category);
+      return (!query || text.includes(query)) && (!category || record.dataset.category === category) && (!area?.value || record.dataset.area === area.value);
     });
     // News: 검색어가 없으면 고른 연도만. 그 종류의 소식이 없는 해는 못 누르고, 고른 해가 비면 가장 최근 해로
     let visible = matched;
@@ -200,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const restart = () => { page = 1; updateNews(); };   // 검색어·종류·연도를 바꾸면 첫 페이지부터
   search?.addEventListener('input', restart);
   filter?.addEventListener('change', restart);
+  area?.addEventListener('change', restart);
   tabs.forEach((tab) => tab.addEventListener('click', () => {
     tabs.forEach((other) => other.setAttribute('aria-selected', String(other === tab)));
     restart();

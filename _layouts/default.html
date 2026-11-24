@@ -22,7 +22,7 @@
   {%- comment -%} 보여 주는 건 페이지를 그리는 스크립트(Projects 기간 표, 목록 나누기 등)가 다 끝난 뒤 — 그 전에 보여 주면 빈 자리가 잠깐 비쳤다가 밀림.
   나중에 받아 오는 내용(News 사진 기록 등) 아래에 있던 자리면, 페이지가 그만큼 길어질 때까지 조금 더 기다림 (최대 0.9초) {%- endcomment %}
   <script>(function(){var h=document.documentElement;if(!h.classList.contains('restoring'))return;var y=0;try{history.scrollRestoration='manual';y=Number(sessionStorage.getItem('scroll:'+location.pathname+location.search))||0;}catch(e){}window.scrollTo(0,y);var t0=Date.now();function show(){if(document.documentElement.scrollHeight-window.innerHeight<y-2&&Date.now()-t0<900){setTimeout(show,50);return;}window.scrollTo(0,y);h.classList.remove('restoring');}document.addEventListener('DOMContentLoaded',function(){setTimeout(show,0);});})()</script>
-  <script defer src="{{ '/assets/site.js' | relative_url }}?v=20261030-rail2"></script>
+  <script defer src="{{ '/assets/site.js' | relative_url }}?v=20261124-area"></script>
   {% for js in page.scripts %}<script defer src="{{ js | relative_url }}"></script>
   {% endfor %}
 </body>

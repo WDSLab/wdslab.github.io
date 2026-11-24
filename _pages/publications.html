@@ -3,7 +3,7 @@ permalink: /publications/
 layout: default
 title: Publications
 nav: publications
-styles: [/assets/publications.css?v=20261124-tabs]
+styles: [/assets/publications.css?v=20261124-areahead]
 scripts: [/assets/impact-dashboard.js?v=20261023-tip5]
 ---
 {%- assign pubs = site.data.publications -%}
@@ -68,7 +68,16 @@ scripts: [/assets/impact-dashboard.js?v=20261023-tip5]
 </div></section>
 
 <section class="section" id="all-publications"><div class="shell">
+{%- comment -%} 제목 줄 오른쪽 끝에 분야 고르기 (위 그래프와는 따로, 아래 종류 탭과 함께 걸림 — site.js #area). 분야 순서는 _data/research.yml {%- endcomment %}
+<div class="list-head">
 <h2>All Publications</h2>
+<select class="area-filter" id="area" aria-label="Research area">
+  <option value="">All research areas</option>
+  {%- for a in site.data.research %}{% assign n_area = pubs | where: "research_area", a.title | size %}
+  <option value="{{ a.title | escape }}">{{ a.title }} ({{ n_area }})</option>
+  {%- endfor %}
+</select>
+</div>
 {%- comment -%} 종류 탭 (Projects 의 Ongoing/Completed 와 같은 모양, site.js 의 role="tab" 처리). 검색 칸은 뺌 (2026-10-23 사용자 결정) {%- endcomment -%}
 {%- assign n_ij = pubs | where: "category", "International Journal" | size -%}
 {%- assign n_dj = pubs | where: "category", "Domestic Journal" | size -%}
