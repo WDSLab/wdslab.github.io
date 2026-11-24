@@ -20,8 +20,8 @@ scripts: [/assets/gallery.js?v=20261023-reserve4]
   <button type="button" role="tab" data-filter="{{ kv[0] }}" aria-selected="false">{{ kv[1] }} <span>{{ n_kind }}</span></button>
   {%- endfor %}
 </div>
-{%- comment -%} 전체 소식을 10개씩 페이지로 (site.js). 연도 묶음 제목(2026·2025…)은 쪽 안에서 구분선 노릇. 첫 상태(첫 10개 + 페이지 단추)는 빌드 때 미리 그림 — 쪽에 소식이 없는 연도 묶음은 통째로 hidden (site.js 와 같은 기준) {%- endcomment -%}
-{%- assign page_size = 10 -%}
+{%- comment -%} 전체 소식을 7개씩 페이지로 (site.js). 연도 묶음 제목(2026·2025…)은 쪽 안에서 구분선 노릇. 첫 상태(첫 7개 + 페이지 단추)는 빌드 때 미리 그림 — 쪽에 소식이 없는 연도 묶음은 통째로 hidden (site.js 와 같은 기준) {%- endcomment -%}
+{%- assign page_size = 7 -%}
 {%- assign pages = news.size | plus: page_size | minus: 1 | divided_by: page_size -%}
 <div class="news-archive" id="records" data-page-size="{{ page_size }}">
   {%- assign seen = 0 -%}

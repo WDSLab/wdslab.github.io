@@ -16,7 +16,7 @@ scripts: [/assets/projects.js?v=20261023-tlbar]
 {%- assign live = 0 -%}
 {%- for r in site.data.projects -%}{%- assign end_ym = r.period | split: "–" | last | strip -%}{%- if end_ym >= now_ym -%}{%- assign live = live | plus: 1 -%}{%- endif -%}{%- endfor -%}
 {%- assign done = site.data.projects.size | minus: live -%}
-{%- assign page_size = 10 -%}
+{%- assign page_size = 7 -%}
 {%- assign pages = live | plus: page_size | minus: 1 | divided_by: page_size -%}
 {%- comment -%} 진행 중 과제를 끝나는 달 순으로: "끝나는달|순번" 글자를 모아 정렬 {%- endcomment -%}
 {%- assign now_y = site.time | date: "%Y" | plus: 0 -%}{%- assign now_m = site.time | date: "%m" | plus: 0 -%}{%- assign now_i = now_y | times: 12 | plus: now_m -%}

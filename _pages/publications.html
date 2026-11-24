@@ -83,7 +83,7 @@ scripts: [/assets/impact-dashboard.js?v=20261023-tip5]
 </div>
 <p class="legend">Bold names: lab members</p>
 {%- comment -%} 첫 페이지 밖 논문은 처음부터 hidden, 페이지 단추도 미리 그려 둔다 — site.js 는 같은 모양을 다시 그릴 뿐 (스크립트 전후 길이가 같아야 화면·스크롤바가 안 움직임) {%- endcomment -%}
-{%- assign page_size = 10 -%}
+{%- assign page_size = 7 -%}
 {%- assign pages = pubs.size | plus: page_size | minus: 1 | divided_by: page_size -%}
 <div class="pub-list" id="records" data-page-size="{{ page_size }}">
 {%- for p in pubs %}{% if forloop.index > page_size %}{% assign rec_hidden = true %}{% else %}{% assign rec_hidden = false %}{% endif %}{% include publication-record.html paper=p hidden=rec_hidden %}{% endfor -%}

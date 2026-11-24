@@ -269,6 +269,9 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .pager button:hover:not(:disabled) { border-color: var(--navy); }
 .pager button.is-current { background: var(--navy); border-color: var(--navy); color: #fff; }
 .pager button:disabled { opacity: .35; cursor: default; }
+/* 앞·뒤 ‹ › : 숫자와 구분되게 테두리 없는 큰 꺾쇠 (자리 폭은 숫자 단추와 같아 줄 길이 그대로) */
+.pager button[aria-label$=" page"] { border-color: transparent; background: none; font-size: 22px; line-height: 1; color: var(--navy); transition: color .2s ease; }
+.pager button[aria-label$=" page"]:hover:not(:disabled) { border-color: transparent; color: var(--accent); }
 .pager-gap { align-self: center; width: 38px; text-align: center; color: var(--muted); }   /* 단추와 같은 폭 — 줄 길이가 쪽마다 안 변함 */
 
 /* Contact: 왼쪽 안내 문장 + 항목 3줄(이름표 | 내용), 오른쪽 지도 */
