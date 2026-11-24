@@ -256,6 +256,14 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .news-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 32px 16px 14px; font-size: 13.5px; color: #fff; background: linear-gradient(transparent, rgba(9,34,61,.85)); }
 /* 목록 페이지 넘기기 (site.js 가 만듦) */
 #records { scroll-margin-top: 88px; } /* 페이지를 넘기면 목록 맨 위로 — 머리글에 가리지 않게 */
+/* 종류 탭 (Projects · Publications · News 공통, 고르기·쪽 나누기는 site.js) */
+.tabs { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 20px 0 8px; }
+.tabs button { padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: 16px; font-weight: 600; color: var(--muted); cursor: pointer; }
+.tabs button span { margin-left: 4px; font-weight: 400; }
+.tabs button:hover { color: var(--navy); }
+.tabs button[aria-selected="true"] { border-bottom-color: var(--navy); color: var(--navy); }
+@media (max-width: 860px) { .tabs { gap: 0 18px; } .tabs button { font-size: 15px; } }
+
 .pager { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 28px; }
 .pager button { min-width: 38px; height: 38px; padding: 0 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); font: inherit; font-size: 14px; color: var(--ink); cursor: pointer; font-variant-numeric: tabular-nums; transition: border-color .2s ease; }
 .pager button:hover:not(:disabled) { border-color: var(--navy); }

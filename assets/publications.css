@@ -41,12 +41,6 @@
 .submitted { background: var(--muted); }
 
 /* 전체 목록 */
-/* 종류 탭: 모양은 projects.css 의 .tabs 와 같게 (Publications 전용 사본) */
-.tabs { display: flex; flex-wrap: wrap; gap: 0 28px; margin: 20px 0 8px; }
-.tabs button { padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: 16px; font-weight: 600; color: var(--muted); cursor: pointer; }
-.tabs button span { margin-left: 4px; font-weight: 400; }
-.tabs button:hover { color: var(--navy); }
-.tabs button[aria-selected="true"] { border-bottom-color: var(--navy); color: var(--navy); }
 .legend { margin-bottom: 16px; font-size: 13px; color: var(--muted); }
 .pub-list { border-top: 1px solid var(--line); }
 .pub { display: grid; grid-template-columns: 72px 1fr; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); scroll-margin-top: 80px; }
@@ -68,7 +62,6 @@
   .kpis { grid-template-columns: repeat(3, 1fr); }
   .kpis strong { font-size: 28px; }
   .charts { grid-template-columns: 1fr; }
-  .tabs { gap: 0 18px; } .tabs button { font-size: 15px; }
   .pub { grid-template-columns: 1fr; gap: 4px; }
   .pub time small { display: inline; margin-left: 6px; }
 }

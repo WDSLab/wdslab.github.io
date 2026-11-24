@@ -13,11 +13,11 @@
 .news-original-item time { color: var(--muted); font-variant-numeric: tabular-nums; }
 /* 종류는 글자로 넣지 않고 표시만 (members.js 가 소식 글자를 읽기 때문) */
 .news-original-item time::after { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
-.news-original-item[data-category="PUBLICATIONS"] time::after { content: '논문'; }
-.news-original-item[data-category="CONFERENCE"] time::after { content: '학회 발표'; }
-.news-original-item[data-category="AWARDS"] time::after { content: '수상'; }
-.news-original-item[data-category="NEW MEMBERS"] time::after { content: '새 구성원'; }
-.news-original-item[data-category="LAB NEWS"] time::after { content: '연구실 소식'; }
+.news-original-item[data-category="PUBLICATIONS"] time::after { content: 'Publications'; }
+.news-original-item[data-category="CONFERENCE"] time::after { content: 'Conference'; }
+.news-original-item[data-category="AWARDS"] time::after { content: 'Awards'; }
+.news-original-item[data-category="NEW MEMBERS"] time::after { content: 'New Members'; }
+.news-original-item[data-category="LAB NEWS"] time::after { content: 'Lab News'; }
 .news-links { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 8px; font-size: 13.5px; }
 .news-links a { color: var(--muted); border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
 .news-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }

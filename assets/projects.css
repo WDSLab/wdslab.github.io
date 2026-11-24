@@ -1,11 +1,7 @@
 /* Projects 페이지: 진행 중 · 완료 탭 + 과제 목록. 색·모서리는 site.css 변수만 쓴다. */
 
 /* 과제: 진행 중 · 완료 탭 + 목록 (탭 고르기는 site.js) */
-.tabs { display: flex; gap: 28px; margin-bottom: 8px; }
-.tabs button { padding: 8px 0; border: 0; border-bottom: 2px solid transparent; background: none; font: inherit; font-size: 16px; font-weight: 600; color: var(--muted); cursor: pointer; }
-.tabs button span { margin-left: 4px; font-weight: 400; }
-.tabs button:hover { color: var(--navy); }
-.tabs button[aria-selected="true"] { border-bottom-color: var(--navy); color: var(--navy); }
+.tabs { margin-top: 0; }   /* 탭 모양은 site.css 공통, Projects 는 위 여백 없이 */
 .project-list { border-top: 1px solid var(--line); }
 .project { display: grid; grid-template-columns: 170px 1fr; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--line); }
 .project[hidden] { display: none; }
