@@ -4,6 +4,7 @@
 .kpis { display: grid; grid-template-columns: repeat(6, 1fr); margin-top: 24px; border-top: 1px solid var(--line); }
 .kpis div { display: flex; flex-direction: column; align-items: center; padding: 20px 0 0; text-align: center; }   /* 숫자와 이름을 칸 가운데에 */
 .kpis strong { font-size: 36px; font-weight: 800; color: var(--navy); line-height: 1.1; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+.kpis #impact-top { color: var(--highlight); }   /* 논문 옆 JCR 상위 % 표시와 같은 색 */
 .kpis span { margin-top: 4px; font-size: 14px; color: var(--muted); }
 .quartiles { margin-top: 20px; font-size: 14px; color: var(--muted); }
 .quartiles b { color: var(--ink); font-weight: 600; }

@@ -55,7 +55,7 @@
   const addMetricCards = (info, values) => {
     const cells = [['SCIE', values.scie], ['Scopus', values.scopus], ['KCI', values.kci], ['Conference', values.conference], ['Awards', values.awards]];
     const ready = info.querySelector('.member-metrics');
-    if (ready) { ready.querySelectorAll('strong').forEach((strong, i) => { const value = cells[i]?.[1]; strong.textContent = value === 0 ? '–' : String(value ?? '—'); strong.classList.toggle('is-zero', value === 0); }); return; }   // 0 은 흐린 – 로
+    if (ready) { ready.querySelectorAll('strong').forEach((strong, i) => { const value = cells[i]?.[1]; strong.textContent = value === 0 ? '–' : String(value ?? '—'); strong.classList.toggle('is-zero', value === 0); strong.classList.toggle('is-award', cells[i]?.[0] === 'Awards' && value > 0); }); return; }   // 0 은 흐린 – 로
     const grid = el('div', 'member-metrics');
     grid.setAttribute('aria-label', 'Publication, conference, and award counts');
     cells.forEach(([label, value]) => {

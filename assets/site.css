@@ -1,8 +1,9 @@
-/* WDSLab 공통 스타일. 색은 아래 7개만 쓴다. 페이지 전용은 members · research · publications · gallery .css */
+/* WDSLab 공통 스타일. 색은 아래 8개만 쓴다. 페이지 전용은 members · research · publications · gallery .css */
 
 :root {
   --navy: #09223D;      /* 주색: 머리띠, 제목, 버튼 */
   --accent: #2F6FB5;    /* 강조 하나: 링크, 호버 */
+  --highlight: #4BEB93; /* 성과 강조: JCR 상위 %, 수상 */
   --bg: #FFFFFF;
   --bg2: #F4F6F9;       /* 번갈아 쓰는 연회색 구간 */
   --ink: #1F2933;       /* 본문 글자 */
@@ -286,7 +287,7 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .paper-links a { color: var(--muted); border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
 .paper-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
 /* 논문의 JCR 상위 %: 상자 없이 초록 글자 (_includes/jcr-badge.html) */
-.jcr-badge { margin-right: 8px; color: #4BEB93; font-weight: 600; white-space: nowrap; }
+.jcr-badge { margin-right: 8px; color: var(--highlight); font-weight: 600; white-space: nowrap; }
 
 /* 바닥글 */
 .footer { background: var(--navy); color: rgba(255,255,255,.7); font-size: 14px; }
@@ -299,6 +300,7 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .footer-logo img { width: auto; height: 40px; }   /* 어두운 바탕용 흰 글자 로고 */
 .footer-contact { margin-left: auto; }
 .footer-contact p { display: inline; margin: 0; }
+.footer-contact span { color: rgba(255,255,255,.85); }   /* 메일 주소: 링크 없이 글자만 (예전 링크 색 그대로) */
 /* 슬로건: 로고 옆에 세로 선을 두고 두 줄로 (큰 줄 + 흐린 줄). 로고 높이 안에 들어가 푸터 높이는 그대로 */
 .footer-slogan { padding-left: 24px; border-left: 1px solid rgba(255,255,255,.2); line-height: 1.35; }
 .footer-slogan b { display: block; margin: 0; font-size: 15px; letter-spacing: -0.01em; }
