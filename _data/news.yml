@@ -1,6 +1,32 @@
+- date: 2026.11.05
+  category: PUBLICATIONS
+  text: '이재훈 학생이 제1저자로 참여한 “CF-JEPA: Mask-free Forward Prediction with Asymmetric Encoder Utilization for Time-series Representation Learning” 논문이 Knowledge-Based Systems에 게재되었습니다. 축하합니다!'
+  links:
+  - type: paper
+    url: https://doi.org/10.1016/j.knosys.2026.117305
+  - type: details
+    url: publications/#paper-cf-jepa-mask-free-forward-prediction-with-asymmetric-encoder-utilization-for-tim
+  - type: github
+    url: https://github.com/WDSLab/CF-JEPA
 - date: 2026.10.08
   category: CONFERENCE
   text: 김영휘, 이승우 학생이 10월 8일 아이슬란드에서 열린 Arctic Circle Assembly에서 2건의 발표를 진행했습니다.
+- date: '2026.10'
+  category: PUBLICATIONS
+  text: '김두현 학생이 제1저자로 참여한 “Ensemble Index Recording-Based Pruning for Enhancing Robustness of Edge AI Models in Smart Port Environments” 논문이 ICIC Express Letters에 게재되었습니다. 축하합니다!'
+  links:
+  - type: paper
+    url: https://doi.org/10.24507/icicel.20.10.1129
+  - type: details
+    url: publications/#paper-ensemble-index-recording-based-pruning-for-enhancing-robustness-of-edge-ai-model
+- date: 2026.09.15
+  category: PUBLICATIONS
+  text: '심성현 교수가 공동 제1저자로 참여한 “Association of Cold Ischemic Time with Early and Long-Term Outcomes in a Nationwide Korean Heart Transplant Cohort” 논문이 Korean Circulation Journal에 게재되었습니다.'
+  links:
+  - type: paper
+    url: https://doi.org/10.4070/kcj.2026.0201
+  - type: details
+    url: publications/#paper-association-of-cold-ischemic-time-with-early-and-long-term-outcomes-in-a-nationw
 - date: 2026.09.01
   category: LAB NEWS
   text: 우리 연구실이 한국산업기술기획평가원(KEIT)의 로봇산업핵심기술개발사업에 선정되어, 「다품종 비연속공정 대응 i-Robot·h-Robot 통합 제어 플랫폼 및 AAS 표준 기반 AI 자율제조 솔루션 개발」 과제로 1년간 10억 원의 연구비를 수주했습니다.
@@ -50,6 +76,14 @@
   links:
   - type: article
     url: https://news.unn.net/news/articleView.html?idxno=594041
+- date: 2026.06.30
+  category: PUBLICATIONS
+  text: '이승우 학생이 제1저자로 참여한 “Reinforcement Learning-Based Multi-Objective Arctic Route Optimization Considering Sea Ice Risk, Time, and Cost” 논문이 Journal of Korean Society of Industrial and Systems Engineering에 게재되었습니다. 축하합니다!'
+  links:
+  - type: paper
+    url: https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART003348736
+  - type: details
+    url: publications/#paper-reinforcement-learning-based-multi-objective-arctic-route-optimization-consideri
 - date: 2026.05.29
   category: PUBLICATIONS
   text: 이승우 학생이 한국산업경영시스템학회 춘계학술대회에서 "해빙 위험도와 운영비용을 고려한 강화학습 기반 북극항로 다목적 최적화"라는 주제로 우수논문상을 수상하였습니다. 축하합니다!
@@ -130,6 +164,14 @@
 - date: 2025.11.01
   category: NEW MEMBERS
   text: 강준규 연구원이 새롭게 합류하였습니다.
+- date: '2025.11'
+  category: PUBLICATIONS
+  text: '이승우 학생이 제1저자로 참여한 “Design of a Multimodal Embedding Fusion-Based Model for Long-Term Sea Ice Concentration Forecasting” 논문이 The journal of Bigdata에 게재되었습니다. 축하합니다!'
+  links:
+  - type: paper
+    url: https://doi.org/10.36498/kbigdt.2025.10.2.241
+  - type: details
+    url: publications/#paper-design-of-a-multimodal-embedding-fusion-based-model-for-long-term-sea-ice-concen
 - date: 2025.10.15
   category: LAB NEWS
   text: 우리 연구실이 LG전자와 함께 수행하는 DNA+ Top5 기업연계 R&D 그룹 연구산학지원사업에 선정되어 4년간 지원받게 되었습니다.
@@ -270,6 +312,14 @@
 - date: 2024.03.01
   category: LAB NEWS
   text: 우리 연구실이 LG전자로부터 "스마트 에어솔루션 사용자 별 행동 모델링을 위한 프로세스 마이닝 및 인공지능 기반의 공감지능(Affectionate Intelligence) 기술개발"이라는 주제로 1년간 연구비 지원을 받습니다.
+- date: '2024.03'
+  category: PUBLICATIONS
+  text: '심성현 교수가 공동저자로 참여한 “A robust eXplainable feature selection method based on Order Statistics” 논문이 ICIC Express Letters에 게재되었습니다.'
+  links:
+  - type: paper
+    url: https://doi.org/10.24507/icicel.18.03.255
+  - type: details
+    url: publications/#paper-a-robust-explainable-feature-selection-method-based-on-order-statistics
 - date: 2024.02.28
   category: LAB NEWS
   text: 이재훈 학생이 석사학위를, 윤보리·박은희 학생이 학사학위를 취득했습니다. 축하합니다!
@@ -361,3 +411,21 @@
 - date: 2022.03.01
   category: LAB NEWS
   text: 우리 연구실이 과학기술정보통신부의 정보통신방송혁신인재양성사업 "Grand ICT연구센터"에 참여하여 5년간 연구비를 지원받게 되었습니다.
+- date: 2022.01.14
+  category: PUBLICATIONS
+  text: '심성현 교수가 1저자로 참여한 “Automatic Conversion of Event Data to Event Logs Using a CNN and Event Density Embedding” 논문이 IEEE Access에 게재되었습니다.'
+  links:
+  - type: paper
+    url: https://ieeexplore.ieee.org/document/9682686
+  - type: details
+    url: publications/#paper-automatic-conversion-of-event-data-to-event-logs-using-a-cnn-and-event-density-e
+- date: 2021.10.11
+  category: PUBLICATIONS
+  text: '심성현 교수가 1저자로 참여한 “Bagging Recurrent Event Imputation for Repair of Imperfect Event Log with Missing Categorical Events” 논문이 IEEE Transactions on Services Computing에 게재되었습니다.'
+  links:
+  - type: paper
+    url: https://ieeexplore.ieee.org/document/9566796
+  - type: details
+    url: publications/#paper-bagging-recurrent-event-imputation-for-repair-of-imperfect-event-log-with-missin
+  - type: github
+    url: https://github.com/WDSLab/Bagging-Recurrent-Event-Imputation
