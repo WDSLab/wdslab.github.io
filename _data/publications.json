@@ -3,7 +3,7 @@
     "year": 2026,
     "title": "Reducing Plate Waste and Carbon Emissions in School Meal Services through Tray-Image Intake Sensing and Menu Optimization",
     "venue": "Waste Management",
-    "status": "Submitted",
+    "status": "In revision",
     "category": "International Journal",
     "links": {
       "github": "https://github.com/WDSLab/CA-Menu"
@@ -366,7 +366,7 @@
     "jcr_year": 2025,
     "jcr_category": null,
     "if_as_listed_on_original": 8.0,
-    "top_percentile_as_listed_on_original": 12.5%,
+    "top_percentile_as_listed_on_original": "Top 12.5%",
     "research_area": "Representation & Self-Supervised Learning",
     "authors": [
       {

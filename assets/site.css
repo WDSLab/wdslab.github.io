@@ -285,8 +285,8 @@ html.js.reveal-init main .section > .shell { transition: none; }
 .paper-links { display: inline-flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13.5px; }
 .paper-links a { color: var(--muted); border-bottom: 1px solid var(--line); transition: color .2s ease, border-color .2s ease; }
 .paper-links a:hover { color: var(--accent); border-color: var(--accent); text-decoration: none; }
-/* 논문의 JCR 상위 %: 상자 없이 파란 글자 (_includes/jcr-badge.html) */
-.jcr-badge { margin-right: 8px; color: var(--accent); font-weight: 600; white-space: nowrap; }
+/* 논문의 JCR 상위 %: 상자 없이 초록 글자 (_includes/jcr-badge.html) */
+.jcr-badge { margin-right: 8px; color: #4BEB93; font-weight: 600; white-space: nowrap; }
 
 /* 바닥글 */
 .footer { background: var(--navy); color: rgba(255,255,255,.7); font-size: 14px; }

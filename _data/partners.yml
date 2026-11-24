@@ -1,5 +1,5 @@
 # 과제 지원 기관 로고 (assets/partners/). 키는 projects.yml 의 funder 글자 그대로. 로고 파일이 없는 기관은 abbr 글자로 보임 (projects.html 달력 카드)
-# 출처: 각 기관 홈페이지 머리글 로고(nrf·keit·kicox·kriso·rims·mss·lg·cwnu), 교육부·해양수산부는 정부상징 공식 로고(Wikimedia Commons). IITP·KIMST 는 못 받아 글자로.
+# 출처: 각 기관 홈페이지 머리글 로고(nrf·keit·kicox·kriso·rims·mss·lg·cwnu), 교육부·해양수산부는 정부상징 공식 로고(Wikimedia Commons). IITP 는 사용자가 준 AI 파일. KIMST 는 못 받아 글자로.
 "중소조선연구원": { file: rims.png }
 "한국산업단지공단": { file: kicox.svg }
 "한국산업기술기획평가원": { file: keit.png }
@@ -13,5 +13,5 @@
 "교육부 BK21": { file: moe.svg }
 "해양수산부": { file: mof.svg }
 "선박해양플랜트연구소": { file: kriso.png }
-"정보통신기획평가원": { abbr: IITP }
+"정보통신기획평가원": { file: iitp.png }
 "해양수산과학기술진흥원": { abbr: KIMST }
